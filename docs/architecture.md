@@ -41,6 +41,12 @@ When the external dataset repository is available locally, add a generation step
 
 That generation step is implemented as `paper-explorer/scripts/build-external-repo-manifest.mjs`. It writes static JSON plus a `generated/external-repo-manifest.js` browser bundle so the site can render inventory data even when opened without a framework.
 
+## Static Export Policy
+
+`paper-explorer/site/` is treated as a self-contained static export root. Browser-facing `href` and `src` attributes must either point inside that directory or to external URLs. The built JupyterBook HTML and Obsidian vault snapshot are copied into the site with `node paper-explorer/scripts/sync-site-export-assets.mjs`, so landing-page links keep working after the site folder is copied, zipped, or hosted alone.
+
+Run `node paper-explorer/scripts/check-site-export-links.mjs` before publishing a copied or zipped site export.
+
 ## Applet Strategy
 
 The initial applets are pedagogical and deterministic:

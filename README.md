@@ -8,7 +8,7 @@ Source paper bundle: [`arXiv-2604.08105v1`](arXiv-2604.08105v1)
 
 ## Components
 
-- `paper-explorer/site/` - static landing page, applets page, database browser, and repository index.
+- `paper-explorer/site/` - export-safe static landing page, exported JupyterBook snapshot, exported vault snapshot, applets page, database browser, and repository index.
 - `paper-explorer/knowledge-base/` - JupyterBook that decomposes the paper into context, theory, datasets, methods, and results.
 - `paper-explorer/obsidian-vault/` - Obsidian vault for the paper knowledge graph.
 - `paper-explorer/repos/` - local manifest area for paper-related Git repositories.
@@ -50,6 +50,18 @@ To regenerate the external repository inventory after updating the local clone, 
 
 ```sh
 node paper-explorer/scripts/build-external-repo-manifest.mjs
+```
+
+To refresh the static export copies of the JupyterBook HTML and Obsidian vault inside `paper-explorer/site/`, run:
+
+```sh
+node paper-explorer/scripts/sync-site-export-assets.mjs
+```
+
+Before exporting `paper-explorer/site/` as a standalone static folder, check that local browser links stay inside the export:
+
+```sh
+node paper-explorer/scripts/check-site-export-links.mjs
 ```
 
 ## Source Links

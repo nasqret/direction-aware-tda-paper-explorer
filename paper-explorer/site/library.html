@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Export Library | Direction-Aware TDA</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="library">
+    <header class="site-header">
+      <a class="brand" href="index.html">Direction-Aware TDA</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Paper</a>
+        <a href="applets.html">Applets</a>
+        <a href="database.html">Databases</a>
+        <a href="repos.html">Repos</a>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <section class="page-intro">
+        <p class="eyebrow">Export library</p>
+        <h1>Knowledge assets</h1>
+        <p>Export-safe entry points for the paper companion. Browser links point to files carried inside this static site export.</p>
+      </section>
+
+      <section class="resource-list" aria-label="Knowledge assets">
+        <article class="resource-panel" id="knowledge-base">
+          <div>
+            <p class="label">JupyterBook</p>
+            <h2>Knowledge base</h2>
+            <p>Markdown-first book source decomposing the paper into context, datasets, directional filtrations, descriptor models, results, and applet mappings.</p>
+          </div>
+          <dl>
+            <div><dt>Open export</dt><dd><a href="knowledge-base/index.html">knowledge-base/index.html</a></dd></div>
+            <div><dt>Repository path</dt><dd><code>paper-explorer/knowledge-base/</code></dd></div>
+            <div><dt>Build command</dt><dd><code>./paper-explorer/scripts/validate-book.sh</code></dd></div>
+            <div><dt>HTML output</dt><dd><code>paper-explorer/knowledge-base/_build/html/index.html</code></dd></div>
+          </dl>
+        </article>
+
+        <article class="resource-panel" id="obsidian">
+          <div>
+            <p class="label">Obsidian</p>
+            <h2>Knowledge graph vault</h2>
+            <p>Linked Markdown notes for authors, institutions, datasets, methods, descriptors, results, and repository provenance.</p>
+          </div>
+          <dl>
+            <div><dt>Open export</dt><dd><a href="obsidian-vault/Paper%20-%20Direction-aware%20topological%20descriptors.md">Paper note</a></dd></div>
+            <div><dt>Repository path</dt><dd><code>paper-explorer/obsidian-vault/</code></dd></div>
+            <div><dt>Main note</dt><dd><code>Paper - Direction-aware topological descriptors.md</code></dd></div>
+            <div><dt>Graph mode</dt><dd>Open the folder as an Obsidian vault.</dd></div>
+          </dl>
+        </article>
+
+        <article class="resource-panel" id="paper-source">
+          <div>
+            <p class="label">Paper source</p>
+            <h2>arXiv source bundle</h2>
+            <p>The original LaTeX bundle is kept as a read-only input for the explorer content, figures, references, and manuscript claims.</p>
+          </div>
+          <dl>
+            <div><dt>Repository path</dt><dd><code>arXiv-2604.08105v1/</code></dd></div>
+            <div><dt>Manuscript</dt><dd><code>main.tex</code></dd></div>
+            <div><dt>Supplement</dt><dd><code>supplement.tex</code></dd></div>
+          </dl>
+        </article>
+
+        <article class="resource-panel" id="inventory">
+          <div>
+            <p class="label">Generated data</p>
+            <h2>Exported manifests</h2>
+            <p>Static JSON and JavaScript inventories are bundled inside this site so the database and repository pages work after export.</p>
+          </div>
+          <dl>
+            <div><dt>Repository manifest</dt><dd><a href="data/external-repo-manifest.json">data/external-repo-manifest.json</a></dd></div>
+            <div><dt>Browser bundle</dt><dd><a href="generated/external-repo-manifest.js">generated/external-repo-manifest.js</a></dd></div>
+            <div><dt>External repo</dt><dd><a href="https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials" target="_blank" rel="noreferrer">GitHub source</a></dd></div>
+          </dl>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

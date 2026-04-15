@@ -67,3 +67,8 @@
   - missing referenced structure paths.
 - Updated the database browser to show target means/ranges, axis chips, structure counts, and missing-reference warnings for each CSV.
 - Verified the updated database browser with `agent-browser`; CSV statistics rendered and no browser error overlay was present.
+- Fixed export-breaking browser links from the static site to repository-only Markdown sources.
+  - Added `paper-explorer/site/library.html` as the export-safe entry point for the JupyterBook source, Obsidian vault, paper bundle, and generated manifests.
+  - Added `paper-explorer/scripts/sync-site-export-assets.mjs` to copy the built JupyterBook HTML and Obsidian vault into the static site export.
+  - Repointed landing-page knowledge-base and vault anchors to files inside `paper-explorer/site/`.
+  - Added `paper-explorer/scripts/check-site-export-links.mjs` to fail if local `href` or `src` targets escape `paper-explorer/site/` or point at missing files.

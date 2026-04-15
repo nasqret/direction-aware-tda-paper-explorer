@@ -23,6 +23,7 @@ Last updated: 2026-04-15
 | Database browser | Complete | Dataset cards, performance table filters, repo/data availability panel |
 | Repository collection | Complete | Manifest for code/data repository and future related repositories |
 | External repo inventory | Complete | Shallow clone indexed; CSV schemas, row counts, target statistics, hashes, scripts, and LFS pointer status generated |
+| Static export links | Complete | Site links resolve inside `paper-explorer/site/`; exported JupyterBook and Obsidian snapshots are copied into the site |
 | Full voxel payload | Pending | Optional `git lfs pull`; needed only for local voxel previews and `.npy` slice applets |
 | Verification | Complete | Static file checks, JupyterBook config check, browser render check |
 
