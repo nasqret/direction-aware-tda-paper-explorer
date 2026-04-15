@@ -6,6 +6,7 @@
     <title>Database Browser | Direction-Aware TDA</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
+    <script src="generated/external-repo-manifest.js" defer></script>
     <script src="explorer.js" defer></script>
   </head>
   <body data-page="database">
@@ -28,6 +29,15 @@
 
       <section class="content-section flush">
         <div id="dataset-grid" class="dataset-grid"></div>
+      </section>
+
+      <section class="content-section flush">
+        <div class="section-heading">
+          <p class="label">Local clone</p>
+          <h2>External repository inventory</h2>
+        </div>
+        <div id="external-repo-summary" class="inventory-strip"></div>
+        <div id="database-files" class="database-file-grid"></div>
       </section>
 
       <section class="browser-panel">

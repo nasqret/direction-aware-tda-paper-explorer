@@ -15,7 +15,12 @@ These applets are intentionally small and deterministic. They should be read as 
 
 ## Database Browser
 
-The browser begins with the paper-level dataset manifest:
+The browser includes two layers:
+
+- paper-level dataset and result metadata extracted from the manuscript;
+- generated repository inventory from the cloned code/data repository.
+
+The paper-level dataset manifest records:
 
 - dataset name;
 - structure count when reported;
@@ -24,16 +29,17 @@ The browser begins with the paper-level dataset manifest:
 - mechanical target;
 - known result rows.
 
-Later, when the external repository is available, the browser should add:
+The generated external inventory records:
 
 - file inventory;
-- sample counts by split;
+- CSV row counts;
 - descriptor dimensions;
-- checksum and provenance fields;
-- preview slices for voxelized `.npy` structures;
-- links from each database row to the relevant book and Obsidian notes.
+- SHA-256 checksums;
+- script/workflow files;
+- Git LFS status for voxelized `.npy` structures.
+
+Preview slices for voxelized arrays require materialized LFS payloads. In the current clone, structure files are pointers until `git lfs pull` is run inside the external repository.
 
 ## Repository Collection
 
 The first repository manifest contains the code/data repository stated in the manuscript. Additional repositories can be added as related work or implementation dependencies are identified.
-

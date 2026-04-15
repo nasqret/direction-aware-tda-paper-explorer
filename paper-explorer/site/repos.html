@@ -6,6 +6,7 @@
     <title>Repository Collection | Direction-Aware TDA</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
+    <script src="generated/external-repo-manifest.js" defer></script>
     <script src="explorer.js" defer></script>
   </head>
   <body data-page="repos">
@@ -28,6 +29,14 @@
 
       <section class="repo-section">
         <div id="repo-list" class="repo-list"></div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="label">Cloned repository</p>
+          <h2>Local source inventory</h2>
+        </div>
+        <div id="repo-inventory" class="inventory-detail"></div>
       </section>
 
       <section class="content-section">

@@ -30,6 +30,7 @@ The first version uses small JSON files extracted from the paper:
 - `datasets.json` - dataset descriptions and reported sizes/regimes.
 - `results.json` - cross-validated performance table values.
 - `repos.json` - paper-related code/data repositories.
+- `external-repo-manifest.json` - generated inventory of the cloned code/data repository.
 
 When the external dataset repository is available locally, add a generation step that creates:
 
@@ -37,6 +38,8 @@ When the external dataset repository is available locally, add a generation step
 - descriptor schema summaries;
 - sample previews;
 - checksum/index data for reproducibility.
+
+That generation step is implemented as `paper-explorer/scripts/build-external-repo-manifest.mjs`. It writes static JSON plus a `generated/external-repo-manifest.js` browser bundle so the site can render inventory data even when opened without a framework.
 
 ## Applet Strategy
 
@@ -49,3 +52,6 @@ The initial applets are pedagogical and deterministic:
 
 These are not replacements for the paper computations. They expose mechanisms and point to the source repository for full reproduction.
 
+## Current External Repository Status
+
+The source repository is cloned locally under `paper-explorer/repos/direction-aware-tda-for-porous-materials` and ignored by Git. Generated manifests are tracked instead. Structure `.npy` files are Git LFS pointers until `git lfs pull` is run inside the external clone.

@@ -517,6 +517,97 @@ input[type="range"] {
   padding: 18px;
 }
 
+.inventory-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: 18px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.inventory-stat {
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px;
+  background: #e8e1d2;
+}
+
+.inventory-stat strong {
+  color: var(--green);
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 0.95;
+}
+
+.inventory-stat span {
+  color: #3f433f;
+  font-weight: 720;
+}
+
+.database-file-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.database-file {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.database-file code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.database-file dl,
+.inventory-detail dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.database-file dt,
+.inventory-detail dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.database-file dd,
+.inventory-detail dd {
+  margin: 3px 0 0;
+  font-weight: 760;
+  overflow-wrap: anywhere;
+}
+
+.inventory-detail {
+  display: grid;
+  gap: 18px;
+  max-width: 1040px;
+}
+
+.inventory-detail > div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.inventory-detail ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
 .dataset-card dl {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -635,7 +726,9 @@ td {
   }
 
   .component-list,
-  .results-strip {
+  .results-strip,
+  .inventory-strip,
+  .database-file-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -675,7 +768,9 @@ td {
   .link-grid,
   .dataset-grid,
   .component-list,
-  .browser-toolbar {
+  .browser-toolbar,
+  .database-file dl,
+  .inventory-detail dl {
     grid-template-columns: 1fr;
   }
 
@@ -695,4 +790,3 @@ td {
     min-height: 280px;
   }
 }
-

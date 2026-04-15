@@ -35,3 +35,26 @@
   - JSON manifests validate with `python3 -m json.tool`.
   - `./paper-explorer/scripts/validate-book.sh` passed and generated HTML under `paper-explorer/knowledge-base/_build/html/`.
   - Browser smoke test passed for `index.html`, `applets.html`, `database.html`, and `repos.html` via `agent-browser`.
+- Committed the initial scaffold as `1e72ef0` (`Bootstrap paper explorer scaffold`).
+- Cloned the paper repository into ignored local path `paper-explorer/repos/direction-aware-tda-for-porous-materials`.
+  - HEAD: `f62d7226920f610fc6b7ac69f05bd6c258d1271b`.
+  - Clone is shallow.
+  - Local size after clone without LFS payload: approximately 194 MB.
+- Added `paper-explorer/scripts/build-external-repo-manifest.mjs`.
+  - Generated `paper-explorer/site/data/external-repo-manifest.json`.
+  - Generated `paper-explorer/site/generated/external-repo-manifest.js`.
+  - Generated `docs/external-repo-inventory.md`.
+- External repository inventory:
+  - 8682 non-git files.
+  - 8 CSV database files.
+  - 42 script/workflow files.
+  - 8626 `.npy` structure files, all currently Git LFS pointers.
+  - Directional CSVs have 646 columns: 3 metadata, 343 ECP, 300 PH cone.
+  - Undirectional CSVs have 333 columns: 3 metadata, 30 ECP, 300 PH cone.
+  - Missing expected undirectional RTP subset files: `database/undirectional/rtp/database_xy_both.csv` and `database/undirectional/rtp/database_xz_both.csv`.
+- Updated the database and repo pages to display the generated external repository inventory.
+- Re-verified:
+  - manifest script syntax passed;
+  - generated manifest JSON passed;
+  - JupyterBook strict build passed;
+  - browser checks passed for updated database and repository pages.

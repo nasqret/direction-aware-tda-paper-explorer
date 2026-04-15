@@ -358,6 +358,62 @@ function renderDatasets() {
   `).join("");
 }
 
+function bytesLabel(bytes) {
+  if (!Number.isFinite(bytes)) return "n/a";
+  const units = ["B", "KB", "MB", "GB"];
+  let value = bytes;
+  let index = 0;
+  while (value >= 1024 && index < units.length - 1) {
+    value /= 1024;
+    index += 1;
+  }
+  return `${value.toFixed(value >= 10 || index === 0 ? 0 : 1)} ${units[index]}`;
+}
+
+function renderExternalDatabaseInventory() {
+  const manifest = window.ExternalRepoManifest;
+  const summary = $("#external-repo-summary");
+  const files = $("#database-files");
+  if (!manifest || !summary || !files) return;
+
+  summary.innerHTML = [
+    ["CSV databases", manifest.inventory.databaseCsvFiles],
+    ["Structure .npy files", manifest.structures.totalNpyFiles],
+    ["LFS pointer files", manifest.structures.lfsPointers],
+    ["Script files", manifest.inventory.scriptFiles]
+  ].map(([label, value]) => `
+    <div class="inventory-stat">
+      <strong>${value}</strong>
+      <span>${label}</span>
+    </div>
+  `).join("");
+
+  const expectedMissing = manifest.expectedDatabaseStatus.filter((item) => !item.exists);
+  const missingNote = expectedMissing.length
+    ? `<p><strong>Missing expected paths:</strong> ${expectedMissing.map((item) => `<code>${item.path}</code>`).join(", ")}</p>`
+    : "";
+
+  files.innerHTML = [
+    ...manifest.databases.map((db) => `
+      <article class="database-file">
+        <div>
+          <p class="label">${db.path.includes("/directional/") ? "directional" : "undirectional"}</p>
+          <code>${db.path}</code>
+        </div>
+        <dl>
+          <div><dt>Rows</dt><dd>${db.rows}</dd></div>
+          <div><dt>Columns</dt><dd>${db.columns}</dd></div>
+          <div><dt>Size</dt><dd>${bytesLabel(db.bytes)}</dd></div>
+          <div><dt>ECP</dt><dd>${db.featureGroups.ecp}</dd></div>
+          <div><dt>PH cone</dt><dd>${db.featureGroups.phCone}</dd></div>
+          <div><dt>SHA-256</dt><dd>${db.sha256.slice(0, 12)}...</dd></div>
+        </dl>
+      </article>
+    `),
+    missingNote ? `<article class="database-file">${missingNote}</article>` : ""
+  ].join("");
+}
+
 function setupResultsTable() {
   const datasetSelect = $("#table-dataset");
   const methodSelect = $("#table-method");
@@ -416,6 +472,35 @@ function renderRepos() {
   `).join("");
 }
 
+function renderRepoInventory() {
+  const manifest = window.ExternalRepoManifest;
+  const target = $("#repo-inventory");
+  if (!manifest || !target) return;
+  target.innerHTML = `
+    <div>
+      <dl>
+        <div><dt>Local path</dt><dd>${manifest.repository.localPath}</dd></div>
+        <div><dt>HEAD</dt><dd>${manifest.repository.head.slice(0, 12)}</dd></div>
+        <div><dt>Clone</dt><dd>${manifest.repository.shallow ? "shallow" : "full"}</dd></div>
+        <div><dt>Files</dt><dd>${manifest.inventory.totalFiles}</dd></div>
+        <div><dt>CSV DBs</dt><dd>${manifest.inventory.databaseCsvFiles}</dd></div>
+        <div><dt>Working tree</dt><dd>${manifest.repository.workingTreeStatus}</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h3>Structure payload status</h3>
+      <dl>
+        ${manifest.structures.byDataset.map((group) => `
+          <div><dt>${group.dataset}</dt><dd>${group.files} files, ${group.lfsPointers} LFS pointers</dd></div>
+        `).join("")}
+      </dl>
+      <ul>
+        ${manifest.notes.map((note) => `<li>${note}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
 function init() {
   const page = document.body.dataset.page;
   if (page === "home") renderHome();
@@ -426,10 +511,13 @@ function init() {
   }
   if (page === "database") {
     renderDatasets();
+    renderExternalDatabaseInventory();
     setupResultsTable();
   }
-  if (page === "repos") renderRepos();
+  if (page === "repos") {
+    renderRepos();
+    renderRepoInventory();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", init);
-
