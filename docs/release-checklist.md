@@ -41,6 +41,8 @@ The workflow:
 
 The Pages source must be configured as GitHub Actions for the remote repository.
 
+The validation workflow intentionally does not require byte-identical generated Sphinx files after a CI rebuild. Sphinx static asset cache keys can vary across environments; the release invariant is that the export rebuilds cleanly and passes the local-link check.
+
 ## Manual Browser Smoke Test
 
 Serve the export root:

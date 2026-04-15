@@ -42,8 +42,6 @@ jobs:
         run: pip install -r paper-explorer/requirements-book.txt
       - name: Validate export
         run: ./paper-explorer/scripts/prepare-site-export.sh
-      - name: Ensure synced export is committed
-        run: git diff --exit-code -- paper-explorer/site/knowledge-base paper-explorer/site/obsidian-vault
       - name: Upload static site artifact
         uses: actions/upload-artifact@v4
         with:

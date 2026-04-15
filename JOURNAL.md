@@ -80,3 +80,4 @@
   - documented the release procedure in `docs/release-checklist.md`.
 - Added GitHub Pages deployment workflow for remote publication from `paper-explorer/site/`.
 - Pinned the full Sphinx/JupyterBook build stack after the first remote validation run showed transitive dependency drift in generated static files.
+- Relaxed CI validation to require a clean rebuild and export link check, not byte-identical generated Sphinx cache artifacts.
