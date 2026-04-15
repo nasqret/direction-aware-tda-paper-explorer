@@ -15,6 +15,9 @@ node_modules/
 dist/
 .vite/
 
+# Release artifacts
+.exports/
+
 # Local env
 .env
 .env.*
@@ -26,4 +29,3 @@ paper-explorer/data/external/
 paper-explorer/repos/*/
 !paper-explorer/repos/README.md
 !paper-explorer/repos/repos.json
-

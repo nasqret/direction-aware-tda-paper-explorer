@@ -72,3 +72,9 @@
   - Added `paper-explorer/scripts/sync-site-export-assets.mjs` to copy the built JupyterBook HTML and Obsidian vault into the static site export.
   - Repointed landing-page knowledge-base and vault anchors to files inside `paper-explorer/site/`.
   - Added `paper-explorer/scripts/check-site-export-links.mjs` to fail if local `href` or `src` targets escape `paper-explorer/site/` or point at missing files.
+- Added release hardening:
+  - pinned JupyterBook build requirements in `paper-explorer/requirements-book.txt`;
+  - added `paper-explorer/scripts/prepare-site-export.sh` as the one-command local release gate;
+  - added `paper-explorer/scripts/package-site-export.sh` for `.exports/` archives;
+  - expanded GitHub Actions validation to build the book, sync the site export, check export links, and upload `paper-explorer/site` as an artifact;
+  - documented the release procedure in `docs/release-checklist.md`.

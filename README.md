@@ -64,6 +64,20 @@ Before exporting `paper-explorer/site/` as a standalone static folder, check tha
 node paper-explorer/scripts/check-site-export-links.mjs
 ```
 
+For the full release gate, run:
+
+```sh
+./paper-explorer/scripts/prepare-site-export.sh
+```
+
+To create a distributable archive under `.exports/`, run:
+
+```sh
+./paper-explorer/scripts/package-site-export.sh
+```
+
+See [`docs/release-checklist.md`](docs/release-checklist.md) for the release procedure and known limits.
+
 ## Source Links
 
 - Paper arXiv page: https://arxiv.org/abs/2604.08105

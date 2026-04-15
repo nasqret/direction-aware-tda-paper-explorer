@@ -24,6 +24,7 @@ Last updated: 2026-04-15
 | Repository collection | Complete | Manifest for code/data repository and future related repositories |
 | External repo inventory | Complete | Shallow clone indexed; CSV schemas, row counts, target statistics, hashes, scripts, and LFS pointer status generated |
 | Static export links | Complete | Site links resolve inside `paper-explorer/site/`; exported JupyterBook and Obsidian snapshots are copied into the site |
+| Release automation | Complete | Single local export gate, package script, GitHub Actions validation, and release checklist |
 | Full voxel payload | Pending | Optional `git lfs pull`; needed only for local voxel previews and `.npy` slice applets |
 | Verification | Complete | Static file checks, JupyterBook config check, browser render check |
 
@@ -53,6 +54,7 @@ Last updated: 2026-04-15
 5. **Release pass**
    - Add deployment target, preview URL, CI build checks, and polished copy.
    - Validation: clean repo status except intentional generated build artifacts.
+   - Status: partial complete. Local export packaging and CI validation are in place; public deployment target and preview URL remain unset.
 
 ## Open Questions
 
