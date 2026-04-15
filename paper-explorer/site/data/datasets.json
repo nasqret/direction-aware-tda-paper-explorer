@@ -1,0 +1,56 @@
+[
+  {
+    "name": "RTP",
+    "fullName": "Random Trigonometric Phase",
+    "structures": 500,
+    "grid": "80 x 80 x 80",
+    "regime": "controlled anisotropy",
+    "description": "Periodic thresholded trigonometric random fields with Fourier-space anisotropy scaling.",
+    "families": ["RTPxy", "RTPxz", "RTPxyz"]
+  },
+  {
+    "name": "RTPxy",
+    "structures": 500,
+    "samples": 1000,
+    "sigmaK": 0.11,
+    "sigmaL": 0.21,
+    "regime": "weak anisotropy",
+    "description": "RTP structures evaluated along x and y directions."
+  },
+  {
+    "name": "RTPxz",
+    "structures": 500,
+    "samples": 1000,
+    "sigmaK": 0.40,
+    "sigmaL": 1.89,
+    "regime": "strong anisotropy",
+    "description": "RTP structures evaluated along mechanically easy x and hard z directions."
+  },
+  {
+    "name": "RTPxyz",
+    "structures": 500,
+    "samples": 1500,
+    "sigmaK": 0.38,
+    "sigmaL": 1.77,
+    "regime": "mixed axes",
+    "description": "Supplementary aggregate over x, y, and z directions."
+  },
+  {
+    "name": "TD",
+    "fullName": "Topologically Diverse",
+    "structures": 2375,
+    "sigmaK": 0.14,
+    "sigmaL": 1.80,
+    "regime": "statistically isotropic",
+    "description": "Voronoi, zeolitic, diamond-like, cubic-strut, and spline-based porous structures."
+  },
+  {
+    "name": "ATTD",
+    "fullName": "Anisotropic Transformed Topologically Diverse",
+    "sigmaK": 0.20,
+    "sigmaL": 1.74,
+    "regime": "moderate anisotropy",
+    "description": "TD structures elongated along z to introduce a preferred direction."
+  }
+]
+

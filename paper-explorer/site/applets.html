@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Applets | Direction-Aware TDA</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <script src="explorer.js" defer></script>
+  </head>
+  <body data-page="applets">
+    <header class="site-header">
+      <a class="brand" href="index.html">Direction-Aware TDA</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Paper</a>
+        <a href="applets.html" aria-current="page">Applets</a>
+        <a href="database.html">Databases</a>
+        <a href="repos.html">Repos</a>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <section class="page-intro">
+        <p class="eyebrow">Interactive mechanisms</p>
+        <h1>Applet collection</h1>
+        <p>Small deterministic views of the descriptor behavior reported in the paper.</p>
+      </section>
+
+      <section class="applet-layout" id="performance">
+        <div class="applet-copy">
+          <p class="label">Reported metrics</p>
+          <h2>Directional gain</h2>
+          <div class="control-grid">
+            <label>
+              Dataset
+              <select id="metric-dataset"></select>
+            </label>
+            <label>
+              Descriptor
+              <select id="metric-method"></select>
+            </label>
+          </div>
+          <div id="metric-readout" class="metric-readout"></div>
+        </div>
+        <div class="applet-surface">
+          <canvas id="gain-canvas" width="640" height="360" aria-label="Directional gain chart"></canvas>
+        </div>
+      </section>
+
+      <section class="applet-layout" id="cone">
+        <div class="applet-copy">
+          <p class="label">Filtration proxy</p>
+          <h2>Cone occupancy</h2>
+          <div class="control-grid">
+            <label>
+              Axis
+              <select id="cone-axis">
+                <option value="vertical">z-axis proxy</option>
+                <option value="horizontal">x-axis proxy</option>
+              </select>
+            </label>
+            <label>
+              Radius
+              <input id="cone-radius" type="range" min="1" max="6" value="3">
+            </label>
+            <label>
+              Height
+              <input id="cone-height" type="range" min="2" max="7" value="5">
+            </label>
+          </div>
+          <div id="cone-readout" class="metric-readout"></div>
+        </div>
+        <div class="applet-surface">
+          <canvas id="cone-canvas" width="520" height="520" aria-label="Cone filtration grid"></canvas>
+        </div>
+      </section>
+
+      <section class="applet-layout" id="rtp">
+        <div class="applet-copy">
+          <p class="label">RTP proxy</p>
+          <h2>Thresholded trigonometric phase</h2>
+          <div class="control-grid">
+            <label>
+              Modes
+              <input id="rtp-modes" type="range" min="6" max="30" value="18">
+            </label>
+            <label>
+              Threshold
+              <input id="rtp-threshold" type="range" min="-35" max="35" value="0">
+            </label>
+            <label>
+              z scaling
+              <input id="rtp-anisotropy" type="range" min="20" max="120" value="35">
+            </label>
+          </div>
+          <div id="rtp-readout" class="metric-readout"></div>
+        </div>
+        <div class="applet-surface">
+          <canvas id="rtp-canvas" width="520" height="520" aria-label="RTP field slice"></canvas>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Direction-Aware TDA | Paper Explorer</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <script src="explorer.js" defer></script>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <a class="brand" href="index.html">Direction-Aware TDA</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Paper</a>
+        <a href="applets.html">Applets</a>
+        <a href="database.html">Databases</a>
+        <a href="repos.html">Repos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero-media" src="assets/render_rtp_420.png" alt="Rendered porous RTP material structure">
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">arXiv:2604.08105v1</p>
+          <h1>Direction-Aware TDA</h1>
+          <p class="hero-title">Topological descriptors for Young's modulus prediction in porous materials.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="applets.html">Explore applets</a>
+            <a class="button secondary" href="../knowledge-base/intro.md">Knowledge base</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-band">
+        <div class="summary-grid">
+          <div>
+            <p class="label">Main claim</p>
+            <h2>Loading direction belongs inside the filtration.</h2>
+          </div>
+          <p>Classical TDA descriptors can erase the axis that controls anisotropic stiffness. This companion connects the manuscript, figures, datasets, methods, performance tables, and interactive explanations in one workspace.</p>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <div class="section-copy">
+          <p class="label">Mechanism</p>
+          <h2>From porous geometry to directional topology</h2>
+          <p>The paper introduces cone-based scalar filtrations and principal-component multifiltrations. These encode whether local material organization aligns with the compression direction before PH and ECP descriptors are vectorized.</p>
+          <a class="text-link" href="applets.html#cone">Open cone filtration applet</a>
+        </div>
+        <figure class="wide-figure">
+          <img src="assets/TDA_directional_horizontal_new.png" alt="Direction-aware topological filtration schematic">
+          <figcaption>Cone and principal-component constructions from the manuscript.</figcaption>
+        </figure>
+      </section>
+
+      <section class="results-strip" aria-label="Key result">
+        <div class="metric-lockup">
+          <span class="metric-value">0.978</span>
+          <span class="metric-label">Directional PH+ECP R2 on RTPxz</span>
+        </div>
+        <div class="metric-lockup">
+          <span class="metric-value">0.754</span>
+          <span class="metric-label">Non-directional PH+ECP R2 on RTPxz</span>
+        </div>
+        <div class="metric-lockup">
+          <span class="metric-value">0.985</span>
+          <span class="metric-label">Voxel CNN R2 on RTPxz</span>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="label">Authors</p>
+          <h2>People and institutions</h2>
+        </div>
+        <div id="author-list" class="link-grid"></div>
+        <div id="institution-list" class="institution-list"></div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="label">Paper map</p>
+          <h2>Explorer components</h2>
+        </div>
+        <div class="component-list">
+          <a href="../knowledge-base/intro.md">
+            <strong>JupyterBook</strong>
+            <span>Context, datasets, filtrations, models, results, references.</span>
+          </a>
+          <a href="../obsidian-vault/Paper%20-%20Direction-aware%20topological%20descriptors.md">
+            <strong>Obsidian vault</strong>
+            <span>Concept graph linking authors, datasets, methods, models, and claims.</span>
+          </a>
+          <a href="database.html">
+            <strong>Database browser</strong>
+            <span>Dataset metadata and performance table inspection.</span>
+          </a>
+          <a href="repos.html">
+            <strong>Repository collection</strong>
+            <span>Code and data source links for reproducibility.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

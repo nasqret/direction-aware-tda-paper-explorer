@@ -1,0 +1,53 @@
+{
+  "title": "Direction-Aware TDA Paper Explorer",
+  "source": "../../arXiv-2604.08105v1",
+  "audience": [
+    "TDA researchers",
+    "materials informatics researchers",
+    "graduate students",
+    "readers reproducing the paper"
+  ],
+  "outputs": [
+    "JupyterBook HTML",
+    "Obsidian vault",
+    "static landing page",
+    "interactive applets",
+    "database browser"
+  ],
+  "chapter_map": [
+    {
+      "file": "intro.md",
+      "purpose": "Paper overview and navigation"
+    },
+    {
+      "file": "chapters/01-context.md",
+      "purpose": "Why direction-aware topology matters for porous materials"
+    },
+    {
+      "file": "chapters/02-datasets.md",
+      "purpose": "RTP, TD, ATTD, anisotropy measures, and FFTMAD setup"
+    },
+    {
+      "file": "chapters/03-directional-filtrations.md",
+      "purpose": "Cone filtration and PC1 multifiltration"
+    },
+    {
+      "file": "chapters/04-descriptors-models.md",
+      "purpose": "PH, ECP, vectorization, CatBoost, CNN"
+    },
+    {
+      "file": "chapters/05-results.md",
+      "purpose": "Performance tables and interpretation"
+    },
+    {
+      "file": "chapters/06-applets-and-databases.md",
+      "purpose": "How the interactive site and database browser map onto the paper"
+    }
+  ],
+  "notebook_policy": "Markdown-first. Add executable notebooks when real data are available locally.",
+  "validation": {
+    "script": "../scripts/validate-book.sh",
+    "strict_html": true
+  }
+}
+

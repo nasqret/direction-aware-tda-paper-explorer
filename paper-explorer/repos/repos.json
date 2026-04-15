@@ -1,0 +1,28 @@
+[
+  {
+    "name": "direction-aware-tda-for-porous-materials",
+    "owner": "dioscuri-tda",
+    "url": "https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials",
+    "role": "Primary code and data repository stated in the manuscript",
+    "expectedContents": [
+      "directional and non-directional descriptor code",
+      "CatBoost and CNN training scripts",
+      "voxelized .npy structures",
+      "FFTMAD-computed Young's modulus values",
+      "vectorized PH, ECP, and PH+ECP descriptors",
+      "figure reproduction scripts"
+    ]
+  },
+  {
+    "name": "dioscuri-tda organization",
+    "owner": "dioscuri-tda",
+    "url": "https://github.com/dioscuri-tda/",
+    "role": "Related software ecosystem for Dioscuri TDA methods",
+    "expectedContents": [
+      "Euler characteristic tools",
+      "Ball Mapper tools",
+      "topological data analysis utilities"
+    ]
+  }
+]
+

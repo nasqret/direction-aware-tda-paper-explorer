@@ -1,0 +1,11 @@
+format: jb-book
+root: intro
+chapters:
+  - file: chapters/01-context
+  - file: chapters/02-datasets
+  - file: chapters/03-directional-filtrations
+  - file: chapters/04-descriptors-models
+  - file: chapters/05-results
+  - file: chapters/06-applets-and-databases
+  - file: references
+

@@ -1,0 +1,18 @@
+[
+  {"dataset":"RTPxz","sigmaK":0.40,"sigmaL":1.89,"cnnR2":0.985,"cnnMae":1.62,"method":"PH","nonDirectionalR2":0.463,"nonDirectionalMae":9.42,"directionalR2":0.954,"directionalMae":2.65},
+  {"dataset":"RTPxz","sigmaK":0.40,"sigmaL":1.89,"cnnR2":0.985,"cnnMae":1.62,"method":"ECP","nonDirectionalR2":0.616,"nonDirectionalMae":12.06,"directionalR2":0.978,"directionalMae":1.85},
+  {"dataset":"RTPxz","sigmaK":0.40,"sigmaL":1.89,"cnnR2":0.985,"cnnMae":1.62,"method":"PH+ECP","nonDirectionalR2":0.754,"nonDirectionalMae":7.05,"directionalR2":0.978,"directionalMae":1.86},
+  {"dataset":"RTPxy","sigmaK":0.11,"sigmaL":0.21,"cnnR2":0.979,"cnnMae":1.02,"method":"PH","nonDirectionalR2":0.878,"nonDirectionalMae":2.42,"directionalR2":0.873,"directionalMae":2.45},
+  {"dataset":"RTPxy","sigmaK":0.11,"sigmaL":0.21,"cnnR2":0.979,"cnnMae":1.02,"method":"ECP","nonDirectionalR2":0.925,"nonDirectionalMae":1.86,"directionalR2":0.940,"directionalMae":1.66},
+  {"dataset":"RTPxy","sigmaK":0.11,"sigmaL":0.21,"cnnR2":0.979,"cnnMae":1.02,"method":"PH+ECP","nonDirectionalR2":0.916,"nonDirectionalMae":1.98,"directionalR2":0.938,"directionalMae":1.69},
+  {"dataset":"TD","sigmaK":0.14,"sigmaL":1.80,"cnnR2":0.976,"cnnMae":0.62,"method":"PH","nonDirectionalR2":0.596,"nonDirectionalMae":2.44,"directionalR2":0.665,"directionalMae":2.18},
+  {"dataset":"TD","sigmaK":0.14,"sigmaL":1.80,"cnnR2":0.976,"cnnMae":0.62,"method":"ECP","nonDirectionalR2":0.815,"nonDirectionalMae":1.48,"directionalR2":0.818,"directionalMae":1.66},
+  {"dataset":"TD","sigmaK":0.14,"sigmaL":1.80,"cnnR2":0.976,"cnnMae":0.62,"method":"PH+ECP","nonDirectionalR2":0.822,"nonDirectionalMae":1.46,"directionalR2":0.836,"directionalMae":1.53},
+  {"dataset":"ATTD","sigmaK":0.20,"sigmaL":1.74,"cnnR2":0.894,"cnnMae":0.34,"method":"PH","nonDirectionalR2":0.536,"nonDirectionalMae":3.78,"directionalR2":0.759,"directionalMae":2.53},
+  {"dataset":"ATTD","sigmaK":0.20,"sigmaL":1.74,"cnnR2":0.894,"cnnMae":0.34,"method":"ECP","nonDirectionalR2":0.653,"nonDirectionalMae":3.36,"directionalR2":0.815,"directionalMae":2.13},
+  {"dataset":"ATTD","sigmaK":0.20,"sigmaL":1.74,"cnnR2":0.894,"cnnMae":0.34,"method":"PH+ECP","nonDirectionalR2":0.643,"nonDirectionalMae":3.33,"directionalR2":0.825,"directionalMae":2.06},
+  {"dataset":"RTPxyz","sigmaK":0.38,"sigmaL":1.77,"cnnR2":0.990,"cnnMae":1.88,"method":"PH","nonDirectionalR2":0.509,"nonDirectionalMae":13.26,"directionalR2":0.548,"directionalMae":13.61},
+  {"dataset":"RTPxyz","sigmaK":0.38,"sigmaL":1.77,"cnnR2":0.990,"cnnMae":1.88,"method":"ECP","nonDirectionalR2":0.493,"nonDirectionalMae":15.11,"directionalR2":0.974,"directionalMae":3.09},
+  {"dataset":"RTPxyz","sigmaK":0.38,"sigmaL":1.77,"cnnR2":0.990,"cnnMae":1.88,"method":"PH+ECP","nonDirectionalR2":0.511,"nonDirectionalMae":9.94,"directionalR2":0.974,"directionalMae":2.89}
+]
+

@@ -1,0 +1,37 @@
+# Paper Explorer Journal
+
+## 2026-04-15
+
+- Inspected `arXiv-2604.08105v1` and confirmed the paper source bundle contains `main.tex`, `supplement.tex`, `references.bib`, class/style files, and manuscript figures.
+- Extracted paper metadata:
+  - Title: "Direction-aware topological descriptors for Young's modulus prediction in porous materials".
+  - Authors: Rafał Topolnicki, Michał Bogdan, Jakub Malinowski, Bartosz Naskręcki, Maciej Harańczyk, Paweł Dłotko.
+  - Main technical axis: direction-aware filtrations for topological descriptors used to predict direction-dependent Young's modulus in porous materials.
+  - Datasets: RTP, RTPxy, RTPxz, RTPxyz, TD, ATTD.
+  - Methods: cone-based filtration, principal-component multifiltration, persistent homology, Euler characteristic profiles, CatBoost, DenseNet-121 CNN baseline, FFTMAD homogenization.
+  - Associated code/data repository: `https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials`.
+- Created a componentized scaffold plan for:
+  - JupyterBook knowledge base.
+  - Obsidian vault knowledge graph.
+  - Landing page.
+  - Interactive applets.
+  - Database browser.
+  - Repository collection.
+- Began implementing static-first assets so the project is usable before adding a framework or external database clone.
+- Added repository contracts: `README.md`, `.gitignore`, `PLAN.md`, `JOURNAL.md`, `docs/architecture.md`, and `docs/content-inventory.md`.
+- Added JupyterBook source under `paper-explorer/knowledge-base/` with strict config, TOC, chapters, figures, and a validation script.
+- Generated a cited-key-only `references.bib` for the JupyterBook because the original bundled BibTeX file contains duplicate keys that fail strict Sphinx builds.
+- Added an Obsidian vault under `paper-explorer/obsidian-vault/` with linked notes for paper, concepts, datasets, methods, models, results, authors, institutions, and repository metadata.
+- Added a static browser explorer under `paper-explorer/site/`:
+  - landing page;
+  - applets page;
+  - database browser;
+  - repository collection;
+  - static data manifests.
+- Copied manuscript PNG assets into the site and JupyterBook static directories.
+- Initialized a Git repository on branch `main`.
+- Verification completed:
+  - `node --check paper-explorer/site/explorer.js` passed.
+  - JSON manifests validate with `python3 -m json.tool`.
+  - `./paper-explorer/scripts/validate-book.sh` passed and generated HTML under `paper-explorer/knowledge-base/_build/html/`.
+  - Browser smoke test passed for `index.html`, `applets.html`, `database.html`, and `repos.html` via `agent-browser`.

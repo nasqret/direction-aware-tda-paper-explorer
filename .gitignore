@@ -1,0 +1,29 @@
+# OS/editor noise
+.DS_Store
+*.swp
+*.swo
+
+# Python/JupyterBook
+__pycache__/
+.ipynb_checkpoints/
+.jupyter_cache/
+_build/
+paper-explorer/knowledge-base/_build/
+
+# JavaScript
+node_modules/
+dist/
+.vite/
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Large local data drops
+paper-explorer/data/raw/
+paper-explorer/data/external/
+paper-explorer/repos/*/
+!paper-explorer/repos/README.md
+!paper-explorer/repos/repos.json
+

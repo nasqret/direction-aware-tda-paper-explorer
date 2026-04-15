@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Repository Collection | Direction-Aware TDA</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <script src="explorer.js" defer></script>
+  </head>
+  <body data-page="repos">
+    <header class="site-header">
+      <a class="brand" href="index.html">Direction-Aware TDA</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Paper</a>
+        <a href="applets.html">Applets</a>
+        <a href="database.html">Databases</a>
+        <a href="repos.html" aria-current="page">Repos</a>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <section class="page-intro">
+        <p class="eyebrow">Code and data</p>
+        <h1>Repository collection</h1>
+        <p>External repositories attached to the paper and related TDA tooling.</p>
+      </section>
+
+      <section class="repo-section">
+        <div id="repo-list" class="repo-list"></div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <p class="label">Local policy</p>
+          <h2>How repositories should enter this explorer</h2>
+        </div>
+        <div class="policy-list">
+          <p><strong>External link:</strong> stable for publication pages and citation targets.</p>
+          <p><strong>Local clone:</strong> useful when generating database manifests or preview images.</p>
+          <p><strong>Submodule:</strong> best when an exact external commit must be pinned for releases.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

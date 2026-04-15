@@ -1,0 +1,40 @@
+title: Direction-Aware TDA Paper Explorer
+author: Bartosz Naskręcki and collaborators
+copyright: "2026"
+logo: _static/images/TDA_directional_horizontal_new.png
+
+execute:
+  execute_notebooks: "off"
+
+bibtex_bibfiles:
+  - references.bib
+
+repository:
+  url: https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials
+  branch: main
+
+html:
+  use_repository_button: true
+  use_issues_button: false
+  use_edit_page_button: false
+  home_page_in_navbar: true
+  extra_footer: "Companion knowledge base scaffolded from arXiv-2604.08105v1."
+
+sphinx:
+  config:
+    html_theme_options:
+      navigation_with_keys: true
+    suppress_warnings:
+      - myst.header
+  extra_extensions:
+    - sphinxcontrib.bibtex
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - dollarmath
+    - colon_fence
+    - deflist
+    - html_admonition
+    - html_image
+

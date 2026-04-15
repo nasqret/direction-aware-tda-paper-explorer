@@ -1,0 +1,83 @@
+{
+  "id": "arXiv-2604.08105v1",
+  "title": "Direction-aware topological descriptors for Young's modulus prediction in porous materials",
+  "shortTitle": "Direction-Aware TDA",
+  "sourceFolder": "../../arXiv-2604.08105v1",
+  "arxivUrl": "https://arxiv.org/abs/2604.08105",
+  "codeDataUrl": "https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials",
+  "authors": [
+    {
+      "name": "Rafał Topolnicki",
+      "role": "Corresponding author",
+      "website": "https://dioscuri-tda.org/",
+      "affiliations": [1, 2]
+    },
+    {
+      "name": "Michał Bogdan",
+      "website": "https://dioscuri-tda.org/",
+      "affiliations": [1]
+    },
+    {
+      "name": "Jakub Malinowski",
+      "website": "https://pwr.edu.pl/en/",
+      "affiliations": [3]
+    },
+    {
+      "name": "Bartosz Naskręcki",
+      "website": "https://bnaskrecki.faculty.wmi.amu.edu.pl/",
+      "affiliations": [1, 4]
+    },
+    {
+      "name": "Maciej Harańczyk",
+      "website": "https://materiales.imdea.org/people/maciej-haranczyk/",
+      "affiliations": [5]
+    },
+    {
+      "name": "Paweł Dłotko",
+      "website": "https://dioscuri-tda.org/",
+      "affiliations": [1]
+    }
+  ],
+  "affiliations": [
+    {
+      "id": 1,
+      "name": "Dioscuri Center in Topological Data Analysis, Institute of Mathematics, Polish Academy of Sciences",
+      "address": "ul. Śniadeckich 8, 00-656 Warsaw, Poland",
+      "website": "https://dioscuri-tda.org/"
+    },
+    {
+      "id": 2,
+      "name": "Institute of Experimental Physics, University of Wrocław",
+      "address": "pl. Maxa Borna 9, Wrocław 50-204, Poland",
+      "website": "https://uwr.edu.pl/"
+    },
+    {
+      "id": 3,
+      "name": "Faculty of Pure and Applied Mathematics, Wrocław University of Science and Technology",
+      "address": "ul. Wybrzeże Wyspiańskiego 27, 50-370 Wrocław, Poland",
+      "website": "https://pwr.edu.pl/en/"
+    },
+    {
+      "id": 4,
+      "name": "Faculty of Mathematics and Computer Science, Adam Mickiewicz University",
+      "address": "ul. Uniwersytetu Poznańskiego 4, 61-614 Poznań, Poland",
+      "website": "https://wmi.amu.edu.pl/"
+    },
+    {
+      "id": 5,
+      "name": "IMDEA Materials Institute",
+      "address": "C. Eric Kandel 2, Getafe, 28906 Madrid, Spain",
+      "website": "https://materiales.imdea.org/"
+    }
+  ],
+  "keywords": [
+    "topological data analysis",
+    "persistent homology",
+    "Euler characteristic profiles",
+    "porous materials",
+    "Young's modulus",
+    "anisotropy",
+    "CatBoost",
+    "DenseNet"
+  ]
+}

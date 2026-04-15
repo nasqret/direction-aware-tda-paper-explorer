@@ -1,0 +1,27 @@
+name: Validate JupyterBook
+
+on:
+  push:
+    paths:
+      - "paper-explorer/knowledge-base/**"
+      - "paper-explorer/scripts/validate-book.sh"
+      - ".github/workflows/validate-book.yml"
+  pull_request:
+    paths:
+      - "paper-explorer/knowledge-base/**"
+      - "paper-explorer/scripts/validate-book.sh"
+      - ".github/workflows/validate-book.yml"
+
+jobs:
+  build-book:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install JupyterBook
+        run: pip install jupyter-book sphinxcontrib-bibtex
+      - name: Build
+        run: ./paper-explorer/scripts/validate-book.sh
+

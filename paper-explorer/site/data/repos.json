@@ -1,0 +1,27 @@
+[
+  {
+    "name": "direction-aware-tda-for-porous-materials",
+    "owner": "dioscuri-tda",
+    "url": "https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials",
+    "role": "Primary code and data repository stated in the manuscript",
+    "expectedContents": [
+      "descriptor computation",
+      "CatBoost and CNN training",
+      "voxel databases",
+      "Young's modulus values",
+      "PH/ECP descriptors"
+    ]
+  },
+  {
+    "name": "dioscuri-tda organization",
+    "owner": "dioscuri-tda",
+    "url": "https://github.com/dioscuri-tda/",
+    "role": "Related TDA software organization",
+    "expectedContents": [
+      "Euler characteristic tools",
+      "Ball Mapper tools",
+      "applied topology utilities"
+    ]
+  }
+]
+
