@@ -32,6 +32,18 @@ The archive is written under `.exports/` and contains `site/` as the static host
 
 GitHub Actions publishes the static explorer through `.github/workflows/deploy-pages.yml`.
 
+Live site:
+
+```text
+https://nasqret.github.io/direction-aware-tda-paper-explorer/
+```
+
+Remote repository:
+
+```text
+https://github.com/nasqret/direction-aware-tda-paper-explorer
+```
+
 The workflow:
 
 - builds the JupyterBook;
@@ -66,4 +78,3 @@ Check these URLs:
 - The external structure arrays are still Git LFS pointers in the ignored local clone.
 - Voxel-backed applets require an explicit `git lfs pull` in `paper-explorer/repos/direction-aware-tda-for-porous-materials`.
 - The current applets are explanatory browser simulations, not full reproductions of the descriptor pipeline.
-- No public deployment target is configured yet.

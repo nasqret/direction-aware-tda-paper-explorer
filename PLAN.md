@@ -25,7 +25,7 @@ Last updated: 2026-04-15
 | External repo inventory | Complete | Shallow clone indexed; CSV schemas, row counts, target statistics, hashes, scripts, and LFS pointer status generated |
 | Static export links | Complete | Site links resolve inside `paper-explorer/site/`; exported JupyterBook and Obsidian snapshots are copied into the site |
 | Release automation | Complete | Single local export gate, package script, GitHub Actions validation, and release checklist |
-| Remote publication | In progress | GitHub remote, pushed branch, and GitHub Pages workflow |
+| Remote publication | Complete | GitHub remote and Pages deployment at https://nasqret.github.io/direction-aware-tda-paper-explorer/ |
 | Full voxel payload | Pending | Optional `git lfs pull`; needed only for local voxel previews and `.npy` slice applets |
 | Verification | Complete | Static file checks, JupyterBook config check, browser render check |
 
@@ -55,7 +55,7 @@ Last updated: 2026-04-15
 5. **Release pass**
    - Add deployment target, preview URL, CI build checks, and polished copy.
    - Validation: clean repo status except intentional generated build artifacts.
-   - Status: partial complete. Local export packaging and CI validation are in place; public deployment target and preview URL remain unset.
+   - Status: complete. Local export packaging, CI validation, and GitHub Pages deployment are in place.
 
 ## Open Questions
 

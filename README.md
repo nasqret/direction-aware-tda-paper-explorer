@@ -34,7 +34,19 @@ The static explorer can be opened directly:
 paper-explorer/site/index.html
 ```
 
-When the repository is pushed to GitHub, the Pages workflow publishes the same static export from:
+The live GitHub Pages deployment is:
+
+```text
+https://nasqret.github.io/direction-aware-tda-paper-explorer/
+```
+
+The remote repository is:
+
+```text
+https://github.com/nasqret/direction-aware-tda-paper-explorer
+```
+
+GitHub Actions publishes the same static export from:
 
 ```text
 paper-explorer/site/
