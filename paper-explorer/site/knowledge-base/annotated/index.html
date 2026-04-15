@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -360,7 +361,12 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="annotated-paper">
 <h1>Annotated Paper<a class="headerlink" href="#annotated-paper" title="Link to this heading">#</a></h1>
 <p>This part of the knowledge base contains two layers. The primary layer is a streamlined expanded text with formulas, tables, figures, and embedded remarks. The provenance layer then reproduces each manuscript section from the LaTeX source with line-numbered source blocks and commentary.</p>
-<div class="tip admonition">
+<div class="annotation-legend admonition">
+<p class="admonition-title">Color legend</p>
+<p><span class="legend-swatch paper-swatch"></span> <strong>Blue</strong> marks original paper material or source-derived reconstruction.</p>
+<p><span class="legend-swatch model-swatch"></span> <strong>Amber</strong> marks model-added interpretation, comments, reading advice, and contextual remarks.</p>
+</div>
+<div class="model-interpretation admonition">
 <p class="admonition-title">How to read this part</p>
 <p>Start with the Expanded Annotated Text for continuous exposition. Use the source-provenance pages when you need to verify how a statement maps back to the original LaTeX.</p>
 </div>

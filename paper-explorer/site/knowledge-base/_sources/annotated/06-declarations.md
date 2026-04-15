@@ -1,22 +1,23 @@
 # Declarations
 
 ```{admonition} Coverage
-:class: important
-This page annotates **Main manuscript**, source lines **607-631**. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.
+:class: annotation-legend
+This page annotates **Main manuscript**, source lines **607-631**. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.
 ```
 
-## Reading Lens
-
+```{admonition} Reading lens
+:class: model-interpretation
 - These lines define authorship, competing-interest, and publication metadata rather than technical content.
 - For reproducibility, declarations matter because they identify responsibility and potential conflicts around the study.
 - They should be preserved in a faithful companion even though they do not affect the mathematical argument.
+```
 
 ## Annotated Source
 
 ### Declarations
 
-::::{admonition} Source lines 607-607
-:class: note
+::::{admonition} Original paper material - source lines 607-607
+:class: paper-original
 
 ```latex
  607 | \section*{Declarations}
@@ -26,7 +27,10 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 > Declarations
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 607-607
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Declarations**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -35,8 +39,8 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 #### Author Contributions Statement
 
-::::{admonition} Source lines 608-608
-:class: note
+::::{admonition} Original paper material - source lines 608-608
+:class: paper-original
 
 ```latex
  608 | \subsection*{Author Contributions Statement}
@@ -46,15 +50,18 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 > Author Contributions Statement
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 608-608
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Author Contributions Statement**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::
 
-::::{admonition} Source lines 609-609
-:class: note
+::::{admonition} Original paper material - source lines 609-609
+:class: paper-original
 
 ```latex
  609 | R.T., M.B., and J.M. wrote the main manuscript. R.T., M.B., and B.N. generated the microstructures. R.T. and M.B. performed the FFTMAD simulations. R.T. developed the machine-learning code and ran computations. M.B., J.M., and P.D. designed and implemented the topological data analysis framework and reviewed the machine-learning and FFTMAD workflows. R.T., M.B., J.M., B.N., and P.D. contributed to the methodology. P.D., M.H., and B.N. provided computational resources. P.D. and M.H. supervised project administration. R.T. prepared all figures except Figure 3, which J.M. and M.B prepared. All authors contributed to formal analysis, validation of the results, and reviewed the final version of the manuscript. 
@@ -64,7 +71,10 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 > R.T., M.B., and J.M. wrote the main manuscript. R.T., M.B., and B.N. generated the microstructures. R.T. and M.B. performed the FFTMAD simulations. R.T. developed the machine-learning code and ran computations. M.B., J.M., and P.D. designed and implemented the topological data analysis framework and reviewed the machine-learning and FFTMAD workflows. R.T., M.B., J.M., B.N., and P.D. contributed to the methodology. P.D., M.H., and B.N. provided computational resources. P.D. and M.H. supervised project administration. R.T. prepared all figures except Figure 3, which J.M. and M.B prepared. All authors contributed to formal analysis, validation of the results, and reviewed the final version of the manuscript.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 609-609
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
@@ -75,8 +85,8 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 #### Competing Interests
 
-::::{admonition} Source lines 611-611
-:class: note
+::::{admonition} Original paper material - source lines 611-611
+:class: paper-original
 
 ```latex
  611 | \subsection*{Competing Interests}
@@ -86,15 +96,18 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 > Competing Interests
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 611-611
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Competing Interests**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::
 
-::::{admonition} Source lines 612-612
-:class: note
+::::{admonition} Original paper material - source lines 612-612
+:class: paper-original
 
 ```latex
  612 | The authors declare no competing interests.
@@ -104,25 +117,31 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 > The authors declare no competing interests.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 612-612
+:class: model-interpretation
 
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::
 
-::::{admonition} Source lines 614-614
-:class: note
+::::{admonition} Original paper material - source lines 614-614
+:class: paper-original
 
 ```latex
  614 | \clearpage
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 614-614
+:class: model-interpretation
 
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::
 
-::::{admonition} Source lines 616-620
-:class: note
+::::{admonition} Original paper material - source lines 616-620
+:class: paper-original
 
 ```latex
  616 | % Supplement-style numbering
@@ -132,13 +151,16 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
  620 | \setcounter{equation}{0}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 616-620
+:class: model-interpretation
 
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::
 
-::::{admonition} Source lines 622-628
-:class: note
+::::{admonition} Original paper material - source lines 622-628
+:class: paper-original
 
 ```latex
  622 | \renewcommand{\thesection}{S\arabic{section}}
@@ -154,19 +176,25 @@ This page annotates **Main manuscript**, source lines **607-631**. The original 
 
 > Ssection Ssection.subsection Ssection.subsection.subsubsection Sfigure Stable Sequation includesupplement.tex
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 622-628
+:class: model-interpretation
 
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::
 
-::::{admonition} Source lines 630-630
-:class: note
+::::{admonition} Original paper material - source lines 630-630
+:class: paper-original
 
 ```latex
  630 | \clearpage
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 630-630
+:class: model-interpretation
 
 - This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.
 ::::

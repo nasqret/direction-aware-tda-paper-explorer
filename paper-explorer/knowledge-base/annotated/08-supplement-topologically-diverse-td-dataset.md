@@ -1,22 +1,23 @@
 # Supplement: Topologically Diverse (TD) Dataset
 
 ```{admonition} Coverage
-:class: important
-This page annotates **Supplementary information**, source lines **6-73**. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.
+:class: annotation-legend
+This page annotates **Supplementary information**, source lines **6-73**. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.
 ```
 
-## Reading Lens
-
+```{admonition} Reading lens
+:class: model-interpretation
 - This supplementary section fills in implementation detail or additional evidence that the main text compresses.
 - Read it as support for reproducibility: generation procedures, additional RTPxyz results, and fold-level performance tables.
 - Where the main text states a result, the supplement often exposes the variation or construction detail behind it.
+```
 
 ## Annotated Source
 
 ### Topologically Diverse (TD) Dataset
 
-::::{admonition} Source lines 6-6
-:class: note
+::::{admonition} Original paper material - source lines 6-6
+:class: paper-original
 
 ```latex
    6 | \section{Topologically Diverse (TD) Dataset}
@@ -26,7 +27,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Topologically Diverse (TD) Dataset
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 6-6
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Topologically Diverse (TD) Dataset**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -34,8 +38,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 7-8
-:class: note
+::::{admonition} Original paper material - source lines 7-8
+:class: paper-original
 
 ```latex
    7 | The RTP dataset is described in detail in the main text. All porous structures used in this study—including the RTP, TD, and ATTD datasets—are openly available in the dedicated repository associated with this paper: \url{https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials}. 
@@ -46,7 +50,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > The RTP dataset is described in detail in the main text. All porous structures used in this study—including the RTP, TD, and ATTD datasets—are openly available in the dedicated repository associated with this paper: https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials. The repository also provides a utility for converting the voxelized data into VTK format, enabling straightforward visualization and rendering using standard tools such as ParaView.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 7-8
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
@@ -57,8 +64,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 #### Generation of porous structures
 
-::::{admonition} Source lines 10-10
-:class: note
+::::{admonition} Original paper material - source lines 10-10
+:class: paper-original
 
 ```latex
   10 | \subsection{Generation of porous structures}
@@ -68,7 +75,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Generation of porous structures
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 10-10
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Generation of porous structures**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -79,8 +89,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 ##### Random Voronoi structuresapp:voronois
 
-::::{admonition} Source lines 11-11
-:class: note
+::::{admonition} Original paper material - source lines 11-11
+:class: paper-original
 
 ```latex
   11 | \subsubsection{Random Voronoi structures}\label{app:voronois}
@@ -90,7 +100,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Random Voronoi structures (label: app:voronois)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 11-11
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Random Voronoi structuresapp:voronois**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -98,8 +111,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 13-13
-:class: note
+::::{admonition} Original paper material - source lines 13-13
+:class: paper-original
 
 ```latex
   13 | 600 random Voronoi structures were generated. For each structure, between 3 and 12 points were sampled from a unit cell (randomly, uniform distribution), with the space between them tesselated into Voronoi regions and the edges between regions used as a skeleton for the structure. The voxels traversed by the edges are approximated using the Bresenham's Line Algorithm~\cite{bresenham1965algorithm} and included within the structure. The edges are thickened to form struts with a square-shaped cross-section, with the side length of the square randomly drawn from the uniform distribution between 0.06 and 0.14. In order to guarantee periodicity of the structure, copies of the original points are generated in cells neighbouring the unit cell as well and the Voronoi tesselation of space, voxelisation of edges and subsequent thickening is conducted within the neighbouring cells as well (see Fig. \ref{fig:voronoi} for a visualization of a 2D version of the procedure), with the neighboring cells discarded at the last stage of the procedure. 
@@ -109,15 +122,18 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > 600 random Voronoi structures were generated. For each structure, between 3 and 12 points were sampled from a unit cell (randomly, uniform distribution), with the space between them tesselated into Voronoi regions and the edges between regions used as a skeleton for the structure. The voxels traversed by the edges are approximated using the Bresenham's Line Algorithm (citation: bresenham1965algorithm) and included within the structure. The edges are thickened to form struts with a square-shaped cross-section, with the side length of the square randomly drawn from the uniform distribution between 0.06 and 0.14. In order to guarantee periodicity of the structure, copies of the original points are generated in cells neighbouring the unit cell as well and the Voronoi tesselation of space, voxelisation of edges and subsequent thickening is conducted within the neighbouring cells as well (see Fig. (ref: fig:voronoi) for a visualization of a 2D version of the procedure), with the neighboring cells discarded at the last stage of the procedure.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 13-13
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 15-20
-:class: note
+::::{admonition} Original paper material - source lines 15-20
+:class: paper-original
 
 ```latex
   15 | \begin{figure}[h!]
@@ -136,7 +152,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 ![Voronoi.png](../_static/images/Voronoi.png)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 15-20
+:class: model-interpretation
 
 - This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.
 - Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.
@@ -146,8 +165,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 ##### Zeolitessec:zeolites
 
-::::{admonition} Source lines 22-22
-:class: note
+::::{admonition} Original paper material - source lines 22-22
+:class: paper-original
 
 ```latex
   22 | \subsubsection{Zeolites}\label{sec:zeolites}
@@ -157,7 +176,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Zeolites (label: sec:zeolites)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 22-22
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Zeolitessec:zeolites**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -165,8 +187,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 24-25
-:class: note
+::::{admonition} Original paper material - source lines 24-25
+:class: paper-original
 
 ```latex
   24 | More than 3000 predicted zeolitic structures were recovered from Michael Deem's database~\cite{C0CP02255A, deem2023pcod}. Each structure is described by the basis cell vector and the locations of Si and O atoms in a unit cell. We restricted the studies to structures with a perpendicular shape of the unit cell, which still left over 1500 structures. We transformed the structures from perpendicular to the normalized $1\times1\times1$ cubic volume by stretching/compression. We thickened the edges by dilation to form struts with a square-shaped cross-section of side length 0.12. We used 300 randomly drawn structures from the dataset and connected the locations of the Si atoms in these structures after the stretching/compression to the locations of their nearest Si neighbors (O atoms were not used in the structure). The connections formed the skeleton of the structure. Periodic boundary conditions were guaranteed by a procedure similar to the one used for random Voronoi structures, involving generating copies of the original Si atom locations in cells neighbouring the unit cell and connecting them to their nearest neighbours as well. Another 299 structures were created on the basis of different randomly drawn structures from using Michael Deem's database~\cite{C0CP02255A, deem2023pcod} using the same algorithm, but with using 0.04 instead of 0.12 as the side length of the square-shaped cross-section of the struts.  
@@ -177,7 +199,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > More than 3000 predicted zeolitic structures were recovered from Michael Deem's database (citation: C0CP02255A, deem2023pcod). Each structure is described by the basis cell vector and the locations of Si and O atoms in a unit cell. We restricted the studies to structures with a perpendicular shape of the unit cell, which still left over 1500 structures. We transformed the structures from perpendicular to the normalized $1x1x1$ cubic volume by stretching/compression. We thickened the edges by dilation to form struts with a square-shaped cross-section of side length 0.12. We used 300 randomly drawn structures from the dataset and connected the locations of the Si atoms in these structures after the stretching/compression to the locations of their nearest Si neighbors (O atoms were not used in the structure). The connections formed the skeleton of the structure. Periodic boundary conditions were guaranteed by a procedure similar to the one used for random Voronoi structures, involving generating copies of the original Si atom locations in cells neighbouring the unit cell and connecting them to their nearest neighbours as well. Another 299 structures were created on the basis of different randomly drawn structures from using Michael Deem's database (citation: C0CP02255A, deem2023pcod) using the same algorithm, but with using 0.04 instead of 0.12 as the side length of the square-shaped cross-section of the struts. This gives a total of 580 zeolite structures.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 24-25
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
@@ -187,8 +212,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 ##### Diamond structures
 
-::::{admonition} Source lines 27-27
-:class: note
+::::{admonition} Original paper material - source lines 27-27
+:class: paper-original
 
 ```latex
   27 | \subsubsection{Diamond structures}
@@ -198,7 +223,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Diamond structures
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 27-27
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Diamond structures**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -206,8 +234,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 29-29
-:class: note
+::::{admonition} Original paper material - source lines 29-29
+:class: paper-original
 
 ```latex
   29 | 299 diamond-resembling structures were generated. Each structure was generated by creating within the unit cell 8 vertices corresponding to atoms in a diamond lattice and creating between the vertices edges corresponding to bonds between the atoms. The precise locations of the vertices were determined by adding a stochastic displacement to the location of the corresponding atom in the diamond lattice. Each of the three-dimensional components of the stochastic displacement for all vertices in a given lattice were drawn from a normal distribution with a standard deviation $\epsilon$ itself drawn from a uniform distribution between 0 and 0.1 (compare to 1.0 being the length of the side of a unit cell). That way, the amount of stochasticity was varied between the structures. The edges connecting the vertices were thickened via dilation to form struts with square-shaped cross-sections, with the length of the side of the cross-section drawn from a uniform distribution between 0.06 and 0.26. That way, the volume fraction was varied between structures.
@@ -217,7 +245,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > 299 diamond-resembling structures were generated. Each structure was generated by creating within the unit cell 8 vertices corresponding to atoms in a diamond lattice and creating between the vertices edges corresponding to bonds between the atoms. The precise locations of the vertices were determined by adding a stochastic displacement to the location of the corresponding atom in the diamond lattice. Each of the three-dimensional components of the stochastic displacement for all vertices in a given lattice were drawn from a normal distribution with a standard deviation $$ itself drawn from a uniform distribution between 0 and 0.1 (compare to 1.0 being the length of the side of a unit cell). That way, the amount of stochasticity was varied between the structures. The edges connecting the vertices were thickened via dilation to form struts with square-shaped cross-sections, with the length of the side of the cross-section drawn from a uniform distribution between 0.06 and 0.26. That way, the volume fraction was varied between structures.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 29-29
+:class: model-interpretation
 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
@@ -225,8 +256,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 ##### Cubic structures
 
-::::{admonition} Source lines 31-31
-:class: note
+::::{admonition} Original paper material - source lines 31-31
+:class: paper-original
 
 ```latex
   31 | \subsubsection{Cubic structures}
@@ -236,7 +267,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Cubic structures
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 31-31
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Cubic structures**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -244,8 +278,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 33-40
-:class: note
+::::{admonition} Original paper material - source lines 33-40
+:class: paper-original
 
 ```latex
   33 | 300 structures resembling a simple cubic strut were generated using the procedure used for diamond structures, with the only difference the 8 initiating points are not the locations of atoms in a diamond structures like in the former dataset, but instead the following set of points: [0, 0, 0],
@@ -262,7 +296,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > 300 structures resembling a simple cubic strut were generated using the procedure used for diamond structures, with the only difference the 8 initiating points are not the locations of atoms in a diamond structures like in the former dataset, but instead the following set of points: [0, 0, 0], [0.5, 0, 0], [0, 0.5, 0], [0, 0, 0.5], [0, 0.5, 0.5], [0.5, 0, 0.5], [0.5, 0.5, 0], [0.5, 0.5, 0.5]. Replicating further steps from the procedure used to generate the diamond-like structures leads to structures resembling a classical cubic strut, with varying thicknesses of the struts and levels of randomization in locations of the struts' vertices.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 33-40
+:class: model-interpretation
 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
@@ -270,8 +307,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 ##### Splines
 
-::::{admonition} Source lines 43-43
-:class: note
+::::{admonition} Original paper material - source lines 43-43
+:class: paper-original
 
 ```latex
   43 | \subsubsection{Splines}
@@ -281,7 +318,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Splines
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 43-43
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Splines**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -289,8 +329,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 45-46
-:class: note
+::::{admonition} Original paper material - source lines 45-46
+:class: paper-original
 
 ```latex
   45 | To generate a family of smooth porous morphologies, we construct a random \emph{periodic} scalar field on the unit cell and then threshold it.
@@ -301,7 +341,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > To generate a family of smooth porous morphologies, we construct a random periodic scalar field on the unit cell and then threshold it. Let $n=`sampling`$ be the number of spline control points per direction and draw i.i.d.\ coefficients
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 45-46
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -310,8 +353,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 47-49
-:class: note
+::::{admonition} Original paper material - source lines 47-49
+:class: paper-original
 
 ```latex
   47 | \begin{equation}
@@ -319,7 +362,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
   49 | \end{equation}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 47-49
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -327,8 +373,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 50-52
-:class: note
+::::{admonition} Original paper material - source lines 50-52
+:class: paper-original
 
 ```latex
   50 | In \textsc{Mathematica}, the command
@@ -340,14 +386,17 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > In Mathematica, the command `BSplineFunction` builds a trivariate tensor-product B-spline field (with `SplineDegree->3`, `SplineClosed->True`, `SplineKnots->"Unclamped"`), i.e.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 50-52
+:class: model-interpretation
 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 53-57
-:class: note
+::::{admonition} Original paper material - source lines 53-57
+:class: paper-original
 
 ```latex
   53 | \begin{equation}
@@ -357,7 +406,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
   57 | \end{equation}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 53-57
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -365,8 +417,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 58-58
-:class: note
+::::{admonition} Original paper material - source lines 58-58
+:class: paper-original
 
 ```latex
   58 | where $\{N_{i,3}\}$ are cubic B-spline basis functions (defined via the Cox--de Boor recursion), and the ``closed'' setting enforces periodicity across the cell boundaries \cite{deBoor1978,wolframBSplineFunction}.
@@ -376,14 +428,17 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > where $\N_i,3\$ are cubic B-spline basis functions (defined via the Cox--de Boor recursion), and the ``closed'' setting enforces periodicity across the cell boundaries (citation: deBoor1978,wolframBSplineFunction).
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 58-58
+:class: model-interpretation
 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 60-61
-:class: note
+::::{admonition} Original paper material - source lines 60-61
+:class: paper-original
 
 ```latex
   60 | A binary structure is then obtained as a super-level set. Using wrapped (periodic) coordinates
@@ -394,7 +449,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > A binary structure is then obtained as a super-level set. Using wrapped (periodic) coordinates $x=(x 1, y 1, z 1)$ (implemented with `Mod`), we voxelize on an $Lx Lx L$ grid (here $L=80$) by
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 60-61
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.
@@ -402,8 +460,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 62-66
-:class: note
+::::{admonition} Original paper material - source lines 62-66
+:class: paper-original
 
 ```latex
   62 | \begin{equation}
@@ -413,7 +471,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
   66 | \end{equation}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 62-66
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -422,8 +483,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 67-67
-:class: note
+::::{admonition} Original paper material - source lines 67-67
+:class: paper-original
 
 ```latex
   67 | and report the volume fraction
@@ -433,14 +494,17 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > and report the volume fraction
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 67-67
+:class: model-interpretation
 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 68-70
-:class: note
+::::{admonition} Original paper material - source lines 68-70
+:class: paper-original
 
 ```latex
   68 | \begin{equation}
@@ -448,7 +512,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
   70 | \end{equation}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 68-70
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -456,8 +523,8 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 - In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.
 ::::
 
-::::{admonition} Source lines 71-72
-:class: note
+::::{admonition} Original paper material - source lines 71-72
+:class: paper-original
 
 ```latex
   71 | Varying the threshold $t$ (in our implementation, on an approximately uniform grid in $[0.35,0.50]$) produces two independent subsets of spline-based structures each, spanning a range of $\phi(t)$ while preserving smoothness and periodic tiling of the unit cell.
@@ -468,7 +535,10 @@ This page annotates **Supplementary information**, source lines **6-73**. The or
 
 > Varying the threshold $t$ (in our implementation, on an approximately uniform grid in $[0.35,0.50]$) produces two independent subsets of spline-based structures each, spanning a range of $phi(t)$ while preserving smoothness and periodic tiling of the unit cell. Total of 596 spline structures were used in the dataset.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 71-72
+:class: model-interpretation
 
 - This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.

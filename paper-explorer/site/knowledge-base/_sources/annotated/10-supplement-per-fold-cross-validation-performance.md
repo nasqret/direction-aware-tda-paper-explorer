@@ -1,22 +1,23 @@
 # Supplement: Per-Fold Cross-Validation Performance
 
 ```{admonition} Coverage
-:class: important
-This page annotates **Supplementary information**, source lines **105-159**. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.
+:class: annotation-legend
+This page annotates **Supplementary information**, source lines **105-159**. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.
 ```
 
-## Reading Lens
-
+```{admonition} Reading lens
+:class: model-interpretation
 - This supplementary section fills in implementation detail or additional evidence that the main text compresses.
 - Read it as support for reproducibility: generation procedures, additional RTPxyz results, and fold-level performance tables.
 - Where the main text states a result, the supplement often exposes the variation or construction detail behind it.
+```
 
 ## Annotated Source
 
 ### Per-Fold Cross-Validation Performance
 
-::::{admonition} Source lines 105-105
-:class: note
+::::{admonition} Original paper material - source lines 105-105
+:class: paper-original
 
 ```latex
  105 | \section{Per-Fold Cross-Validation Performance}
@@ -26,15 +27,18 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 
 > Per-Fold Cross-Validation Performance
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 105-105
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Per-Fold Cross-Validation Performance**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
 - In the supplement, this block provides extra construction detail or result granularity that supports the main text.
 ::::
 
-::::{admonition} Source lines 106-106
-:class: note
+::::{admonition} Original paper material - source lines 106-106
+:class: paper-original
 
 ```latex
  106 | The implemented cross-validation procedure allows for a direct comparison of the models within each fold, as identical train/validation/test splits are used throughout. This provides substantially more detailed insight than the averaged results reported in Table 1 of the manuscript.
@@ -44,13 +48,16 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 
 > The implemented cross-validation procedure allows for a direct comparison of the models within each fold, as identical train/validation/test splits are used throughout. This provides substantially more detailed insight than the averaged results reported in Table 1 of the manuscript.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 106-106
+:class: model-interpretation
 
 - In the supplement, this block provides extra construction detail or result granularity that supports the main text.
 ::::
 
-::::{admonition} Source lines 108-108
-:class: note
+::::{admonition} Original paper material - source lines 108-108
+:class: paper-original
 
 ```latex
  108 | The per-fold results for the $R^2$ and MAE metrics are presented in Tables~\ref{tab:fold_r2} and~\ref{tab:fold_mae}, respectively. The column Gain indicates whether the use of directional descriptors improves the performance, i.e., increases $R^2$ or decreases MAE. The last two rows of each table report the mean and standard deviation across folds for each method.
@@ -60,15 +67,18 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 
 > The per-fold results for the $R^2$ and MAE metrics are presented in Tables (ref: tab:fold_r2) and (ref: tab:fold_mae), respectively. The column Gain indicates whether the use of directional descriptors improves the performance, i.e., increases $R^2$ or decreases MAE. The last two rows of each table report the mean and standard deviation across folds for each method.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 108-108
+:class: model-interpretation
 
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
 - This is a performance-interpretation block. Watch both $R^2$ and MAE because they answer different questions about explained variance and absolute error.
 - In the supplement, this block provides extra construction detail or result granularity that supports the main text.
 ::::
 
-::::{admonition} Source lines 110-110
-:class: note
+::::{admonition} Original paper material - source lines 110-110
+:class: paper-original
 
 ```latex
  110 | We report results for the PH+ECP descriptor on the RTPxz and RTPxy datasets, as this combination constitutes the main result of the paper. As shown in the tables, the improvement obtained by incorporating directional descriptors is consistent across all folds and for both datasets: $R^2$ increases and MAE decreases in every single split, demonstrating that the performance gain is systematic rather than incidental. The only exception is the standard deviation of $R^2$ for RTPxy, which is slightly higher for the directional descriptors compared to the non-directional variant.
@@ -78,7 +88,10 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 
 > We report results for the PH+ECP descriptor on the RTPxz and RTPxy datasets, as this combination constitutes the main result of the paper. As shown in the tables, the improvement obtained by incorporating directional descriptors is consistent across all folds and for both datasets: $R^2$ increases and MAE decreases in every single split, demonstrating that the performance gain is systematic rather than incidental. The only exception is the standard deviation of $R^2$ for RTPxy, which is slightly higher for the directional descriptors compared to the non-directional variant.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 110-110
+:class: model-interpretation
 
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
 - This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.
@@ -86,8 +99,8 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 - In the supplement, this block provides extra construction detail or result granularity that supports the main text.
 ::::
 
-::::{admonition} Source lines 112-131
-:class: note
+::::{admonition} Original paper material - source lines 112-131
+:class: paper-original
 
 ```latex
  112 | \begin{table}[]
@@ -116,7 +129,10 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 
 > $R^2$ scores obtained in each cross-validation fold for the RTPxz and RTPxy datasets using the PH+ECP descriptor. Results for the CNN model are provided for reference. The column Gain indicates whether the inclusion of directional descriptors improves performance (i.e., increases $R^2$). The last two rows report the mean and standard deviation across folds.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 112-131
+:class: model-interpretation
 
 - This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.
 - The main inferential question is whether directional information improves prediction under the same learning setup.
@@ -125,8 +141,8 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 - This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.
 ::::
 
-::::{admonition} Source lines 133-152
-:class: note
+::::{admonition} Original paper material - source lines 133-152
+:class: paper-original
 
 ```latex
  133 | \begin{table}[]
@@ -155,7 +171,10 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 
 > The same as Table (ref: tab:fold_r2) but for MAE.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 133-152
+:class: model-interpretation
 
 - This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.
 - The main inferential question is whether directional information improves prediction under the same learning setup.
@@ -164,15 +183,18 @@ This page annotates **Supplementary information**, source lines **105-159**. The
 - This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.
 ::::
 
-::::{admonition} Source lines 154-155
-:class: note
+::::{admonition} Original paper material - source lines 154-155
+:class: paper-original
 
 ```latex
  154 | % \bibliographystyle{sn-mathphys-num}
  155 | % \bibliography{references}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 154-155
+:class: model-interpretation
 
 - In the supplement, this block provides extra construction detail or result granularity that supports the main text.
 ::::

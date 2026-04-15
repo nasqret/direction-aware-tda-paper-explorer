@@ -2,8 +2,15 @@
 
 This part of the knowledge base contains two layers. The primary layer is a streamlined expanded text with formulas, tables, figures, and embedded remarks. The provenance layer then reproduces each manuscript section from the LaTeX source with line-numbered source blocks and commentary.
 
+```{admonition} Color legend
+:class: annotation-legend
+<span class="legend-swatch paper-swatch"></span> **Blue** marks original paper material or source-derived reconstruction.
+
+<span class="legend-swatch model-swatch"></span> **Amber** marks model-added interpretation, comments, reading advice, and contextual remarks.
+```
+
 ```{admonition} How to read this part
-:class: tip
+:class: model-interpretation
 Start with the Expanded Annotated Text for continuous exposition. Use the source-provenance pages when you need to verify how a statement maps back to the original LaTeX.
 ```
 

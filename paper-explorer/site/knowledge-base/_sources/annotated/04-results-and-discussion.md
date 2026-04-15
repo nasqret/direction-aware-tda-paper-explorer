@@ -1,22 +1,23 @@
 # Results and Discussion
 
 ```{admonition} Coverage
-:class: important
-This page annotates **Main manuscript**, source lines **403-579**. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.
+:class: annotation-legend
+This page annotates **Main manuscript**, source lines **403-579**. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.
 ```
 
-## Reading Lens
-
+```{admonition} Reading lens
+:class: model-interpretation
 - This section is the empirical test of the paper's thesis. Read every reported score as a comparison between direction-agnostic topology, direction-aware topology, and voxel CNN baselines.
 - The important pattern is not a single best number but the relationship between anisotropy and the gain from direction-aware descriptors.
 - Use the tables and figures to distinguish strong-anisotropy wins, weak-anisotropy parity, and cases where descriptor families behave differently.
+```
 
 ## Annotated Source
 
 ### Results and Discussion
 
-::::{admonition} Source lines 403-403
-:class: note
+::::{admonition} Original paper material - source lines 403-403
+:class: paper-original
 
 ```latex
  403 | \section{Results and Discussion}
@@ -26,15 +27,18 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Results and Discussion
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 403-403
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Results and Discussion**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 405-405
-:class: note
+::::{admonition} Original paper material - source lines 405-405
+:class: paper-original
 
 ```latex
  405 | Table~\ref{tab:metrics} summarizes the predictive performance of the evaluated descriptor configurations across all considered datasets. In addition to regression metrics, the table reports two scalar measures characterizing structural anisotropy: the spectral measure $k$ and the integral correlation-length-based measure $L$, both computed directly from the binary microstructures.
@@ -44,7 +48,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Table (ref: tab:metrics) summarizes the predictive performance of the evaluated descriptor configurations across all considered datasets. In addition to regression metrics, the table reports two scalar measures characterizing structural anisotropy: the spectral measure $k$ and the integral correlation-length-based measure $L$, both computed directly from the binary microstructures.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 405-405
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -53,8 +60,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 407-407
-:class: note
+::::{admonition} Original paper material - source lines 407-407
+:class: paper-original
 
 ```latex
  407 | For each dataset, the reported quantities are the standard deviations $\sigma(k)$ and $\sigma(L)$. These were computed from the directional values $k_\alpha$ and $L_\alpha$ corresponding to the same loading axes used to evaluate Young’s modulus in a given dataset. For example, for the RTPxy dataset, $\sigma(k)$ is calculated from the collection of $k_x$ and $k_y$ values across all structures, and $\sigma(L)$ analogously from $L_x$ and $L_y$. In this way, $\sigma(k)$ and $\sigma(L)$ quantify the spread of anisotropic characteristics within each dataset: larger values indicate greater variability in directional morphology, while smaller values correspond to more structurally homogeneous ensembles.
@@ -64,7 +71,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > For each dataset, the reported quantities are the standard deviations $sigma(k)$ and $sigma(L)$. These were computed from the directional values $k_alpha$ and $L_alpha$ corresponding to the same loading axes used to evaluate Young’s modulus in a given dataset. For example, for the RTPxy dataset, $sigma(k)$ is calculated from the collection of $k_x$ and $k_y$ values across all structures, and $sigma(L)$ analogously from $L_x$ and $L_y$. In this way, $sigma(k)$ and $sigma(L)$ quantify the spread of anisotropic characteristics within each dataset: larger values indicate greater variability in directional morphology, while smaller values correspond to more structurally homogeneous ensembles.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 407-407
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -73,8 +83,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 410-417
-:class: note
+::::{admonition} Original paper material - source lines 410-417
+:class: paper-original
 
 ```latex
  410 | \begin{figure}
@@ -97,7 +107,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 ![scatter_rtp_xz.png](../_static/images/scatter_rtp_xz.png)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 410-417
+:class: model-interpretation
 
 - This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.
 - Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.
@@ -106,8 +119,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.
 ::::
 
-::::{admonition} Source lines 419-419
-:class: note
+::::{admonition} Original paper material - source lines 419-419
+:class: paper-original
 
 ```latex
  419 | Figure~\ref{fig:scatter_rtp} shows predicted versus FFTMAD-computed Young’s modulus for the RTPxy (left) and RTPxz (right) datasets. Insets display the distributions of Young’s modulus values (top) and prediction errors (bottom). For the weakly anisotropic RTPxy dataset, both directional and non-directional descriptors yield predictions tightly clustered around perfect agreement with narrow, symmetric error distributions. In contrast, for the strongly anisotropic RTPxz dataset, directional descriptors maintain high accuracy, while non-directional descriptors exhibit substantial deviations and broadened error distributions, highlighting the importance of directional topology under strong anisotropy.
@@ -117,7 +130,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Figure (ref: fig:scatter_rtp) shows predicted versus FFTMAD-computed Young’s modulus for the RTPxy (left) and RTPxz (right) datasets. Insets display the distributions of Young’s modulus values (top) and prediction errors (bottom). For the weakly anisotropic RTPxy dataset, both directional and non-directional descriptors yield predictions tightly clustered around perfect agreement with narrow, symmetric error distributions. In contrast, for the strongly anisotropic RTPxz dataset, directional descriptors maintain high accuracy, while non-directional descriptors exhibit substantial deviations and broadened error distributions, highlighting the importance of directional topology under strong anisotropy.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 419-419
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -126,8 +142,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 421-442
-:class: note
+::::{admonition} Original paper material - source lines 421-442
+:class: paper-original
 
 ```latex
  421 | The RTP datasets provide a controlled setting for assessing the influence of
@@ -158,7 +174,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > The RTP datasets provide a controlled setting for assessing the influence of structural anisotropy on predictive performance. We first consider the RTPxy dataset, which consists of RTP microstructures for which Young’s modulus was evaluated exclusively along the $x$ and $y$ directions. As a result, this dataset is statistically isotropic within the $xy$ plane and does not exhibit a preferred mechanical hard axis. Consistent with this interpretation, the average Young’s moduli along the two directions are nearly identical, with mean values of $E_x = 11.46 GPa$ and $E_y = 11.49 GPa$. The corresponding anisotropy measures, based on the $x$ and $y$ axes, are lowest, with $sigma(k)=0.11$ and $sigma(L)=0.21$, indicating only weak directional differentiation in the underlying pore morphology. In contrast, the RTPxz dataset is constructed from the same set of RTP microstructures but probes mechanical response along the $x$ and $z$ directions. In this case, the $x$ direction acts as a mechanically easy axis ($E_x = 11.46 GPa$), while the $z$ direction corresponds to a pronounced hard axis, with an average Young’s modulus of $E_z = 35.55 GPa$. This strong directional contrast is reflected in substantially higher anisotropy measures, with $sigma(k)=0.40$ and $sigma(L)=1.89$ (based on $x$ and $z$ axis), making RTPxz the most anisotropic dataset among all those considered.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 421-442
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -167,8 +186,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This supplies the scalar anisotropy summaries used to interpret when directional descriptors should matter most.
 ::::
 
-::::{admonition} Source lines 445-457
-:class: note
+::::{admonition} Original paper material - source lines 445-457
+:class: paper-original
 
 ```latex
  445 | For the strongly anisotropic RTPxz dataset, the benefit of directional topology
@@ -190,7 +209,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > For the strongly anisotropic RTPxz dataset, the benefit of directional topology is pronounced. When persistent homology (PH) descriptors are used without directional information, predictive performance is poor ($R^2=0.463$, MAE $=9.42 GPa$), indicating that non-directional PH fails to capture the dominant directional features governing elastic response. Introducing directionality leads to a dramatic improvement, with directional PH achieving $R^2=0.954$ and a substantially reduced MAE of $2.65 GPa$. A similar trend is observed for multifiltration Euler characteristic profiles (ECP), where the transition from non-directional to directional descriptors increases $R^2$ from $0.616$ to $0.978$ and reduces MAE from $12.06 GPa$ to $1.85 GPa$. The combined PH+ECP representation yields the lowest error overall for RTPxz, with directional models reaching $R^2=0.978$ and MAE $=1.86 GPa$.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 445-457
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
@@ -199,8 +221,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - The principal-component construction adds local orientation information and supports multiparameter Euler-characteristic descriptors.
 ::::
 
-::::{admonition} Source lines 459-480
-:class: note
+::::{admonition} Original paper material - source lines 459-480
+:class: paper-original
 
 ```latex
  459 | \begin{table}[]
@@ -231,7 +253,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Cross-validated regression performance for Young’s modulus prediction using boosting models trained on persistent homology (PH), Euler characteristic profiles (ECP), and their combination (PH+ECP), together with a convolutional neural network (CNN) baseline trained directly on voxelized structures. Reported metrics correspond to averages over 8 cross-validation folds.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 459-480
+:class: model-interpretation
 
 - This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.
 - The main inferential question is whether directional information improves prediction under the same learning setup.
@@ -240,8 +265,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
 ::::
 
-::::{admonition} Source lines 482-496
-:class: note
+::::{admonition} Original paper material - source lines 482-496
+:class: paper-original
 
 ```latex
  482 | For the more weakly anisotropic RTPxy dataset, the performance gap between
@@ -265,7 +290,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > For the more weakly anisotropic RTPxy dataset, the performance gap between directional and non-directional descriptors is smaller than for the strongly anisotropic RTPxz case, but remains systematic and consistent across all descriptor classes (with the the exception of PH alone, which is the weakest anyway for both directional and non-directional descriptors). Although non-directional models already achieve high predictive accuracy ($R^2=0.878$ for PH and $R^2=0.925$ for ECP), the inclusion of directional information leads to simultaneous improvements in both variance explained and absolute error for ECP and PH+ECP. In particular, directional ECP increases $R^2$ from $0.925$ to $0.940$ while reducing MAE from $1.86 GPa$ to $1.66 GPa$, and similar trends are observed PH+ECP descriptors. Importantly, with the exception of PH on RTPxy, no instance is observed in which a non-directional representation outperforms its directional counterpart in terms of $R^2$, while in some cases non-directional representations slightly surpass directional ones in terms of MAE This demonstrates that the shift to directional topology provides added predictive value for strongly anisotropic materials and does not decrease the predictive value even when the probed mechanical response is nearly isotropic, and suggests that non-directional descriptors offer no practical advantage once directional alternatives are available.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 482-496
+:class: model-interpretation
 
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
 - This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.
@@ -273,8 +301,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 498-508
-:class: note
+::::{admonition} Original paper material - source lines 498-508
+:class: paper-original
 
 ```latex
  498 | Across both RTP datasets, ECP consistently outperforms PH when used alone, and
@@ -294,7 +322,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Across both RTP datasets, ECP consistently outperforms PH when used alone, and the combined PH+ECP descriptors provide the most accurate and stable predictions. For reference, convolutional neural networks trained directly on voxelized structures achieve uniformly high accuracy for both RTPxz and RTPxy ($R^2=0.985$ and $0.979$, respectively), but the performance gap relative to topological models narrows substantially for RTPxz when directional PH+ECP descriptors are employed. Overall, the RTP results demonstrate that the utility of directional topological descriptors increases sharply with structural anisotropy, and that their impact is most pronounced in regimes where elastic response is governed by a clear mechanical hard axis.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 498-508
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -303,8 +334,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.
 ::::
 
-::::{admonition} Source lines 510-510
-:class: note
+::::{admonition} Original paper material - source lines 510-510
+:class: paper-original
 
 ```latex
  510 | Results obtained for the combined-direction RTPxyz dataset further support these conclusions; see Section S2 (Table~S1 and Figure~S2) in the Supplementary Information.
@@ -314,15 +345,18 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Results obtained for the combined-direction RTPxyz dataset further support these conclusions; see Section S2 (Table~S1 and Figure~S2) in the Supplementary Information.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 510-510
+:class: model-interpretation
 
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
 - This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 512-513
-:class: note
+::::{admonition} Original paper material - source lines 512-513
+:class: paper-original
 
 ```latex
  512 | To further substantiate the consistency of the performance gains across data splits, 
@@ -333,14 +367,17 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > To further substantiate the consistency of the performance gains across data splits, we provide detailed fold-wise cross-validation results in the Section S3 (Tables~S2 and S3) in the Supplementary Information.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 512-513
+:class: model-interpretation
 
 - This is a performance-interpretation block. Watch both $R^2$ and MAE because they answer different questions about explained variance and absolute error.
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 515-522
-:class: note
+::::{admonition} Original paper material - source lines 515-522
+:class: paper-original
 
 ```latex
  515 | \begin{figure}
@@ -363,7 +400,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 ![scatter_attd.png](../_static/images/scatter_attd.png)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 515-522
+:class: model-interpretation
 
 - This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.
 - Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.
@@ -372,8 +412,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.
 ::::
 
-::::{admonition} Source lines 525-539
-:class: note
+::::{admonition} Original paper material - source lines 525-539
+:class: paper-original
 
 ```latex
  525 | To verify that the observed trends are not specific to the RTP model or to a
@@ -397,7 +437,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > To verify that the observed trends are not specific to the RTP model or to a particular class of microstructures, additional datasets were considered. Specifically, a Topologically Diverse (TD) dataset was constructed to include porous microstructures spanning a broad range of topologies (see Section (ref: sec:td_structures) and Section S1 in the Supplementary Information), while remaining statistically isotropic. This dataset is characterized by low anisotropy, with $sigma(k)=0.14$ and $sigma(L)=1.80$, and an average Young’s modulus of $7.46 GPa$. For the TD dataset, the same qualitative trends observed for RTPxy persist. ECP multifiltration descriptors outperform the PH descriptors in both directional and non-directional settings. Non-directional PH achieves only $R^2=0.596$ with MAE $=2.44 GPa$, whereas non-directional ECP improves performance substantially to $R^2=0.815$ and MAE $=1.48 GPa$. Directional descriptors again provide a consistent advantage in terms of $R^2$: directional PH+ECP reaches $R^2=0.836$, outperforming all non-directional alternatives, while the latter have a slight advantage in terms of MAE for ECP and PH+ECP. This reinforces the conclusion that direction-aware topology is not detrimental even for nominally isotropic datasets.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 525-539
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -406,8 +449,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 ::::
 
-::::{admonition} Source lines 541-542
-:class: note
+::::{admonition} Original paper material - source lines 541-542
+:class: paper-original
 
 ```latex
  541 | A limitation of the TD dataset is that anisotropy cannot be introduced in a controlled manner at the level of microstructure generation. To address this, an Anisotropic Transformed Topologically Diverse (ATTD) dataset was constructed by elongating the original structures along a single axis, thereby introducing moderate but systematic anisotropy. This procedure increases the spectral anisotropy variability to $\sigma(k)=0.20$, while the correlation-length-based variability becomes $\sigma(L)=1.74$, and the average Young’s modulus increases to $9.36\,\mathrm{GPa}$.
@@ -418,7 +461,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > A limitation of the TD dataset is that anisotropy cannot be introduced in a controlled manner at the level of microstructure generation. To address this, an Anisotropic Transformed Topologically Diverse (ATTD) dataset was constructed by elongating the original structures along a single axis, thereby introducing moderate but systematic anisotropy. This procedure increases the spectral anisotropy variability to $sigma(k)=0.20$, while the correlation-length-based variability becomes $sigma(L)=1.74$, and the average Young’s modulus increases to $9.36 GPa$. Although ATTD is more anisotropic than TD—as reflected by the larger value of $sigma(k)$—the value of $sigma(L)$ is slightly lower. This stems from the definition of the correlation-length measure, which depends on the integral of the autocorrelation function up to its first zero crossing. In the TD and ATTD datasets, where structures are not generated from spectrally controlled random fields, the autocorrelation does not necessarily decay monotonically, and the elongation procedure can reduce variability in the position of the first zero crossing across samples. As a result, the spread of $L$ values may decrease even when directional anisotropy increases. In this context, $L$ serves primarily as an auxiliary real-space measure complementing the more sensitive spectral indicator $k$.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 541-542
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -427,8 +473,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 ::::
 
-::::{admonition} Source lines 544-553
-:class: note
+::::{admonition} Original paper material - source lines 544-553
+:class: paper-original
 
 ```latex
  544 | For the ATTD dataset, the benefits of directional topology become
@@ -447,7 +493,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > For the ATTD dataset, the benefits of directional topology become more pronounced. Directional ECP improves predictive performance from $R^2=0.653$ in the non-directional case to $0.815$, while directional PH+ECP achieves the highest accuracy with $R^2=0.825$ and the lowest MAE of $2.06 GPa$. In contrast, non-directional PH+ECP remains comparatively weak ($R^2=0.643$, MAE $=3.33 GPa$). These results closely mirror those observed for RTPxz, demonstrating that the relationship between anisotropy and the effectiveness of directional descriptors is not restricted to RTP microstructures, but extends to a broader class of porous topologies.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 544-553
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -456,8 +505,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This is a performance-interpretation block. Watch both $R^2$ and MAE because they answer different questions about explained variance and absolute error.
 ::::
 
-::::{admonition} Source lines 555-555
-:class: note
+::::{admonition} Original paper material - source lines 555-555
+:class: paper-original
 
 ```latex
  555 | Figure~\ref{fig:scatter_td} compares predicted and FFTMAD-computed Young’s modulus for the TD (left) and ATTD (right) datasets. For the isotropic TD dataset, directional and non-directional topological descriptors yield comparable accuracy, with predictions clustered near perfect agreement. Introducing moderate anisotropy in ATTD leads to a clear separation: directional descriptors preserve tight alignment with the diagonal, while non-directional descriptors show increased scatter. As in the RTP datasets (Figure~\ref{fig:scatter_rtp}), this highlights that directional topology becomes increasingly informative as anisotropy strengthens, even for structurally diverse porous systems.
@@ -467,7 +516,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Figure (ref: fig:scatter_td) compares predicted and FFTMAD-computed Young’s modulus for the TD (left) and ATTD (right) datasets. For the isotropic TD dataset, directional and non-directional topological descriptors yield comparable accuracy, with predictions clustered near perfect agreement. Introducing moderate anisotropy in ATTD leads to a clear separation: directional descriptors preserve tight alignment with the diagonal, while non-directional descriptors show increased scatter. As in the RTP datasets (Figure (ref: fig:scatter_rtp)), this highlights that directional topology becomes increasingly informative as anisotropy strengthens, even for structurally diverse porous systems.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 555-555
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -476,8 +528,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.
 ::::
 
-::::{admonition} Source lines 558-560
-:class: note
+::::{admonition} Original paper material - source lines 558-560
+:class: paper-original
 
 ```latex
  558 | Across the TD and ATTD datasets, convolutional neural networks trained directly on voxelized structures achieve high accuracy, with $R^2 = 0.976$ for TD and $R^2 = 0.894$ for ATTD (Table~\ref{tab:metrics}). However, the performance gap between CNNs and topological models decreases as anisotropy increases and directional PH+ECP descriptors are used.
@@ -489,7 +541,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Across the TD and ATTD datasets, convolutional neural networks trained directly on voxelized structures achieve high accuracy, with $R^2 = 0.976$ for TD and $R^2 = 0.894$ for ATTD (Table (ref: tab:metrics)). However, the performance gap between CNNs and topological models decreases as anisotropy increases and directional PH+ECP descriptors are used. For the isotropic TD dataset ($sigma(k)=0.14$), directional PH+ECP reaches $R^2 = 0.836$, yielding a gap of $0.140$ relative to the CNN. For the moderately anisotropic ATTD dataset ($sigma(k)=0.20$), this gap reduces to $0.069$ ($R^2 = 0.825$ vs.\ $0.894$). A similar trend appears in the RTP datasets: the gap is $0.041$ for RTPxy and only $0.006$ for the strongly anisotropic RTPxz case, where directional PH+ECP nearly matches the CNN baseline ($R^2 = 0.978$ vs.\ $0.985$). These results indicate that the CNN advantage largely reflects its ability to capture anisotropic structural information, which directional topological descriptors encode explicitly and increasingly effectively as anisotropy strengthens.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 558-560
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -498,8 +553,8 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 - This supplies the scalar anisotropy summaries used to interpret when directional descriptors should matter most.
 ::::
 
-::::{admonition} Source lines 563-577
-:class: note
+::::{admonition} Original paper material - source lines 563-577
+:class: paper-original
 
 ```latex
  563 | Taken together, the results across all datasets lead to several general
@@ -523,7 +578,10 @@ This page annotates **Main manuscript**, source lines **403-579**. The original 
 
 > Taken together, the results across all datasets lead to several general conclusions. First, multifiltration ECP descriptors consistently outperform PH when used alone, regardless of dataset or anisotropy level. Second, combining PH and ECP yields the most accurate and stable topological representations across all considered regimes. Third, directional descriptors uniformly dominate non-directional ones for non-isotropic datasets and have virtually identical performance for isotropic datasets, leaving little practical justification for the latter. Finally, the advantage of directional topology increases systematically with structural anisotropy, a trend observed consistently for both RTP and non-RTP microstructures. These findings highlight the robustness and generality of topological data analysis as a framework for linking complex porous microstructures to mechanical response, and underscore its potential as an interpretable, low-dimensional alternative to purely voxel-based learning approaches.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 563-577
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.

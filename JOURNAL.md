@@ -87,3 +87,4 @@
 - Added `graph.html` and `build-vault-graph.mjs`, generating a static browser knowledge graph from 33 Obsidian notes and 111 resolved wiki links.
 - Rebuilt the knowledge base around an annotated-paper layer generated from the LaTeX source, covering every main-text and supplement section with line-numbered source blocks and commentary.
 - Added a primary `Expanded Annotated Text` chapter with continuous exposition, formulas, tables, figures, and remarks, leaving line-numbered source pages as provenance rather than the main reading experience.
+- Added an explicit annotation color contract to the JupyterBook: blue marks original-paper/source-derived material and amber marks model-added interpretation. The expanded narrative, annotated index, and generated line-numbered provenance pages now use the same convention.

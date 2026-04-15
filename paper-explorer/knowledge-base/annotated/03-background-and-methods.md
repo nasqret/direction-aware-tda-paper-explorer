@@ -1,22 +1,23 @@
 # Background and methods
 
 ```{admonition} Coverage
-:class: important
-This page annotates **Main manuscript**, source lines **314-402**. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.
+:class: annotation-legend
+This page annotates **Main manuscript**, source lines **314-402**. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.
 ```
 
-## Reading Lens
-
+```{admonition} Reading lens
+:class: model-interpretation
 - This section gives the mathematical mechanism: how a voxel structure becomes a scalar or vector field, and how PH/ECP descriptors are extracted.
 - Separate the non-directional baseline from the direction-aware modification. The comparison is only meaningful if the downstream learning model is kept comparable.
 - The central technical issue is where the loading direction enters the pipeline: before topology is computed, not merely after features are produced.
+```
 
 ## Annotated Source
 
 ### Background and methods
 
-::::{admonition} Source lines 314-314
-:class: note
+::::{admonition} Original paper material - source lines 314-314
+:class: paper-original
 
 ```latex
  314 | \section{Background and methods}
@@ -26,7 +27,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Background and methods
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 314-314
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Background and methods**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -35,8 +39,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 #### Computing topological descriptors on the structures
 
-::::{admonition} Source lines 315-315
-:class: note
+::::{admonition} Original paper material - source lines 315-315
+:class: paper-original
 
 ```latex
  315 | \subsection{Computing topological descriptors on the structures}
@@ -46,15 +50,18 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Computing topological descriptors on the structures
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 315-315
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Computing topological descriptors on the structures**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 316-324
-:class: note
+::::{admonition} Original paper material - source lines 316-324
+:class: paper-original
 
 ```latex
  316 | \begin{figure}
@@ -76,7 +83,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 ![TDA_directional_horizontal_new.png](../_static/images/TDA_directional_horizontal_new.png)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 316-324
+:class: model-interpretation
 
 - This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.
 - Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.
@@ -87,8 +97,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 ##### Topological data analysis
 
-::::{admonition} Source lines 326-326
-:class: note
+::::{admonition} Original paper material - source lines 326-326
+:class: paper-original
 
 ```latex
  326 | \subsubsection{Topological data analysis}
@@ -98,7 +108,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Topological data analysis
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 326-326
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Topological data analysis**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -106,8 +119,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 328-328
-:class: note
+::::{admonition} Original paper material - source lines 328-328
+:class: paper-original
 
 ```latex
  328 | Topological data analysis (TDA) leverages the tools of topology and algebra to extract relevant information from datasets. The fundamental principle of this methodology is that "Data has shape and shape has meaning"~\cite{Dlotko2024}. The reader is referred to~\cite{Dlotko2024, Gurnari2025} for a comprehensive overview of the basic concepts. Here, we present a brief outline of the TDA methods we will use. 
@@ -117,14 +130,17 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Topological data analysis (TDA) leverages the tools of topology and algebra to extract relevant information from datasets. The fundamental principle of this methodology is that "Data has shape and shape has meaning" (citation: Dlotko2024). The reader is referred to (citation: Dlotko2024, Gurnari2025) for a comprehensive overview of the basic concepts. Here, we present a brief outline of the TDA methods we will use.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 328-328
+:class: model-interpretation
 
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 332-332
-:class: note
+::::{admonition} Original paper material - source lines 332-332
+:class: paper-original
 
 ```latex
  332 | To represent the topology of the structures, we used 3-dimensional cubical complexes, which consist of cubes of various dimensions. TDA enables the analysis of data structures at multiple resolutions, which are defined using a function called filtration~\cite{Dlotko2024, Gurnari2025}. The initial values of this function were computed for 0-dimensional cubes (vertices) and then propagated to higher-dimensional cells in a standard manner, known as V-construction~\cite{Robins2011}.
@@ -134,15 +150,18 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > To represent the topology of the structures, we used 3-dimensional cubical complexes, which consist of cubes of various dimensions. TDA enables the analysis of data structures at multiple resolutions, which are defined using a function called filtration (citation: Dlotko2024, Gurnari2025). The initial values of this function were computed for 0-dimensional cubes (vertices) and then propagated to higher-dimensional cells in a standard manner, known as V-construction (citation: Robins2011).
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 332-332
+:class: model-interpretation
 
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
 - This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 334-334
-:class: note
+::::{admonition} Original paper material - source lines 334-334
+:class: paper-original
 
 ```latex
  334 | The filtrations chosen in previous applications of TDA to porous materials are based on the distance transform and therefore do not account for directionality~\cite{Robins2016, Herring2019, Moon2019, Thompson2023, Lisitsa2020, Lee2017, Krishnapriyan2021, Chen2025, Wang2025, Jiang2018, Ishihara2023}. However, directionality is a critical factor for anisotropic materials whose Young's modulus depends on the direction of compression. To address this, we encoded the compression direction information into the filtration functions, thereby making our descriptors direction-aware. The details of these functions are described in the next section.
@@ -152,7 +171,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > The filtrations chosen in previous applications of TDA to porous materials are based on the distance transform and therefore do not account for directionality (citation: Robins2016, Herring2019, Moon2019, Thompson2023, Lisitsa2020, Lee2017, Krishnapriyan2021, Chen2025, Wang2025, Jiang2018, Ishihara2023). However, directionality is a critical factor for anisotropic materials whose Young's modulus depends on the direction of compression. To address this, we encoded the compression direction information into the filtration functions, thereby making our descriptors direction-aware. The details of these functions are described in the next section.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 334-334
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -163,8 +185,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 ##### Cone-based filtration
 
-::::{admonition} Source lines 336-336
-:class: note
+::::{admonition} Original paper material - source lines 336-336
+:class: paper-original
 
 ```latex
  336 | \subsubsection{Cone-based filtration}
@@ -174,7 +196,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Cone-based filtration
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 336-336
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Cone-based filtration**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -182,8 +207,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 338-338
-:class: note
+::::{admonition} Original paper material - source lines 338-338
+:class: paper-original
 
 ```latex
  338 | The first directional filtration we consider is based on porosity inside cones. For each element of the input grid two cones starting at this point and having rotational axis parallel to direction of compressions are constructed. The cones are positioned in opposite directions. In the case of extreme grid elements, the cones may extend beyond the boundaries of the defined material. Therefore, for calculation purposes, we assume that the material is periodic. Porosity inside the cones is filtration value assigned to vertex corresponding to selected element of the grid. If the grid element represents an empty space, the corresponding filtration value is set to 1.25. The value 1.25 is selected arbitrary so that all the grid points outside material enters the filtration after all the grid elements belonging to material (that have filtration values between 0 and 1). This is to make a clear distinction between empty and non-empty spaces in the structure. The method is presented graphically in the Figure~\ref{fig:TDA_directional}. The formal definition of the described filtration is as follows.
@@ -193,7 +218,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > The first directional filtration we consider is based on porosity inside cones. For each element of the input grid two cones starting at this point and having rotational axis parallel to direction of compressions are constructed. The cones are positioned in opposite directions. In the case of extreme grid elements, the cones may extend beyond the boundaries of the defined material. Therefore, for calculation purposes, we assume that the material is periodic. Porosity inside the cones is filtration value assigned to vertex corresponding to selected element of the grid. If the grid element represents an empty space, the corresponding filtration value is set to 1.25. The value 1.25 is selected arbitrary so that all the grid points outside material enters the filtration after all the grid elements belonging to material (that have filtration values between 0 and 1). This is to make a clear distinction between empty and non-empty spaces in the structure. The method is presented graphically in the Figure (ref: fig:TDA_directional). The formal definition of the described filtration is as follows.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 338-338
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This is the density-baseline motivation: porosity alone is treated as insufficient for predicting stiffness across complex porous morphologies.
@@ -202,8 +230,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - The cone construction is the simplest place where direction enters the filtration: neighborhoods are sampled relative to a chosen axis.
 ::::
 
-::::{admonition} Source lines 340-343
-:class: note
+::::{admonition} Original paper material - source lines 340-343
+:class: paper-original
 
 ```latex
  340 | \begin{definition}
@@ -212,7 +240,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
  343 | \end{definition}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 340-343
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -220,8 +251,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 345-349
-:class: note
+::::{admonition} Original paper material - source lines 345-349
+:class: paper-original
 
 ```latex
  345 | \begin{definition}
@@ -231,7 +262,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
  349 | \end{definition}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 345-349
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -240,8 +274,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 351-351
-:class: note
+::::{admonition} Original paper material - source lines 351-351
+:class: paper-original
 
 ```latex
  351 | Cone-based filtration distinguishes the direction of compression ($z$-axis here) and is invariant under rotation around an axis parallel to that direction. This method takes two parameters, the cone's height and radius of its base.
@@ -251,7 +285,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Cone-based filtration distinguishes the direction of compression ($z$-axis here) and is invariant under rotation around an axis parallel to that direction. This method takes two parameters, the cone's height and radius of its base.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 351-351
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -261,8 +298,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 ##### Filtration's extension based on principal component
 
-::::{admonition} Source lines 353-353
-:class: note
+::::{admonition} Original paper material - source lines 353-353
+:class: paper-original
 
 ```latex
  353 | \subsubsection{Filtration's extension based on principal component}
@@ -272,7 +309,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Filtration's extension based on principal component
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 353-353
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Filtration's extension based on principal component**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -280,8 +320,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 354-354
-:class: note
+::::{admonition} Original paper material - source lines 354-354
+:class: paper-original
 
 ```latex
  354 | In the next step, we extended our initial filtration method to include information about the local material direction within specific regions. The local material direction for each material was represented by two parameters, which we determined through the following procedure.
@@ -291,14 +331,17 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > In the next step, we extended our initial filtration method to include information about the local material direction within specific regions. The local material direction for each material was represented by two parameters, which we determined through the following procedure.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 354-354
+:class: model-interpretation
 
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 356-356
-:class: note
+::::{admonition} Original paper material - source lines 356-356
+:class: paper-original
 
 ```latex
  356 | For a selected grid element e, we treated all non-zero grid elements within a centered sphere of a radius $r$ as a 3D point cloud. We then calculated the first principal component  of this cloud to define its primary directional axis. The resulting normalized vector was used to extract two components: one corresponding to the compression direction ($v_z$) and a second, independent component ($v_y$).
@@ -308,7 +351,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > For a selected grid element e, we treated all non-zero grid elements within a centered sphere of a radius $r$ as a 3D point cloud. We then calculated the first principal component of this cloud to define its primary directional axis. The resulting normalized vector was used to extract two components: one corresponding to the compression direction ($v_z$) and a second, independent component ($v_y$).
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 356-356
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.
@@ -316,8 +362,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 358-358
-:class: note
+::::{admonition} Original paper material - source lines 358-358
+:class: paper-original
 
 ```latex
  358 | This process results in a 2-parameter filtration value, specifically $(1-|v_z|,1-|v_y|) $. This filtration is motivated by the principle that a material's ability to transfer stress is maximized when its orientation aligns with the imposed compression direction. The method requires a single hyperparameter: the radius of the point's neighborhood. A recap of this method is shown in the Figure {\ref{fig:TDA_directional}}
@@ -327,7 +373,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > This process results in a 2-parameter filtration value, specifically $(1-|v_z|,1-|v_y|) $. This filtration is motivated by the principle that a material's ability to transfer stress is maximized when its orientation aligns with the imposed compression direction. The method requires a single hyperparameter: the radius of the point's neighborhood. A recap of this method is shown in the Figure (ref: fig:TDA_directional)
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 358-358
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
@@ -335,8 +384,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 360-360
-:class: note
+::::{admonition} Original paper material - source lines 360-360
+:class: paper-original
 
 ```latex
  360 | The hyperparameters used in the filtration procedures were fixed across all experiments. For the cone-based filtration, the cone height was set to $h_{\mathrm{cone}} = 6$ and the cone base radius to $r_{\mathrm{cone}} = 3$. The same geometric parameters were employed for both the single-parameter filtration used in persistent homology and the multifiltration used in Euler characteristic profile calculations. In the principal-component-based multifiltration, the neighborhood radius was set to $r_{\mathrm{PC1}} = 4$, defining the spherical region used to estimate the local material orientation.
@@ -346,7 +395,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > The hyperparameters used in the filtration procedures were fixed across all experiments. For the cone-based filtration, the cone height was set to $h_cone = 6$ and the cone base radius to $r_cone = 3$. The same geometric parameters were employed for both the single-parameter filtration used in persistent homology and the multifiltration used in Euler characteristic profile calculations. In the principal-component-based multifiltration, the neighborhood radius was set to $r_PC1 = 4$, defining the spherical region used to estimate the local material orientation.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 360-360
+:class: model-interpretation
 
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
 - The cone construction is the simplest place where direction enters the filtration: neighborhoods are sampled relative to a chosen axis.
@@ -354,8 +406,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 364-382
-:class: note
+::::{admonition} Original paper material - source lines 364-382
+:class: paper-original
 
 ```latex
  364 | \begin{algorithm}
@@ -379,7 +431,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
  382 | \end{algorithm}
 ```
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 364-382
+:class: model-interpretation
 
 - This mathematical block defines part of the computational object used later in the pipeline.
 - Track the variables here: later descriptors and model inputs inherit these definitions.
@@ -390,8 +445,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 ##### Direction-aware topological descriptors
 
-::::{admonition} Source lines 385-385
-:class: note
+::::{admonition} Original paper material - source lines 385-385
+:class: paper-original
 
 ```latex
  385 | \subsubsection{Direction-aware topological descriptors}
@@ -401,7 +456,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Direction-aware topological descriptors
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 385-385
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Direction-aware topological descriptors**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -409,8 +467,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 387-387
-:class: note
+::::{admonition} Original paper material - source lines 387-387
+:class: paper-original
 
 ```latex
  387 | The filtrations described above were applied to study the structures at various resolutions. Next, we generated their topological summaries using persistent homology (for cone-based filtration) and Euler characteristic profiles (ECP) (for multifiltration). Persistent Homology (PH) is a fundamental tool in TDA. It offers the advantage of simultaneously capturing structural features, such as connected components, rings, and voids, at various scales. While ECP offers a less detailed topological description, it is computationally very efficient and allows for the use of multiparameter filtrations.
@@ -420,7 +478,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > The filtrations described above were applied to study the structures at various resolutions. Next, we generated their topological summaries using persistent homology (for cone-based filtration) and Euler characteristic profiles (ECP) (for multifiltration). Persistent Homology (PH) is a fundamental tool in TDA. It offers the advantage of simultaneously capturing structural features, such as connected components, rings, and voids, at various scales. While ECP offers a less detailed topological description, it is computationally very efficient and allows for the use of multiparameter filtrations.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 387-387
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
@@ -429,8 +490,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 389-389
-:class: note
+::::{admonition} Original paper material - source lines 389-389
+:class: paper-original
 
 ```latex
  389 | In the case of Persistent Homology calculations, the assumption of periodicity of the material in the  compression direction was used. Euler characteristic profiles were calculated without assuming periodicity in any direction. 
@@ -440,7 +501,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > In the case of Persistent Homology calculations, the assumption of periodicity of the material in the compression direction was used. Euler characteristic profiles were calculated without assuming periodicity in any direction.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 389-389
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
@@ -448,8 +512,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 392-392
-:class: note
+::::{admonition} Original paper material - source lines 392-392
+:class: paper-original
 
 ```latex
  392 | Since most machine learning models require vector-formatted inputs, persistence diagrams were converted into persistence images~\cite{JMLR:v18:16-337}. Each diagram was mapped to a $10 \times 10$ image with birth and persistence ranges both set to $(0, 1.25)$. Persistence diagrams in dimensions 0, 1, and 2 were vectorized separately and subsequently concatenated into a single descriptor. Euler characteristic profiles were vectorized independently by sampling the multifiltration values on a $7 \times 7 \times 7$ grid.
@@ -459,7 +523,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Since most machine learning models require vector-formatted inputs, persistence diagrams were converted into persistence images (citation: JMLR:v18:16-337). Each diagram was mapped to a $10 x 10$ image with birth and persistence ranges both set to $(0, 1.25)$. Persistence diagrams in dimensions 0, 1, and 2 were vectorized separately and subsequently concatenated into a single descriptor. Euler characteristic profiles were vectorized independently by sampling the multifiltration values on a $7 x 7 x 7$ grid.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 392-392
+:class: model-interpretation
 
 - This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.
 - The principal-component construction adds local orientation information and supports multiparameter Euler-characteristic descriptors.
@@ -468,8 +535,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 #### Estimation using boosting algorithm and neural networks
 
-::::{admonition} Source lines 394-394
-:class: note
+::::{admonition} Original paper material - source lines 394-394
+:class: paper-original
 
 ```latex
  394 | \subsection{Estimation using boosting algorithm and neural networks}
@@ -479,7 +546,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Estimation using boosting algorithm and neural networks
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 394-394
+:class: model-interpretation
 
 - This heading opens a new logical unit: **Estimation using boosting algorithm and neural networks**.
 - Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.
@@ -487,8 +557,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 396-396
-:class: note
+::::{admonition} Original paper material - source lines 396-396
+:class: paper-original
 
 ```latex
  396 | Vectorized topological descriptors were used to train machine learning models aimed at predicting the elastic properties of the corresponding porous structures. Predictive models based on topological descriptors were trained using the CatBoost algorithm, a gradient-boosted decision tree method designed to provide strong performance and robustness on structured tabular data~\cite{Prokhorenkova2019}. As a baseline, we employed a convolutional neural network with the DenseNet-121 architecture, trained directly on voxelized representations of the structures. This architecture has previously been shown to achieve state-of-the-art performance for predicting mechanical properties of RTP-type porous structures~\cite{praca_z_madrytem}.
@@ -498,7 +568,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Vectorized topological descriptors were used to train machine learning models aimed at predicting the elastic properties of the corresponding porous structures. Predictive models based on topological descriptors were trained using the CatBoost algorithm, a gradient-boosted decision tree method designed to provide strong performance and robustness on structured tabular data (citation: Prokhorenkova2019). As a baseline, we employed a convolutional neural network with the DenseNet-121 architecture, trained directly on voxelized representations of the structures. This architecture has previously been shown to achieve state-of-the-art performance for predicting mechanical properties of RTP-type porous structures (citation: praca_z_madrytem).
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 396-396
+:class: model-interpretation
 
 - This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
@@ -507,8 +580,8 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 398-398
-:class: note
+::::{admonition} Original paper material - source lines 398-398
+:class: paper-original
 
 ```latex
  398 | Model training was performed using $k$-fold cross-validation with $k = 8$. The entire dataset was divided into eight folds. For the first model, folds 1–6 were used for training, the 7th fold served as a validation set to detect overfitting and determine when to stop training, and the 8th fold was used as the test set. All metrics reported in this paper were computed exclusively on the test sets. The second model was trained on folds 2–7, validated on fold 8, and tested on fold 1, and so on. Thus, for each algorithm, a total of eight models were trained, and the overall performance was obtained by averaging the metrics across all test sets. Using cross-validation increases the robustness of the results to random data splits. Moreover, it ensures that each data point is used exactly once as a test instance, allowing the reported metrics to represent the entire dataset.
@@ -518,13 +591,16 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > Model training was performed using $k$-fold cross-validation with $k = 8$. The entire dataset was divided into eight folds. For the first model, folds 1–6 were used for training, the 7th fold served as a validation set to detect overfitting and determine when to stop training, and the 8th fold was used as the test set. All metrics reported in this paper were computed exclusively on the test sets. The second model was trained on folds 2–7, validated on fold 8, and tested on fold 1, and so on. Thus, for each algorithm, a total of eight models were trained, and the overall performance was obtained by averaging the metrics across all test sets. Using cross-validation increases the robustness of the results to random data splits. Moreover, it ensures that each data point is used exactly once as a test instance, allowing the reported metrics to represent the entire dataset.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 398-398
+:class: model-interpretation
 
 - In the methods section, this block contributes to the pipeline that maps structure and direction into machine-learning features.
 ::::
 
-::::{admonition} Source lines 400-400
-:class: note
+::::{admonition} Original paper material - source lines 400-400
+:class: paper-original
 
 ```latex
  400 | To prevent data leakage, all $k$-fold cross-validation splits were performed at the structure level (stratification). When multiple Young’s modulus values were obtained from the same structure under different loading directions, these samples were assigned jointly to the training, validation, or test set within each fold. This ensured that mechanical responses of a given structure were never split across different subsets, providing a strict and physically meaningful evaluation of model generalization.
@@ -534,7 +610,10 @@ This page annotates **Main manuscript**, source lines **314-402**. The original 
 
 > To prevent data leakage, all $k$-fold cross-validation splits were performed at the structure level (stratification). When multiple Young’s modulus values were obtained from the same structure under different loading directions, these samples were assigned jointly to the training, validation, or test set within each fold. This ensured that mechanical responses of a given structure were never split across different subsets, providing a strict and physically meaningful evaluation of model generalization.
 
-**Commentary and remarks**
+::::
+
+::::{admonition} Model-added interpretation - source lines 400-400
+:class: model-interpretation
 
 - This connects geometry to the target variable: directional Young's modulus under a specified loading axis.
 - This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.

@@ -1,0 +1,105 @@
+/* Color contract for the annotated-paper layer.
+   Blue marks source-derived/original paper material.
+   Amber marks model-added interpretation. */
+
+:root {
+  --paper-source-border: #2563eb;
+  --paper-source-title-bg: #dbeafe;
+  --paper-source-bg: #eff6ff;
+  --paper-source-text: #1e3a8a;
+  --paper-model-border: #b45309;
+  --paper-model-title-bg: #fef3c7;
+  --paper-model-bg: #fffbeb;
+  --paper-model-text: #78350f;
+  --paper-legend-border: #475569;
+  --paper-legend-bg: #f8fafc;
+  --paper-legend-title-bg: #e2e8f0;
+  --paper-legend-text: #0f172a;
+}
+
+.admonition.paper-original,
+.paper-original.admonition {
+  border-left-color: var(--paper-source-border);
+  background: var(--paper-source-bg);
+}
+
+.admonition.paper-original > .admonition-title,
+.paper-original.admonition > .admonition-title {
+  background: var(--paper-source-title-bg);
+  color: var(--paper-source-text);
+}
+
+.admonition.model-interpretation,
+.model-interpretation.admonition {
+  border-left-color: var(--paper-model-border);
+  background: var(--paper-model-bg);
+}
+
+.admonition.model-interpretation > .admonition-title,
+.model-interpretation.admonition > .admonition-title {
+  background: var(--paper-model-title-bg);
+  color: var(--paper-model-text);
+}
+
+.admonition.annotation-legend,
+.annotation-legend.admonition {
+  border-left-color: var(--paper-legend-border);
+  background: var(--paper-legend-bg);
+}
+
+.admonition.annotation-legend > .admonition-title,
+.annotation-legend.admonition > .admonition-title {
+  background: var(--paper-legend-title-bg);
+  color: var(--paper-legend-text);
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.35em;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  vertical-align: -0.1em;
+}
+
+.paper-swatch {
+  color: var(--paper-source-border);
+  background: var(--paper-source-title-bg);
+}
+
+.model-swatch {
+  color: var(--paper-model-border);
+  background: var(--paper-model-title-bg);
+}
+
+/* The expanded narrative is mostly a source-derived reconstruction.
+   Tint its ordinary exposition so model additions stand apart visibly. */
+section#expanded-annotated-text :is(p, ul, ol, table, figure, div.math, pre):not(.admonition *):not(.cell_output *) {
+  border-left: 4px solid var(--paper-source-border);
+  background: var(--paper-source-bg);
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.35rem;
+}
+
+section#expanded-annotated-text .admonition :is(p, ul, ol, table, figure, div.math, pre),
+section#expanded-annotated-text .cell :is(p, ul, ol, table, figure, div.math, pre) {
+  border-left: 0;
+  background: transparent;
+  padding: 0;
+}
+
+[data-theme="dark"] {
+  --paper-source-border: #60a5fa;
+  --paper-source-title-bg: #172554;
+  --paper-source-bg: #0f1f3a;
+  --paper-source-text: #bfdbfe;
+  --paper-model-border: #f59e0b;
+  --paper-model-title-bg: #451a03;
+  --paper-model-bg: #2f1d05;
+  --paper-model-text: #fde68a;
+  --paper-legend-border: #94a3b8;
+  --paper-legend-bg: #111827;
+  --paper-legend-title-bg: #1f2937;
+  --paper-legend-text: #e5e7eb;
+}

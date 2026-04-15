@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -344,7 +345,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#random-trigonometric-phase">Random Trigonometric Phase</a></li>
@@ -376,24 +376,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dataset">
 <h1>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h1>
-<div class="important admonition">
+<div class="annotation-legend admonition">
 <p class="admonition-title">Coverage</p>
-<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>67-313</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>67-313</strong>. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.</p>
 </div>
-<section id="reading-lens">
-<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Reading lens</p>
 <ul class="simple">
 <li><p>This is the experimental design section. It defines where the geometry comes from, how anisotropy is controlled, and how mechanical targets are computed.</p></li>
 <li><p>The dataset choices are not incidental: RTP isolates controlled anisotropy, TD tests generalization under statistical isotropy, and ATTD tests a transformed anisotropic setting.</p></li>
 <li><p>Every later performance claim depends on the target-generation and anisotropy definitions introduced here.</p></li>
 </ul>
-</section>
+</div>
 <section id="annotated-source">
 <h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
 <section id="id1">
 <h3>Dataset<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<div class="note admonition">
-<p class="admonition-title">Source lines 67-67</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 67-67</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  67 | <span class="k">\section</span><span class="nb">{</span>Dataset<span class="nb">}</span>
 </pre></div>
 </div>
@@ -401,7 +401,9 @@ document.write(`
 <blockquote>
 <div><p>Dataset</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 67-67</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Dataset</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -410,8 +412,8 @@ document.write(`
 </div>
 <section id="random-trigonometric-phase">
 <h4>Random Trigonometric Phase<a class="headerlink" href="#random-trigonometric-phase" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 69-69</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 69-69</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  69 | <span class="k">\subsection</span><span class="nb">{</span>Random Trigonometric Phase<span class="nb">}</span>
 </pre></div>
 </div>
@@ -419,7 +421,9 @@ document.write(`
 <blockquote>
 <div><p>Random Trigonometric Phase</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 69-69</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Random Trigonometric Phase</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -427,8 +431,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 71-74</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 71-74</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  71 | The porous two-phase structures used in this study were generated using a
   72 | <span class="k">\emph</span><span class="nb">{</span>random trigonometric phase<span class="nb">}</span> (RTP) approach, in which a continuous,
   73 | statistically homogeneous random field is constructed as a superposition of
@@ -439,15 +443,17 @@ document.write(`
 <blockquote>
 <div><p>The porous two-phase structures used in this study were generated using a random trigonometric phase (RTP) approach, in which a continuous, statistically homogeneous random field is constructed as a superposition of trigonometric modes with random phases and wavevectors.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 71-74</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 77-82</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 77-82</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  77 | We consider a cubic domain discretized on a regular
   78 | <span class="s">$</span><span class="nb">N </span><span class="nv">\times</span><span class="nb"> N </span><span class="nv">\times</span><span class="nb"> N</span><span class="s">$</span> grid with <span class="s">$</span><span class="nb">N</span><span class="o">=</span><span class="m">80</span><span class="s">$</span> and periodic boundary conditions.
   79 | The spatial coordinates are normalized to the unit cube,
@@ -460,15 +466,17 @@ document.write(`
 <blockquote>
 <div><p>We consider a cubic domain discretized on a regular <span class="math notranslate nohighlight">\(N x N x N\)</span> grid with <span class="math notranslate nohighlight">\(N=80\)</span> and periodic boundary conditions. The spatial coordinates are normalized to the unit cube, <span class="math notranslate nohighlight">\(x in [0,1)^3\)</span>, and periodicity is enforced implicitly by the trigonometric basis. The RTP scalar field <span class="math notranslate nohighlight">\(S(x)\)</span> is defined as</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 77-82</p>
 <ul class="simple">
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 83-89</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 83-89</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  83 | <span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
   84 | <span class="k">\label</span><span class="nb">{</span>eqn:rtp<span class="nb">_</span>S<span class="nb">}</span>
   85 | S(<span class="k">\mathbf</span><span class="nb">{</span>x<span class="nb">}</span>) =
@@ -478,7 +486,9 @@ document.write(`
   89 | <span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 83-89</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
@@ -486,8 +496,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 90-94</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 90-94</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  90 | where <span class="s">$</span><span class="nb">K</span><span class="s">$</span> is the number of trigonometric modes,
   91 | <span class="s">$</span><span class="nv">\phi</span><span class="nb">_k </span><span class="nv">\sim</span><span class="nb"> </span><span class="nv">\mathcal</span><span class="nb">{U}</span><span class="o">(</span><span class="m">0</span><span class="nb">,</span><span class="m">2</span><span class="nv">\pi</span><span class="o">)</span><span class="s">$</span> are independent random phase shifts, and the
   92 | wavevectors <span class="s">$</span><span class="nv">\mathbf</span><span class="nb">{q}_k</span><span class="s">$</span> are sampled from a bounded integer lattice <span class="s">$</span><span class="nv">\mathbf</span><span class="nb">{q}_k </span><span class="o">=</span><span class="nb"> </span><span class="o">(</span><span class="nb">n_x, n_y, n_z</span><span class="o">)</span><span class="nb">, n_</span><span class="nv">\alpha</span><span class="nb"> </span><span class="nv">\in</span><span class="nb"> </span><span class="o">[-</span><span class="nb">n_</span><span class="nv">\text</span><span class="nb">{max}, n_</span><span class="nv">\text</span><span class="nb">{max}</span><span class="o">]</span><span class="nb">.</span><span class="s">$</span>
@@ -499,15 +509,17 @@ document.write(`
 <blockquote>
 <div><p>where <span class="math notranslate nohighlight">\(K\)</span> is the number of trigonometric modes, <span class="math notranslate nohighlight">\(phi_k ~ U(0,2pi)\)</span> are independent random phase shifts, and the wavevectors <span class="math notranslate nohighlight">\(q_k\)</span> are sampled from a bounded integer lattice <span class="math notranslate nohighlight">\(q_k = (n_x, n_y, n_z), n_alpha in [-n_max, n_max].\)</span> Because each cosine mode is periodic on the unit torus, the field <span class="math notranslate nohighlight">\(S\)</span> and all derived microstructures satisfy periodic boundary conditions by construction.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 90-94</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 96-98</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 96-98</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  96 | The continuous field <span class="s">$</span><span class="nb">S</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}</span><span class="o">)</span><span class="s">$</span> is converted into a binary porous medium
   97 | by thresholding.
   98 | The material indicator function <span class="s">$</span><span class="nb">X</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}</span><span class="o">)</span><span class="nb"> </span><span class="nv">\in</span><span class="nb"> </span><span class="nv">\{</span><span class="m">0</span><span class="nb">,</span><span class="m">1</span><span class="nv">\}</span><span class="s">$</span> is defined as
@@ -517,15 +529,17 @@ document.write(`
 <blockquote>
 <div><p>The continuous field <span class="math notranslate nohighlight">\(S(x)\)</span> is converted into a binary porous medium by thresholding. The material indicator function $X(x) in \0,1$ is defined as</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 96-98</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 99-105</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 99-105</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  99 | <span class="sb">\[</span>
 <span class="nb"> </span><span class="m">100</span><span class="nb"> | X</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span>
 <span class="nb"> </span><span class="m">101</span><span class="nb"> | </span><span class="nv">\begin</span><span class="nb">{cases}</span>
@@ -535,15 +549,17 @@ document.write(`
 <span class="nb"> </span><span class="m">105</span><span class="nb"> | </span><span class="s">\]</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 99-105</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 106-114</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 106-114</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 106 | where <span class="s">$</span><span class="nb">X</span><span class="o">=</span><span class="m">1</span><span class="s">$</span> denotes solid material and <span class="s">$</span><span class="nb">X</span><span class="o">=</span><span class="m">0</span><span class="s">$</span> denotes void.
  107 | For each realization, the threshold <span class="s">$</span><span class="nv">\tau</span><span class="s">$</span> is determined numerically such that
  108 | the resulting porosity <span class="s">$</span><span class="nv">\phi</span><span class="s">$</span> matches a prescribed target value, selected
@@ -559,7 +575,9 @@ document.write(`
 <blockquote>
 <div><p>where <span class="math notranslate nohighlight">\(X=1\)</span> denotes solid material and <span class="math notranslate nohighlight">\(X=0\)</span> denotes void. For each realization, the threshold <span class="math notranslate nohighlight">\(tau\)</span> is determined numerically such that the resulting porosity <span class="math notranslate nohighlight">\(phi\)</span> matches a prescribed target value, selected prior to generation. To ensure physically meaningful structures, each realization is subjected to a connectivity and percolation analysis under periodic boundary conditions: all material voxels must form a single connected component and the solid phase must percolate across the domain in all three Cartesian directions, otherwise the structure is not included in the dataset. In this study, we used <span class="math notranslate nohighlight">\(K\)</span> values sampled uniformly from the interval <span class="math notranslate nohighlight">\([10, 30]\)</span>, fixed <span class="math notranslate nohighlight">\(n_max = 12\)</span>, and selected the target porosity uniformly from the interval <span class="math notranslate nohighlight">\([0.2, 0.8]\)</span>.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 106-114</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This is the density-baseline motivation: porosity alone is treated as insufficient for predicting stiffness across complex porous morphologies.</p></li>
@@ -568,8 +586,8 @@ document.write(`
 <li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 117-123</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 117-123</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 117 | In the isotropic case, the statistical properties of <span class="s">$</span><span class="nb">S</span><span class="s">$</span> are invariant under
  118 | rotations, as the spectral content is identical on average along all spatial
  119 | directions.
@@ -583,7 +601,9 @@ document.write(`
 <blockquote>
 <div><p>In the isotropic case, the statistical properties of <span class="math notranslate nohighlight">\(S\)</span> are invariant under rotations, as the spectral content is identical on average along all spatial directions. Directional anisotropy is introduced explicitly in Fourier space by scaling the components of the wavevectors prior to evaluating Eq.~eqn:rtp_S. Specifically, integer wavevectors <span class="math notranslate nohighlight">\(q_k^(0)\)</span> are first sampled uniformly from the bounded lattice, and the final wavevectors are defined as</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 117-123</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
@@ -592,22 +612,24 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 124-126</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 124-126</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 124 | <span class="k">\begin</span><span class="nb">{</span>equation*<span class="nb">}</span>
  125 | <span class="k">\mathbf</span><span class="nb">{</span>q<span class="nb">}_</span>k = <span class="k">\mathrm</span><span class="nb">{</span>diag<span class="nb">}</span>(s<span class="nb">_</span>x, s<span class="nb">_</span>y, s<span class="nb">_</span>z)<span class="k">\,\mathbf</span><span class="nb">{</span>q<span class="nb">}_</span>k<span class="nb">^{</span>(0)<span class="nb">}</span>,
  126 | <span class="k">\end</span><span class="nb">{</span>equation*<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 124-126</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 127-131</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 127-131</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 127 | where <span class="s">$</span><span class="o">(</span><span class="nb">s_x, s_y, s_z</span><span class="o">)</span><span class="s">$</span> are prescribed anisotropy scaling factors.
  128 | This construction directly controls the characteristic correlation lengths of
  129 | the random field: larger values of <span class="s">$</span><span class="nb">s_</span><span class="nv">\alpha</span><span class="s">$</span> correspond to higher spatial
@@ -619,14 +641,16 @@ document.write(`
 <blockquote>
 <div><p>where <span class="math notranslate nohighlight">\((s_x, s_y, s_z)\)</span> are prescribed anisotropy scaling factors. This construction directly controls the characteristic correlation lengths of the random field: larger values of <span class="math notranslate nohighlight">\(s_alpha\)</span> correspond to higher spatial frequencies and thus shorter correlation lengths along direction <span class="math notranslate nohighlight">\(alpha\)</span>, whereas smaller values of <span class="math notranslate nohighlight">\(s_alpha\)</span> lead to longer-range correlations.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 127-131</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 133-135</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 133-135</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 133 | In this work, we set <span class="s">$</span><span class="nb">s_x </span><span class="o">=</span><span class="nb"> s_y </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="s">$</span> and <span class="s">$</span><span class="nb">s_z </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">2</span><span class="s">$</span>, resulting in structures
  134 | with significantly extended correlation length along the <span class="s">$</span><span class="nb">z</span><span class="s">$</span> axis and a
  135 | pronounced directional anisotropy.
@@ -636,14 +660,16 @@ document.write(`
 <blockquote>
 <div><p>In this work, we set <span class="math notranslate nohighlight">\(s_x = s_y = 1\)</span> and <span class="math notranslate nohighlight">\(s_z = 0.2\)</span>, resulting in structures with significantly extended correlation length along the <span class="math notranslate nohighlight">\(z\)</span> axis and a pronounced directional anisotropy.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 133-135</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 137-152</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 137-152</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 137 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
  138 |     <span class="k">\centering</span>
  139 |     <span class="k">\begin</span><span class="nb">{</span>overpic<span class="nb">}</span>[width=0.3<span class="k">\textwidth</span>]<span class="nb">{</span>render<span class="nb">_</span>rtp<span class="nb">_</span>420.png<span class="nb">}</span>
@@ -670,7 +696,9 @@ document.write(`
 <p><img alt="render_rtp_420.png" src="../_images/render_rtp_420.png" /></p>
 <p><img alt="render_rtp_121.png" src="../_images/render_rtp_121.png" /></p>
 <p><img alt="render_rtp_349.png" src="../_images/render_rtp_349.png" /></p>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 137-152</p>
 <ul class="simple">
 <li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
 <li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
@@ -679,8 +707,8 @@ document.write(`
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 154-154</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 154-154</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 154 | A total of 500 distinct RTP microstructures were generated. For each structure, uniaxial compression tests were performed independently along the three Cartesian directions, and the corresponding directional Young’s moduli were computed using an FFT-based spectral homogenization method implemented in <span class="k">\texttt</span><span class="nb">{</span>FFTMAD<span class="nb">}</span> (see Section~<span class="k">\ref</span><span class="nb">{</span>sec:fftmad<span class="nb">}</span> for details of the numerical procedure). Figure~<span class="k">\ref</span><span class="nb">{</span>fig:rtp<span class="nb">}</span> presents three exemplary RTP structures spanning increasing levels of structural anisotropy, together with their corresponding directional Young’s moduli, porosities, and spectral anisotropy measures, illustrating correlation between directional morphology and mechanical response.
 </pre></div>
 </div>
@@ -688,7 +716,9 @@ document.write(`
 <blockquote>
 <div><p>A total of 500 distinct RTP microstructures were generated. For each structure, uniaxial compression tests were performed independently along the three Cartesian directions, and the corresponding directional Young’s moduli were computed using an FFT-based spectral homogenization method implemented in <code class="docutils literal notranslate"><span class="pre">FFTMAD</span></code> (see Section (ref: sec:fftmad) for details of the numerical procedure). Figure (ref: fig:rtp) presents three exemplary RTP structures spanning increasing levels of structural anisotropy, together with their corresponding directional Young’s moduli, porosities, and spectral anisotropy measures, illustrating correlation between directional morphology and mechanical response.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 154-154</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
@@ -700,8 +730,8 @@ document.write(`
 </section>
 <section id="dataset-of-topologically-diverse-structures">
 <h4>Dataset of topologically diverse structures<a class="headerlink" href="#dataset-of-topologically-diverse-structures" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 156-156</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 156-156</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 156 | <span class="k">\subsection</span><span class="nb">{</span>Dataset of topologically diverse structures<span class="nb">}</span>
 </pre></div>
 </div>
@@ -709,7 +739,9 @@ document.write(`
 <blockquote>
 <div><p>Dataset of topologically diverse structures</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 156-156</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Dataset of topologically diverse structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -717,8 +749,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 157-180</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 157-180</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 157 | <span class="k">\label</span><span class="nb">{</span>sec:td<span class="nb">_</span>structures<span class="nb">}</span>
  158 | A dataset of 2375 topologically diverse (TD) 
  159 | periodic porous structures was generated to assess the
@@ -749,7 +781,9 @@ document.write(`
 <blockquote>
 <div><p>(label: sec:td_structures) A dataset of 2375 topologically diverse (TD) periodic porous structures was generated to assess the generality of the proposed topological descriptors beyond RTP-based structures. All structures occupy a normalized <span class="math notranslate nohighlight">\(1x1x1\)</span> cubic domain, voxelized on a regular <span class="math notranslate nohighlight">\(80x80x80\)</span> grid, and satisfy periodic boundary conditions in all three spatial directions. Importantly, the dataset was constructed to be statistically isotropic: no preferred spatial direction is imposed by the generation procedures, and the resulting ensembles exhibit no systematic directional bias in their geometric or mechanical properties. Within this constraint, the dataset spans a broad range of pore morphologies and topologies. The dataset comprises five approximately equally sized subsets, each corresponding to a distinct family of porous structures generated by a different stochastic algorithm. Within each family, randomness ensures substantial variability in geometric features and effective elastic properties while preserving statistical isotropy. Additional details on the generating algorithms are available in the SI, while the full dataset, together with the corresponding unidirectional Young’s moduli, is available in the dedicated repository associated with this paper – see section Code and Data Availability for more information. The five structure families are referred to as Voronoi, Zeolitic, Diamond-like, Cubic-strut, and Spline-based structures. Representative examples and generation schematics are shown in Figure (ref: fig:various_aniso). Below we briefly summarize the defining characteristics of each family.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 157-180</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
@@ -760,8 +794,8 @@ document.write(`
 </div>
 <section id="voronoi-based-structures">
 <h5>Voronoi-based structures<a class="headerlink" href="#voronoi-based-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 182-182</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 182-182</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 182 | <span class="k">\paragraph</span><span class="nb">{</span>Voronoi-based structures<span class="nb">}</span> were generated from three-dimensional Voronoi
 </pre></div>
 </div>
@@ -769,7 +803,9 @@ document.write(`
 <blockquote>
 <div><p>Voronoi-based structures were generated from three-dimensional Voronoi</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 182-182</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Voronoi-based structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -777,8 +813,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 183-187</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 183-187</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 183 | tessellations of randomly distributed seed points within the unit cell.
  184 | Between three and twelve points were sampled uniformly per realization, and the
  185 | edges of the resulting tessellation were used as the structural skeleton.
@@ -790,7 +826,9 @@ document.write(`
 <blockquote>
 <div><p>tessellations of randomly distributed seed points within the unit cell. Between three and twelve points were sampled uniformly per realization, and the edges of the resulting tessellation were used as the structural skeleton. These edges were voxelized and thickened to form struts with square cross sections of randomly varying thickness (see Figure~S1 in the Supplementary Information).</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 183-187</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
@@ -799,8 +837,8 @@ document.write(`
 </section>
 <section id="zeolitic-inspired-structures">
 <h5>Zeolitic-inspired structures<a class="headerlink" href="#zeolitic-inspired-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 189-189</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 189-189</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 189 | <span class="k">\paragraph</span><span class="nb">{</span>Zeolitic-inspired structures<span class="nb">}</span> were derived from predicted zeolite frameworks reported in
 </pre></div>
 </div>
@@ -808,7 +846,9 @@ document.write(`
 <blockquote>
 <div><p>Zeolitic-inspired structures were derived from predicted zeolite frameworks reported in</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 189-189</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Zeolitic-inspired structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -816,8 +856,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 190-195</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 190-195</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 190 | the database of Deem and co-workers~<span class="k">\cite</span><span class="nb">{</span>C0CP02255A,deem2023pcod<span class="nb">}</span>.
  191 | A subset of structures with orthogonal unit cells was selected and rescaled to
  192 | the normalized cubic domain.
@@ -830,7 +870,9 @@ document.write(`
 <blockquote>
 <div><p>the database of Deem and co-workers (citation: C0CP02255A,deem2023pcod). A subset of structures with orthogonal unit cells was selected and rescaled to the normalized cubic domain. Although individual realizations may exhibit complex internal connectivity, the ensemble does not privilege any spatial direction and is therefore statistically isotropic.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 190-195</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
@@ -840,8 +882,8 @@ document.write(`
 </section>
 <section id="diamond-like-structures">
 <h5>Diamond-like structures<a class="headerlink" href="#diamond-like-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 197-197</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 197-197</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 197 | <span class="k">\paragraph</span><span class="nb">{</span>Diamond-like structures<span class="nb">}</span> were generated by perturbing the atomic positions of an
 </pre></div>
 </div>
@@ -849,7 +891,9 @@ document.write(`
 <blockquote>
 <div><p>Diamond-like structures were generated by perturbing the atomic positions of an</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 197-197</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Diamond-like structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -857,8 +901,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 198-204</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 198-204</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 198 | ideal diamond lattice within the unit cell.
  199 | Random displacements drawn from isotropic normal distributions were applied
  200 | uniformly to all lattice sites, with the displacement magnitude varied across
@@ -872,7 +916,9 @@ document.write(`
 <blockquote>
 <div><p>ideal diamond lattice within the unit cell. Random displacements drawn from isotropic normal distributions were applied uniformly to all lattice sites, with the displacement magnitude varied across realizations. Edges corresponding to nearest-neighbor bonds were then thickened to form struts with randomly selected square cross sections, producing networks that remain statistically isotropic at the ensemble level.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 198-204</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
@@ -881,8 +927,8 @@ document.write(`
 </section>
 <section id="cubic-strut-structures">
 <h5>Cubic-strut structures<a class="headerlink" href="#cubic-strut-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 206-206</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 206-206</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 206 | <span class="k">\paragraph</span><span class="nb">{</span>Cubic-strut structures<span class="nb">}</span> were generated using the same procedure as for the
 </pre></div>
 </div>
@@ -890,7 +936,9 @@ document.write(`
 <blockquote>
 <div><p>Cubic-strut structures were generated using the same procedure as for the</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 206-206</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Cubic-strut structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -898,8 +946,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 207-211</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 207-211</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 207 | diamond-like structures, but starting from a simple cubic lattice rather than a
  208 | diamond lattice.
  209 | Random perturbations of the lattice sites and variations in strut thickness
@@ -911,7 +959,9 @@ document.write(`
 <blockquote>
 <div><p>diamond-like structures, but starting from a simple cubic lattice rather than a diamond lattice. Random perturbations of the lattice sites and variations in strut thickness introduce geometric disorder while preserving the absence of any preferred orientation in the ensemble.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 207-211</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
@@ -920,8 +970,8 @@ document.write(`
 </section>
 <section id="spline-based-structures">
 <h5>Spline-based structures<a class="headerlink" href="#spline-based-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 213-213</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 213-213</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 213 | <span class="k">\paragraph</span><span class="nb">{</span>Spline-based structures<span class="nb">}</span> were constructed by thresholding smooth, periodic scalar
 </pre></div>
 </div>
@@ -929,7 +979,9 @@ document.write(`
 <blockquote>
 <div><p>Spline-based structures were constructed by thresholding smooth, periodic scalar</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 213-213</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Spline-based structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -938,8 +990,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 214-220</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 214-220</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 214 | fields defined via trivariate tensor-product B-splines.
  215 | Random spline coefficients were drawn independently, and periodicity was
  216 | enforced at the level of the spline basis.
@@ -953,7 +1005,9 @@ document.write(`
 <blockquote>
 <div><p>fields defined via trivariate tensor-product B-splines. Random spline coefficients were drawn independently, and periodicity was enforced at the level of the spline basis. Because the underlying scalar fields are generated without directional preference, the resulting binary porous structures form a statistically isotropic ensemble with smooth pore morphologies and controlled volume fractions.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 214-220</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -966,8 +1020,8 @@ document.write(`
 </section>
 <section id="dataset-of-anisotropic-transformed-topologically-diverse-structures">
 <h4>Dataset of anisotropic transformed topologically diverse structures<a class="headerlink" href="#dataset-of-anisotropic-transformed-topologically-diverse-structures" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 222-222</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 222-222</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 222 | <span class="k">\subsection</span><span class="nb">{</span>Dataset of anisotropic transformed topologically diverse structures<span class="nb">}</span>
 </pre></div>
 </div>
@@ -975,7 +1029,9 @@ document.write(`
 <blockquote>
 <div><p>Dataset of anisotropic transformed topologically diverse structures</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 222-222</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Dataset of anisotropic transformed topologically diverse structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -984,8 +1040,8 @@ document.write(`
 <li><p>This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 223-243</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 223-243</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 223 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
  224 |     <span class="k">\centering</span>
  225 |     <span class="k">\begin</span><span class="nb">{</span>overpic<span class="nb">}</span>[width=0.18<span class="k">\textwidth</span>]<span class="nb">{</span>render<span class="nb">_</span>splines.png<span class="nb">}</span>
@@ -1019,7 +1075,9 @@ document.write(`
 <p><img alt="render_cubic.png" src="../_images/render_cubic.png" /></p>
 <p><img alt="render_zeolites.png" src="../_images/render_zeolites.png" /></p>
 <p><img alt="render_voronoi.png" src="../_images/render_voronoi.png" /></p>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 223-243</p>
 <ul class="simple">
 <li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
 <li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
@@ -1028,8 +1086,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 244-249</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 244-249</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 244 | For the TD dataset, there is no natural or
  245 | straightforward way to introduce anisotropy at the level of structure
  246 | generation.
@@ -1042,7 +1100,9 @@ document.write(`
 <blockquote>
 <div><p>For the TD dataset, there is no natural or straightforward way to introduce anisotropy at the level of structure generation. To overcome this limitation and to enable a systematic study of anisotropic effects, a simple geometric elongation procedure was applied to the existing binary structures, yielding an additional dataset denoted Anisotropic Transformed Topologically Diverse (ATTD).</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 244-249</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
@@ -1051,8 +1111,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 251-257</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 251-257</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 251 | Each original isotropic structure, represented on an <span class="s">$</span><span class="m">80</span><span class="nv">\times</span><span class="m">80</span><span class="nv">\times</span><span class="m">80</span><span class="s">$</span>
  252 | voxel grid, was first downsampled to a <span class="s">$</span><span class="m">40</span><span class="nv">\times</span><span class="m">40</span><span class="nv">\times</span><span class="m">40</span><span class="s">$</span> grid, forming a
  253 | coarse-grained structural segment.
@@ -1066,7 +1126,9 @@ document.write(`
 <blockquote>
 <div><p>Each original isotropic structure, represented on an <span class="math notranslate nohighlight">\(80x80x80\)</span> voxel grid, was first downsampled to a <span class="math notranslate nohighlight">\(40x40x40\)</span> grid, forming a coarse-grained structural segment. This segment was then elongated along the <span class="math notranslate nohighlight">\(z\)</span> direction to obtain a <span class="math notranslate nohighlight">\(40x40x80\)</span> volume. Finally, the elongated segment was replicated four times in the transverse directions to reconstruct an <span class="math notranslate nohighlight">\(80x80x80\)</span> periodic grid.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 251-257</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -1074,8 +1136,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 259-267</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 259-267</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 259 | This transformation preserves the local topology of the original structures
  260 | while introducing a distinguished spatial direction through geometric
  261 | elongation.
@@ -1091,7 +1153,9 @@ document.write(`
 <blockquote>
 <div><p>This transformation preserves the local topology of the original structures while introducing a distinguished spatial direction through geometric elongation. As a result, isotropy is systematically broken and a moderate, controllable structural anisotropy is introduced, with the <span class="math notranslate nohighlight">\(z\)</span> axis becoming preferentially aligned. The resulting dataset provides a complementary benchmark bridging the gap between statistically isotropic diverse structures and the strongly anisotropic RTP-based datasets.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 259-267</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
@@ -1102,8 +1166,8 @@ document.write(`
 </section>
 <section id="anisotropy-measures">
 <h4>Anisotropy Measures<a class="headerlink" href="#anisotropy-measures" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 269-269</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 269-269</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 269 | <span class="k">\subsection</span><span class="nb">{</span>Anisotropy Measures<span class="nb">}</span>
 </pre></div>
 </div>
@@ -1111,7 +1175,9 @@ document.write(`
 <blockquote>
 <div><p>Anisotropy Measures</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 269-269</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Anisotropy Measures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -1120,8 +1186,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 271-273</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 271-273</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 271 | Structural anisotropy was quantified directly on the binary voxelized
  272 | microstructures~<span class="k">\cite</span><span class="nb">{</span>PhysRevE.76.031110<span class="nb">}</span>. Two complementary measures were employed, capturing
  273 | anisotropy in real space and in Fourier space, respectively.
@@ -1131,7 +1197,9 @@ document.write(`
 <blockquote>
 <div><p>Structural anisotropy was quantified directly on the binary voxelized microstructures (citation: PhysRevE.76.031110). Two complementary measures were employed, capturing anisotropy in real space and in Fourier space, respectively.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 271-273</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -1140,8 +1208,8 @@ document.write(`
 <li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 275-293</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 275-293</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 275 | Directional correlation lengths were estimated from the two-point
  276 | autocorrelation function of the mean-centered indicator field
  277 | <span class="s">$</span><span class="nb">Y</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> X</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{x}</span><span class="o">)</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="nv">\langle</span><span class="nb"> X </span><span class="nv">\rangle</span><span class="s">$</span>.
@@ -1167,7 +1235,9 @@ document.write(`
 <blockquote>
 <div><p>Directional correlation lengths were estimated from the two-point autocorrelation function of the mean-centered indicator field <span class="math notranslate nohighlight">\(Y(x) = X(x) - X \)</span>. For each Cartesian direction, one-dimensional periodic autocorrelation functions were computed along all lines parallel to that axis using FFT-based convolution and subsequently averaged over transverse coordinates. The resulting directional autocorrelation functions <span class="math notranslate nohighlight">\(C_x()\)</span>, <span class="math notranslate nohighlight">\(C_y()\)</span>, and <span class="math notranslate nohighlight">\(C_z()\)</span> were normalized such that <span class="math notranslate nohighlight">\(C_alpha(0)=1\)</span>. We define directional correlation lengths <span class="math notranslate nohighlight">\(L_alpha = sum_ 0 C_alpha()\)</span> where the sum is restricted to non-negative lags up to the first zero crossing of <span class="math notranslate nohighlight">\(C_alpha()\)</span> as a characteristic anisotropy length. Structure anisotropy is additionally characterized in Fourier space using the power spectrum. The discrete Fourier transform of the mean-centered indicator field was computed and the directional second moments of the power spectrum, <span class="math notranslate nohighlight">\( k_alpha^2\)</span>, were evaluated by weighting each squared wavevector component by the normalized spectral power. To reduce sensitivity to interface-induced high-frequency noise inherent to binary data, the spectral moments were computed after removal of the zero frequency mode. Together, these real-space and spectral measures provide quantification of anisotropy in all porous materials considered here.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 275-293</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -1179,8 +1249,8 @@ document.write(`
 </section>
 <section id="estimation-of-the-young-s-modulus">
 <h4>Estimation of the Young’s modulus<a class="headerlink" href="#estimation-of-the-young-s-modulus" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 296-296</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 296-296</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 296 | <span class="k">\subsection</span><span class="nb">{</span>Estimation of the Young&#39;s modulus<span class="nb">}</span>
 </pre></div>
 </div>
@@ -1188,7 +1258,9 @@ document.write(`
 <blockquote>
 <div><p>Estimation of the Young’s modulus</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 296-296</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Estimation of the Young’s modulus</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -1196,8 +1268,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 297-297</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 297-297</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 297 | <span class="k">\label</span><span class="nb">{</span>sec:fftmad<span class="nb">}</span>
 </pre></div>
 </div>
@@ -1205,14 +1277,16 @@ document.write(`
 <blockquote>
 <div><p>(label: sec:fftmad)</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 297-297</p>
 <ul class="simple">
 <li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 299-304</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 299-304</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 299 | Effective Young’s moduli of the porous microstructures were computed in silico
  300 | using an FFT-based homogenization approach implemented in the Python package
  301 | <span class="k">\texttt</span><span class="nb">{</span>FFTMAD<span class="nb">}</span>~<span class="k">\cite</span><span class="nb">{</span>Lucarini2019<span class="nb">}</span>.
@@ -1225,7 +1299,9 @@ document.write(`
 <blockquote>
 <div><p>Effective Young’s moduli of the porous microstructures were computed in silico using an FFT-based homogenization approach implemented in the Python package <code class="docutils literal notranslate"><span class="pre">FFTMAD</span></code> (citation: Lucarini2019). For each structure, uniaxial compressive loading was applied along the selected principal directions, and the effective Young’s modulus was extracted from the linear macroscopic stress–strain response.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 299-304</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
@@ -1234,8 +1310,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 306-312</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 306-312</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 306 | For the RTP datasets, the solid phase was modeled as an isotropic linear elastic
  307 | material with Young’s modulus <span class="s">$</span><span class="nb">E_{</span><span class="nv">\mathrm</span><span class="nb">{bulk}}</span><span class="o">=</span><span class="nv">\text</span><span class="nb">{</span><span class="m">81</span><span class="nb">.</span><span class="m">5</span><span class="nb">}</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span> and
  308 | Poisson’s ratio <span class="s">$</span><span class="nv">\nu</span><span class="nb">_{</span><span class="nv">\mathrm</span><span class="nb">{bulk}}</span><span class="o">=</span><span class="nv">\text</span><span class="nb">{</span><span class="m">0</span><span class="nb">.</span><span class="m">39</span><span class="nb">}</span><span class="s">$</span>, chosen to be representative of the
@@ -1249,7 +1325,9 @@ document.write(`
 <blockquote>
 <div><p>For the RTP datasets, the solid phase was modeled as an isotropic linear elastic material with Young’s modulus <span class="math notranslate nohighlight">\(E_bulk=81.5 GPa\)</span> and Poisson’s ratio <span class="math notranslate nohighlight">\(_bulk=0.39\)</span>, chosen to be representative of the Au<span class="math notranslate nohighlight">\(_0.30\)</span>Ag<span class="math notranslate nohighlight">\(_0.70\)</span> alloy – a material frequently used in nanoporous research (citation: ShanShi, ZANDERSONS2021116979, BEETS2021116445). The elastic properties of the structures in the TD and ATTD were set to <span class="math notranslate nohighlight">\(E_bulk=70.0 GPa\)</span> and <span class="math notranslate nohighlight">\(_bulk=0.33\)</span> and correspond to aluminium. All simulations were performed in the small-strain regime, and on the voxelized structures.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 306-312</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
@@ -1327,7 +1405,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#random-trigonometric-phase">Random Trigonometric Phase</a></li>

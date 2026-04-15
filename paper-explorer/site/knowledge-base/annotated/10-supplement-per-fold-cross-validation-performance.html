@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -344,7 +345,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-fold-cross-validation-performance">Per-Fold Cross-Validation Performance</a></li>
 </ul>
@@ -362,24 +362,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="supplement-per-fold-cross-validation-performance">
 <h1>Supplement: Per-Fold Cross-Validation Performance<a class="headerlink" href="#supplement-per-fold-cross-validation-performance" title="Link to this heading">#</a></h1>
-<div class="important admonition">
+<div class="annotation-legend admonition">
 <p class="admonition-title">Coverage</p>
-<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>105-159</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>105-159</strong>. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.</p>
 </div>
-<section id="reading-lens">
-<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Reading lens</p>
 <ul class="simple">
 <li><p>This supplementary section fills in implementation detail or additional evidence that the main text compresses.</p></li>
 <li><p>Read it as support for reproducibility: generation procedures, additional RTPxyz results, and fold-level performance tables.</p></li>
 <li><p>Where the main text states a result, the supplement often exposes the variation or construction detail behind it.</p></li>
 </ul>
-</section>
+</div>
 <section id="annotated-source">
 <h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
 <section id="per-fold-cross-validation-performance">
 <h3>Per-Fold Cross-Validation Performance<a class="headerlink" href="#per-fold-cross-validation-performance" title="Link to this heading">#</a></h3>
-<div class="note admonition">
-<p class="admonition-title">Source lines 105-105</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 105-105</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 105 | <span class="k">\section</span><span class="nb">{</span>Per-Fold Cross-Validation Performance<span class="nb">}</span>
 </pre></div>
 </div>
@@ -387,15 +387,17 @@ document.write(`
 <blockquote>
 <div><p>Per-Fold Cross-Validation Performance</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 105-105</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Per-Fold Cross-Validation Performance</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
 <li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 106-106</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 106-106</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 106 | The implemented cross-validation procedure allows for a direct comparison of the models within each fold, as identical train/validation/test splits are used throughout. This provides substantially more detailed insight than the averaged results reported in Table 1 of the manuscript.
 </pre></div>
 </div>
@@ -403,13 +405,15 @@ document.write(`
 <blockquote>
 <div><p>The implemented cross-validation procedure allows for a direct comparison of the models within each fold, as identical train/validation/test splits are used throughout. This provides substantially more detailed insight than the averaged results reported in Table 1 of the manuscript.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 106-106</p>
 <ul class="simple">
 <li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 108-108</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 108-108</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 108 | The per-fold results for the <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> and MAE metrics are presented in Tables~<span class="k">\ref</span><span class="nb">{</span>tab:fold<span class="nb">_</span>r2<span class="nb">}</span> and~<span class="k">\ref</span><span class="nb">{</span>tab:fold<span class="nb">_</span>mae<span class="nb">}</span>, respectively. The column Gain indicates whether the use of directional descriptors improves the performance, i.e., increases <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> or decreases MAE. The last two rows of each table report the mean and standard deviation across folds for each method.
 </pre></div>
 </div>
@@ -417,15 +421,17 @@ document.write(`
 <blockquote>
 <div><p>The per-fold results for the <span class="math notranslate nohighlight">\(R^2\)</span> and MAE metrics are presented in Tables (ref: tab:fold_r2) and (ref: tab:fold_mae), respectively. The column Gain indicates whether the use of directional descriptors improves the performance, i.e., increases <span class="math notranslate nohighlight">\(R^2\)</span> or decreases MAE. The last two rows of each table report the mean and standard deviation across folds for each method.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 108-108</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
 <li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 110-110</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 110-110</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 110 | We report results for the PH+ECP descriptor on the RTPxz and RTPxy datasets, as this combination constitutes the main result of the paper. As shown in the tables, the improvement obtained by incorporating directional descriptors is consistent across all folds and for both datasets: <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> increases and MAE decreases in every single split, demonstrating that the performance gain is systematic rather than incidental. The only exception is the standard deviation of <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> for RTPxy, which is slightly higher for the directional descriptors compared to the non-directional variant.
 </pre></div>
 </div>
@@ -433,7 +439,9 @@ document.write(`
 <blockquote>
 <div><p>We report results for the PH+ECP descriptor on the RTPxz and RTPxy datasets, as this combination constitutes the main result of the paper. As shown in the tables, the improvement obtained by incorporating directional descriptors is consistent across all folds and for both datasets: <span class="math notranslate nohighlight">\(R^2\)</span> increases and MAE decreases in every single split, demonstrating that the performance gain is systematic rather than incidental. The only exception is the standard deviation of <span class="math notranslate nohighlight">\(R^2\)</span> for RTPxy, which is slightly higher for the directional descriptors compared to the non-directional variant.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 110-110</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
@@ -441,8 +449,8 @@ document.write(`
 <li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 112-131</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 112-131</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 112 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
  113 | <span class="k">\caption</span><span class="nb">{</span><span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> scores obtained in each cross-validation fold for the RTPxz and RTPxy datasets using the PH+ECP descriptor. Results for the CNN model are provided for reference. The column <span class="k">\textit</span><span class="nb">{</span>Gain<span class="nb">}</span> indicates whether the inclusion of directional descriptors improves performance (i.e., increases <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span>). The last two rows report the mean and standard deviation across folds.<span class="nb">}</span>
  114 | <span class="k">\label</span><span class="nb">{</span>tab:fold<span class="nb">_</span>r2<span class="nb">}</span>
@@ -469,7 +477,9 @@ document.write(`
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(R^2\)</span> scores obtained in each cross-validation fold for the RTPxz and RTPxy datasets using the PH+ECP descriptor. Results for the CNN model are provided for reference. The column Gain indicates whether the inclusion of directional descriptors improves performance (i.e., increases <span class="math notranslate nohighlight">\(R^2\)</span>). The last two rows report the mean and standard deviation across folds.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 112-131</p>
 <ul class="simple">
 <li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
 <li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
@@ -478,8 +488,8 @@ document.write(`
 <li><p>This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 133-152</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 133-152</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 133 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
  134 | <span class="k">\caption</span><span class="nb">{</span>The same as Table <span class="k">\ref</span><span class="nb">{</span>tab:fold<span class="nb">_</span>r2<span class="nb">}</span> but for MAE.<span class="nb">}</span>
  135 | <span class="k">\label</span><span class="nb">{</span>tab:fold<span class="nb">_</span>mae<span class="nb">}</span>
@@ -506,7 +516,9 @@ document.write(`
 <blockquote>
 <div><p>The same as Table (ref: tab:fold_r2) but for MAE.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 133-152</p>
 <ul class="simple">
 <li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
 <li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
@@ -515,13 +527,15 @@ document.write(`
 <li><p>This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 154-155</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 154-155</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 154 | <span class="c">% \bibliographystyle{sn-mathphys-num}</span>
  155 | <span class="c">% \bibliography{references}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 154-155</p>
 <ul class="simple">
 <li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
 </ul>
@@ -594,7 +608,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-fold-cross-validation-performance">Per-Fold Cross-Validation Performance</a></li>
 </ul>

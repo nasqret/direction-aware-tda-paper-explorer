@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -344,7 +345,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-for-rtpxyz-dataset">Results for RTPxyz dataset</a></li>
 </ul>
@@ -362,24 +362,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="supplement-results-for-rtpxyz-dataset">
 <h1>Supplement: Results for RTPxyz dataset<a class="headerlink" href="#supplement-results-for-rtpxyz-dataset" title="Link to this heading">#</a></h1>
-<div class="important admonition">
+<div class="annotation-legend admonition">
 <p class="admonition-title">Coverage</p>
-<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>74-104</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>74-104</strong>. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.</p>
 </div>
-<section id="reading-lens">
-<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Reading lens</p>
 <ul class="simple">
 <li><p>This section is the empirical test of the paper’s thesis. Read every reported score as a comparison between direction-agnostic topology, direction-aware topology, and voxel CNN baselines.</p></li>
 <li><p>The important pattern is not a single best number but the relationship between anisotropy and the gain from direction-aware descriptors.</p></li>
 <li><p>Use the tables and figures to distinguish strong-anisotropy wins, weak-anisotropy parity, and cases where descriptor families behave differently.</p></li>
 </ul>
-</section>
+</div>
 <section id="annotated-source">
 <h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
 <section id="results-for-rtpxyz-dataset">
 <h3>Results for RTPxyz dataset<a class="headerlink" href="#results-for-rtpxyz-dataset" title="Link to this heading">#</a></h3>
-<div class="note admonition">
-<p class="admonition-title">Source lines 74-74</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 74-74</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  74 | <span class="k">\section</span><span class="nb">{</span>Results for RTPxyz dataset<span class="nb">}</span>
 </pre></div>
 </div>
@@ -387,7 +387,9 @@ document.write(`
 <blockquote>
 <div><p>Results for RTPxyz dataset</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 74-74</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Results for RTPxyz dataset</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -395,8 +397,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 75-80</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 75-80</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  75 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
   76 |     <span class="k">\centering</span>
   77 |     <span class="k">\includegraphics</span><span class="na">[width=0.75\textwidth]</span><span class="nb">{</span>scatter<span class="nb">_</span>rtp<span class="nb">_</span>xyz.png<span class="nb">}</span>
@@ -411,7 +413,9 @@ document.write(`
 </div></blockquote>
 <p><strong>Figure assets carried into the book</strong></p>
 <p><img alt="scatter_rtp_xyz.png" src="../_images/scatter_rtp_xyz.png" /></p>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 75-80</p>
 <ul class="simple">
 <li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
 <li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
@@ -420,8 +424,8 @@ document.write(`
 <li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 82-82</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 82-82</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  82 | Models were additionally trained on the RTPxyz dataset, which aggregates Young’s modulus values computed for the RTP structures along all three Cartesian directions. This dataset comprises a total of 1500 samples, of which two thirds correspond to the mechanically easy axes (<span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">y</span><span class="s">$</span>) and one third to the mechanically hard axis (<span class="s">$</span><span class="nb">z</span><span class="s">$</span>). The scatter plot of predicted versus FFTMAD-computed Young’s modulus for models trained with directional and non-directional descriptors is shown in Fig.~<span class="k">\ref</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">_</span>xyz<span class="nb">}</span>, while the corresponding regression metrics are summarized in Table~<span class="k">\ref</span><span class="nb">{</span>tab:metrics<span class="nb">_</span>rtp<span class="nb">_</span>xyz<span class="nb">}</span>.
 </pre></div>
 </div>
@@ -429,7 +433,9 @@ document.write(`
 <blockquote>
 <div><p>Models were additionally trained on the RTPxyz dataset, which aggregates Young’s modulus values computed for the RTP structures along all three Cartesian directions. This dataset comprises a total of 1500 samples, of which two thirds correspond to the mechanically easy axes (<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>) and one third to the mechanically hard axis (<span class="math notranslate nohighlight">\(z\)</span>). The scatter plot of predicted versus FFTMAD-computed Young’s modulus for models trained with directional and non-directional descriptors is shown in Fig. (ref: fig:scatter_rtp_xyz), while the corresponding regression metrics are summarized in Table (ref: tab:metrics_rtp_xyz).</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 82-82</p>
 <ul class="simple">
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -438,8 +444,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 84-84</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 84-84</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  84 | Models based on directional descriptors maintain high predictive accuracy, with predictions tightly clustered around the diagonal and a coefficient of determination of <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">974</span><span class="s">$</span>. In contrast, models relying on non-directional descriptors perform poorly, achieving only <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">511</span><span class="s">$</span>. The corresponding scatter plot reveals a pronounced bifurcation: predictions obtained from non-directional descriptors split into two distinct branches, one above and one below the diagonal.
 </pre></div>
 </div>
@@ -447,7 +453,9 @@ document.write(`
 <blockquote>
 <div><p>Models based on directional descriptors maintain high predictive accuracy, with predictions tightly clustered around the diagonal and a coefficient of determination of <span class="math notranslate nohighlight">\(R^2 = 0.974\)</span>. In contrast, models relying on non-directional descriptors perform poorly, achieving only <span class="math notranslate nohighlight">\(R^2 = 0.511\)</span>. The corresponding scatter plot reveals a pronounced bifurcation: predictions obtained from non-directional descriptors split into two distinct branches, one above and one below the diagonal.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 84-84</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
@@ -455,8 +463,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 86-98</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 86-98</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  86 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
   87 | <span class="k">\centering</span>
   88 | <span class="k">\caption</span><span class="nb">{</span>Cross-validated regression metrics for Young’s modulus prediction using CatBoost with PH, ECP, and PH+ECP topological summaries, and a CNN baseline trained directly on voxelized structures. Reported as average over 8 folds. The same as Table~1 in the manuscript but for the RTPxyz dataset.<span class="nb">}</span>
@@ -476,7 +484,9 @@ document.write(`
 <blockquote>
 <div><p>Cross-validated regression metrics for Young’s modulus prediction using CatBoost with PH, ECP, and PH+ECP topological summaries, and a CNN baseline trained directly on voxelized structures. Reported as average over 8 folds. The same as Table~1 in the manuscript but for the RTPxyz dataset.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 86-98</p>
 <ul class="simple">
 <li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
 <li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
@@ -485,8 +495,8 @@ document.write(`
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 101-101</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 101-101</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 101 | The upper branch (systematic overestimation) predominantly contains data points corresponding to compression along the mechanically easy <span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">y</span><span class="s">$</span> axes, where the true Young’s modulus is relatively low. The lower branch (systematic underestimation) consists mainly of samples compressed along the mechanically hard <span class="s">$</span><span class="nb">z</span><span class="s">$</span> axis, where the true Young’s modulus is significantly higher. This clear separation demonstrates that non-directional descriptors fail to encode the loading direction and therefore cannot distinguish between mechanically inequivalent orientations of the same structure.
 </pre></div>
 </div>
@@ -494,7 +504,9 @@ document.write(`
 <blockquote>
 <div><p>The upper branch (systematic overestimation) predominantly contains data points corresponding to compression along the mechanically easy <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, where the true Young’s modulus is relatively low. The lower branch (systematic underestimation) consists mainly of samples compressed along the mechanically hard <span class="math notranslate nohighlight">\(z\)</span> axis, where the true Young’s modulus is significantly higher. This clear separation demonstrates that non-directional descriptors fail to encode the loading direction and therefore cannot distinguish between mechanically inequivalent orientations of the same structure.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 101-101</p>
 <ul class="simple">
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -502,8 +514,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 103-103</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 103-103</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 103 | Only a small fraction of predictions obtained with non-directional descriptors lie close to the line of perfect agreement, which is reflected in the broadened and multimodal error distribution shown in the inset histogram. In contrast, no such branching behavior is observed for directional descriptors: predictions remain symmetrically distributed around the diagonal, indicating that direction-aware topology provides a consistent and physically meaningful representation of anisotropic mechanical response.
 </pre></div>
 </div>
@@ -511,7 +523,9 @@ document.write(`
 <blockquote>
 <div><p>Only a small fraction of predictions obtained with non-directional descriptors lie close to the line of perfect agreement, which is reflected in the broadened and multimodal error distribution shown in the inset histogram. In contrast, no such branching behavior is observed for directional descriptors: predictions remain symmetrically distributed around the diagonal, indicating that direction-aware topology provides a consistent and physically meaningful representation of anisotropic mechanical response.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 103-103</p>
 <ul class="simple">
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
 <li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
@@ -586,7 +600,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-for-rtpxyz-dataset">Results for RTPxyz dataset</a></li>
 </ul>

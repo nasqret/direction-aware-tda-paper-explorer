@@ -14,6 +14,8 @@ repository:
   branch: main
 
 html:
+  extra_css:
+    - _static/annotated.css
   use_repository_button: true
   use_issues_button: false
   use_edit_page_button: false
@@ -37,4 +39,3 @@ parse:
     - deflist
     - html_admonition
     - html_image
-

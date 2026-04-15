@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -344,7 +345,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topologically-diverse-td-dataset">Topologically Diverse (TD) Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-porous-structures">Generation of porous structures</a><ul class="nav section-nav flex-column">
@@ -372,24 +372,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="supplement-topologically-diverse-td-dataset">
 <h1>Supplement: Topologically Diverse (TD) Dataset<a class="headerlink" href="#supplement-topologically-diverse-td-dataset" title="Link to this heading">#</a></h1>
-<div class="important admonition">
+<div class="annotation-legend admonition">
 <p class="admonition-title">Coverage</p>
-<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>6-73</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>6-73</strong>. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.</p>
 </div>
-<section id="reading-lens">
-<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Reading lens</p>
 <ul class="simple">
 <li><p>This supplementary section fills in implementation detail or additional evidence that the main text compresses.</p></li>
 <li><p>Read it as support for reproducibility: generation procedures, additional RTPxyz results, and fold-level performance tables.</p></li>
 <li><p>Where the main text states a result, the supplement often exposes the variation or construction detail behind it.</p></li>
 </ul>
-</section>
+</div>
 <section id="annotated-source">
 <h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
 <section id="topologically-diverse-td-dataset">
 <h3>Topologically Diverse (TD) Dataset<a class="headerlink" href="#topologically-diverse-td-dataset" title="Link to this heading">#</a></h3>
-<div class="note admonition">
-<p class="admonition-title">Source lines 6-6</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 6-6</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>   6 | <span class="k">\section</span><span class="nb">{</span>Topologically Diverse (TD) Dataset<span class="nb">}</span>
 </pre></div>
 </div>
@@ -397,7 +397,9 @@ document.write(`
 <blockquote>
 <div><p>Topologically Diverse (TD) Dataset</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 6-6</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Topologically Diverse (TD) Dataset</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -405,8 +407,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 7-8</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 7-8</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>   7 | The RTP dataset is described in detail in the main text. All porous structures used in this study—including the RTP, TD, and ATTD datasets—are openly available in the dedicated repository associated with this paper: <span class="k">\url</span><span class="nb">{</span>https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials<span class="nb">}</span>. 
    8 | The repository also provides a utility for converting the voxelized data into VTK format, enabling straightforward visualization and rendering using standard tools such as ParaView.
 </pre></div>
@@ -415,7 +417,9 @@ document.write(`
 <blockquote>
 <div><p>The RTP dataset is described in detail in the main text. All porous structures used in this study—including the RTP, TD, and ATTD datasets—are openly available in the dedicated repository associated with this paper: https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials. The repository also provides a utility for converting the voxelized data into VTK format, enabling straightforward visualization and rendering using standard tools such as ParaView.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 7-8</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
@@ -426,8 +430,8 @@ document.write(`
 </div>
 <section id="generation-of-porous-structures">
 <h4>Generation of porous structures<a class="headerlink" href="#generation-of-porous-structures" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 10-10</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 10-10</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  10 | <span class="k">\subsection</span><span class="nb">{</span>Generation of porous structures<span class="nb">}</span>
 </pre></div>
 </div>
@@ -435,7 +439,9 @@ document.write(`
 <blockquote>
 <div><p>Generation of porous structures</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 10-10</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Generation of porous structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -446,8 +452,8 @@ document.write(`
 </div>
 <section id="random-voronoi-structuresapp-voronois">
 <h5>Random Voronoi structuresapp:voronois<a class="headerlink" href="#random-voronoi-structuresapp-voronois" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 11-11</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 11-11</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  11 | <span class="k">\subsubsection</span><span class="nb">{</span>Random Voronoi structures<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>app:voronois<span class="nb">}</span>
 </pre></div>
 </div>
@@ -455,7 +461,9 @@ document.write(`
 <blockquote>
 <div><p>Random Voronoi structures (label: app:voronois)</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 11-11</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Random Voronoi structuresapp:voronois</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -463,8 +471,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 13-13</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 13-13</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  13 | 600 random Voronoi structures were generated. For each structure, between 3 and 12 points were sampled from a unit cell (randomly, uniform distribution), with the space between them tesselated into Voronoi regions and the edges between regions used as a skeleton for the structure. The voxels traversed by the edges are approximated using the Bresenham&#39;s Line Algorithm~<span class="k">\cite</span><span class="nb">{</span>bresenham1965algorithm<span class="nb">}</span> and included within the structure. The edges are thickened to form struts with a square-shaped cross-section, with the side length of the square randomly drawn from the uniform distribution between 0.06 and 0.14. In order to guarantee periodicity of the structure, copies of the original points are generated in cells neighbouring the unit cell as well and the Voronoi tesselation of space, voxelisation of edges and subsequent thickening is conducted within the neighbouring cells as well (see Fig. <span class="k">\ref</span><span class="nb">{</span>fig:voronoi<span class="nb">}</span> for a visualization of a 2D version of the procedure), with the neighboring cells discarded at the last stage of the procedure. 
 </pre></div>
 </div>
@@ -472,15 +480,17 @@ document.write(`
 <blockquote>
 <div><p>600 random Voronoi structures were generated. For each structure, between 3 and 12 points were sampled from a unit cell (randomly, uniform distribution), with the space between them tesselated into Voronoi regions and the edges between regions used as a skeleton for the structure. The voxels traversed by the edges are approximated using the Bresenham’s Line Algorithm (citation: bresenham1965algorithm) and included within the structure. The edges are thickened to form struts with a square-shaped cross-section, with the side length of the square randomly drawn from the uniform distribution between 0.06 and 0.14. In order to guarantee periodicity of the structure, copies of the original points are generated in cells neighbouring the unit cell as well and the Voronoi tesselation of space, voxelisation of edges and subsequent thickening is conducted within the neighbouring cells as well (see Fig. (ref: fig:voronoi) for a visualization of a 2D version of the procedure), with the neighboring cells discarded at the last stage of the procedure.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 13-13</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 15-20</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 15-20</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  15 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h!]
   16 |     <span class="k">\centering</span>
   17 |     <span class="k">\includegraphics</span><span class="na">[width=0.89\linewidth]</span><span class="nb">{</span>Voronoi.png<span class="nb">}</span>
@@ -495,7 +505,9 @@ document.write(`
 </div></blockquote>
 <p><strong>Figure assets carried into the book</strong></p>
 <p><img alt="Voronoi.png" src="../_images/Voronoi.png" /></p>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 15-20</p>
 <ul class="simple">
 <li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
 <li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
@@ -506,8 +518,8 @@ document.write(`
 </section>
 <section id="zeolitessec-zeolites">
 <h5>Zeolitessec:zeolites<a class="headerlink" href="#zeolitessec-zeolites" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 22-22</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 22-22</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  22 | <span class="k">\subsubsection</span><span class="nb">{</span>Zeolites<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>sec:zeolites<span class="nb">}</span>
 </pre></div>
 </div>
@@ -515,7 +527,9 @@ document.write(`
 <blockquote>
 <div><p>Zeolites (label: sec:zeolites)</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 22-22</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Zeolitessec:zeolites</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -523,8 +537,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 24-25</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 24-25</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  24 | More than 3000 predicted zeolitic structures were recovered from Michael Deem&#39;s database~<span class="k">\cite</span><span class="nb">{</span>C0CP02255A, deem2023pcod<span class="nb">}</span>. Each structure is described by the basis cell vector and the locations of Si and O atoms in a unit cell. We restricted the studies to structures with a perpendicular shape of the unit cell, which still left over 1500 structures. We transformed the structures from perpendicular to the normalized <span class="s">$</span><span class="m">1</span><span class="nv">\times</span><span class="m">1</span><span class="nv">\times</span><span class="m">1</span><span class="s">$</span> cubic volume by stretching/compression. We thickened the edges by dilation to form struts with a square-shaped cross-section of side length 0.12. We used 300 randomly drawn structures from the dataset and connected the locations of the Si atoms in these structures after the stretching/compression to the locations of their nearest Si neighbors (O atoms were not used in the structure). The connections formed the skeleton of the structure. Periodic boundary conditions were guaranteed by a procedure similar to the one used for random Voronoi structures, involving generating copies of the original Si atom locations in cells neighbouring the unit cell and connecting them to their nearest neighbours as well. Another 299 structures were created on the basis of different randomly drawn structures from using Michael Deem&#39;s database~<span class="k">\cite</span><span class="nb">{</span>C0CP02255A, deem2023pcod<span class="nb">}</span> using the same algorithm, but with using 0.04 instead of 0.12 as the side length of the square-shaped cross-section of the struts.  
   25 | This gives a total of 580 zeolite structures.  <span class="c">%599</span>
 </pre></div>
@@ -533,7 +547,9 @@ document.write(`
 <blockquote>
 <div><p>More than 3000 predicted zeolitic structures were recovered from Michael Deem’s database (citation: C0CP02255A, deem2023pcod). Each structure is described by the basis cell vector and the locations of Si and O atoms in a unit cell. We restricted the studies to structures with a perpendicular shape of the unit cell, which still left over 1500 structures. We transformed the structures from perpendicular to the normalized <span class="math notranslate nohighlight">\(1x1x1\)</span> cubic volume by stretching/compression. We thickened the edges by dilation to form struts with a square-shaped cross-section of side length 0.12. We used 300 randomly drawn structures from the dataset and connected the locations of the Si atoms in these structures after the stretching/compression to the locations of their nearest Si neighbors (O atoms were not used in the structure). The connections formed the skeleton of the structure. Periodic boundary conditions were guaranteed by a procedure similar to the one used for random Voronoi structures, involving generating copies of the original Si atom locations in cells neighbouring the unit cell and connecting them to their nearest neighbours as well. Another 299 structures were created on the basis of different randomly drawn structures from using Michael Deem’s database (citation: C0CP02255A, deem2023pcod) using the same algorithm, but with using 0.04 instead of 0.12 as the side length of the square-shaped cross-section of the struts. This gives a total of 580 zeolite structures.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 24-25</p>
 <ul class="simple">
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
@@ -544,8 +560,8 @@ document.write(`
 </section>
 <section id="diamond-structures">
 <h5>Diamond structures<a class="headerlink" href="#diamond-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 27-27</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 27-27</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  27 | <span class="k">\subsubsection</span><span class="nb">{</span>Diamond structures<span class="nb">}</span>
 </pre></div>
 </div>
@@ -553,7 +569,9 @@ document.write(`
 <blockquote>
 <div><p>Diamond structures</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 27-27</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Diamond structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -561,8 +579,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 29-29</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 29-29</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  29 | 299 diamond-resembling structures were generated. Each structure was generated by creating within the unit cell 8 vertices corresponding to atoms in a diamond lattice and creating between the vertices edges corresponding to bonds between the atoms. The precise locations of the vertices were determined by adding a stochastic displacement to the location of the corresponding atom in the diamond lattice. Each of the three-dimensional components of the stochastic displacement for all vertices in a given lattice were drawn from a normal distribution with a standard deviation <span class="s">$</span><span class="nv">\epsilon</span><span class="s">$</span> itself drawn from a uniform distribution between 0 and 0.1 (compare to 1.0 being the length of the side of a unit cell). That way, the amount of stochasticity was varied between the structures. The edges connecting the vertices were thickened via dilation to form struts with square-shaped cross-sections, with the length of the side of the cross-section drawn from a uniform distribution between 0.06 and 0.26. That way, the volume fraction was varied between structures.
 </pre></div>
 </div>
@@ -570,7 +588,9 @@ document.write(`
 <blockquote>
 <div><p>299 diamond-resembling structures were generated. Each structure was generated by creating within the unit cell 8 vertices corresponding to atoms in a diamond lattice and creating between the vertices edges corresponding to bonds between the atoms. The precise locations of the vertices were determined by adding a stochastic displacement to the location of the corresponding atom in the diamond lattice. Each of the three-dimensional components of the stochastic displacement for all vertices in a given lattice were drawn from a normal distribution with a standard deviation $$ itself drawn from a uniform distribution between 0 and 0.1 (compare to 1.0 being the length of the side of a unit cell). That way, the amount of stochasticity was varied between the structures. The edges connecting the vertices were thickened via dilation to form struts with square-shaped cross-sections, with the length of the side of the cross-section drawn from a uniform distribution between 0.06 and 0.26. That way, the volume fraction was varied between structures.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 29-29</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
@@ -579,8 +599,8 @@ document.write(`
 </section>
 <section id="cubic-structures">
 <h5>Cubic structures<a class="headerlink" href="#cubic-structures" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 31-31</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 31-31</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  31 | <span class="k">\subsubsection</span><span class="nb">{</span>Cubic structures<span class="nb">}</span>
 </pre></div>
 </div>
@@ -588,7 +608,9 @@ document.write(`
 <blockquote>
 <div><p>Cubic structures</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 31-31</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Cubic structures</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -596,8 +618,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 33-40</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 33-40</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  33 | 300 structures resembling a simple cubic strut were generated using the procedure used for diamond structures, with the only difference the 8 initiating points are not the locations of atoms in a diamond structures like in the former dataset, but instead the following set of points: [0, 0, 0],
   34 |         [0.5, 0, 0],
   35 |         [0, 0.5, 0],
@@ -612,7 +634,9 @@ document.write(`
 <blockquote>
 <div><p>300 structures resembling a simple cubic strut were generated using the procedure used for diamond structures, with the only difference the 8 initiating points are not the locations of atoms in a diamond structures like in the former dataset, but instead the following set of points: [0, 0, 0], [0.5, 0, 0], [0, 0.5, 0], [0, 0, 0.5], [0, 0.5, 0.5], [0.5, 0, 0.5], [0.5, 0.5, 0], [0.5, 0.5, 0.5]. Replicating further steps from the procedure used to generate the diamond-like structures leads to structures resembling a classical cubic strut, with varying thicknesses of the struts and levels of randomization in locations of the struts’ vertices.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 33-40</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
@@ -621,8 +645,8 @@ document.write(`
 </section>
 <section id="splines">
 <h5>Splines<a class="headerlink" href="#splines" title="Link to this heading">#</a></h5>
-<div class="note admonition">
-<p class="admonition-title">Source lines 43-43</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 43-43</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  43 | <span class="k">\subsubsection</span><span class="nb">{</span>Splines<span class="nb">}</span>
 </pre></div>
 </div>
@@ -630,7 +654,9 @@ document.write(`
 <blockquote>
 <div><p>Splines</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 43-43</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Splines</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -638,8 +664,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 45-46</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 45-46</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  45 | To generate a family of smooth porous morphologies, we construct a random <span class="k">\emph</span><span class="nb">{</span>periodic<span class="nb">}</span> scalar field on the unit cell and then threshold it.
   46 | Let <span class="s">$</span><span class="nb">n</span><span class="o">=</span><span class="nv">\texttt</span><span class="nb">{sampling}</span><span class="s">$</span> be the number of spline control points per direction and draw i.i.d.<span class="k">\</span> coefficients
 </pre></div>
@@ -648,7 +674,9 @@ document.write(`
 <blockquote>
 <div><p>To generate a family of smooth porous morphologies, we construct a random periodic scalar field on the unit cell and then threshold it. Let <span class="math notranslate nohighlight">\(n=`sampling`\)</span> be the number of spline control points per direction and draw i.i.d.\ coefficients</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 45-46</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
@@ -657,14 +685,16 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 47-49</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 47-49</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  47 | <span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
   48 | r<span class="nb">_{</span>ijk<span class="nb">}</span><span class="k">\sim\mathcal</span> U(0,1),<span class="k">\qquad</span> i,j,k=1,<span class="k">\dots</span>,n .
   49 | <span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 47-49</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
@@ -672,8 +702,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 50-52</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 50-52</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  50 | In <span class="k">\textsc</span><span class="nb">{</span>Mathematica<span class="nb">}</span>, the command
   51 | <span class="k">\texttt</span><span class="nb">{</span>BSplineFunction<span class="nb">}</span> builds a trivariate tensor-product B-spline field
   52 | (with <span class="k">\texttt</span><span class="nb">{</span>SplineDegree-&gt;3<span class="nb">}</span>, <span class="k">\texttt</span><span class="nb">{</span>SplineClosed-&gt;True<span class="nb">}</span>, <span class="k">\texttt</span><span class="nb">{</span>SplineKnots-&gt;&quot;Unclamped&quot;<span class="nb">}</span>), i.e.
@@ -683,14 +713,16 @@ document.write(`
 <blockquote>
 <div><p>In Mathematica, the command <code class="docutils literal notranslate"><span class="pre">BSplineFunction</span></code> builds a trivariate tensor-product B-spline field (with <code class="docutils literal notranslate"><span class="pre">SplineDegree-&gt;3</span></code>, <code class="docutils literal notranslate"><span class="pre">SplineClosed-&gt;True</span></code>, <code class="docutils literal notranslate"><span class="pre">SplineKnots-&gt;&quot;Unclamped&quot;</span></code>), i.e.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 50-52</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 53-57</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 53-57</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  53 | <span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
   54 | f(x,y,z)=<span class="k">\sum_</span><span class="nb">{</span>i=1<span class="nb">}^{</span>n<span class="nb">}</span><span class="k">\sum_</span><span class="nb">{</span>j=1<span class="nb">}^{</span>n<span class="nb">}</span><span class="k">\sum_</span><span class="nb">{</span>k=1<span class="nb">}^{</span>n<span class="nb">}</span>
   55 | r<span class="nb">_{</span>ijk<span class="nb">}</span><span class="k">\,</span>N<span class="nb">_{</span>i,3<span class="nb">}</span>(x)<span class="k">\,</span>N<span class="nb">_{</span>j,3<span class="nb">}</span>(y)<span class="k">\,</span>N<span class="nb">_{</span>k,3<span class="nb">}</span>(z),
@@ -698,7 +730,9 @@ document.write(`
   57 | <span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 53-57</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
@@ -706,8 +740,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 58-58</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 58-58</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  58 | where <span class="s">$</span><span class="nv">\{</span><span class="nb">N_{i,</span><span class="m">3</span><span class="nb">}</span><span class="nv">\}</span><span class="s">$</span> are cubic B-spline basis functions (defined via the Cox--de Boor recursion), and the ``closed&#39;&#39; setting enforces periodicity across the cell boundaries <span class="k">\cite</span><span class="nb">{</span>deBoor1978,wolframBSplineFunction<span class="nb">}</span>.
 </pre></div>
 </div>
@@ -715,14 +749,16 @@ document.write(`
 <blockquote>
 <div><p>where $\N_i,3$ are cubic B-spline basis functions (defined via the Cox–de Boor recursion), and the ``closed’’ setting enforces periodicity across the cell boundaries (citation: deBoor1978,wolframBSplineFunction).</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 58-58</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 60-61</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 60-61</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  60 | A binary structure is then obtained as a super-level set. Using wrapped (periodic) coordinates
   61 | <span class="s">$</span><span class="nv">\tilde</span><span class="nb">{</span><span class="nv">\boldsymbol</span><span class="nb">{x}}</span><span class="o">=(</span><span class="nb">x</span><span class="nv">\bmod</span><span class="nb"> </span><span class="m">1</span><span class="nb">,</span><span class="nv">\,</span><span class="nb">y</span><span class="nv">\bmod</span><span class="nb"> </span><span class="m">1</span><span class="nb">,</span><span class="nv">\,</span><span class="nb">z</span><span class="nv">\bmod</span><span class="nb"> </span><span class="m">1</span><span class="o">)</span><span class="s">$</span> (implemented with <span class="k">\texttt</span><span class="nb">{</span>Mod<span class="nb">}</span>), we voxelize on an <span class="s">$</span><span class="nb">L</span><span class="nv">\times</span><span class="nb"> L</span><span class="nv">\times</span><span class="nb"> L</span><span class="s">$</span> grid (here <span class="s">$</span><span class="nb">L</span><span class="o">=</span><span class="m">80</span><span class="s">$</span>) by
 </pre></div>
@@ -731,7 +767,9 @@ document.write(`
 <blockquote>
 <div><p>A binary structure is then obtained as a super-level set. Using wrapped (periodic) coordinates <span class="math notranslate nohighlight">\(x=(x 1, y 1, z 1)\)</span> (implemented with <code class="docutils literal notranslate"><span class="pre">Mod</span></code>), we voxelize on an <span class="math notranslate nohighlight">\(Lx Lx L\)</span> grid (here <span class="math notranslate nohighlight">\(L=80\)</span>) by</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 60-61</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
@@ -739,8 +777,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 62-66</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 62-66</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  62 | <span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
   63 | T<span class="nb">_{</span>abc<span class="nb">}</span>(t)=<span class="k">\mathbf</span><span class="nb">{</span>1<span class="nb">}</span><span class="k">\Bigl\{\,</span>f<span class="k">\!\bigl</span>(<span class="k">\tfrac</span><span class="nb">{</span>a<span class="nb">}{</span>L<span class="nb">}</span>,<span class="k">\tfrac</span><span class="nb">{</span>b<span class="nb">}{</span>L<span class="nb">}</span>,<span class="k">\tfrac</span><span class="nb">{</span>c<span class="nb">}{</span>L<span class="nb">}</span><span class="k">\bigr</span>)<span class="k">\ge</span> t<span class="k">\,\Bigr\}</span>,
   64 | <span class="k">\qquad</span> a,b,c=0,<span class="k">\dots</span>,L-1,
@@ -748,7 +786,9 @@ document.write(`
   66 | <span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 62-66</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
@@ -757,8 +797,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 67-67</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 67-67</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  67 | and report the volume fraction
 </pre></div>
 </div>
@@ -766,20 +806,24 @@ document.write(`
 <blockquote>
 <div><p>and report the volume fraction</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 67-67</p>
 <ul class="simple">
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 68-70</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 68-70</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  68 | <span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
   69 | <span class="k">\phi</span>(t)=<span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>L<span class="nb">^{</span>3<span class="nb">}}</span><span class="k">\sum_</span><span class="nb">{</span>a,b,c<span class="nb">}</span> T<span class="nb">_{</span>abc<span class="nb">}</span>(t).
   70 | <span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 68-70</p>
 <ul class="simple">
 <li><p>This mathematical block defines part of the computational object used later in the pipeline.</p></li>
 <li><p>Track the variables here: later descriptors and model inputs inherit these definitions.</p></li>
@@ -787,8 +831,8 @@ document.write(`
 <li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 71-72</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 71-72</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  71 | Varying the threshold <span class="s">$</span><span class="nb">t</span><span class="s">$</span> (in our implementation, on an approximately uniform grid in <span class="s">$</span><span class="o">[</span><span class="m">0</span><span class="nb">.</span><span class="m">35</span><span class="nb">,</span><span class="m">0</span><span class="nb">.</span><span class="m">50</span><span class="o">]</span><span class="s">$</span>) produces two independent subsets of spline-based structures each, spanning a range of <span class="s">$</span><span class="nv">\phi</span><span class="o">(</span><span class="nb">t</span><span class="o">)</span><span class="s">$</span> while preserving smoothness and periodic tiling of the unit cell.
   72 | Total of 596 spline structures were used in the dataset.
 </pre></div>
@@ -797,7 +841,9 @@ document.write(`
 <blockquote>
 <div><p>Varying the threshold <span class="math notranslate nohighlight">\(t\)</span> (in our implementation, on an approximately uniform grid in <span class="math notranslate nohighlight">\([0.35,0.50]\)</span>) produces two independent subsets of spline-based structures each, spanning a range of <span class="math notranslate nohighlight">\(phi(t)\)</span> while preserving smoothness and periodic tiling of the unit cell. Total of 596 spline structures were used in the dataset.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 71-72</p>
 <ul class="simple">
 <li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
 <li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
@@ -874,7 +920,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topologically-diverse-td-dataset">Topologically Diverse (TD) Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-of-porous-structures">Generation of porous structures</a><ul class="nav section-nav flex-column">

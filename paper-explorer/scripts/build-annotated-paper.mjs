@@ -399,8 +399,8 @@ function markdownForBlock(block, pageTitle) {
     lines.push("");
   }
 
-  lines.push(`::::{admonition} Source lines ${range}`);
-  lines.push(":class: note");
+  lines.push(`::::{admonition} Original paper material - source lines ${range}`);
+  lines.push(":class: paper-original");
   lines.push("");
   lines.push("```latex");
   lines.push(rawSource(block));
@@ -424,7 +424,10 @@ function markdownForBlock(block, pageTitle) {
     });
   }
 
-  lines.push("**Commentary and remarks**");
+  lines.push("::::");
+  lines.push("");
+  lines.push(`::::{admonition} Model-added interpretation - source lines ${range}`);
+  lines.push(":class: model-interpretation");
   lines.push("");
   blockCommentary(block, pageTitle).forEach((note) => lines.push(`- ${note}`));
   lines.push("::::");
@@ -442,13 +445,14 @@ function pageMarkdown(range, linesBySource) {
   md.push(`# ${range.title}`);
   md.push("");
   md.push("```{admonition} Coverage");
-  md.push(":class: important");
-  md.push(`This page annotates **${sourceFileLabel(range.source)}**, source lines **${firstLine}-${lastLine}**. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.`);
+  md.push(":class: annotation-legend");
+  md.push(`This page annotates **${sourceFileLabel(range.source)}**, source lines **${firstLine}-${lastLine}**. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.`);
   md.push("```");
   md.push("");
-  md.push("## Reading Lens");
-  md.push("");
+  md.push("```{admonition} Reading lens");
+  md.push(":class: model-interpretation");
   sectionLens(range.title).forEach((note) => md.push(`- ${note}`));
+  md.push("```");
   md.push("");
   md.push("## Annotated Source");
   md.push("");
@@ -462,8 +466,15 @@ function indexMarkdown(ranges) {
   md.push("");
   md.push("This part of the knowledge base contains two layers. The primary layer is a streamlined expanded text with formulas, tables, figures, and embedded remarks. The provenance layer then reproduces each manuscript section from the LaTeX source with line-numbered source blocks and commentary.");
   md.push("");
+  md.push("```{admonition} Color legend");
+  md.push(":class: annotation-legend");
+  md.push("<span class=\"legend-swatch paper-swatch\"></span> **Blue** marks original paper material or source-derived reconstruction.");
+  md.push("");
+  md.push("<span class=\"legend-swatch model-swatch\"></span> **Amber** marks model-added interpretation, comments, reading advice, and contextual remarks.");
+  md.push("```");
+  md.push("");
   md.push("```{admonition} How to read this part");
-  md.push(":class: tip");
+  md.push(":class: model-interpretation");
   md.push("Start with the Expanded Annotated Text for continuous exposition. Use the source-provenance pages when you need to verify how a statement maps back to the original LaTeX.");
   md.push("```");
   md.push("");

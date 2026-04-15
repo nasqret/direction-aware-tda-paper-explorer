@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -342,7 +343,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Declarations</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#author-contributions-statement">Author Contributions Statement</a></li>
@@ -364,24 +364,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="declarations">
 <h1>Declarations<a class="headerlink" href="#declarations" title="Link to this heading">#</a></h1>
-<div class="important admonition">
+<div class="annotation-legend admonition">
 <p class="admonition-title">Coverage</p>
-<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>607-631</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>607-631</strong>. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.</p>
 </div>
-<section id="reading-lens">
-<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Reading lens</p>
 <ul class="simple">
 <li><p>These lines define authorship, competing-interest, and publication metadata rather than technical content.</p></li>
 <li><p>For reproducibility, declarations matter because they identify responsibility and potential conflicts around the study.</p></li>
 <li><p>They should be preserved in a faithful companion even though they do not affect the mathematical argument.</p></li>
 </ul>
-</section>
+</div>
 <section id="annotated-source">
 <h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
 <section id="id1">
 <h3>Declarations<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<div class="note admonition">
-<p class="admonition-title">Source lines 607-607</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 607-607</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 607 | <span class="k">\section*</span><span class="nb">{</span>Declarations<span class="nb">}</span>
 </pre></div>
 </div>
@@ -389,7 +389,9 @@ document.write(`
 <blockquote>
 <div><p>Declarations</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 607-607</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Declarations</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
@@ -398,8 +400,8 @@ document.write(`
 </div>
 <section id="author-contributions-statement">
 <h4>Author Contributions Statement<a class="headerlink" href="#author-contributions-statement" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 608-608</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 608-608</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 608 | <span class="k">\subsection*</span><span class="nb">{</span>Author Contributions Statement<span class="nb">}</span>
 </pre></div>
 </div>
@@ -407,15 +409,17 @@ document.write(`
 <blockquote>
 <div><p>Author Contributions Statement</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 608-608</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Author Contributions Statement</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 609-609</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 609-609</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 609 | R.T., M.B., and J.M. wrote the main manuscript. R.T., M.B., and B.N. generated the microstructures. R.T. and M.B. performed the FFTMAD simulations. R.T. developed the machine-learning code and ran computations. M.B., J.M., and P.D. designed and implemented the topological data analysis framework and reviewed the machine-learning and FFTMAD workflows. R.T., M.B., J.M., B.N., and P.D. contributed to the methodology. P.D., M.H., and B.N. provided computational resources. P.D. and M.H. supervised project administration. R.T. prepared all figures except Figure 3, which J.M. and M.B prepared. All authors contributed to formal analysis, validation of the results, and reviewed the final version of the manuscript. 
 </pre></div>
 </div>
@@ -423,7 +427,9 @@ document.write(`
 <blockquote>
 <div><p>R.T., M.B., and J.M. wrote the main manuscript. R.T., M.B., and B.N. generated the microstructures. R.T. and M.B. performed the FFTMAD simulations. R.T. developed the machine-learning code and ran computations. M.B., J.M., and P.D. designed and implemented the topological data analysis framework and reviewed the machine-learning and FFTMAD workflows. R.T., M.B., J.M., B.N., and P.D. contributed to the methodology. P.D., M.H., and B.N. provided computational resources. P.D. and M.H. supervised project administration. R.T. prepared all figures except Figure 3, which J.M. and M.B prepared. All authors contributed to formal analysis, validation of the results, and reviewed the final version of the manuscript.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 609-609</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
@@ -435,8 +441,8 @@ document.write(`
 </section>
 <section id="competing-interests">
 <h4>Competing Interests<a class="headerlink" href="#competing-interests" title="Link to this heading">#</a></h4>
-<div class="note admonition">
-<p class="admonition-title">Source lines 611-611</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 611-611</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 611 | <span class="k">\subsection*</span><span class="nb">{</span>Competing Interests<span class="nb">}</span>
 </pre></div>
 </div>
@@ -444,15 +450,17 @@ document.write(`
 <blockquote>
 <div><p>Competing Interests</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 611-611</p>
 <ul class="simple">
 <li><p>This heading opens a new logical unit: <strong>Competing Interests</strong>.</p></li>
 <li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 612-612</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 612-612</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 612 | The authors declare no competing interests.
 </pre></div>
 </div>
@@ -460,23 +468,27 @@ document.write(`
 <blockquote>
 <div><p>The authors declare no competing interests.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 612-612</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 614-614</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 614-614</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 614 | <span class="k">\clearpage</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 614-614</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 616-620</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 616-620</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 616 | <span class="c">% Supplement-style numbering</span>
  617 | <span class="k">\setcounter</span><span class="nb">{</span>section<span class="nb">}{</span>0<span class="nb">}</span>
  618 | <span class="k">\setcounter</span><span class="nb">{</span>figure<span class="nb">}{</span>0<span class="nb">}</span>
@@ -484,13 +496,15 @@ document.write(`
  620 | <span class="k">\setcounter</span><span class="nb">{</span>equation<span class="nb">}{</span>0<span class="nb">}</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 616-620</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 622-628</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 622-628</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 622 | <span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thesection</span><span class="nb">}{</span>S<span class="k">\arabic</span><span class="nb">{</span>section<span class="nb">}}</span>
  623 | <span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thesubsection</span><span class="nb">}{</span>S<span class="k">\arabic</span><span class="nb">{</span>section<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>subsection<span class="nb">}}</span>
  624 | <span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\thesubsubsection</span><span class="nb">}{</span>S<span class="k">\arabic</span><span class="nb">{</span>section<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>subsection<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>subsubsection<span class="nb">}}</span>
@@ -504,17 +518,21 @@ document.write(`
 <blockquote>
 <div><p>Ssection Ssection.subsection Ssection.subsection.subsubsection Sfigure Stable Sequation includesupplement.tex</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 622-628</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 630-630</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 630-630</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 630 | <span class="k">\clearpage</span>
 </pre></div>
 </div>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 630-630</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
@@ -588,7 +606,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Declarations</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#author-contributions-statement">Author Contributions Statement</a></li>

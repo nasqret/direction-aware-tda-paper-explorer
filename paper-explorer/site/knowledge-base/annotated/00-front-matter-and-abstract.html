@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/annotated.css?v=32ed1b46" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -344,7 +345,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a></li>
 </ul>
             </nav>
@@ -359,22 +359,22 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="front-matter-and-abstract">
 <h1>Front Matter and Abstract<a class="headerlink" href="#front-matter-and-abstract" title="Link to this heading">#</a></h1>
-<div class="important admonition">
+<div class="annotation-legend admonition">
 <p class="admonition-title">Coverage</p>
-<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>21-46</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>21-46</strong>. Blue blocks reproduce or faithfully restate the original source material. Amber blocks are model-added interpretation explaining role, assumptions, and reading context.</p>
 </div>
-<section id="reading-lens">
-<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Reading lens</p>
 <ul class="simple">
 <li><p>Read this as the contract for the whole paper: title, authorship, affiliations, and the compressed claim in the abstract.</p></li>
 <li><p>The abstract already contains the causal chain used throughout the manuscript: anisotropy creates direction-dependent mechanics; standard topology forgets direction; direction-aware filtrations restore that information.</p></li>
 <li><p>When reading later sections, check that every dataset, descriptor, and result actually supports the claims made here.</p></li>
 </ul>
-</section>
+</div>
 <section id="annotated-source">
 <h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
-<div class="note admonition">
-<p class="admonition-title">Source lines 22-22</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 22-22</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  22 | <span class="k">\title</span><span class="na">[Direction-aware TDA]</span><span class="nb">{</span>Direction-aware topological descriptors for Young&#39;s modulus prediction in porous materials<span class="nb">}</span>
 </pre></div>
 </div>
@@ -382,7 +382,9 @@ document.write(`
 <blockquote>
 <div><p>Direction-aware topological descriptors for Young’s modulus prediction in porous materials</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 22-22</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
@@ -391,8 +393,8 @@ document.write(`
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 24-25</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 24-25</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  24 | <span class="k">\author*</span><span class="na">[1,2]</span><span class="nb">{</span>Rafał Topolnicki<span class="nb">}</span>
   25 | <span class="k">\email</span><span class="nb">{</span>rafal.topolnicki@uwr.edu.pl<span class="nb">}</span>
 </pre></div>
@@ -401,13 +403,15 @@ document.write(`
 <blockquote>
 <div><p>Rafał Topolnicki rafal.topolnicki&#64;uwr.edu.pl</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 24-25</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 27-31</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 27-31</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  27 | <span class="k">\author</span><span class="na">[1]</span><span class="nb">{</span>Michał Bogdan<span class="nb">}</span>
   28 | <span class="k">\author</span><span class="na">[3]</span><span class="nb">{</span>Jakub Malinowski<span class="nb">}</span>
   29 | <span class="k">\author</span><span class="na">[1,4]</span><span class="nb">{</span>Bartosz Naskręcki<span class="nb">}</span>
@@ -419,13 +423,15 @@ document.write(`
 <blockquote>
 <div><p>Michał Bogdan Jakub Malinowski Bartosz Naskręcki Maciej Harańczyk Paweł Dłotko</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 27-31</p>
 <ul class="simple">
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 33-39</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 33-39</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  33 | <span class="k">\affil</span><span class="na">[1]</span><span class="nb">{</span>Dioscuri Center in Topological Data Analysis, Institute of Mathematics, Polish Academy of Sciences, ul.
   34 | Sniadeckich 8, 00-656 Warsaw, Poland<span class="nb">}</span>
   35 | <span class="k">\affil</span><span class="na">[2]</span><span class="nb">{</span>Institute of Experimental Physics, University of Wrocław, pl. Maxa Borna 9, Wrocław 50-204, Poland<span class="nb">}</span>
@@ -439,14 +445,16 @@ document.write(`
 <blockquote>
 <div><p>Dioscuri Center in Topological Data Analysis, Institute of Mathematics, Polish Academy of Sciences, ul. Sniadeckich 8, 00-656 Warsaw, Poland Institute of Experimental Physics, University of Wrocław, pl. Maxa Borna 9, Wrocław 50-204, Poland Faculty of Pure and Applied Mathematics, Wrocław University of Science and Technology, ul. Wybrzeże Wyspiańskiego 27, 50-370 Wrocław, Poland Faculty of Mathematics and Computer Science, Adam Mickiewicz University, ul. Uniwersytetu Poznańskiego 4, 61-614 Poznań, Poland IMDEA Materials Institute, C. Eric Kandel 2, Getafe, 28906 Madrid, Spain</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 33-39</p>
 <ul class="simple">
 <li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
 <li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
 </ul>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Source lines 41-45</p>
+<div class="paper-original admonition">
+<p class="admonition-title">Original paper material - source lines 41-45</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  41 | <span class="k">\abstract</span><span class="nb">{</span>
   42 | <span class="k">\textit</span><span class="nb">{</span>
   43 | Classical topological descriptors used in topological data analysis (TDA) are invariant under permutations of spatial axes and therefore cannot represent the loading direction, which is essential for modeling anisotropic mechanical response. Here, this limitation is addressed by introducing a <span class="k">\emph</span><span class="nb">{</span>direction-aware TDA framework<span class="nb">}</span> in which the compression axis is explicitly embedded into filtration functions used to compute both persistent homology and Euler characteristic profile descriptors. Across multiple porous-material datasets spanning a broad range of structural anisotropy, direction-aware descriptors yield higher predictive accuracy than their direction-agnostic counterparts, with performance gains that increase systematically with anisotropy. Notably, direction-aware descriptors remain competitive and often improve <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> even for nominally isotropic ensembles, indicating sensitivity to mechanically relevant directional organization beyond bulk anisotropy measures. When used as inputs to gradient-boosted tree models, the proposed descriptors approach the accuracy of convolutional neural networks trained directly on voxelized structures while retaining a compact, transferable representation. The study considers multiple datasets spanning weak to strong anisotropy, enabling systematic validation of direction-aware topology across regimes. Overall, the results establish direction-aware TDA as a general route for linking porous structure to direction-dependent elastic properties and motivate its use in anisotropic materials modeling problems where a preferred direction naturally arises.<span class="nb">}</span>
@@ -458,7 +466,9 @@ document.write(`
 <blockquote>
 <div><p>Classical topological descriptors used in topological data analysis (TDA) are invariant under permutations of spatial axes and therefore cannot represent the loading direction, which is essential for modeling anisotropic mechanical response. Here, this limitation is addressed by introducing a direction-aware TDA framework in which the compression axis is explicitly embedded into filtration functions used to compute both persistent homology and Euler characteristic profile descriptors. Across multiple porous-material datasets spanning a broad range of structural anisotropy, direction-aware descriptors yield higher predictive accuracy than their direction-agnostic counterparts, with performance gains that increase systematically with anisotropy. Notably, direction-aware descriptors remain competitive and often improve <span class="math notranslate nohighlight">\(R^2\)</span> even for nominally isotropic ensembles, indicating sensitivity to mechanically relevant directional organization beyond bulk anisotropy measures. When used as inputs to gradient-boosted tree models, the proposed descriptors approach the accuracy of convolutional neural networks trained directly on voxelized structures while retaining a compact, transferable representation. The study considers multiple datasets spanning weak to strong anisotropy, enabling systematic validation of direction-aware topology across regimes. Overall, the results establish direction-aware TDA as a general route for linking porous structure to direction-dependent elastic properties and motivate its use in anisotropic materials modeling problems where a preferred direction naturally arises.</p>
 </div></blockquote>
-<p><strong>Commentary and remarks</strong></p>
+</div>
+<div class="model-interpretation admonition">
+<p class="admonition-title">Model-added interpretation - source lines 41-45</p>
 <ul class="simple">
 <li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
 <li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
@@ -534,7 +544,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a></li>
 </ul>
   </nav></div>
