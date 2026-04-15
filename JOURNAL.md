@@ -79,3 +79,4 @@
   - expanded GitHub Actions validation to build the book, sync the site export, check export links, and upload `paper-explorer/site` as an artifact;
   - documented the release procedure in `docs/release-checklist.md`.
 - Added GitHub Pages deployment workflow for remote publication from `paper-explorer/site/`.
+- Pinned the full Sphinx/JupyterBook build stack after the first remote validation run showed transitive dependency drift in generated static files.
