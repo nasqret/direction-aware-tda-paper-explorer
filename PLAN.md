@@ -26,6 +26,7 @@ Last updated: 2026-04-15
 | Static export links | Complete | Site links resolve inside `paper-explorer/site/`; exported JupyterBook and Obsidian snapshots are copied into the site |
 | Release automation | Complete | Single local export gate, package script, GitHub Actions validation, and release checklist |
 | Remote publication | Complete | GitHub remote and Pages deployment at https://nasqret.github.io/direction-aware-tda-paper-explorer/ |
+| Public-site hardening | Complete | Metadata, sitemap, robots policy, `.nojekyll`, and Node 24 Actions opt-in |
 | Full voxel payload | Pending | Optional `git lfs pull`; needed only for local voxel previews and `.npy` slice applets |
 | Verification | Complete | Static file checks, JupyterBook config check, browser render check |
 

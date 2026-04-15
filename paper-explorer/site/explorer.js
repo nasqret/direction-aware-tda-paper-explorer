@@ -79,6 +79,8 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 const fmt = (value, digits = 3) => Number.isFinite(value) ? value.toFixed(digits) : "n/a";
 const unique = (items) => Array.from(new Set(items));
+const gainFor = (row) => row.directionalR2 - row.nonDirectionalR2;
+const cnnGapFor = (row) => Math.abs(row.cnnR2 - row.directionalR2);
 
 function optionList(select, values, allLabel) {
   if (!select) return;
@@ -427,25 +429,109 @@ function renderExternalDatabaseInventory() {
   ].join("");
 }
 
+function renderResultSummary() {
+  const summary = $("#result-summary");
+  if (!summary) return;
+  const rows = Results.map((row) => ({
+    ...row,
+    gain: gainFor(row),
+    cnnGap: cnnGapFor(row)
+  }));
+  const bestGain = rows.reduce((best, row) => row.gain > best.gain ? row : best, rows[0]);
+  const bestDirectional = rows.reduce((best, row) => row.directionalR2 > best.directionalR2 ? row : best, rows[0]);
+  const closestCnn = rows.reduce((best, row) => row.cnnGap < best.cnnGap ? row : best, rows[0]);
+  const averageGain = rows.reduce((total, row) => total + row.gain, 0) / rows.length;
+  summary.innerHTML = [
+    [`+${fmt(bestGain.gain, 3)}`, `Largest R2 gain: ${bestGain.dataset} ${bestGain.method}`],
+    [fmt(bestDirectional.directionalR2, 3), `Best directional R2: ${bestDirectional.dataset} ${bestDirectional.method}`],
+    [fmt(closestCnn.cnnGap, 3), `Smallest gap to CNN: ${closestCnn.dataset} ${closestCnn.method}`],
+    [`+${fmt(averageGain, 3)}`, "Mean directional R2 gain across table"]
+  ].map(([value, label]) => `
+    <div class="inventory-stat">
+      <strong>${value}</strong>
+      <span>${label}</span>
+    </div>
+  `).join("");
+}
+
+function sortRows(rows, sortValue) {
+  const sorted = [...rows];
+  const compareText = (a, b) => `${a.dataset} ${a.method}`.localeCompare(`${b.dataset} ${b.method}`);
+  const sorters = {
+    "gain-desc": (a, b) => gainFor(b) - gainFor(a) || compareText(a, b),
+    "directional-desc": (a, b) => b.directionalR2 - a.directionalR2 || compareText(a, b),
+    "cnn-gap-asc": (a, b) => cnnGapFor(a) - cnnGapFor(b) || compareText(a, b),
+    "mae-asc": (a, b) => a.directionalMae - b.directionalMae || compareText(a, b),
+    "dataset-asc": compareText
+  };
+  return sorted.sort(sorters[sortValue] || sorters["gain-desc"]);
+}
+
+function csvEscape(value) {
+  const text = String(value ?? "");
+  return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
+function rowsToCsv(rows) {
+  const columns = [
+    ["dataset", "Dataset"],
+    ["method", "Method"],
+    ["sigmaK", "sigma(k)"],
+    ["sigmaL", "sigma(L)"],
+    ["nonDirectionalR2", "Non-dir R2"],
+    ["directionalR2", "Dir R2"],
+    ["gain", "R2 gain"],
+    ["nonDirectionalMae", "Non-dir MAE"],
+    ["directionalMae", "Dir MAE"],
+    ["cnnR2", "CNN R2"]
+  ];
+  return [
+    columns.map(([, label]) => csvEscape(label)).join(","),
+    ...rows.map((row) => columns.map(([key]) => {
+      const value = key === "gain" ? gainFor(row) : row[key];
+      return csvEscape(typeof value === "number" ? fmt(value, key.includes("Mae") ? 2 : 3) : value);
+    }).join(","))
+  ].join("\n");
+}
+
+function downloadCsv(rows) {
+  const blob = new Blob([rowsToCsv(rows)], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "direction-aware-tda-results.csv";
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
 function setupResultsTable() {
   const datasetSelect = $("#table-dataset");
   const methodSelect = $("#table-method");
   const searchInput = $("#table-search");
+  const sortSelect = $("#table-sort");
+  const status = $("#table-status");
+  const exportButton = $("#export-results");
   const tbody = $("#results-table tbody");
-  if (!datasetSelect || !methodSelect || !searchInput || !tbody) return;
+  if (!datasetSelect || !methodSelect || !searchInput || !sortSelect || !tbody) return;
   optionList(datasetSelect, unique(Results.map((row) => row.dataset)), "All datasets");
   optionList(methodSelect, unique(Results.map((row) => row.method)), "All descriptors");
+  let currentRows = [];
 
   const render = () => {
     const term = searchInput.value.trim().toLowerCase();
-    const rows = Results.filter((row) => {
+    currentRows = sortRows(Results.filter((row) => {
       const matchesDataset = datasetSelect.value === "all" || row.dataset === datasetSelect.value;
       const matchesMethod = methodSelect.value === "all" || row.method === methodSelect.value;
       const haystack = `${row.dataset} ${row.method}`.toLowerCase();
       return matchesDataset && matchesMethod && (!term || haystack.includes(term));
-    });
-    tbody.innerHTML = rows.map((row) => {
-      const gain = row.directionalR2 - row.nonDirectionalR2;
+    }), sortSelect.value);
+    if (status) {
+      status.textContent = `${currentRows.length} result${currentRows.length === 1 ? "" : "s"}`;
+    }
+    tbody.innerHTML = currentRows.length ? currentRows.map((row) => {
+      const gain = gainFor(row);
       return `
         <tr>
           <td>${row.dataset}</td>
@@ -460,10 +546,13 @@ function setupResultsTable() {
           <td>${fmt(row.cnnR2, 3)}</td>
         </tr>
       `;
-    }).join("");
+    }).join("") : `<tr><td colspan="10">No matching rows.</td></tr>`;
   };
 
-  [datasetSelect, methodSelect, searchInput].forEach((input) => input.addEventListener("input", render));
+  [datasetSelect, methodSelect, searchInput, sortSelect].forEach((input) => input.addEventListener("input", render));
+  if (exportButton) {
+    exportButton.addEventListener("click", () => downloadCsv(currentRows));
+  }
   render();
 }
 
@@ -524,6 +613,7 @@ function init() {
   }
   if (page === "database") {
     renderDatasets();
+    renderResultSummary();
     renderExternalDatabaseInventory();
     setupResultsTable();
   }

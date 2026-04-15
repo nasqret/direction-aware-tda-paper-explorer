@@ -82,3 +82,4 @@
 - Pinned the full Sphinx/JupyterBook build stack after the first remote validation run showed transitive dependency drift in generated static files.
 - Relaxed CI validation to require a clean rebuild and export link check, not byte-identical generated Sphinx cache artifacts.
 - Published the repository to `https://github.com/nasqret/direction-aware-tda-paper-explorer` and verified the live GitHub Pages site at `https://nasqret.github.io/direction-aware-tda-paper-explorer/`.
+- Added public-site hardening: page metadata, canonical and Open Graph tags, sitemap, robots policy, `.nojekyll`, Library navigation, Node 24 Actions opt-in, and a richer database performance browser with sorting and CSV export.

@@ -1,0 +1,1 @@
+# Disable Jekyll processing on GitHub Pages so copied JupyterBook _static assets are served.

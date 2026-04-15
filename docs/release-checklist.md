@@ -53,6 +53,8 @@ The workflow:
 
 The Pages source must be configured as GitHub Actions for the remote repository.
 
+The export includes `.nojekyll`, `robots.txt`, and `sitemap.xml` so GitHub Pages serves copied JupyterBook `_static` assets and exposes the main public routes to crawlers.
+
 The validation workflow intentionally does not require byte-identical generated Sphinx files after a CI rebuild. Sphinx static asset cache keys can vary across environments; the release invariant is that the export rebuilds cleanly and passes the local-link check.
 
 ## Manual Browser Smoke Test
@@ -70,6 +72,8 @@ Check these URLs:
 - `http://127.0.0.1:8026/database.html`
 - `http://127.0.0.1:8026/repos.html`
 - `http://127.0.0.1:8026/library.html`
+- `http://127.0.0.1:8026/sitemap.xml`
+- `http://127.0.0.1:8026/robots.txt`
 - `http://127.0.0.1:8026/knowledge-base/index.html`
 - `http://127.0.0.1:8026/obsidian-vault/Paper%20-%20Direction-aware%20topological%20descriptors.md`
 

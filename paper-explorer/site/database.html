@@ -4,12 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Database Browser | Direction-Aware TDA</title>
+    <meta name="description" content="Static database browser for paper datasets, descriptor tables, external repository CSV inventories, and target statistics.">
+    <link rel="canonical" href="https://nasqret.github.io/direction-aware-tda-paper-explorer/database.html">
+    <meta property="og:title" content="Database Browser | Direction-Aware TDA">
+    <meta property="og:description" content="Inspect RTP, TD, ATTD, CSV database summaries, and descriptor performance from the paper.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasqret.github.io/direction-aware-tda-paper-explorer/database.html">
+    <meta property="og:image" content="https://nasqret.github.io/direction-aware-tda-paper-explorer/assets/scatter_rtp_xz.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
     <script src="generated/external-repo-manifest.js" defer></script>
     <script src="explorer.js" defer></script>
   </head>
   <body data-page="database">
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html">Direction-Aware TDA</a>
       <nav class="site-nav" aria-label="Primary">
@@ -17,10 +26,11 @@
         <a href="applets.html">Applets</a>
         <a href="database.html" aria-current="page">Databases</a>
         <a href="repos.html">Repos</a>
+        <a href="library.html">Library</a>
       </nav>
     </header>
 
-    <main class="workspace">
+    <main id="main" class="workspace">
       <section class="page-intro">
         <p class="eyebrow">Database browser</p>
         <h1>Datasets and reported metrics</h1>
@@ -29,6 +39,14 @@
 
       <section class="content-section flush">
         <div id="dataset-grid" class="dataset-grid"></div>
+      </section>
+
+      <section class="content-section flush">
+        <div class="section-heading">
+          <p class="label">Performance ledger</p>
+          <h2>Descriptor comparison summary</h2>
+        </div>
+        <div id="result-summary" class="inventory-strip"></div>
       </section>
 
       <section class="content-section flush">
@@ -54,6 +72,18 @@
             Search
             <input id="table-search" type="search" placeholder="RTPxz, ECP, ATTD">
           </label>
+          <label>
+            Sort
+            <select id="table-sort">
+              <option value="gain-desc">Largest R2 gain</option>
+              <option value="directional-desc">Best directional R2</option>
+              <option value="cnn-gap-asc">Closest to CNN R2</option>
+              <option value="mae-asc">Lowest directional MAE</option>
+              <option value="dataset-asc">Dataset name</option>
+            </select>
+          </label>
+          <button id="export-results" class="button utility" type="button">Export CSV</button>
+          <p id="table-status" class="table-status" aria-live="polite"></p>
         </div>
         <div class="table-wrap">
           <table id="results-table">

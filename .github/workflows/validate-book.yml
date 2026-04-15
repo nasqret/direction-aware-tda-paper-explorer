@@ -1,5 +1,8 @@
 name: Validate Paper Explorer
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     paths:
@@ -29,6 +32,8 @@ on:
 
 jobs:
   validate-export:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nasqret.github.io/direction-aware-tda-paper-explorer/sitemap.xml
