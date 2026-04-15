@@ -9,6 +9,7 @@ Source paper bundle: [`arXiv-2604.08105v1`](arXiv-2604.08105v1)
 ## Components
 
 - `paper-explorer/site/` - export-safe static landing page, exported JupyterBook snapshot, exported vault snapshot, applets page, database browser, and repository index.
+- `paper-explorer/site/graph.html` - interactive browser knowledge graph generated from the Obsidian vault.
 - `paper-explorer/knowledge-base/` - JupyterBook that decomposes the paper into context, theory, datasets, methods, and results.
 - `paper-explorer/obsidian-vault/` - Obsidian vault for the paper knowledge graph.
 - `paper-explorer/repos/` - local manifest area for paper-related Git repositories.

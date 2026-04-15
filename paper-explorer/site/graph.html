@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Knowledge Graph | Direction-Aware TDA</title>
+    <meta name="description" content="Interactive browser knowledge graph generated from the Obsidian vault for the direction-aware TDA paper explorer.">
+    <link rel="canonical" href="https://nasqret.github.io/direction-aware-tda-paper-explorer/graph.html">
+    <meta property="og:title" content="Knowledge Graph | Direction-Aware TDA">
+    <meta property="og:description" content="Explore authors, concepts, datasets, methods, models, results, and repository notes as an interactive graph.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasqret.github.io/direction-aware-tda-paper-explorer/graph.html">
+    <meta property="og:image" content="https://nasqret.github.io/direction-aware-tda-paper-explorer/assets/TDA_directional_horizontal_new.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <script src="generated/vault-graph.js" defer></script>
+    <script src="explorer.js" defer></script>
+  </head>
+  <body data-page="graph">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">Direction-Aware TDA</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Paper</a>
+        <a href="graph.html" aria-current="page">Graph</a>
+        <a href="applets.html">Applets</a>
+        <a href="database.html">Databases</a>
+        <a href="repos.html">Repos</a>
+        <a href="library.html">Library</a>
+      </nav>
+    </header>
+
+    <main id="main" class="workspace">
+      <section class="page-intro">
+        <p class="eyebrow">Obsidian graph</p>
+        <h1>Knowledge graph</h1>
+        <p>Generated from wiki links in the Obsidian vault. Select a node to inspect its note, category, and immediate neighborhood.</p>
+      </section>
+
+      <section class="graph-shell" aria-label="Knowledge graph explorer">
+        <aside class="graph-controls">
+          <div class="control-grid">
+            <label>
+              Search
+              <input id="graph-search" type="search" placeholder="Cone, RTPxz, CatBoost">
+            </label>
+            <label>
+              Category
+              <select id="graph-category"></select>
+            </label>
+            <button id="graph-reset" class="button utility" type="button">Reset view</button>
+          </div>
+          <div id="graph-stats" class="graph-stats"></div>
+          <div id="graph-node-list" class="graph-node-list" aria-label="Graph nodes"></div>
+        </aside>
+
+        <div class="graph-stage">
+          <div class="graph-canvas-wrap">
+            <canvas id="vault-graph-canvas" width="1040" height="680" aria-label="Interactive Obsidian knowledge graph"></canvas>
+          </div>
+          <article id="graph-detail" class="graph-detail" aria-live="polite"></article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

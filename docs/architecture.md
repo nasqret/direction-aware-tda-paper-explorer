@@ -31,6 +31,7 @@ The first version uses small JSON files extracted from the paper:
 - `results.json` - cross-validated performance table values.
 - `repos.json` - paper-related code/data repositories.
 - `external-repo-manifest.json` - generated inventory of the cloned code/data repository.
+- `vault-graph.json` - generated node and edge graph from Obsidian wiki links.
 
 When the external dataset repository is available locally, add a generation step that creates:
 
@@ -57,6 +58,15 @@ The initial applets are pedagogical and deterministic:
 - **RTP field toy** renders a thresholded trigonometric phase field slice.
 
 These are not replacements for the paper computations. They expose mechanisms and point to the source repository for full reproduction.
+
+## Knowledge Graph Strategy
+
+The Obsidian vault is the authoring source for linked notes. `paper-explorer/scripts/build-vault-graph.mjs` parses wiki links in that vault and generates:
+
+- `paper-explorer/site/data/vault-graph.json`;
+- `paper-explorer/site/generated/vault-graph.js`.
+
+The static `graph.html` page renders that generated graph without external libraries, so the graph works when `paper-explorer/site/` is copied, zipped, or served by GitHub Pages.
 
 ## Current External Repository Status
 

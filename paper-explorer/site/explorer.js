@@ -81,6 +81,13 @@ const fmt = (value, digits = 3) => Number.isFinite(value) ? value.toFixed(digits
 const unique = (items) => Array.from(new Set(items));
 const gainFor = (row) => row.directionalR2 - row.nonDirectionalR2;
 const cnnGapFor = (row) => Math.abs(row.cnnR2 - row.directionalR2);
+const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  "\"": "&quot;",
+  "'": "&#39;"
+})[char]);
 
 function optionList(select, values, allLabel) {
   if (!select) return;
@@ -506,6 +513,260 @@ function downloadCsv(rows) {
   URL.revokeObjectURL(url);
 }
 
+function categoryColor(category) {
+  const palette = {
+    Authors: "#24547a",
+    Concepts: "#286d5b",
+    Datasets: "#a97822",
+    Institutions: "#596b73",
+    Methods: "#a1463c",
+    Models: "#6a5a8a",
+    Repositories: "#7a6332",
+    Results: "#2c6f7a",
+    Vault: "#101615"
+  };
+  return palette[category] || "#58615e";
+}
+
+function setupVaultGraph() {
+  const graph = window.VaultGraph;
+  const canvas = $("#vault-graph-canvas");
+  const searchInput = $("#graph-search");
+  const categorySelect = $("#graph-category");
+  const resetButton = $("#graph-reset");
+  const stats = $("#graph-stats");
+  const nodeList = $("#graph-node-list");
+  const detail = $("#graph-detail");
+  if (!graph || !canvas || !searchInput || !categorySelect || !stats || !nodeList || !detail) return;
+
+  const ctx = canvas.getContext("2d");
+  const nodeById = new Map(graph.nodes.map((node) => [node.id, node]));
+  const adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
+  graph.edges.forEach((edge) => {
+    adjacency.get(edge.source)?.add(edge.target);
+    adjacency.get(edge.target)?.add(edge.source);
+  });
+  const graphRoot = nodeById.get("Paper - Direction-aware topological descriptors")
+    || graph.nodes.reduce((best, node) => node.degree > best.degree ? node : best, graph.nodes[0]);
+  const state = {
+    selected: graphRoot,
+    positions: new Map()
+  };
+
+  optionList(categorySelect, graph.categories, "All categories");
+
+  const matchesFilter = (node) => {
+    const term = searchInput.value.trim().toLowerCase();
+    const category = categorySelect.value;
+    const haystack = `${node.title} ${node.category} ${node.excerpt}`.toLowerCase();
+    return (category === "all" || node.category === category) && (!term || haystack.includes(term));
+  };
+
+  const filteredNodes = () => graph.nodes
+    .filter(matchesFilter)
+    .sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title));
+
+  const layout = () => {
+    const width = canvas.width;
+    const height = canvas.height;
+    const cx = width / 2;
+    const cy = height / 2;
+    const ringX = width * 0.34;
+    const ringY = height * 0.31;
+    const byCategory = new Map(graph.categories.map((category) => [
+      category,
+      graph.nodes.filter((node) => node.category === category).sort((a, b) => a.title.localeCompare(b.title))
+    ]));
+
+    state.positions.clear();
+    graph.categories.forEach((category, categoryIndex) => {
+      const nodes = byCategory.get(category) || [];
+      const angle = -Math.PI / 2 + (categoryIndex / graph.categories.length) * Math.PI * 2;
+      const clusterX = cx + Math.cos(angle) * ringX;
+      const clusterY = cy + Math.sin(angle) * ringY;
+      const localRadius = Math.max(34, Math.min(92, 20 + nodes.length * 9));
+      nodes.forEach((node, nodeIndex) => {
+        if (node.id === graphRoot.id) {
+          state.positions.set(node.id, { x: cx, y: cy });
+          return;
+        }
+        const nodeAngle = -Math.PI / 2 + (nodeIndex / Math.max(1, nodes.length)) * Math.PI * 2 + categoryIndex * 0.17;
+        const degreePull = Math.min(0.58, node.degree / 24);
+        state.positions.set(node.id, {
+          x: clusterX * (1 - degreePull) + cx * degreePull + Math.cos(nodeAngle) * localRadius * (1 - degreePull * 0.4),
+          y: clusterY * (1 - degreePull) + cy * degreePull + Math.sin(nodeAngle) * localRadius * (1 - degreePull * 0.4)
+        });
+      });
+    });
+  };
+
+  const draw = () => {
+    layout();
+    const width = canvas.width;
+    const height = canvas.height;
+    const matches = new Set(filteredNodes().map((node) => node.id));
+    const selectedNeighbors = adjacency.get(state.selected.id) || new Set();
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = "#fffdfa";
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.lineWidth = 1.2;
+    graph.edges.forEach((edge) => {
+      const source = state.positions.get(edge.source);
+      const target = state.positions.get(edge.target);
+      if (!source || !target) return;
+      const selectedEdge = edge.source === state.selected.id || edge.target === state.selected.id;
+      const matchedEdge = matches.has(edge.source) && matches.has(edge.target);
+      ctx.globalAlpha = selectedEdge ? 0.72 : matchedEdge ? 0.28 : 0.055;
+      ctx.strokeStyle = selectedEdge ? "#24547a" : "#8f9b94";
+      ctx.beginPath();
+      ctx.moveTo(source.x, source.y);
+      ctx.lineTo(target.x, target.y);
+      ctx.stroke();
+    });
+
+    graph.nodes.forEach((node) => {
+      const position = state.positions.get(node.id);
+      if (!position) return;
+      const matched = matches.has(node.id);
+      const selected = node.id === state.selected.id;
+      const connected = selectedNeighbors.has(node.id);
+      const radius = selected ? 15 : Math.max(6, Math.min(13, 5 + node.degree * 0.45));
+      ctx.globalAlpha = selected ? 1 : matched ? 0.95 : connected ? 0.62 : 0.22;
+      ctx.fillStyle = categoryColor(node.category);
+      ctx.beginPath();
+      ctx.arc(position.x, position.y, radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = selected ? "#101615" : "#fffdfa";
+      ctx.lineWidth = selected ? 3 : 1.6;
+      ctx.stroke();
+    });
+
+    const labeled = graph.nodes
+      .filter((node) => node.id === state.selected.id || (matches.has(node.id) && node.degree >= 8))
+      .sort((a, b) => b.degree - a.degree)
+      .slice(0, 12);
+
+    ctx.font = "700 15px system-ui";
+    ctx.textBaseline = "middle";
+    labeled.forEach((node) => {
+      const position = state.positions.get(node.id);
+      if (!position) return;
+      const label = node.title.length > 30 ? `${node.title.slice(0, 27)}...` : node.title;
+      ctx.fillStyle = "rgba(255, 253, 250, 0.88)";
+      const textWidth = ctx.measureText(label).width;
+      ctx.fillRect(position.x + 13, position.y - 13, textWidth + 12, 26);
+      ctx.fillStyle = "#101615";
+      ctx.fillText(label, position.x + 19, position.y + 1);
+    });
+
+    ctx.globalAlpha = 1;
+  };
+
+  const renderStats = () => {
+    const visible = filteredNodes().length;
+    stats.innerHTML = [
+      [graph.nodeCount, "notes"],
+      [graph.edgeCount, "links"],
+      [graph.categories.length, "categories"],
+      [visible, "visible"]
+    ].map(([value, label]) => `
+      <div>
+        <strong>${value}</strong>
+        <span>${label}</span>
+      </div>
+    `).join("");
+  };
+
+  const renderDetail = () => {
+    const node = state.selected;
+    const neighbors = Array.from(adjacency.get(node.id) || [])
+      .map((id) => nodeById.get(id))
+      .filter(Boolean)
+      .sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title));
+    detail.innerHTML = `
+      <div>
+        <p class="label">${escapeHtml(node.category)} · ${node.degree} link${node.degree === 1 ? "" : "s"}</p>
+        <h2>${escapeHtml(node.title)}</h2>
+      </div>
+      <p>${escapeHtml(node.excerpt || "No excerpt available.")}</p>
+      <p><a href="${node.url}">Open source note</a></p>
+      <div class="neighbor-list">
+        ${neighbors.map((neighbor) => `<button type="button" data-node="${escapeHtml(neighbor.id)}">${escapeHtml(neighbor.title)}</button>`).join("")}
+      </div>
+    `;
+    $$(".neighbor-list button", detail).forEach((button) => {
+      button.addEventListener("click", () => {
+        state.selected = nodeById.get(button.dataset.node) || state.selected;
+        renderAll();
+      });
+    });
+  };
+
+  const renderNodeList = () => {
+    const nodes = filteredNodes();
+    nodeList.innerHTML = nodes.map((node) => `
+      <button class="graph-node-button ${node.id === state.selected.id ? "is-active" : ""}" type="button" data-node="${escapeHtml(node.id)}">
+        <strong>${escapeHtml(node.title)}</strong>
+        <span>${escapeHtml(node.category)} · ${node.degree} links</span>
+      </button>
+    `).join("");
+    $$(".graph-node-button", nodeList).forEach((button) => {
+      button.addEventListener("click", () => {
+        state.selected = nodeById.get(button.dataset.node) || state.selected;
+        renderAll();
+      });
+    });
+  };
+
+  const renderAll = () => {
+    renderStats();
+    renderNodeList();
+    renderDetail();
+    draw();
+  };
+
+  const nearestNode = (event) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * canvas.width;
+    const y = ((event.clientY - rect.top) / rect.height) * canvas.height;
+    let best = null;
+    let bestDistance = Infinity;
+    graph.nodes.forEach((node) => {
+      const position = state.positions.get(node.id);
+      if (!position) return;
+      const distance = Math.hypot(position.x - x, position.y - y);
+      if (distance < bestDistance) {
+        best = node;
+        bestDistance = distance;
+      }
+    });
+    return bestDistance <= 22 ? best : null;
+  };
+
+  canvas.addEventListener("click", (event) => {
+    const node = nearestNode(event);
+    if (!node) return;
+    state.selected = node;
+    renderAll();
+  });
+
+  canvas.addEventListener("mousemove", (event) => {
+    canvas.style.cursor = nearestNode(event) ? "pointer" : "default";
+  });
+
+  [searchInput, categorySelect].forEach((input) => input.addEventListener("input", renderAll));
+  resetButton?.addEventListener("click", () => {
+    searchInput.value = "";
+    categorySelect.value = "all";
+    state.selected = graphRoot;
+    renderAll();
+  });
+
+  renderAll();
+}
+
 function setupResultsTable() {
   const datasetSelect = $("#table-dataset");
   const methodSelect = $("#table-method");
@@ -611,6 +872,7 @@ function init() {
     setupConeApplet();
     setupRtpApplet();
   }
+  if (page === "graph") setupVaultGraph();
   if (page === "database") {
     renderDatasets();
     renderResultSummary();

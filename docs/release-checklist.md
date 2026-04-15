@@ -68,6 +68,7 @@ python3 -m http.server 8026 -d paper-explorer/site
 Check these URLs:
 
 - `http://127.0.0.1:8026/index.html`
+- `http://127.0.0.1:8026/graph.html`
 - `http://127.0.0.1:8026/applets.html`
 - `http://127.0.0.1:8026/database.html`
 - `http://127.0.0.1:8026/repos.html`

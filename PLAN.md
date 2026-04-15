@@ -18,6 +18,7 @@ Last updated: 2026-04-15
 | Paper metadata extraction | Complete | Title, authors, affiliations, abstract, datasets, methods, result tables |
 | JupyterBook knowledge base | Complete | Config, TOC, chapters, references, validation script |
 | Obsidian knowledge graph | Complete | Vault notes with bidirectional links between concepts, datasets, methods, results, authors |
+| Browser knowledge graph | Complete | Static graph page generated from Obsidian wiki links |
 | Landing page | Complete | Static paper landing page with authors, institutions, references, figures, and links |
 | Interactive applets | Complete | Descriptor comparison, anisotropy/performance explorer, cone-filtration toy, RTP field toy |
 | Database browser | Complete | Dataset cards, performance table filters, repo/data availability panel |

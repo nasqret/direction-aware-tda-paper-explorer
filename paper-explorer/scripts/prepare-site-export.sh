@@ -9,8 +9,13 @@ cd "$REPO_ROOT"
 echo "Checking JavaScript syntax..."
 node --check paper-explorer/site/explorer.js
 node --check paper-explorer/scripts/build-external-repo-manifest.mjs
+node --check paper-explorer/scripts/build-vault-graph.mjs
 node --check paper-explorer/scripts/check-site-export-links.mjs
 node --check paper-explorer/scripts/sync-site-export-assets.mjs
+
+echo "Generating vault graph..."
+node paper-explorer/scripts/build-vault-graph.mjs
+node --check paper-explorer/site/generated/vault-graph.js
 
 echo "Checking JSON data files..."
 python3 -m json.tool paper-explorer/site/data/paper.json >/dev/null
@@ -18,6 +23,7 @@ python3 -m json.tool paper-explorer/site/data/datasets.json >/dev/null
 python3 -m json.tool paper-explorer/site/data/results.json >/dev/null
 python3 -m json.tool paper-explorer/site/data/repos.json >/dev/null
 python3 -m json.tool paper-explorer/site/data/external-repo-manifest.json >/dev/null
+python3 -m json.tool paper-explorer/site/data/vault-graph.json >/dev/null
 
 echo "Building JupyterBook..."
 ./paper-explorer/scripts/validate-book.sh

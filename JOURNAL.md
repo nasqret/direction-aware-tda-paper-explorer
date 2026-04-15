@@ -84,3 +84,4 @@
 - Published the repository to `https://github.com/nasqret/direction-aware-tda-paper-explorer` and verified the live GitHub Pages site at `https://nasqret.github.io/direction-aware-tda-paper-explorer/`.
 - Added public-site hardening: page metadata, canonical and Open Graph tags, sitemap, robots policy, `.nojekyll`, Library navigation, Node 24 Actions opt-in, and a richer database performance browser with sorting and CSV export.
 - Upgraded GitHub workflows to current official action releases after verifying available tags through the GitHub API.
+- Added `graph.html` and `build-vault-graph.mjs`, generating a static browser knowledge graph from 33 Obsidian notes and 111 resolved wiki links.
