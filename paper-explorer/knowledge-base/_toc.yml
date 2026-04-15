@@ -3,6 +3,7 @@ root: intro
 chapters:
   - file: annotated/index
     sections:
+      - file: annotated/expanded-narrative
       - file: annotated/00-front-matter-and-abstract
       - file: annotated/01-introduction
       - file: annotated/02-dataset

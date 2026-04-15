@@ -460,12 +460,16 @@ function indexMarkdown(ranges) {
   const md = [];
   md.push("# Annotated Paper");
   md.push("");
-  md.push("This part of the knowledge base is a line-numbered reading companion for the manuscript and supplement. It is intentionally not a short summary: every paper section is reproduced from the LaTeX source in reading order and annotated with comments, mathematical remarks, modeling assumptions, and interpretation checks.");
+  md.push("This part of the knowledge base contains two layers. The primary layer is a streamlined expanded text with formulas, tables, figures, and embedded remarks. The provenance layer then reproduces each manuscript section from the LaTeX source with line-numbered source blocks and commentary.");
   md.push("");
   md.push("```{admonition} How to read this part");
   md.push(":class: tip");
-  md.push("Use the source line numbers to move between the published paper source and the explanation. The commentary blocks are written to answer: what is this line doing, why does it matter, what assumptions enter here, and how does it connect to the rest of the paper explorer?");
+  md.push("Start with the Expanded Annotated Text for continuous exposition. Use the source-provenance pages when you need to verify how a statement maps back to the original LaTeX.");
   md.push("```");
+  md.push("");
+  md.push("## Main Narrative Chapter");
+  md.push("");
+  md.push("- [Expanded Annotated Text](expanded-narrative.md)");
   md.push("");
   md.push("## Coverage Map");
   md.push("");

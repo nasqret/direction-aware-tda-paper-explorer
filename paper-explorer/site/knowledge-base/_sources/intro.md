@@ -2,7 +2,7 @@
 
 This book decomposes the paper **Direction-aware topological descriptors for Young's modulus prediction in porous materials** into a navigable knowledge base. The source manuscript argues that standard topological descriptors lose essential information when the target property depends on a loading direction.
 
-The first part, [Annotated Paper](annotated/index.md), is the primary reading companion. It reproduces the manuscript and supplement section by section from the LaTeX source, with line-numbered source blocks and detailed commentary on the role, assumptions, mathematics, modeling choices, and interpretation of each block.
+The first part, [Annotated Paper](annotated/index.md), is the primary reading companion. Its main chapter is the [Expanded Annotated Text](annotated/expanded-narrative.md), a streamlined walkthrough of the paper with formulas, tables, figures, and remarks. The following pages preserve line-numbered source annotations as provenance.
 
 The central idea is simple:
 
@@ -19,7 +19,8 @@ The central idea is simple:
 
 ## Navigation
 
-- [Annotated Paper](annotated/index.md) gives the line-numbered, section-by-section commentary.
+- [Expanded Annotated Text](annotated/expanded-narrative.md) gives the streamlined annotated manuscript chapter.
+- [Annotated Paper](annotated/index.md) gives the full annotated-paper section, including source-provenance pages.
 - [Context](chapters/01-context.md) explains the scientific motivation.
 - [Datasets](chapters/02-datasets.md) summarizes RTP, TD, ATTD, anisotropy measures, and FFTMAD simulations.
 - [Directional filtrations](chapters/03-directional-filtrations.md) explains cone and principal-component constructions.

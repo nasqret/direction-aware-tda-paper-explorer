@@ -1,0 +1,1682 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Expanded Annotated Text &#8212; Direction-Aware TDA Paper Explorer</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'annotated/expanded-narrative';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Front Matter and Abstract" href="00-front-matter-and-abstract.html" />
+    <link rel="prev" title="Annotated Paper" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-light" alt="Direction-Aware TDA Paper Explorer - Home"/>
+    <script>document.write(`<img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-dark" alt="Direction-Aware TDA Paper Explorer - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Annotated Paper</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Expanded Annotated Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00-front-matter-and-abstract.html">Front Matter and Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-background-and-methods.html">Background and methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-results-and-discussion.html">Results and Discussion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-declarations.html">Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-bibliography-hooks.html">Bibliography Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-supplement-topologically-diverse-td-dataset.html">Supplement: Topologically Diverse (TD) Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-supplement-results-for-rtpxyz-dataset.html">Supplement: Results for RTPxyz dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-supplement-per-fold-cross-validation-performance.html">Supplement: Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/01-context.html">Context: Why Direction Matters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/02-datasets.html">Datasets And Mechanical Targets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/03-directional-filtrations.html">Directional Filtrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/04-descriptors-models.html">Descriptors And Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/05-results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/06-applets-and-databases.html">Applets And Database Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/annotated/expanded-narrative.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Expanded Annotated Text</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-claim-and-abstract-level-reading">Central Claim And Abstract-Level Reading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">2. Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-trigonometric-phase-structures">2.1 Random Trigonometric Phase Structures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topologically-diverse-structures">2.2 Topologically Diverse Structures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anisotropic-transformed-td-structures">2.3 Anisotropic Transformed TD Structures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anisotropy-measures">2.4 Anisotropy Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#young-s-modulus-labels">2.5 Young’s Modulus Labels</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direction-aware-topological-descriptors">3. Direction-Aware Topological Descriptors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cone-based-filtration">3.1 Cone-Based Filtration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principal-component-multifiltration">3.2 Principal-Component Multifiltration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ph-ecp-and-vectorization">3.3 PH, ECP, And Vectorization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-models-and-cross-validation">3.4 Learning Models And Cross-Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-and-discussion">4. Results And Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-performance-table">4.1 Main Performance Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rtpxy-and-rtpxz">4.2 RTPxy And RTPxz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#td-and-attd">4.3 TD And ATTD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supplementary-rtpxyz-result">4.4 Supplementary RTPxyz Result</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-fold-cross-validation-tables">4.5 Per-Fold Cross-Validation Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fold-wise-r-2">Fold-wise <span class="math notranslate nohighlight">\(R^2\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fold-wise-mae">Fold-wise MAE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-meaning">5. Summary And Meaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility-surface">6. Reproducibility Surface</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="expanded-annotated-text">
+<h1>Expanded Annotated Text<a class="headerlink" href="#expanded-annotated-text" title="Link to this heading">#</a></h1>
+<p>This chapter is the main reading companion for the paper. It is not a short
+summary. It rewrites the manuscript in a continuous explanatory form, keeping
+the scientific order of the original text, preserving the formulas, figures,
+and tables, and adding comments at the point where the reader needs them.</p>
+<div class="note admonition">
+<p class="admonition-title">Source convention</p>
+<p>Short source anchors such as <code class="docutils literal notranslate"><span class="pre">main.tex:67-313</span></code> point to the original LaTeX
+source in <code class="docutils literal notranslate"><span class="pre">arXiv-2604.08105v1/</span></code>. The line-numbered provenance pages remain
+available after this chapter, but the present chapter is intended to be read as
+standard mathematical exposition.</p>
+</div>
+<section id="central-claim-and-abstract-level-reading">
+<h2>Central Claim And Abstract-Level Reading<a class="headerlink" href="#central-claim-and-abstract-level-reading" title="Link to this heading">#</a></h2>
+<p>The paper studies <strong>direction-dependent elastic response</strong> in porous materials.
+The target property is the directional Young’s modulus: the same voxelized
+microstructure can have different effective stiffness depending on whether it is
+compressed along the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, or <span class="math notranslate nohighlight">\(z\)</span> axis.</p>
+<p>The key problem is that many standard topological descriptors are deliberately
+insensitive to coordinate direction. This is usually a strength: a topological
+summary should not change under irrelevant rotations or axis permutations. In
+this paper, however, the loading direction is not irrelevant. It is part of the
+physical experiment. A descriptor that forgets the loading axis can therefore
+identify two mechanically distinct situations.</p>
+<p>The proposed solution is:</p>
+<ol class="arabic simple">
+<li><p>Start with a binary porous structure.</p></li>
+<li><p>Choose a compression direction.</p></li>
+<li><p>Build filtrations whose values depend on that direction.</p></li>
+<li><p>Compute persistent homology (PH) and Euler characteristic profile (ECP)
+descriptors from those filtrations.</p></li>
+<li><p>Use the vectorized descriptors in regression models for Young’s modulus.</p></li>
+</ol>
+<p>The abstract’s main empirical claim is that direction-aware topological
+descriptors outperform direction-agnostic descriptors, with the improvement
+becoming larger when the dataset is more anisotropic. The strongest test case is
+RTPxz, where directional PH+ECP reaches <span class="math notranslate nohighlight">\(R^2=0.978\)</span>, close to the voxel CNN
+baseline <span class="math notranslate nohighlight">\(R^2=0.985\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Remark</p>
+<p>The conceptual move is not simply to add an axis label to the data table. The
+axis is inserted before topology is computed, by changing the filtration
+function itself. That is why the topological features can become direction
+aware.</p>
+</div>
+</section>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:47-66</span></code>.</p>
+<p>Porous materials are modeled here as structures with two phases: solid material
+and void. The mechanical behavior depends not only on the total amount of solid
+material, but also on how the solid is connected, how pores are arranged, and
+how load paths travel through the geometry.</p>
+<p>The classical baseline intuition is the Gibson–Ashby density law
+<span id="id1">[<a class="reference internal" href="../references.html#id7" title="L. J. Gibson and M. F. Ashby. The mechanics of three-dimensional cellular materials. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences, 382:43-59, 7 1982. URL: https://dx.doi.org/10.1098/rspa.1982.0088, doi:10.1098/RSPA.1982.0088.">GA82</a>]</span>. It relates material density <span class="math notranslate nohighlight">\(\rho\)</span> to Young’s modulus <span class="math notranslate nohighlight">\(E\)</span>
+by a power law,</p>
+<div class="math notranslate nohighlight">
+\[
+E \propto \rho^n.
+\]</div>
+<p>For idealized open-cell structures one expects <span class="math notranslate nohighlight">\(n \approx 2\)</span>, while for
+closed-cell structures one expects different scaling, often described in the
+paper as <span class="math notranslate nohighlight">\(E \propto \rho^3\)</span> in the cited setting. The important point is not the
+exact exponent, but the limitation of density-only reasoning. Real porous
+materials can be stiffer or softer than density scaling predicts because
+connectivity, pore morphology, strut alignment, and topological organization
+matter.</p>
+<p>Topological data analysis (TDA) supplies descriptors for these missing
+geometric and topological aspects. Persistent homology records the appearance
+and disappearance of components, loops, and voids across a filtration. Euler
+characteristic curves and profiles record alternating counts of cells or
+topological features across one or more filtration parameters. These descriptors
+are compact enough to be used in machine-learning pipelines.</p>
+<p>The paper identifies a specific limitation of previous TDA descriptors for
+porous materials: many are based on distance transforms or other constructions
+that do not know which direction is being loaded. If a microstructure is
+anisotropic, the modulus along a hard axis and an easy axis can be very
+different. A descriptor invariant under axis permutation can collapse this
+difference.</p>
+<div class="important admonition">
+<p class="admonition-title">Comment</p>
+<p>This is the central modeling obstruction. A direction-agnostic descriptor can be
+mathematically elegant and still physically wrong for a directional target.
+Young’s modulus under uniaxial compression is not a scalar property of the
+unoriented shape alone; it is a property of shape plus loading direction.</p>
+</div>
+<p>The paper’s contribution is therefore a direction-aware TDA framework. The
+compression axis is embedded directly into the filtration functions used to
+compute PH and ECP descriptors. These descriptors are then compared with
+non-directional counterparts and with a CNN trained directly on voxel grids.</p>
+</section>
+<section id="datasets">
+<h2>2. Datasets<a class="headerlink" href="#datasets" title="Link to this heading">#</a></h2>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:67-313</span></code>; supplementary source: <code class="docutils literal notranslate"><span class="pre">supplement.tex:6-73</span></code>.</p>
+<p>The dataset design is part of the argument. The paper does not test only one
+kind of porous material. It uses:</p>
+<ul class="simple">
+<li><p>RTP structures, where anisotropy is controlled in Fourier space.</p></li>
+<li><p>TD structures, which are statistically isotropic but topologically diverse.</p></li>
+<li><p>ATTD structures, created by elongating TD structures to introduce anisotropy.</p></li>
+<li><p>RTPxyz in the supplement, where all three loading directions are pooled.</p></li>
+</ul>
+<p>The reason for this design is that direction-aware descriptors should be tested
+both where anisotropy is strong and where it is weak or absent. If the method
+only worked for one synthetic generator, the claim would be much weaker.</p>
+<section id="random-trigonometric-phase-structures">
+<h3>2.1 Random Trigonometric Phase Structures<a class="headerlink" href="#random-trigonometric-phase-structures" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:69-155</span></code>.</p>
+<p>The RTP dataset is generated from a random trigonometric scalar field on the
+unit cube with periodic boundary conditions. The grid resolution is
+<span class="math notranslate nohighlight">\(N \times N \times N\)</span> with <span class="math notranslate nohighlight">\(N=80\)</span>, and coordinates are normalized as
+<span class="math notranslate nohighlight">\(\mathbf{x}\in[0,1)^3\)</span>.</p>
+<p>The scalar field is</p>
+<div class="math notranslate nohighlight">
+\[
+S(\mathbf{x}) =
+\sqrt{\frac{2}{K}}
+\sum_{k=1}^{K}
+\cos\!\left(2\pi\,\mathbf{q}_k \cdot \mathbf{x} + \phi_k\right),
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(K\)</span> is the number of trigonometric modes;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi_k \sim \mathcal{U}(0,2\pi)\)</span> are independent random phases;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{q}_k=(n_x,n_y,n_z)\)</span> is sampled from a bounded integer lattice with
+<span class="math notranslate nohighlight">\(n_\alpha\in[-n_{\max}, n_{\max}]\)</span>.</p></li>
+</ul>
+<p>The paper uses <span class="math notranslate nohighlight">\(K\)</span> sampled uniformly from <span class="math notranslate nohighlight">\([10,30]\)</span>, fixes
+<span class="math notranslate nohighlight">\(n_{\max}=12\)</span>, and samples target porosity from <span class="math notranslate nohighlight">\([0.2,0.8]\)</span>.</p>
+<p>The continuous scalar field is thresholded to obtain a binary material:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X(\mathbf{x}) =
+\begin{cases}
+1, &amp; S(\mathbf{x}) &gt; \tau,\\
+0, &amp; \text{otherwise}.
+\end{cases}
+\end{split}\]</div>
+<p>Here <span class="math notranslate nohighlight">\(X=1\)</span> denotes solid and <span class="math notranslate nohighlight">\(X=0\)</span> denotes void. The threshold <span class="math notranslate nohighlight">\(\tau\)</span> is chosen
+numerically so that the generated structure matches the target porosity.</p>
+<div class="note admonition">
+<p class="admonition-title">Remark</p>
+<p>The threshold is not a fixed global constant. It is adjusted per realization to
+control porosity. This matters because the study is not just measuring density
+effects; it wants to separate porosity, topology, and anisotropic organization.</p>
+</div>
+<p>The generated structures must also pass connectivity and percolation checks:
+all solid voxels must form one connected component, and the solid phase must
+percolate across all three Cartesian directions. Without this condition, the
+effective mechanical response could be dominated by disconnected or physically
+irrelevant fragments.</p>
+<p>Anisotropy is introduced by scaling the wavevectors before evaluating the RTP
+field:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{q}_k =
+\operatorname{diag}(s_x,s_y,s_z)\,\mathbf{q}_k^{(0)}.
+\]</div>
+<p>The paper uses <span class="math notranslate nohighlight">\(s_x=s_y=1\)</span> and <span class="math notranslate nohighlight">\(s_z=0.2\)</span>. Larger <span class="math notranslate nohighlight">\(s_\alpha\)</span> means higher spatial
+frequency and shorter correlation length along direction <span class="math notranslate nohighlight">\(\alpha\)</span>; smaller
+<span class="math notranslate nohighlight">\(s_\alpha\)</span> means longer correlation length. Thus <span class="math notranslate nohighlight">\(s_z=0.2\)</span> creates elongated
+structure along the <span class="math notranslate nohighlight">\(z\)</span> axis.</p>
+<p><img alt="RTP examples" src="../_images/render_rtp_420.png" /></p>
+<p>The paper reports 500 RTP microstructures. Each is tested under uniaxial
+compression along the Cartesian directions, producing directional Young’s
+moduli. Two paired datasets are central:</p>
+<ul class="simple">
+<li><p><strong>RTPxy</strong>: the same structures evaluated along <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> only. This is
+weakly anisotropic in the probed plane.</p></li>
+<li><p><strong>RTPxz</strong>: the same structures evaluated along <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span>. This compares an
+easy direction with a hard direction and is strongly anisotropic.</p></li>
+</ul>
+</section>
+<section id="topologically-diverse-structures">
+<h3>2.2 Topologically Diverse Structures<a class="headerlink" href="#topologically-diverse-structures" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:156-221</span></code>; supplement: <code class="docutils literal notranslate"><span class="pre">supplement.tex:6-73</span></code>.</p>
+<p>The TD dataset contains 2375 statistically isotropic periodic porous structures
+on an <span class="math notranslate nohighlight">\(80^3\)</span> grid. It is designed to test whether the topological descriptors
+generalize beyond the RTP mechanism.</p>
+<p>The five structure families are:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Family</p></th>
+<th class="head"><p>Construction idea</p></th>
+<th class="head"><p>Role in the dataset</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Voronoi</p></td>
+<td><p>Random seed points define Voronoi tessellations; edges are thickened into struts.</p></td>
+<td><p>Network-like structures with random cell geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Zeolitic</p></td>
+<td><p>Predicted zeolite frameworks are rescaled to the unit cube; Si-neighbor connections form the skeleton.</p></td>
+<td><p>Realistic framework-like connectivity.</p></td>
+</tr>
+<tr class="row-even"><td><p>Diamond-like</p></td>
+<td><p>Perturbed diamond-lattice atoms are connected by thickened nearest-neighbor bonds.</p></td>
+<td><p>Ordered but randomly perturbed strut networks.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cubic-strut</p></td>
+<td><p>Perturbed simple cubic lattice points are connected and thickened.</p></td>
+<td><p>Classical cubic scaffold variations.</p></td>
+</tr>
+<tr class="row-even"><td><p>Spline-based</p></td>
+<td><p>Periodic random B-spline scalar fields are thresholded.</p></td>
+<td><p>Smooth pore morphologies.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="TD and ATTD structure families" src="../_images/render_splines.png" /></p>
+<p>The supplement gives the most explicit mathematical description for the
+spline-based structures. Random coefficients are sampled as</p>
+<div class="math notranslate nohighlight">
+\[
+r_{ijk}\sim\mathcal{U}(0,1),\qquad i,j,k=1,\dots,n.
+\]</div>
+<p>A trivariate periodic tensor-product B-spline field is then defined by</p>
+<div class="math notranslate nohighlight">
+\[
+f(x,y,z)=
+\sum_{i=1}^{n}\sum_{j=1}^{n}\sum_{k=1}^{n}
+r_{ijk}\,N_{i,3}(x)\,N_{j,3}(y)\,N_{k,3}(z),
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_{i,3}\)</span> are cubic B-spline basis functions. The binary structure is a
+super-level set:</p>
+<div class="math notranslate nohighlight">
+\[
+T_{abc}(t)=
+\mathbf{1}\!\left\{
+f\!\left(\frac{a}{L},\frac{b}{L},\frac{c}{L}\right)\ge t
+\right\},
+\qquad a,b,c=0,\dots,L-1,
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(L=80\)</span>. The volume fraction is</p>
+<div class="math notranslate nohighlight">
+\[
+\phi(t)=\frac{1}{L^3}\sum_{a,b,c}T_{abc}(t).
+\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Comment</p>
+<p>The TD dataset is not merely “more data.” It changes the geometric prior. RTP
+structures are generated by Fourier modes; TD structures include strut
+networks, framework-like geometries, lattice perturbations, and smooth spline
+fields. This tests whether the descriptor idea is tied to a generator or to a
+more general structure-property principle.</p>
+</div>
+</section>
+<section id="anisotropic-transformed-td-structures">
+<h3>2.3 Anisotropic Transformed TD Structures<a class="headerlink" href="#anisotropic-transformed-td-structures" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:222-268</span></code>.</p>
+<p>The ATTD dataset is built because the TD generators do not provide an obvious
+knob for controlled anisotropy. The paper therefore applies a geometric
+elongation procedure:</p>
+<ol class="arabic simple">
+<li><p>Start with an isotropic <span class="math notranslate nohighlight">\(80\times80\times80\)</span> TD structure.</p></li>
+<li><p>Downsample it to <span class="math notranslate nohighlight">\(40\times40\times40\)</span>.</p></li>
+<li><p>Elongate the segment along <span class="math notranslate nohighlight">\(z\)</span> to <span class="math notranslate nohighlight">\(40\times40\times80\)</span>.</p></li>
+<li><p>Replicate it four times in the transverse directions to reconstruct an
+<span class="math notranslate nohighlight">\(80\times80\times80\)</span> periodic grid.</p></li>
+</ol>
+<p>This approximately preserves local topology while introducing a preferred
+direction. ATTD is therefore a bridge between statistically isotropic TD and
+strongly anisotropic RTPxz.</p>
+</section>
+<section id="anisotropy-measures">
+<h3>2.4 Anisotropy Measures<a class="headerlink" href="#anisotropy-measures" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:269-295</span></code>.</p>
+<p>The paper uses two complementary anisotropy measures, one in real space and one
+in Fourier space.</p>
+<p>Let the binary indicator be <span class="math notranslate nohighlight">\(X(\mathbf{x})\)</span>. The mean-centered field is</p>
+<div class="math notranslate nohighlight">
+\[
+Y(\mathbf{x})=X(\mathbf{x})-\langle X\rangle.
+\]</div>
+<p>For each Cartesian direction, a one-dimensional periodic autocorrelation
+function is computed and averaged over transverse coordinates. The directional
+correlations are denoted</p>
+<div class="math notranslate nohighlight">
+\[
+C_x(\ell),\qquad C_y(\ell),\qquad C_z(\ell),
+\]</div>
+<p>and are normalized by <span class="math notranslate nohighlight">\(C_\alpha(0)=1\)</span>.</p>
+<p>The directional correlation length is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+L_\alpha=\sum_{\ell\ge 0} C_\alpha(\ell),
+\]</div>
+<p>where the sum is restricted to non-negative lags up to the first zero crossing
+of <span class="math notranslate nohighlight">\(C_\alpha(\ell)\)</span>.</p>
+<p>The Fourier-space measure uses the discrete Fourier transform of <span class="math notranslate nohighlight">\(Y\)</span> and the
+directional second moments of the power spectrum:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle k_\alpha^2\rangle.
+\]</div>
+<p>The zero-frequency mode is removed before computing these moments. This avoids
+letting the mean solid fraction dominate the spectral anisotropy signal.</p>
+<div class="important admonition">
+<p class="admonition-title">Remark</p>
+<p>The paper reports dataset-level anisotropy through the standard deviations
+<span class="math notranslate nohighlight">\(\sigma(k)\)</span> and <span class="math notranslate nohighlight">\(\sigma(L)\)</span> over the loading axes used in the dataset. Large
+values mean the probed directions differ strongly in morphology. RTPxz has
+<span class="math notranslate nohighlight">\(\sigma(k)=0.40\)</span> and <span class="math notranslate nohighlight">\(\sigma(L)=1.89\)</span>, making it the cleanest test of
+direction-aware topology.</p>
+</div>
+</section>
+<section id="young-s-modulus-labels">
+<h3>2.5 Young’s Modulus Labels<a class="headerlink" href="#young-s-modulus-labels" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:296-313</span></code>.</p>
+<p>Effective Young’s moduli are computed using FFT-based homogenization via
+<code class="docutils literal notranslate"><span class="pre">FFTMAD</span></code> <span id="id2">[<a class="reference internal" href="../references.html#id24" title="S. Lucarini and J. Segurado. On the accuracy of spectral solvers for micromechanics based fatigue modeling. Computational Mechanics, 63:365-382, 2 2019. URL: https://link.springer.com/article/10.1007/s00466-018-1598-1, doi:10.1007/S00466-018-1598-1/FIGURES/9.">LS19</a>]</span>. Each structure is compressed along selected
+principal directions, and the effective modulus is extracted from the linear
+macroscopic stress-strain response.</p>
+<p>For RTP, the solid phase is assigned properties representative of an
+Au<span class="math notranslate nohighlight">\(_{0.30}\)</span>Ag<span class="math notranslate nohighlight">\(_{0.70}\)</span> alloy:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{\mathrm{bulk}}=81.5\,\mathrm{GPa},
+\qquad
+\nu_{\mathrm{bulk}}=0.39.
+\]</div>
+<p>For TD and ATTD, the solid phase corresponds to aluminium:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{\mathrm{bulk}}=70.0\,\mathrm{GPa},
+\qquad
+\nu_{\mathrm{bulk}}=0.33.
+\]</div>
+<p>All simulations are small-strain simulations on voxelized structures.</p>
+</section>
+</section>
+<section id="direction-aware-topological-descriptors">
+<h2>3. Direction-Aware Topological Descriptors<a class="headerlink" href="#direction-aware-topological-descriptors" title="Link to this heading">#</a></h2>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:314-402</span></code>.</p>
+<p>The paper uses cubical complexes to represent voxelized porous structures.
+Filtration values are first assigned to vertices and then propagated to higher
+dimensional cells using the standard V-construction. The key distinction is
+between:</p>
+<ul class="simple">
+<li><p><strong>non-directional filtrations</strong>, such as distance-transform filtrations used
+in prior porous-material TDA work;</p></li>
+<li><p><strong>direction-aware filtrations</strong>, where the loading axis enters the filtration
+before PH or ECP is computed.</p></li>
+</ul>
+<p><img alt="Direction-aware filtration schematic" src="../_images/TDA_directional_horizontal_new.png" /></p>
+<section id="cone-based-filtration">
+<h3>3.1 Cone-Based Filtration<a class="headerlink" href="#cone-based-filtration" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:336-352</span></code>.</p>
+<p>The cone filtration measures local porosity in cones aligned with the
+compression direction. For a grid point <span class="math notranslate nohighlight">\(e=(i_0,j_0,k_0)\)</span>, the paper defines a
+double cone of height <span class="math notranslate nohighlight">\(h\)</span> and radius <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{Cone}(e,r,h)
+=
+\left\{
+(i,j,k)\in\mathcal{N}:
+|k-k_0|&lt;h
+\;\land\;
+\sqrt{|i-i_0|^2+|j-j_0|^2}
+\le
+\frac{|k-k_0|r}{h}
+\right\}.
+\]</div>
+<p>The displayed formula is written for a compression direction parallel to the
+<span class="math notranslate nohighlight">\(z\)</span> axis. For other compression directions, the coordinate role changes
+accordingly.</p>
+<p>For a binary grid <span class="math notranslate nohighlight">\(G\)</span> of size <span class="math notranslate nohighlight">\(n\times n\times n\)</span>, the cone-based filtration is</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\mathrm{cone}}(e;r,h)
+=
+1-
+\frac{1}{|\mathrm{Cone}(e,r,h)|}
+\sum_{(i,j,k)\in \mathrm{Cone}(e,r,h)}
+g_{i'j'k'},
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+i'=i\bmod n,\qquad j'=j\bmod n,\qquad k'=k\bmod n.
+\]</div>
+<p>The modulo operation implements periodicity. Since <span class="math notranslate nohighlight">\(g=1\)</span> for solid material and
+<span class="math notranslate nohighlight">\(g=0\)</span> for void, the average in the formula measures the solid fraction inside
+the cone. Subtracting from 1 gives a local cone porosity.</p>
+<p>If the selected grid element is empty, the filtration value is set to 1.25. This
+is deliberately outside the physical solid-material range <span class="math notranslate nohighlight">\([0,1]\)</span>, so void
+vertices enter the filtration after all material vertices.</p>
+<div class="note admonition">
+<p class="admonition-title">Comment</p>
+<p>The cone filtration is interpretable. It asks: looking forward and backward
+along the loading direction, how much solid material lies in a conical support
+region? This encodes a simple proxy for directional load transfer.</p>
+</div>
+<p>The fixed hyperparameters are:</p>
+<div class="math notranslate nohighlight">
+\[
+h_{\mathrm{cone}}=6,
+\qquad
+r_{\mathrm{cone}}=3.
+\]</div>
+</section>
+<section id="principal-component-multifiltration">
+<h3>3.2 Principal-Component Multifiltration<a class="headerlink" href="#principal-component-multifiltration" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:353-384</span></code>.</p>
+<p>The principal-component construction estimates local material orientation. For
+a selected solid grid element, all nonzero grid elements inside a sphere of
+radius <span class="math notranslate nohighlight">\(r\)</span> are treated as a point cloud. The first principal component of that
+point cloud gives a local dominant direction.</p>
+<p>If the normalized first principal component is <span class="math notranslate nohighlight">\(v\)</span>, the filtration value used
+in the paper is the two-parameter vector</p>
+<div class="math notranslate nohighlight">
+\[
+\left(1-|v_z|,\;1-|v_y|\right).
+\]</div>
+<p>The component <span class="math notranslate nohighlight">\(|v_z|\)</span> measures alignment with the compression direction in the
+paper’s coordinate convention. A material direction aligned with compression
+has <span class="math notranslate nohighlight">\(|v_z|\)</span> close to 1, hence <span class="math notranslate nohighlight">\(1-|v_z|\)</span> close to 0.</p>
+<p>The neighborhood radius is fixed as</p>
+<div class="math notranslate nohighlight">
+\[
+r_{\mathrm{PC1}}=4.
+\]</div>
+<p>The algorithmic content can be written as:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>PcFiltration(G, (i,j,k), r):
+    if G[i,j,k] = 0:
+        return (1.25, 1.25)
+    neighborhood = get_neighborhood(G, (i,j,k), r)
+    v = first_principal_component(neighborhood)
+    v = v / |v|
+    return (1 - |v[2]|, 1 - |v[1]|)
+</pre></div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Remark</p>
+<p>This is the main place where the paper moves from a scalar filtration to a
+multifiltration. ECP can naturally sample a multiparameter grid, so the
+principal-component construction is paired with Euler characteristic profiles.</p>
+</div>
+</section>
+<section id="ph-ecp-and-vectorization">
+<h3>3.3 PH, ECP, And Vectorization<a class="headerlink" href="#ph-ecp-and-vectorization" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:385-393</span></code>.</p>
+<p>The cone filtration is used for persistent homology. PH tracks connected
+components, loops, and voids across the filtration. The paper uses dimensions
+0, 1, and 2 and converts persistence diagrams into persistence images
+<span id="id3">[<a class="reference internal" href="../references.html#id31" title="Henry Adams, Tegan Emerson, Michael Kirby, Rachel Neville, Chris Peterson, Patrick Shipman, Sofya Chepushtanova, Eric Hanson, Francis Motta, and Lori Ziegelmeier. Persistence images: a stable vector representation of persistent homology. Journal of Machine Learning Research, 18(8):1–35, 2017. URL: http://jmlr.org/papers/v18/16-337.html.">AEK+17</a>]</span>.</p>
+<p>The persistence image settings are:</p>
+<div class="math notranslate nohighlight">
+\[
+10\times10
+\quad\text{image grid},
+\qquad
+\text{birth range }(0,1.25),
+\qquad
+\text{persistence range }(0,1.25).
+\]</div>
+<p>The persistence images for dimensions 0, 1, and 2 are vectorized separately and
+concatenated.</p>
+<p>ECP descriptors are computed from the multifiltration and sampled on a</p>
+<div class="math notranslate nohighlight">
+\[
+7\times7\times7
+\]</div>
+<p>grid. ECP is less detailed than PH but computationally efficient and suitable
+for multiparameter filtrations.</p>
+</section>
+<section id="learning-models-and-cross-validation">
+<h3>3.4 Learning Models And Cross-Validation<a class="headerlink" href="#learning-models-and-cross-validation" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:394-402</span></code>.</p>
+<p>Topological descriptors are used as tabular features for CatBoost regression
+<span id="id4">[<a class="reference internal" href="../references.html#id32" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. Catboost: unbiased boosting with categorical features. 2019. URL: https://arxiv.org/abs/1706.09516, arXiv:1706.09516.">PGV+19</a>]</span>. The CNN baseline is DenseNet-121 trained directly on
+the voxelized structures.</p>
+<p>The evaluation uses <span class="math notranslate nohighlight">\(k\)</span>-fold cross-validation with</p>
+<div class="math notranslate nohighlight">
+\[
+k=8.
+\]</div>
+<p>For each fold, six folds are used for training, one for validation, and one for
+testing. Metrics are computed only on test sets and then averaged across folds.</p>
+<p>To avoid data leakage, splits are performed at the <strong>structure level</strong>. If the
+same structure has multiple Young’s modulus labels under different loading
+directions, those labels stay together in train, validation, or test.</p>
+<div class="important admonition">
+<p class="admonition-title">Comment</p>
+<p>This split policy is essential. If the same geometry appeared in training under
+one loading direction and in testing under another, the model could partially
+memorize the structure rather than learn a general descriptor-property map.</p>
+</div>
+</section>
+</section>
+<section id="results-and-discussion">
+<h2>4. Results And Discussion<a class="headerlink" href="#results-and-discussion" title="Link to this heading">#</a></h2>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:403-579</span></code>; supplement: <code class="docutils literal notranslate"><span class="pre">supplement.tex:74-159</span></code>.</p>
+<p>The main empirical question is whether direction-aware descriptors outperform
+non-directional descriptors, and whether the improvement grows with anisotropy.</p>
+<section id="main-performance-table">
+<h3>4.1 Main Performance Table<a class="headerlink" href="#main-performance-table" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:459-489</span></code>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head text-right"><p><span class="math notranslate nohighlight">\(\sigma(k)\)</span></p></th>
+<th class="head text-right"><p><span class="math notranslate nohighlight">\(\sigma(L)\)</span></p></th>
+<th class="head text-right"><p>CNN <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>CNN MAE</p></th>
+<th class="head"><p>Method</p></th>
+<th class="head text-right"><p>Non-dir <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>Non-dir MAE</p></th>
+<th class="head text-right"><p>Dir <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>Dir MAE</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RTPxz</p></td>
+<td class="text-right"><p>0.40</p></td>
+<td class="text-right"><p>1.89</p></td>
+<td class="text-right"><p>0.985</p></td>
+<td class="text-right"><p>1.62</p></td>
+<td><p>PH</p></td>
+<td class="text-right"><p>0.463</p></td>
+<td class="text-right"><p>9.42</p></td>
+<td class="text-right"><p>0.954</p></td>
+<td class="text-right"><p>2.65</p></td>
+</tr>
+<tr class="row-odd"><td><p>RTPxz</p></td>
+<td class="text-right"><p>0.40</p></td>
+<td class="text-right"><p>1.89</p></td>
+<td class="text-right"><p>0.985</p></td>
+<td class="text-right"><p>1.62</p></td>
+<td><p>ECP</p></td>
+<td class="text-right"><p>0.616</p></td>
+<td class="text-right"><p>12.06</p></td>
+<td class="text-right"><p>0.978</p></td>
+<td class="text-right"><p>1.85</p></td>
+</tr>
+<tr class="row-even"><td><p>RTPxz</p></td>
+<td class="text-right"><p>0.40</p></td>
+<td class="text-right"><p>1.89</p></td>
+<td class="text-right"><p>0.985</p></td>
+<td class="text-right"><p>1.62</p></td>
+<td><p>PH+ECP</p></td>
+<td class="text-right"><p>0.754</p></td>
+<td class="text-right"><p>7.05</p></td>
+<td class="text-right"><p>0.978</p></td>
+<td class="text-right"><p>1.86</p></td>
+</tr>
+<tr class="row-odd"><td><p>RTPxy</p></td>
+<td class="text-right"><p>0.11</p></td>
+<td class="text-right"><p>0.21</p></td>
+<td class="text-right"><p>0.979</p></td>
+<td class="text-right"><p>1.02</p></td>
+<td><p>PH</p></td>
+<td class="text-right"><p>0.878</p></td>
+<td class="text-right"><p>2.42</p></td>
+<td class="text-right"><p>0.873</p></td>
+<td class="text-right"><p>2.45</p></td>
+</tr>
+<tr class="row-even"><td><p>RTPxy</p></td>
+<td class="text-right"><p>0.11</p></td>
+<td class="text-right"><p>0.21</p></td>
+<td class="text-right"><p>0.979</p></td>
+<td class="text-right"><p>1.02</p></td>
+<td><p>ECP</p></td>
+<td class="text-right"><p>0.925</p></td>
+<td class="text-right"><p>1.86</p></td>
+<td class="text-right"><p>0.940</p></td>
+<td class="text-right"><p>1.66</p></td>
+</tr>
+<tr class="row-odd"><td><p>RTPxy</p></td>
+<td class="text-right"><p>0.11</p></td>
+<td class="text-right"><p>0.21</p></td>
+<td class="text-right"><p>0.979</p></td>
+<td class="text-right"><p>1.02</p></td>
+<td><p>PH+ECP</p></td>
+<td class="text-right"><p>0.916</p></td>
+<td class="text-right"><p>1.98</p></td>
+<td class="text-right"><p>0.938</p></td>
+<td class="text-right"><p>1.69</p></td>
+</tr>
+<tr class="row-even"><td><p>TD</p></td>
+<td class="text-right"><p>0.14</p></td>
+<td class="text-right"><p>1.80</p></td>
+<td class="text-right"><p>0.976</p></td>
+<td class="text-right"><p>0.62</p></td>
+<td><p>PH</p></td>
+<td class="text-right"><p>0.596</p></td>
+<td class="text-right"><p>2.44</p></td>
+<td class="text-right"><p>0.665</p></td>
+<td class="text-right"><p>2.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>TD</p></td>
+<td class="text-right"><p>0.14</p></td>
+<td class="text-right"><p>1.80</p></td>
+<td class="text-right"><p>0.976</p></td>
+<td class="text-right"><p>0.62</p></td>
+<td><p>ECP</p></td>
+<td class="text-right"><p>0.815</p></td>
+<td class="text-right"><p>1.48</p></td>
+<td class="text-right"><p>0.818</p></td>
+<td class="text-right"><p>1.66</p></td>
+</tr>
+<tr class="row-even"><td><p>TD</p></td>
+<td class="text-right"><p>0.14</p></td>
+<td class="text-right"><p>1.80</p></td>
+<td class="text-right"><p>0.976</p></td>
+<td class="text-right"><p>0.62</p></td>
+<td><p>PH+ECP</p></td>
+<td class="text-right"><p>0.822</p></td>
+<td class="text-right"><p>1.46</p></td>
+<td class="text-right"><p>0.836</p></td>
+<td class="text-right"><p>1.53</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATTD</p></td>
+<td class="text-right"><p>0.20</p></td>
+<td class="text-right"><p>1.74</p></td>
+<td class="text-right"><p>0.894</p></td>
+<td class="text-right"><p>0.34</p></td>
+<td><p>PH</p></td>
+<td class="text-right"><p>0.536</p></td>
+<td class="text-right"><p>3.78</p></td>
+<td class="text-right"><p>0.759</p></td>
+<td class="text-right"><p>2.53</p></td>
+</tr>
+<tr class="row-even"><td><p>ATTD</p></td>
+<td class="text-right"><p>0.20</p></td>
+<td class="text-right"><p>1.74</p></td>
+<td class="text-right"><p>0.894</p></td>
+<td class="text-right"><p>0.34</p></td>
+<td><p>ECP</p></td>
+<td class="text-right"><p>0.653</p></td>
+<td class="text-right"><p>3.36</p></td>
+<td class="text-right"><p>0.815</p></td>
+<td class="text-right"><p>2.13</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATTD</p></td>
+<td class="text-right"><p>0.20</p></td>
+<td class="text-right"><p>1.74</p></td>
+<td class="text-right"><p>0.894</p></td>
+<td class="text-right"><p>0.34</p></td>
+<td><p>PH+ECP</p></td>
+<td class="text-right"><p>0.643</p></td>
+<td class="text-right"><p>3.33</p></td>
+<td class="text-right"><p>0.825</p></td>
+<td class="text-right"><p>2.06</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">How to read this table</p>
+<p>The table is not just a leaderboard. Compare within each dataset and descriptor
+family: PH non-directional vs PH directional, ECP non-directional vs ECP
+directional, and PH+ECP non-directional vs PH+ECP directional. The central
+claim is about these paired comparisons.</p>
+</div>
+</section>
+<section id="rtpxy-and-rtpxz">
+<h3>4.2 RTPxy And RTPxz<a class="headerlink" href="#rtpxy-and-rtpxz" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:410-514</span></code>.</p>
+<p><img alt="RTP predicted versus computed" src="../_images/scatter_rtp_xy.png" /></p>
+<p>RTPxy probes <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions. The mean moduli are almost identical:</p>
+<div class="math notranslate nohighlight">
+\[
+E_x=11.46\,\mathrm{GPa},
+\qquad
+E_y=11.49\,\mathrm{GPa}.
+\]</div>
+<p>The anisotropy measures are small:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(k)=0.11,
+\qquad
+\sigma(L)=0.21.
+\]</div>
+<p>Thus direction-aware topology has limited opportunity to help. Even so,
+directional ECP improves from <span class="math notranslate nohighlight">\(R^2=0.925\)</span> to <span class="math notranslate nohighlight">\(R^2=0.940\)</span>, and directional
+PH+ECP improves from <span class="math notranslate nohighlight">\(R^2=0.916\)</span> to <span class="math notranslate nohighlight">\(R^2=0.938\)</span>.</p>
+<p>RTPxz is the decisive case. It probes <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions in the same
+underlying structures:</p>
+<div class="math notranslate nohighlight">
+\[
+E_x=11.46\,\mathrm{GPa},
+\qquad
+E_z=35.55\,\mathrm{GPa}.
+\]</div>
+<p>The anisotropy measures are much larger:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(k)=0.40,
+\qquad
+\sigma(L)=1.89.
+\]</div>
+<p>For RTPxz, non-directional PH gives only <span class="math notranslate nohighlight">\(R^2=0.463\)</span>, while directional PH gives
+<span class="math notranslate nohighlight">\(R^2=0.954\)</span>. Non-directional ECP gives <span class="math notranslate nohighlight">\(R^2=0.616\)</span>, while directional ECP gives
+<span class="math notranslate nohighlight">\(R^2=0.978\)</span>. Directional PH+ECP also reaches <span class="math notranslate nohighlight">\(R^2=0.978\)</span>.</p>
+<div class="important admonition">
+<p class="admonition-title">Interpretation</p>
+<p>The same geometry can be mechanically easy in one direction and hard in
+another. Non-directional descriptors mix these cases because they cannot
+represent the loading axis. Direction-aware descriptors separate them before
+topology is summarized.</p>
+</div>
+</section>
+<section id="td-and-attd">
+<h3>4.3 TD And ATTD<a class="headerlink" href="#td-and-attd" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:515-579</span></code>.</p>
+<p><img alt="TD and ATTD predicted versus computed" src="../_images/scatter_td.png" /></p>
+<p>The TD dataset tests generality under statistical isotropy. It has</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(k)=0.14,
+\qquad
+\sigma(L)=1.80,
+\qquad
+\bar{E}=7.46\,\mathrm{GPa}.
+\]</div>
+<p>The same broad pattern holds: ECP is stronger than PH alone, and directional
+PH+ECP gives the best <span class="math notranslate nohighlight">\(R^2\)</span> among topological models. The gains are modest
+because TD is not designed to contain a preferred direction.</p>
+<p>ATTD introduces moderate anisotropy by elongating TD structures. It has</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma(k)=0.20,
+\qquad
+\sigma(L)=1.74,
+\qquad
+\bar{E}=9.36\,\mathrm{GPa}.
+\]</div>
+<p>For ATTD, the directional improvement is substantial:</p>
+<ul class="simple">
+<li><p>ECP improves from <span class="math notranslate nohighlight">\(R^2=0.653\)</span> to <span class="math notranslate nohighlight">\(R^2=0.815\)</span>.</p></li>
+<li><p>PH+ECP improves from <span class="math notranslate nohighlight">\(R^2=0.643\)</span> to <span class="math notranslate nohighlight">\(R^2=0.825\)</span>.</p></li>
+<li><p>The directional PH+ECP MAE is <span class="math notranslate nohighlight">\(2.06\,\mathrm{GPa}\)</span>, compared with
+<span class="math notranslate nohighlight">\(3.33\,\mathrm{GPa}\)</span> for non-directional PH+ECP.</p></li>
+</ul>
+<p>The CNN remains strong, but the gap between CNN and directional topology
+shrinks as anisotropy increases. The paper explicitly compares these gaps:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head text-right"><p>CNN <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>Directional PH+ECP <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>Gap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TD</p></td>
+<td class="text-right"><p>0.976</p></td>
+<td class="text-right"><p>0.836</p></td>
+<td class="text-right"><p>0.140</p></td>
+</tr>
+<tr class="row-odd"><td><p>ATTD</p></td>
+<td class="text-right"><p>0.894</p></td>
+<td class="text-right"><p>0.825</p></td>
+<td class="text-right"><p>0.069</p></td>
+</tr>
+<tr class="row-even"><td><p>RTPxy</p></td>
+<td class="text-right"><p>0.979</p></td>
+<td class="text-right"><p>0.938</p></td>
+<td class="text-right"><p>0.041</p></td>
+</tr>
+<tr class="row-odd"><td><p>RTPxz</p></td>
+<td class="text-right"><p>0.985</p></td>
+<td class="text-right"><p>0.978</p></td>
+<td class="text-right"><p>0.006</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Comment</p>
+<p>This gap analysis is important because it reframes the CNN comparison. The CNN
+is not merely “better”; it is better partly because it can learn directional
+organization from voxels. Direction-aware topology recovers much of that signal
+in a compact descriptor.</p>
+</div>
+</section>
+<section id="supplementary-rtpxyz-result">
+<h3>4.4 Supplementary RTPxyz Result<a class="headerlink" href="#supplementary-rtpxyz-result" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">supplement.tex:74-104</span></code>.</p>
+<p>RTPxyz pools all three loading directions. It contains 1500 samples: two thirds
+from mechanically easy <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes and one third from the hard <span class="math notranslate nohighlight">\(z\)</span> axis.</p>
+<p><img alt="RTPxyz predicted versus computed" src="../_images/scatter_rtp_xyz.png" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head text-right"><p><span class="math notranslate nohighlight">\(\sigma(k)\)</span></p></th>
+<th class="head text-right"><p><span class="math notranslate nohighlight">\(\sigma(L)\)</span></p></th>
+<th class="head text-right"><p>CNN <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>CNN MAE</p></th>
+<th class="head"><p>Method</p></th>
+<th class="head text-right"><p>Non-dir <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>Non-dir MAE</p></th>
+<th class="head text-right"><p>Dir <span class="math notranslate nohighlight">\(R^2\)</span></p></th>
+<th class="head text-right"><p>Dir MAE</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RTPxyz</p></td>
+<td class="text-right"><p>0.38</p></td>
+<td class="text-right"><p>1.77</p></td>
+<td class="text-right"><p>0.990</p></td>
+<td class="text-right"><p>1.88</p></td>
+<td><p>PH</p></td>
+<td class="text-right"><p>0.509</p></td>
+<td class="text-right"><p>13.26</p></td>
+<td class="text-right"><p>0.548</p></td>
+<td class="text-right"><p>13.61</p></td>
+</tr>
+<tr class="row-odd"><td><p>RTPxyz</p></td>
+<td class="text-right"><p>0.38</p></td>
+<td class="text-right"><p>1.77</p></td>
+<td class="text-right"><p>0.990</p></td>
+<td class="text-right"><p>1.88</p></td>
+<td><p>ECP</p></td>
+<td class="text-right"><p>0.493</p></td>
+<td class="text-right"><p>15.11</p></td>
+<td class="text-right"><p>0.974</p></td>
+<td class="text-right"><p>3.09</p></td>
+</tr>
+<tr class="row-even"><td><p>RTPxyz</p></td>
+<td class="text-right"><p>0.38</p></td>
+<td class="text-right"><p>1.77</p></td>
+<td class="text-right"><p>0.990</p></td>
+<td class="text-right"><p>1.88</p></td>
+<td><p>PH+ECP</p></td>
+<td class="text-right"><p>0.511</p></td>
+<td class="text-right"><p>9.94</p></td>
+<td class="text-right"><p>0.974</p></td>
+<td class="text-right"><p>2.89</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The supplement reports a bifurcation in non-directional predictions: easy-axis
+samples are systematically overestimated and hard-axis samples are
+systematically underestimated. This is the clearest qualitative picture of the
+failure mode. The model sees a topological structure but not the direction in
+which it was compressed.</p>
+</section>
+<section id="per-fold-cross-validation-tables">
+<h3>4.5 Per-Fold Cross-Validation Tables<a class="headerlink" href="#per-fold-cross-validation-tables" title="Link to this heading">#</a></h3>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">supplement.tex:105-158</span></code>.</p>
+<p>The supplement provides fold-wise results for PH+ECP on RTPxz and RTPxy. These
+tables show that the average gains are not caused by one lucky split.</p>
+<section id="fold-wise-r-2">
+<h4>Fold-wise <span class="math notranslate nohighlight">\(R^2\)</span><a class="headerlink" href="#fold-wise-r-2" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>Fold</p></th>
+<th class="head text-right"><p>RTPxz Dir</p></th>
+<th class="head text-right"><p>RTPxz Non-dir</p></th>
+<th class="head"><p>Gain</p></th>
+<th class="head text-right"><p>RTPxz CNN</p></th>
+<th class="head text-right"><p>RTPxy Dir</p></th>
+<th class="head text-right"><p>RTPxy Non-dir</p></th>
+<th class="head"><p>Gain</p></th>
+<th class="head text-right"><p>RTPxy CNN</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0.9706</p></td>
+<td class="text-right"><p>0.7213</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9689</p></td>
+<td class="text-right"><p>0.9176</p></td>
+<td class="text-right"><p>0.9012</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9852</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0.9829</p></td>
+<td class="text-right"><p>0.8088</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9876</p></td>
+<td class="text-right"><p>0.9777</p></td>
+<td class="text-right"><p>0.9587</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9751</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0.9814</p></td>
+<td class="text-right"><p>0.7638</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9923</p></td>
+<td class="text-right"><p>0.9265</p></td>
+<td class="text-right"><p>0.9179</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9889</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0.9726</p></td>
+<td class="text-right"><p>0.7582</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9899</p></td>
+<td class="text-right"><p>0.9132</p></td>
+<td class="text-right"><p>0.9013</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9823</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0.9795</p></td>
+<td class="text-right"><p>0.7018</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9889</p></td>
+<td class="text-right"><p>0.9408</p></td>
+<td class="text-right"><p>0.9162</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9892</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>6</p></td>
+<td class="text-right"><p>0.9798</p></td>
+<td class="text-right"><p>0.7473</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9776</p></td>
+<td class="text-right"><p>0.9525</p></td>
+<td class="text-right"><p>0.9035</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9732</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>7</p></td>
+<td class="text-right"><p>0.9764</p></td>
+<td class="text-right"><p>0.7866</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9828</p></td>
+<td class="text-right"><p>0.9532</p></td>
+<td class="text-right"><p>0.9130</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9863</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>8</p></td>
+<td class="text-right"><p>0.9816</p></td>
+<td class="text-right"><p>0.7464</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9884</p></td>
+<td class="text-right"><p>0.9233</p></td>
+<td class="text-right"><p>0.9169</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9541</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Mean</p></td>
+<td class="text-right"><p>0.9781</p></td>
+<td class="text-right"><p>0.7543</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9846</p></td>
+<td class="text-right"><p>0.9381</p></td>
+<td class="text-right"><p>0.9161</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.9793</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Std</p></td>
+<td class="text-right"><p>0.0045</p></td>
+<td class="text-right"><p>0.0340</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.0078</p></td>
+<td class="text-right"><p>0.0221</p></td>
+<td class="text-right"><p>0.0186</p></td>
+<td><p>No</p></td>
+<td class="text-right"><p>0.0118</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="fold-wise-mae">
+<h4>Fold-wise MAE<a class="headerlink" href="#fold-wise-mae" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p>Fold</p></th>
+<th class="head text-right"><p>RTPxz Dir</p></th>
+<th class="head text-right"><p>RTPxz Non-dir</p></th>
+<th class="head"><p>Gain</p></th>
+<th class="head text-right"><p>RTPxz CNN</p></th>
+<th class="head text-right"><p>RTPxy Dir</p></th>
+<th class="head text-right"><p>RTPxy Non-dir</p></th>
+<th class="head"><p>Gain</p></th>
+<th class="head text-right"><p>RTPxy CNN</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2.116</p></td>
+<td class="text-right"><p>7.532</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>2.269</p></td>
+<td class="text-right"><p>2.051</p></td>
+<td class="text-right"><p>2.202</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.871</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>1.572</p></td>
+<td class="text-right"><p>6.511</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.504</p></td>
+<td class="text-right"><p>1.120</p></td>
+<td class="text-right"><p>1.493</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.225</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>1.631</p></td>
+<td class="text-right"><p>6.803</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.185</p></td>
+<td class="text-right"><p>1.512</p></td>
+<td class="text-right"><p>1.763</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.701</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>1.965</p></td>
+<td class="text-right"><p>6.757</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.203</p></td>
+<td class="text-right"><p>1.674</p></td>
+<td class="text-right"><p>1.735</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.792</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>1.820</p></td>
+<td class="text-right"><p>7.821</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.380</p></td>
+<td class="text-right"><p>1.764</p></td>
+<td class="text-right"><p>2.087</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.735</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>6</p></td>
+<td class="text-right"><p>1.891</p></td>
+<td class="text-right"><p>7.331</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>2.062</p></td>
+<td class="text-right"><p>1.656</p></td>
+<td class="text-right"><p>2.213</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.243</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>7</p></td>
+<td class="text-right"><p>2.119</p></td>
+<td class="text-right"><p>6.788</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>2.021</p></td>
+<td class="text-right"><p>1.850</p></td>
+<td class="text-right"><p>2.396</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.060</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>8</p></td>
+<td class="text-right"><p>1.730</p></td>
+<td class="text-right"><p>6.878</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.336</p></td>
+<td class="text-right"><p>1.906</p></td>
+<td class="text-right"><p>1.989</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.520</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Mean</p></td>
+<td class="text-right"><p>1.855</p></td>
+<td class="text-right"><p>7.053</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.620</p></td>
+<td class="text-right"><p>1.692</p></td>
+<td class="text-right"><p>1.985</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>1.018</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Std</p></td>
+<td class="text-right"><p>0.207</p></td>
+<td class="text-right"><p>0.454</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.430</p></td>
+<td class="text-right"><p>0.284</p></td>
+<td class="text-right"><p>0.300</p></td>
+<td><p>Yes</p></td>
+<td class="text-right"><p>0.293</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Interpretation</p>
+<p>For RTPxz, the directional PH+ECP improvement appears in every fold for both
+<span class="math notranslate nohighlight">\(R^2\)</span> and MAE. That is stronger evidence than the averaged table alone.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="summary-and-meaning">
+<h2>5. Summary And Meaning<a class="headerlink" href="#summary-and-meaning" title="Link to this heading">#</a></h2>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:580-606</span></code>.</p>
+<p>The paper establishes a general representation principle: when the target
+property is direction dependent, topology should be computed from filtrations
+that know the direction. The method is not tied to one dataset. It is strongest
+on RTPxz, remains useful on ATTD, and does not collapse on weakly anisotropic or
+nominally isotropic datasets.</p>
+<p>The main conclusions are:</p>
+<ol class="arabic simple">
+<li><p>Standard topological descriptors are useful but incomplete for anisotropic
+mechanical response.</p></li>
+<li><p>Direction-aware filtrations repair a specific physical mismatch between
+descriptor invariance and direction-dependent targets.</p></li>
+<li><p>ECP is the strongest standalone descriptor family in the reported
+experiments.</p></li>
+<li><p>PH+ECP gives the most stable combined topological representation.</p></li>
+<li><p>Direction-aware PH+ECP can approach voxel CNN performance in strongly
+anisotropic settings while remaining compact and interpretable.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Final remark</p>
+<p>The paper should be read as a method for inserting physical directionality into
+topological summaries. The exact porous-material datasets are the validation
+surface, but the conceptual template can extend to any problem where a
+preferred direction controls a material, transport, or mechanical property.</p>
+</div>
+</section>
+<section id="reproducibility-surface">
+<h2>6. Reproducibility Surface<a class="headerlink" href="#reproducibility-surface" title="Link to this heading">#</a></h2>
+<p>Source: <code class="docutils literal notranslate"><span class="pre">main.tex:591-606</span></code>.</p>
+<p>The associated implementation and datasets are available at:</p>
+<p><a class="github reference external" href="https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials">dioscuri-tda/direction-aware-tda-for-porous-materials</a></p>
+<p>The repository is described as containing:</p>
+<ul class="simple">
+<li><p>code for directional and non-directional descriptor computation;</p></li>
+<li><p>CatBoost and CNN training scripts;</p></li>
+<li><p>numerical experiment reproduction tools;</p></li>
+<li><p>voxelized porous structures stored as <code class="docutils literal notranslate"><span class="pre">.npy</span></code>;</p></li>
+<li><p>FFTMAD-computed Young’s modulus values;</p></li>
+<li><p>vectorized PH, ECP, and PH+ECP descriptors.</p></li>
+</ul>
+<p>In this explorer, the external repository inventory is available through the
+database and repository pages. The current local inventory records the structure
+arrays as Git LFS pointers unless the full LFS payload is explicitly pulled.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./annotated"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Annotated Paper</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="00-front-matter-and-abstract.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Front Matter and Abstract</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-claim-and-abstract-level-reading">Central Claim And Abstract-Level Reading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">2. Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-trigonometric-phase-structures">2.1 Random Trigonometric Phase Structures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topologically-diverse-structures">2.2 Topologically Diverse Structures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anisotropic-transformed-td-structures">2.3 Anisotropic Transformed TD Structures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anisotropy-measures">2.4 Anisotropy Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#young-s-modulus-labels">2.5 Young’s Modulus Labels</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direction-aware-topological-descriptors">3. Direction-Aware Topological Descriptors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cone-based-filtration">3.1 Cone-Based Filtration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principal-component-multifiltration">3.2 Principal-Component Multifiltration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ph-ecp-and-vectorization">3.3 PH, ECP, And Vectorization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-models-and-cross-validation">3.4 Learning Models And Cross-Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-and-discussion">4. Results And Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-performance-table">4.1 Main Performance Table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rtpxy-and-rtpxz">4.2 RTPxy And RTPxz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#td-and-attd">4.3 TD And ATTD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supplementary-rtpxyz-result">4.4 Supplementary RTPxyz Result</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-fold-cross-validation-tables">4.5 Per-Fold Cross-Validation Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fold-wise-r-2">Fold-wise <span class="math notranslate nohighlight">\(R^2\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fold-wise-mae">Fold-wise MAE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-and-meaning">5. Summary And Meaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducibility-surface">6. Reproducibility Surface</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bartosz Naskręcki and collaborators
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

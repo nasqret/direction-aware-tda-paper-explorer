@@ -13,7 +13,7 @@ Run:
 This command:
 
 - checks JavaScript syntax;
-- regenerates the annotated-paper JupyterBook pages from the LaTeX source;
+- regenerates the source-provenance annotated-paper JupyterBook pages from the LaTeX source;
 - validates committed JSON data;
 - builds the JupyterBook with warnings as errors;
 - syncs the built JupyterBook HTML and Obsidian vault into `paper-explorer/site/`;

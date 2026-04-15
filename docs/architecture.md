@@ -74,4 +74,4 @@ The source repository is cloned locally under `paper-explorer/repos/direction-aw
 
 ## Annotated Paper Strategy
 
-The JupyterBook includes a generated annotated-paper section under `paper-explorer/knowledge-base/annotated/`. The generator `paper-explorer/scripts/build-annotated-paper.mjs` reads the LaTeX source and supplement, splits them into manuscript sections, reproduces the source with line numbers, and adds commentary blocks for every source block. This is the deep reading layer; the topical chapters are secondary navigation and synthesis pages.
+The JupyterBook includes an annotated-paper section under `paper-explorer/knowledge-base/annotated/`. Its primary page, `expanded-narrative.md`, is a continuous expanded reading of the paper with formulas, tables, figures, and remarks. The generator `paper-explorer/scripts/build-annotated-paper.mjs` reads the LaTeX source and supplement, splits them into manuscript sections, reproduces the source with line numbers, and adds commentary blocks for every source block. Those generated pages serve as provenance for the narrative chapter; the topical chapters are secondary navigation and synthesis pages.

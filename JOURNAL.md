@@ -86,3 +86,4 @@
 - Upgraded GitHub workflows to current official action releases after verifying available tags through the GitHub API.
 - Added `graph.html` and `build-vault-graph.mjs`, generating a static browser knowledge graph from 33 Obsidian notes and 111 resolved wiki links.
 - Rebuilt the knowledge base around an annotated-paper layer generated from the LaTeX source, covering every main-text and supplement section with line-numbered source blocks and commentary.
+- Added a primary `Expanded Annotated Text` chapter with continuous exposition, formulas, tables, figures, and remarks, leaving line-numbered source pages as provenance rather than the main reading experience.

@@ -43,9 +43,10 @@
 
 ## Knowledge Base Coverage
 
-The JupyterBook now contains a generated annotated-paper layer under `paper-explorer/knowledge-base/annotated/`.
+The JupyterBook now contains an annotated-paper layer under `paper-explorer/knowledge-base/annotated/`.
 
+- Primary narrative: `annotated/expanded-narrative.md`, a continuous expanded reading with formulas, tables, figures, and embedded remarks.
 - Main manuscript coverage: front matter, abstract, Introduction, Dataset, Background and methods, Results and Discussion, Summary, Declarations, and bibliography commands.
 - Supplement coverage: TD generation details, RTPxyz results, and per-fold cross-validation tables.
-- Annotation style: line-numbered LaTeX source blocks, readable text, figure assets where present, and commentary remarks for each source block.
+- Provenance style: line-numbered LaTeX source blocks, readable text, figure assets where present, and commentary remarks for each source block.
 - Regeneration command: `node paper-explorer/scripts/build-annotated-paper.mjs`.

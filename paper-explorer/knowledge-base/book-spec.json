@@ -17,7 +17,11 @@
   "chapter_map": [
     {
       "file": "annotated/index.md",
-      "purpose": "Line-numbered, section-by-section annotated reproduction of the manuscript and supplement"
+      "purpose": "Annotated-paper section with streamlined expanded narrative and line-numbered source provenance"
+    },
+    {
+      "file": "annotated/expanded-narrative.md",
+      "purpose": "Continuous expanded explanation of the paper with formulas, tables, figures, and remarks"
     },
     {
       "file": "intro.md",
