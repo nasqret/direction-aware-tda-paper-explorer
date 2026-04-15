@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T00:05:14.259Z",
+  "generatedAt": "2026-04-15T00:09:37.752Z",
   "repository": {
     "name": "direction-aware-tda-for-porous-materials",
     "owner": "dioscuri-tda",
@@ -44,6 +44,8 @@
   "databases": [
     {
       "path": "database/directional/rtp/database_both.csv",
+      "descriptorKind": "directional",
+      "datasetKey": "RTP",
       "exists": true,
       "bytes": 10809713,
       "sha256": "373bab14b4b4c57a8c7d3312ba1315623cb1dfa21aad72d2cce8e752ce1d6cb4",
@@ -63,10 +65,63 @@
         "npy_path": "structures/rtp/0_axis-x.npy",
         "stress_axis": "x",
         "cii": "2.328679068909247"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/rtp/0_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 2.328679068909247
+        },
+        {
+          "npy_path": "structures/rtp/0_axis-y.npy",
+          "stress_axis": "y",
+          "cii": 2.577359829412942
+        },
+        {
+          "npy_path": "structures/rtp/0_axis-z.npy",
+          "stress_axis": "z",
+          "cii": 5.229039353281512
+        }
+      ],
+      "uniqueNpyPaths": 1500,
+      "normalizedStructureCount": 500,
+      "referencedFilesExist": 1500,
+      "referencedFilesMissing": 0,
+      "missingExamples": [],
+      "targetStats": {
+        "count": 1500,
+        "min": 0.0091655057225508,
+        "max": 6.15597407501686,
+        "mean": 1.9499702437192603
+      },
+      "axisStats": [
+        {
+          "axis": "x",
+          "count": 500,
+          "min": 0.0091655057225508,
+          "max": 4.002321972054263,
+          "mean": 1.1463858470445965
+        },
+        {
+          "axis": "y",
+          "count": 500,
+          "min": 0.0177080380010458,
+          "max": 4.266411059360977,
+          "mean": 1.1484570082008543
+        },
+        {
+          "axis": "z",
+          "count": 500,
+          "min": 0.7078975991362882,
+          "max": 6.15597407501686,
+          "mean": 3.5550678759123344
+        }
+      ]
     },
     {
       "path": "database/directional/rtp/database_xy_both.csv",
+      "descriptorKind": "directional",
+      "datasetKey": "RTP",
       "exists": true,
       "bytes": 7176565,
       "sha256": "4033ab109d0a64bdfd55f5f1667e65fb0d8009af8e37e5148d5059e2f6b298ac",
@@ -86,10 +141,56 @@
         "npy_path": "structures/rtp/0_axis-x.npy",
         "stress_axis": "x",
         "cii": "2.328679068909247"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/rtp/0_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 2.328679068909247
+        },
+        {
+          "npy_path": "structures/rtp/0_axis-y.npy",
+          "stress_axis": "y",
+          "cii": 2.577359829412942
+        },
+        {
+          "npy_path": "structures/rtp/100_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 3.011116950773943
+        }
+      ],
+      "uniqueNpyPaths": 1000,
+      "normalizedStructureCount": 500,
+      "referencedFilesExist": 1000,
+      "referencedFilesMissing": 0,
+      "missingExamples": [],
+      "targetStats": {
+        "count": 1000,
+        "min": 0.0091655057225508,
+        "max": 4.266411059360977,
+        "mean": 1.147421427622723
+      },
+      "axisStats": [
+        {
+          "axis": "x",
+          "count": 500,
+          "min": 0.0091655057225508,
+          "max": 4.002321972054263,
+          "mean": 1.1463858470445965
+        },
+        {
+          "axis": "y",
+          "count": 500,
+          "min": 0.0177080380010458,
+          "max": 4.266411059360977,
+          "mean": 1.1484570082008543
+        }
+      ]
     },
     {
       "path": "database/directional/rtp/database_xz_both.csv",
+      "descriptorKind": "directional",
+      "datasetKey": "RTP",
       "exists": true,
       "bytes": 7173867,
       "sha256": "30ce0693523193b7a41eb2a210de1bec0873e2f7a1d428d616c48564d80293da",
@@ -109,10 +210,56 @@
         "npy_path": "structures/rtp/0_axis-x.npy",
         "stress_axis": "x",
         "cii": "2.328679068909247"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/rtp/0_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 2.328679068909247
+        },
+        {
+          "npy_path": "structures/rtp/0_axis-z.npy",
+          "stress_axis": "z",
+          "cii": 5.229039353281512
+        },
+        {
+          "npy_path": "structures/rtp/100_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 3.011116950773943
+        }
+      ],
+      "uniqueNpyPaths": 1000,
+      "normalizedStructureCount": 500,
+      "referencedFilesExist": 1000,
+      "referencedFilesMissing": 0,
+      "missingExamples": [],
+      "targetStats": {
+        "count": 1000,
+        "min": 0.0091655057225508,
+        "max": 6.15597407501686,
+        "mean": 2.350726861478467
+      },
+      "axisStats": [
+        {
+          "axis": "x",
+          "count": 500,
+          "min": 0.0091655057225508,
+          "max": 4.002321972054263,
+          "mean": 1.1463858470445965
+        },
+        {
+          "axis": "z",
+          "count": 500,
+          "min": 0.7078975991362882,
+          "max": 6.15597407501686,
+          "mean": 3.5550678759123344
+        }
+      ]
     },
     {
       "path": "database/directional/various_anisotropy/database_both.csv",
+      "descriptorKind": "directional",
+      "datasetKey": "ATTD",
       "exists": true,
       "bytes": 31588142,
       "sha256": "cdbdc9195bd2296476d3c61d6afdf1d346389051e27ac455d5d6086a30dc2412",
@@ -132,10 +279,62 @@
         "npy_path": "structures/various_anisotropy/VF=0.0288515625_time=20251121_150056_380550_stretch_axis-x.npy",
         "stress_axis": "x",
         "cii": "0.09446177889575093"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/various_anisotropy/VF=0.0288515625_time=20251121_150056_380550_stretch_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 0.09446177889575093
+        },
+        {
+          "npy_path": "structures/various_anisotropy/VF=0.0288515625_time=20251121_150056_380550_stretch_axis-z.npy",
+          "stress_axis": "z",
+          "cii": 0.11232398475936177
+        },
+        {
+          "npy_path": "structures/various_anisotropy/VF=0.044357421875_time=20251121_140427_333348_stretch_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 0.15300496683608308
+        }
+      ],
+      "uniqueNpyPaths": 4770,
+      "normalizedStructureCount": 2395,
+      "referencedFilesExist": 4750,
+      "referencedFilesMissing": 20,
+      "missingExamples": [
+        "structures/various_anisotropy/VF=0.078671875_time=20251120_161138_903038_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8161700_VF=0.0819140625_time=20250221_135010_681985_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8164300_VF=0.0881953125_time=20250124_112658_705347_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8177300_VF=0.083046875_time=20250221_135759_541377_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8186100_VF=0.12890625_time=20250221_134158_465246_stretch_axis-z.npy"
+      ],
+      "targetStats": {
+        "count": 4770,
+        "min": 0.003206370294502458,
+        "max": 5.453395307259237,
+        "mean": 0.9363656074467821
+      },
+      "axisStats": [
+        {
+          "axis": "x",
+          "count": 2375,
+          "min": 0.003206370294502458,
+          "max": 4.828636695287886,
+          "mean": 0.6797099825488033
+        },
+        {
+          "axis": "z",
+          "count": 2395,
+          "min": 0.02558920807447875,
+          "max": 5.453395307259237,
+          "mean": 1.1908779703414356
+        }
+      ]
     },
     {
       "path": "database/directional/various_isotropy/database_both.csv",
+      "descriptorKind": "directional",
+      "datasetKey": "TD",
       "exists": true,
       "bytes": 14981375,
       "sha256": "d11c8badad70fd00c2e033699075af210ad0ce1e9c73ce926d247d847dad528a",
@@ -155,10 +354,49 @@
         "npy_path": "structures/various_isotropy/VF=0.0288515625_time=20251121_150056_380550.npy",
         "stress_axis": "z",
         "cii": "0.0793475279997906"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/various_isotropy/VF=0.0288515625_time=20251121_150056_380550.npy",
+          "stress_axis": "z",
+          "cii": 0.0793475279997906
+        },
+        {
+          "npy_path": "structures/various_isotropy/VF=0.04562109375_time=20251121_150927_842619.npy",
+          "stress_axis": "z",
+          "cii": 0.1305449577463251
+        },
+        {
+          "npy_path": "structures/various_isotropy/VF=0.04622265625_time=20251121_144735_013723.npy",
+          "stress_axis": "z",
+          "cii": 0.1318575954330217
+        }
+      ],
+      "uniqueNpyPaths": 2375,
+      "normalizedStructureCount": 2375,
+      "referencedFilesExist": 2375,
+      "referencedFilesMissing": 0,
+      "missingExamples": [],
+      "targetStats": {
+        "count": 2375,
+        "min": 0.008009658578371,
+        "max": 4.506942269069561,
+        "mean": 0.7446588396122263
+      },
+      "axisStats": [
+        {
+          "axis": "z",
+          "count": 2375,
+          "min": 0.008009658578371,
+          "max": 4.506942269069561,
+          "mean": 0.7446588396122263
+        }
+      ]
     },
     {
       "path": "database/undirectional/rtp/database_both.csv",
+      "descriptorKind": "undirectional",
+      "datasetKey": "RTP",
       "exists": true,
       "bytes": 8010576,
       "sha256": "44d105b4d8f7e310c6f1af810f16f6113d3824828f1e0d5416efeb60a2a07075",
@@ -178,10 +416,63 @@
         "npy_path": "structures/rtp/0_axis-x.npy",
         "stress_axis": "x",
         "cii": "2.328679068909247"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/rtp/0_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 2.328679068909247
+        },
+        {
+          "npy_path": "structures/rtp/0_axis-y.npy",
+          "stress_axis": "y",
+          "cii": 2.577359829412942
+        },
+        {
+          "npy_path": "structures/rtp/0_axis-z.npy",
+          "stress_axis": "z",
+          "cii": 5.229039353281512
+        }
+      ],
+      "uniqueNpyPaths": 1500,
+      "normalizedStructureCount": 500,
+      "referencedFilesExist": 1500,
+      "referencedFilesMissing": 0,
+      "missingExamples": [],
+      "targetStats": {
+        "count": 1500,
+        "min": 0.0091655057225508,
+        "max": 6.15597407501686,
+        "mean": 1.9499702437192603
+      },
+      "axisStats": [
+        {
+          "axis": "x",
+          "count": 500,
+          "min": 0.0091655057225508,
+          "max": 4.002321972054263,
+          "mean": 1.1463858470445965
+        },
+        {
+          "axis": "y",
+          "count": 500,
+          "min": 0.0177080380010458,
+          "max": 4.266411059360977,
+          "mean": 1.1484570082008543
+        },
+        {
+          "axis": "z",
+          "count": 500,
+          "min": 0.7078975991362882,
+          "max": 6.15597407501686,
+          "mean": 3.5550678759123344
+        }
+      ]
     },
     {
       "path": "database/undirectional/various_anisotropy/database_both.csv",
+      "descriptorKind": "undirectional",
+      "datasetKey": "ATTD",
       "exists": true,
       "bytes": 24395530,
       "sha256": "83dd326a04b3d1c7a57b4df23188eeb229909570333c2d5a1342de9590674036",
@@ -201,10 +492,62 @@
         "npy_path": "structures/various_anisotropy/VF=0.0288515625_time=20251121_150056_380550_stretch_axis-x.npy",
         "stress_axis": "x",
         "cii": "0.09446177889575093"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/various_anisotropy/VF=0.0288515625_time=20251121_150056_380550_stretch_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 0.09446177889575093
+        },
+        {
+          "npy_path": "structures/various_anisotropy/VF=0.0288515625_time=20251121_150056_380550_stretch_axis-z.npy",
+          "stress_axis": "z",
+          "cii": 0.11232398475936177
+        },
+        {
+          "npy_path": "structures/various_anisotropy/VF=0.044357421875_time=20251121_140427_333348_stretch_axis-x.npy",
+          "stress_axis": "x",
+          "cii": 0.15300496683608308
+        }
+      ],
+      "uniqueNpyPaths": 4770,
+      "normalizedStructureCount": 2395,
+      "referencedFilesExist": 4750,
+      "referencedFilesMissing": 20,
+      "missingExamples": [
+        "structures/various_anisotropy/VF=0.078671875_time=20251120_161138_903038_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8161700_VF=0.0819140625_time=20250221_135010_681985_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8164300_VF=0.0881953125_time=20250124_112658_705347_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8177300_VF=0.083046875_time=20250221_135759_541377_stretch_axis-z.npy",
+        "structures/various_anisotropy/file_number=8186100_VF=0.12890625_time=20250221_134158_465246_stretch_axis-z.npy"
+      ],
+      "targetStats": {
+        "count": 4770,
+        "min": 0.003206370294502458,
+        "max": 5.453395307259237,
+        "mean": 0.9363656074467821
+      },
+      "axisStats": [
+        {
+          "axis": "x",
+          "count": 2375,
+          "min": 0.003206370294502458,
+          "max": 4.828636695287886,
+          "mean": 0.6797099825488033
+        },
+        {
+          "axis": "z",
+          "count": 2395,
+          "min": 0.02558920807447875,
+          "max": 5.453395307259237,
+          "mean": 1.1908779703414356
+        }
+      ]
     },
     {
       "path": "database/undirectional/various_isotropy/database_both.csv",
+      "descriptorKind": "undirectional",
+      "datasetKey": "TD",
       "exists": true,
       "bytes": 12163164,
       "sha256": "87eaabf533abc88c2788584d76b1843f7d92100957dda8af532a5502e2db931f",
@@ -224,7 +567,44 @@
         "npy_path": "structures/various_isotropy/VF=0.0288515625_time=20251121_150056_380550.npy",
         "stress_axis": "z",
         "cii": "0.0793475279997906"
-      }
+      },
+      "sampleRows": [
+        {
+          "npy_path": "structures/various_isotropy/VF=0.0288515625_time=20251121_150056_380550.npy",
+          "stress_axis": "z",
+          "cii": 0.0793475279997906
+        },
+        {
+          "npy_path": "structures/various_isotropy/VF=0.04562109375_time=20251121_150927_842619.npy",
+          "stress_axis": "z",
+          "cii": 0.1305449577463251
+        },
+        {
+          "npy_path": "structures/various_isotropy/VF=0.04622265625_time=20251121_144735_013723.npy",
+          "stress_axis": "z",
+          "cii": 0.1318575954330217
+        }
+      ],
+      "uniqueNpyPaths": 2375,
+      "normalizedStructureCount": 2375,
+      "referencedFilesExist": 2375,
+      "referencedFilesMissing": 0,
+      "missingExamples": [],
+      "targetStats": {
+        "count": 2375,
+        "min": 0.008009658578371,
+        "max": 4.506942269069561,
+        "mean": 0.7446588396122263
+      },
+      "axisStats": [
+        {
+          "axis": "z",
+          "count": 2375,
+          "min": 0.008009658578371,
+          "max": 4.506942269069561,
+          "mean": 0.7446588396122263
+        }
+      ]
     }
   ],
   "expectedDatabaseStatus": [

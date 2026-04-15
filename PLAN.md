@@ -22,7 +22,7 @@ Last updated: 2026-04-15
 | Interactive applets | Complete | Descriptor comparison, anisotropy/performance explorer, cone-filtration toy, RTP field toy |
 | Database browser | Complete | Dataset cards, performance table filters, repo/data availability panel |
 | Repository collection | Complete | Manifest for code/data repository and future related repositories |
-| External repo inventory | Complete | Shallow clone indexed; CSV schemas, row counts, hashes, scripts, and LFS pointer status generated |
+| External repo inventory | Complete | Shallow clone indexed; CSV schemas, row counts, target statistics, hashes, scripts, and LFS pointer status generated |
 | Full voxel payload | Pending | Optional `git lfs pull`; needed only for local voxel previews and `.npy` slice applets |
 | Verification | Complete | Static file checks, JupyterBook config check, browser render check |
 
@@ -42,7 +42,7 @@ Last updated: 2026-04-15
    - Clone or mount `dioscuri-tda/direction-aware-tda-for-porous-materials`.
    - Add dataset manifests, file counts, schema summaries, and sample previews.
    - Validation: database browser loads real metadata from generated JSON.
-   - Status: partial complete. CSV database manifests and repository inventory are integrated; full voxel payload remains Git LFS-gated.
+   - Status: partial complete. CSV database manifests, target statistics, and repository inventory are integrated; full voxel payload remains Git LFS-gated.
 
 4. **Applet pass**
    - Replace toy applets with reproducible miniature computations where feasible.

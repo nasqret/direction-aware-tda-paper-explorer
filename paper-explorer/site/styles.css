@@ -566,6 +566,21 @@ input[type="range"] {
   overflow-wrap: anywhere;
 }
 
+.database-file details {
+  color: var(--muted);
+}
+
+.database-file summary {
+  cursor: pointer;
+  color: var(--red);
+  font-weight: 760;
+}
+
+.database-file ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
 .database-file dl,
 .inventory-detail dl {
   display: grid;
@@ -587,6 +602,29 @@ input[type="range"] {
   margin: 3px 0 0;
   font-weight: 760;
   overflow-wrap: anywhere;
+}
+
+.axis-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.axis-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid #cfc8bc;
+  border-radius: 999px;
+  background: #f4eee2;
+  color: #3f433f;
+  font-size: 0.88rem;
+}
+
+.axis-chip span {
+  color: var(--muted);
 }
 
 .inventory-detail {

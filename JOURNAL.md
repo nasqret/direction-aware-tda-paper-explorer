@@ -58,3 +58,12 @@
   - generated manifest JSON passed;
   - JupyterBook strict build passed;
   - browser checks passed for updated database and repository pages.
+- Continued CSV-backed database integration without pulling the 4.2 GB Git LFS structure payload.
+- Extended the external repository manifest with:
+  - target (`cii`) min, max, and mean;
+  - target statistics by stress axis;
+  - unique referenced `.npy` paths;
+  - normalized structure counts;
+  - missing referenced structure paths.
+- Updated the database browser to show target means/ranges, axis chips, structure counts, and missing-reference warnings for each CSV.
+- Verified the updated database browser with `agent-browser`; CSV statistics rendered and no browser error overlay was present.

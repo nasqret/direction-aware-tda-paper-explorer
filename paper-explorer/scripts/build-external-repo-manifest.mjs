@@ -74,6 +74,39 @@ function parseCsvLine(line) {
   return values;
 }
 
+function emptyStats() {
+  return {
+    count: 0,
+    min: null,
+    max: null,
+    mean: null
+  };
+}
+
+function pushStat(stats, value) {
+  if (!Number.isFinite(value)) return;
+  stats.count += 1;
+  stats.min = stats.min === null ? value : Math.min(stats.min, value);
+  stats.max = stats.max === null ? value : Math.max(stats.max, value);
+  stats.mean = stats.mean === null ? value : stats.mean + value;
+}
+
+function finishStat(stats) {
+  if (!stats.count) return stats;
+  return {
+    count: stats.count,
+    min: stats.min,
+    max: stats.max,
+    mean: stats.mean / stats.count
+  };
+}
+
+function normalizedStructureId(npyPath) {
+  return npyPath
+    .replace(/_axis-[xyz]\.npy$/, ".npy")
+    .replace(/_stretch_axis-[xyz]\.npy$/, ".npy");
+}
+
 async function csvSummary(relativePath) {
   const absolute = path.join(repoRoot, relativePath);
   if (!existsSync(absolute)) {
@@ -83,14 +116,63 @@ async function csvSummary(relativePath) {
   const lines = text.trimEnd().split(/\r?\n/);
   const headers = parseCsvLine(lines[0] ?? "");
   const firstRow = parseCsvLine(lines[1] ?? "");
+  const npyIndex = headers.indexOf("npy_path");
+  const axisIndex = headers.indexOf("stress_axis");
+  const targetIndex = headers.indexOf("cii");
   const groups = headers.reduce((acc, column) => {
     if (column.startsWith("ecp_")) acc.ecp += 1;
     else if (column.startsWith("ph_cone_")) acc.phCone += 1;
     else acc.metadata += 1;
     return acc;
   }, { metadata: 0, ecp: 0, phCone: 0 });
+  const targetStats = emptyStats();
+  const axisStats = new Map();
+  const npyPaths = new Set();
+  const normalizedStructures = new Set();
+  let referencedFilesExist = 0;
+  let referencedFilesMissing = 0;
+  const missingExamples = [];
+  const sampleRows = [];
+  for (const line of lines.slice(1)) {
+    if (!line.trim()) continue;
+    const row = parseCsvLine(line);
+    const npyPath = row[npyIndex] ?? "";
+    const axis = row[axisIndex] || "unknown";
+    const cii = Number(row[targetIndex]);
+    pushStat(targetStats, cii);
+    if (!axisStats.has(axis)) axisStats.set(axis, emptyStats());
+    pushStat(axisStats.get(axis), cii);
+    if (npyPath) {
+      npyPaths.add(npyPath);
+      normalizedStructures.add(normalizedStructureId(npyPath));
+      if (existsSync(path.join(repoRoot, npyPath))) {
+        referencedFilesExist += 1;
+      } else {
+        referencedFilesMissing += 1;
+        if (missingExamples.length < 5) missingExamples.push(npyPath);
+      }
+    }
+    if (sampleRows.length < 3) {
+      sampleRows.push({ npy_path: npyPath, stress_axis: axis, cii: Number.isFinite(cii) ? cii : null });
+    }
+  }
+
+  const descriptorKind = relativePath.includes("/directional/")
+    ? "directional"
+    : relativePath.includes("/undirectional/")
+      ? "undirectional"
+      : "unknown";
+  const datasetKey = relativePath
+    .replace(/^database\/(directional|undirectional)\//, "")
+    .replace(/\/database.*$/, "")
+    .replace("various_isotropy", "TD")
+    .replace("various_anisotropy", "ATTD")
+    .replace("rtp", "RTP");
+
   return {
     path: relativePath,
+    descriptorKind,
+    datasetKey,
     exists: true,
     bytes: (await stat(absolute)).size,
     sha256: await fileHash(absolute),
@@ -99,10 +181,20 @@ async function csvSummary(relativePath) {
     featureGroups: groups,
     metadataColumns: headers.filter((column) => !column.startsWith("ecp_") && !column.startsWith("ph_cone_")),
     firstRowPreview: {
-      npy_path: firstRow[headers.indexOf("npy_path")] ?? null,
-      stress_axis: firstRow[headers.indexOf("stress_axis")] ?? null,
-      cii: firstRow[headers.indexOf("cii")] ?? null
-    }
+      npy_path: firstRow[npyIndex] ?? null,
+      stress_axis: firstRow[axisIndex] ?? null,
+      cii: firstRow[targetIndex] ?? null
+    },
+    sampleRows,
+    uniqueNpyPaths: npyPaths.size,
+    normalizedStructureCount: normalizedStructures.size,
+    referencedFilesExist,
+    referencedFilesMissing,
+    missingExamples,
+    targetStats: finishStat(targetStats),
+    axisStats: [...axisStats.entries()]
+      .map(([axis, stats]) => ({ axis, ...finishStat(stats) }))
+      .sort((a, b) => a.axis.localeCompare(b.axis))
   };
 }
 
@@ -243,9 +335,9 @@ async function main() {
     "",
     "## Database CSVs",
     "",
-    "| Path | Rows | Columns | ECP | PH cone | SHA-256 |",
-    "| --- | ---: | ---: | ---: | ---: | --- |",
-    ...manifest.databases.map((db) => `| \`${db.path}\` | ${db.rows} | ${db.columns} | ${db.featureGroups.ecp} | ${db.featureGroups.phCone} | \`${db.sha256.slice(0, 12)}...\` |`),
+    "| Path | Rows | Structures | Axes | Target mean | Columns | ECP | PH cone | Missing refs | SHA-256 |",
+    "| --- | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |",
+    ...manifest.databases.map((db) => `| \`${db.path}\` | ${db.rows} | ${db.normalizedStructureCount} | ${db.axisStats.map((axis) => axis.axis).join(", ")} | ${db.targetStats.mean.toFixed(4)} | ${db.columns} | ${db.featureGroups.ecp} | ${db.featureGroups.phCone} | ${db.referencedFilesMissing} | \`${db.sha256.slice(0, 12)}...\` |`),
     "",
     "## Expected Path Check",
     "",

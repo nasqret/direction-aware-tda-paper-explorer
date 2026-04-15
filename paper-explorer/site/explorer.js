@@ -393,6 +393,13 @@ function renderExternalDatabaseInventory() {
     ? `<p><strong>Missing expected paths:</strong> ${expectedMissing.map((item) => `<code>${item.path}</code>`).join(", ")}</p>`
     : "";
 
+  const axisSummary = (db) => db.axisStats.map((axis) => `
+    <span class="axis-chip">
+      <strong>${axis.axis}</strong>
+      <span>n=${axis.count}, mean=${fmt(axis.mean, 3)}</span>
+    </span>
+  `).join("");
+
   files.innerHTML = [
     ...manifest.databases.map((db) => `
       <article class="database-file">
@@ -402,12 +409,18 @@ function renderExternalDatabaseInventory() {
         </div>
         <dl>
           <div><dt>Rows</dt><dd>${db.rows}</dd></div>
-          <div><dt>Columns</dt><dd>${db.columns}</dd></div>
+          <div><dt>Structures</dt><dd>${db.normalizedStructureCount}</dd></div>
           <div><dt>Size</dt><dd>${bytesLabel(db.bytes)}</dd></div>
+          <div><dt>Target mean</dt><dd>${fmt(db.targetStats.mean, 3)}</dd></div>
+          <div><dt>Target range</dt><dd>${fmt(db.targetStats.min, 3)}-${fmt(db.targetStats.max, 3)}</dd></div>
+          <div><dt>Missing refs</dt><dd class="${db.referencedFilesMissing ? "gain-negative" : ""}">${db.referencedFilesMissing}</dd></div>
+          <div><dt>Columns</dt><dd>${db.columns}</dd></div>
           <div><dt>ECP</dt><dd>${db.featureGroups.ecp}</dd></div>
           <div><dt>PH cone</dt><dd>${db.featureGroups.phCone}</dd></div>
           <div><dt>SHA-256</dt><dd>${db.sha256.slice(0, 12)}...</dd></div>
         </dl>
+        <div class="axis-chip-row">${axisSummary(db)}</div>
+        ${db.missingExamples.length ? `<details><summary>Missing reference examples</summary><ul>${db.missingExamples.map((item) => `<li><code>${item}</code></li>`).join("")}</ul></details>` : ""}
       </article>
     `),
     missingNote ? `<article class="database-file">${missingNote}</article>` : ""

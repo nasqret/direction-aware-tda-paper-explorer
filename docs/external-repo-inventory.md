@@ -1,6 +1,6 @@
 # External Repository Inventory
 
-Generated: 2026-04-15T00:05:14.259Z
+Generated: 2026-04-15T00:09:37.752Z
 
 ## Repository
 
@@ -22,16 +22,16 @@ Generated: 2026-04-15T00:05:14.259Z
 
 ## Database CSVs
 
-| Path | Rows | Columns | ECP | PH cone | SHA-256 |
-| --- | ---: | ---: | ---: | ---: | --- |
-| `database/directional/rtp/database_both.csv` | 1500 | 646 | 343 | 300 | `373bab14b4b4...` |
-| `database/directional/rtp/database_xy_both.csv` | 1000 | 646 | 343 | 300 | `4033ab109d0a...` |
-| `database/directional/rtp/database_xz_both.csv` | 1000 | 646 | 343 | 300 | `30ce06935231...` |
-| `database/directional/various_anisotropy/database_both.csv` | 4770 | 646 | 343 | 300 | `cdbdc9195bd2...` |
-| `database/directional/various_isotropy/database_both.csv` | 2375 | 646 | 343 | 300 | `d11c8badad70...` |
-| `database/undirectional/rtp/database_both.csv` | 1500 | 333 | 30 | 300 | `44d105b4d8f7...` |
-| `database/undirectional/various_anisotropy/database_both.csv` | 4770 | 333 | 30 | 300 | `83dd326a04b3...` |
-| `database/undirectional/various_isotropy/database_both.csv` | 2375 | 333 | 30 | 300 | `87eaabf533ab...` |
+| Path | Rows | Structures | Axes | Target mean | Columns | ECP | PH cone | Missing refs | SHA-256 |
+| --- | ---: | ---: | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| `database/directional/rtp/database_both.csv` | 1500 | 500 | x, y, z | 1.9500 | 646 | 343 | 300 | 0 | `373bab14b4b4...` |
+| `database/directional/rtp/database_xy_both.csv` | 1000 | 500 | x, y | 1.1474 | 646 | 343 | 300 | 0 | `4033ab109d0a...` |
+| `database/directional/rtp/database_xz_both.csv` | 1000 | 500 | x, z | 2.3507 | 646 | 343 | 300 | 0 | `30ce06935231...` |
+| `database/directional/various_anisotropy/database_both.csv` | 4770 | 2395 | x, z | 0.9364 | 646 | 343 | 300 | 20 | `cdbdc9195bd2...` |
+| `database/directional/various_isotropy/database_both.csv` | 2375 | 2375 | z | 0.7447 | 646 | 343 | 300 | 0 | `d11c8badad70...` |
+| `database/undirectional/rtp/database_both.csv` | 1500 | 500 | x, y, z | 1.9500 | 333 | 30 | 300 | 0 | `44d105b4d8f7...` |
+| `database/undirectional/various_anisotropy/database_both.csv` | 4770 | 2395 | x, z | 0.9364 | 333 | 30 | 300 | 20 | `83dd326a04b3...` |
+| `database/undirectional/various_isotropy/database_both.csv` | 2375 | 2375 | z | 0.7447 | 333 | 30 | 300 | 0 | `87eaabf533ab...` |
 
 ## Expected Path Check
 
