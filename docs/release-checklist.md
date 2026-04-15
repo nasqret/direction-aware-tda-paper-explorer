@@ -28,6 +28,19 @@ Run:
 
 The archive is written under `.exports/` and contains `site/` as the static hosting root.
 
+## Remote Publication
+
+GitHub Actions publishes the static explorer through `.github/workflows/deploy-pages.yml`.
+
+The workflow:
+
+- builds the JupyterBook;
+- syncs `paper-explorer/site/knowledge-base/` and `paper-explorer/site/obsidian-vault/`;
+- checks export-local links;
+- uploads `paper-explorer/site/` as the GitHub Pages artifact.
+
+The Pages source must be configured as GitHub Actions for the remote repository.
+
 ## Manual Browser Smoke Test
 
 Serve the export root:

@@ -78,3 +78,4 @@
   - added `paper-explorer/scripts/package-site-export.sh` for `.exports/` archives;
   - expanded GitHub Actions validation to build the book, sync the site export, check export links, and upload `paper-explorer/site` as an artifact;
   - documented the release procedure in `docs/release-checklist.md`.
+- Added GitHub Pages deployment workflow for remote publication from `paper-explorer/site/`.
