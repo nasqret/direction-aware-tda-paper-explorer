@@ -85,3 +85,4 @@
 - Added public-site hardening: page metadata, canonical and Open Graph tags, sitemap, robots policy, `.nojekyll`, Library navigation, Node 24 Actions opt-in, and a richer database performance browser with sorting and CSV export.
 - Upgraded GitHub workflows to current official action releases after verifying available tags through the GitHub API.
 - Added `graph.html` and `build-vault-graph.mjs`, generating a static browser knowledge graph from 33 Obsidian notes and 111 resolved wiki links.
+- Rebuilt the knowledge base around an annotated-paper layer generated from the LaTeX source, covering every main-text and supplement section with line-numbered source blocks and commentary.

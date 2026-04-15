@@ -71,3 +71,7 @@ The static `graph.html` page renders that generated graph without external libra
 ## Current External Repository Status
 
 The source repository is cloned locally under `paper-explorer/repos/direction-aware-tda-for-porous-materials` and ignored by Git. Generated manifests are tracked instead. Structure `.npy` files are Git LFS pointers until `git lfs pull` is run inside the external clone.
+
+## Annotated Paper Strategy
+
+The JupyterBook includes a generated annotated-paper section under `paper-explorer/knowledge-base/annotated/`. The generator `paper-explorer/scripts/build-annotated-paper.mjs` reads the LaTeX source and supplement, splits them into manuscript sections, reproduces the source with line numbers, and adds commentary blocks for every source block. This is the deep reading layer; the topical chapters are secondary navigation and synthesis pages.

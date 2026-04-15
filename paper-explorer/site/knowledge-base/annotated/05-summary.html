@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Summary &#8212; Direction-Aware TDA Paper Explorer</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'annotated/05-summary';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Declarations" href="06-declarations.html" />
+    <link rel="prev" title="Results and Discussion" href="04-results-and-discussion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-light" alt="Direction-Aware TDA Paper Explorer - Home"/>
+    <script>document.write(`<img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-dark" alt="Direction-Aware TDA Paper Explorer - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Annotated Paper</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00-front-matter-and-abstract.html">Front Matter and Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-background-and-methods.html">Background and methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-results-and-discussion.html">Results and Discussion</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-declarations.html">Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-bibliography-hooks.html">Bibliography Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-supplement-topologically-diverse-td-dataset.html">Supplement: Topologically Diverse (TD) Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-supplement-results-for-rtpxyz-dataset.html">Supplement: Results for RTPxyz dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-supplement-per-fold-cross-validation-performance.html">Supplement: Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/01-context.html">Context: Why Direction Matters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/02-datasets.html">Datasets And Mechanical Targets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/03-directional-filtrations.html">Directional Filtrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/04-descriptors-models.html">Descriptors And Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/05-results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/06-applets-and-databases.html">Applets And Database Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/annotated/05-summary.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Summary</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-and-data-availability">Code and Data Availability</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#funding">Funding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Coverage</p>
+<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>580-606</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+</div>
+<section id="reading-lens">
+<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This section compresses the paper back into its main claim and explains what should be taken forward.</p></li>
+<li><p>The key interpretive point is that direction-aware topology is presented as a reusable representation strategy, not as a one-off model trick.</p></li>
+<li><p>Notice which claims are framed as established by the experiments and which remain future-facing.</p></li>
+</ul>
+</section>
+<section id="annotated-source">
+<h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Summary<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Source lines 580-580</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 580 | <span class="k">\section</span><span class="nb">{</span>Summary<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Summary</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This heading opens a new logical unit: <strong>Summary</strong>.</p></li>
+<li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 581-581</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 581 | <span class="k">\label</span><span class="nb">{</span>sec:summary<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>(label: sec:summary)</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 583-583</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 583 | Direction-dependent properties in porous materials pose a structural learning problem in which symmetry breaking with respect to the loading axis is essential. This work demonstrates that incorporating directional information into topological data analysis provides a significant advantage for predicting direction-dependent elastic properties of porous structures. Standard topological descriptors, while effective at capturing multiscale connectivity and void structure, are inherently isotropic and therefore insufficient for modeling anisotropic mechanical response. By embedding the loading direction directly into the filtration functions used for persistent homology and Euler characteristic profiles, the proposed direction-aware construction lifts this intrinsic isotropy and encodes mechanically relevant anisotropic topology in a compact representation.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Direction-dependent properties in porous materials pose a structural learning problem in which symmetry breaking with respect to the loading axis is essential. This work demonstrates that incorporating directional information into topological data analysis provides a significant advantage for predicting direction-dependent elastic properties of porous structures. Standard topological descriptors, while effective at capturing multiscale connectivity and void structure, are inherently isotropic and therefore insufficient for modeling anisotropic mechanical response. By embedding the loading direction directly into the filtration functions used for persistent homology and Euler characteristic profiles, the proposed direction-aware construction lifts this intrinsic isotropy and encodes mechanically relevant anisotropic topology in a compact representation.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 585-585</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 585 | Across multiple datasets spanning weak to strong anisotropy, direction-aware persistent homology and Euler characteristic profiles systematically improve predictive performance for uniaxial Young’s modulus compared with direction-agnostic topology, with gains that grow as structural anisotropy strengthens. The effect is most pronounced for strongly anisotropic structures (RTPxz), where direction-aware topology yields large improvements in both explained variance (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span>) and mean absolute error (MAE), reducing prediction errors by several-fold and nearly matching a voxel-based CNN baseline. For nominally isotropic ensembles (RTPxy and TD), directional descriptors remain uniformly competitive and typically increase <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> (while occasionally inducing minor changes in MAE), indicating that direction-aware topology captures subtle mechanically relevant organization even when macroscopic anisotropy is weak.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Across multiple datasets spanning weak to strong anisotropy, direction-aware persistent homology and Euler characteristic profiles systematically improve predictive performance for uniaxial Young’s modulus compared with direction-agnostic topology, with gains that grow as structural anisotropy strengthens. The effect is most pronounced for strongly anisotropic structures (RTPxz), where direction-aware topology yields large improvements in both explained variance (<span class="math notranslate nohighlight">\(R^2\)</span>) and mean absolute error (MAE), reducing prediction errors by several-fold and nearly matching a voxel-based CNN baseline. For nominally isotropic ensembles (RTPxy and TD), directional descriptors remain uniformly competitive and typically increase <span class="math notranslate nohighlight">\(R^2\)</span> (while occasionally inducing minor changes in MAE), indicating that direction-aware topology captures subtle mechanically relevant organization even when macroscopic anisotropy is weak.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 587-587</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 587 | Among descriptor families, multifiltration Euler characteristic profiles (ECP) consistently provide stronger predictive signal than persistent homology (PH) when used alone, and their combination (PH+ECP) produces the most accurate and stable models across all considered regimes. Moreover, as anisotropy increases (RTPxz and ATTD), the performance gap between topological models and convolutional neural networks trained directly on voxelized structures narrows substantially, demonstrating that a significant portion of the predictive power of high-dimensional image-based models can be recovered through compact, physics-informed, direction-aware topological summaries.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Among descriptor families, multifiltration Euler characteristic profiles (ECP) consistently provide stronger predictive signal than persistent homology (PH) when used alone, and their combination (PH+ECP) produces the most accurate and stable models across all considered regimes. Moreover, as anisotropy increases (RTPxz and ATTD), the performance gap between topological models and convolutional neural networks trained directly on voxelized structures narrows substantially, demonstrating that a significant portion of the predictive power of high-dimensional image-based models can be recovered through compact, physics-informed, direction-aware topological summaries.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 589-589</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 589 | From the perspective of porous-materials modeling, these results establish a general, geometry-agnostic route for encoding anisotropic connectivity and alignment effects—key determinants of stiffness—without relying on handcrafted geometric descriptors or expensive end-to-end training on voxel grids. More broadly, the proposed direction-aware TDA framework provides a transferable and low-dimensional alternative (or complement) to voxel-based deep learning for structure–property prediction in porous media, with natural extensions to other direction-dependent properties such as yield strength, elastic tensors, permeability, and transport coefficients governed by anisotropic microstructural organization.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>From the perspective of porous-materials modeling, these results establish a general, geometry-agnostic route for encoding anisotropic connectivity and alignment effects—key determinants of stiffness—without relying on handcrafted geometric descriptors or expensive end-to-end training on voxel grids. More broadly, the proposed direction-aware TDA framework provides a transferable and low-dimensional alternative (or complement) to voxel-based deep learning for structure–property prediction in porous media, with natural extensions to other direction-dependent properties such as yield strength, elastic tensors, permeability, and transport coefficients governed by anisotropic microstructural organization.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<section id="code-and-data-availability">
+<h4>Code and Data Availability<a class="headerlink" href="#code-and-data-availability" title="Link to this heading">#</a></h4>
+<div class="note admonition">
+<p class="admonition-title">Source lines 591-591</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 591 | <span class="k">\subsection*</span><span class="nb">{</span>Code and Data Availability<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Code and Data Availability</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This heading opens a new logical unit: <strong>Code and Data Availability</strong>.</p></li>
+<li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
+<li><p>This is part of the reproducibility surface: it points from the paper to the code/data artifacts indexed elsewhere in this explorer.</p></li>
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 592-592</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 592 | A complete implementation of all methods used in this study is available in the accompanying GitHub repository at <span class="k">\url</span><span class="nb">{</span>https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials<span class="nb">}</span>. The repository includes the full codebase for computing directional and non-directional topological descriptors, training the CatBoost and CNN models, reproducing all numerical experiments, and generating the figures reported in the manuscript. It also contains all datasets used in this work, including voxelized porous structures stored as <span class="k">\texttt</span><span class="nb">{</span>.npy<span class="nb">}</span> files, FFTMAD-computed Young’s modulus values, and vectorized PH, ECP, and PH+ECP descriptors. Ready-to-use databases, training scripts, and detailed instructions for reproducing every result are provided to ensure full transparency and straightforward replication of the presented findings.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>A complete implementation of all methods used in this study is available in the accompanying GitHub repository at https://github.com/dioscuri-tda/direction-aware-tda-for-porous-materials. The repository includes the full codebase for computing directional and non-directional topological descriptors, training the CatBoost and CNN models, reproducing all numerical experiments, and generating the figures reported in the manuscript. It also contains all datasets used in this work, including voxelized porous structures stored as <code class="docutils literal notranslate"><span class="pre">.npy</span></code> files, FFTMAD-computed Young’s modulus values, and vectorized PH, ECP, and PH+ECP descriptors. Ready-to-use databases, training scripts, and detailed instructions for reproducing every result are provided to ensure full transparency and straightforward replication of the presented findings.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
+</ul>
+</div>
+</section>
+<section id="funding">
+<h4>Funding<a class="headerlink" href="#funding" title="Link to this heading">#</a></h4>
+<div class="note admonition">
+<p class="admonition-title">Source lines 594-594</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 594 | <span class="k">\subsection*</span><span class="nb">{</span>Funding<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Funding</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This heading opens a new logical unit: <strong>Funding</strong>.</p></li>
+<li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 595-599</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 595 | Financial support from the PORMETALOMICS project, funded by the Spanish
+ 596 | Ministry for Science, Innovation, and Universities (award no.
+ 597 | PCI2022-132975) and the National Science Centre, Poland (project no.
+ 598 | 2021/03/Y/ST5/00232) within the M-ERA.NET 3 call, is gratefully acknowledged. 
+ 599 | This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 958174.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Financial support from the PORMETALOMICS project, funded by the Spanish Ministry for Science, Innovation, and Universities (award no. PCI2022-132975) and the National Science Centre, Poland (project no. 2021/03/Y/ST5/00232) within the M-ERA.NET 3 call, is gratefully acknowledged. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 958174.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 601-605</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 601 | This research is financed under Dioscuri, a programme initiated by the
+ 602 | Max Planck Society, jointly managed with the National Science Centre
+ 603 | in Poland, and mutually funded by Polish Ministry of Science and
+ 604 | Higher Education and German Federal Ministry of Research,
+ 605 | Technology and Space.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>This research is financed under Dioscuri, a programme initiated by the Max Planck Society, jointly managed with the National Science Centre in Poland, and mutually funded by Polish Ministry of Science and Higher Education and German Federal Ministry of Research, Technology and Space.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This block is preserved so the commentary remains anchored to the manuscript rather than to a summary of it.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./annotated"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04-results-and-discussion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Results and Discussion</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06-declarations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Declarations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#code-and-data-availability">Code and Data Availability</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#funding">Funding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bartosz Naskręcki and collaborators
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

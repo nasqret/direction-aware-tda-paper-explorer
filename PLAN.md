@@ -16,6 +16,7 @@ Last updated: 2026-04-15
 | --- | --- | --- |
 | Repository setup | Complete | Git repo, README, `.gitignore`, docs, plan, journal |
 | Paper metadata extraction | Complete | Title, authors, affiliations, abstract, datasets, methods, result tables |
+| Annotated paper reproduction | Complete | Generated line-numbered commentary pages for every main-text and supplement section |
 | JupyterBook knowledge base | Complete | Config, TOC, chapters, references, validation script |
 | Obsidian knowledge graph | Complete | Vault notes with bidirectional links between concepts, datasets, methods, results, authors |
 | Browser knowledge graph | Complete | Static graph page generated from Obsidian wiki links |

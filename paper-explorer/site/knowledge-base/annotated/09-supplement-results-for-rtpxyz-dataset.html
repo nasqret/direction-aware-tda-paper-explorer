@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Supplement: Results for RTPxyz dataset &#8212; Direction-Aware TDA Paper Explorer</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'annotated/09-supplement-results-for-rtpxyz-dataset';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supplement: Per-Fold Cross-Validation Performance" href="10-supplement-per-fold-cross-validation-performance.html" />
+    <link rel="prev" title="Supplement: Topologically Diverse (TD) Dataset" href="08-supplement-topologically-diverse-td-dataset.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-light" alt="Direction-Aware TDA Paper Explorer - Home"/>
+    <script>document.write(`<img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-dark" alt="Direction-Aware TDA Paper Explorer - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Annotated Paper</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00-front-matter-and-abstract.html">Front Matter and Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-background-and-methods.html">Background and methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-results-and-discussion.html">Results and Discussion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-declarations.html">Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-bibliography-hooks.html">Bibliography Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-supplement-topologically-diverse-td-dataset.html">Supplement: Topologically Diverse (TD) Dataset</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Supplement: Results for RTPxyz dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-supplement-per-fold-cross-validation-performance.html">Supplement: Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/01-context.html">Context: Why Direction Matters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/02-datasets.html">Datasets And Mechanical Targets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/03-directional-filtrations.html">Directional Filtrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/04-descriptors-models.html">Descriptors And Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/05-results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/06-applets-and-databases.html">Applets And Database Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/annotated/09-supplement-results-for-rtpxyz-dataset.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Supplement: Results for RTPxyz dataset</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-for-rtpxyz-dataset">Results for RTPxyz dataset</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="supplement-results-for-rtpxyz-dataset">
+<h1>Supplement: Results for RTPxyz dataset<a class="headerlink" href="#supplement-results-for-rtpxyz-dataset" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Coverage</p>
+<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>74-104</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+</div>
+<section id="reading-lens">
+<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This section is the empirical test of the paper’s thesis. Read every reported score as a comparison between direction-agnostic topology, direction-aware topology, and voxel CNN baselines.</p></li>
+<li><p>The important pattern is not a single best number but the relationship between anisotropy and the gain from direction-aware descriptors.</p></li>
+<li><p>Use the tables and figures to distinguish strong-anisotropy wins, weak-anisotropy parity, and cases where descriptor families behave differently.</p></li>
+</ul>
+</section>
+<section id="annotated-source">
+<h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
+<section id="results-for-rtpxyz-dataset">
+<h3>Results for RTPxyz dataset<a class="headerlink" href="#results-for-rtpxyz-dataset" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Source lines 74-74</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  74 | <span class="k">\section</span><span class="nb">{</span>Results for RTPxyz dataset<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Results for RTPxyz dataset</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This heading opens a new logical unit: <strong>Results for RTPxyz dataset</strong>.</p></li>
+<li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 75-80</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  75 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+  76 |     <span class="k">\centering</span>
+  77 |     <span class="k">\includegraphics</span><span class="na">[width=0.75\textwidth]</span><span class="nb">{</span>scatter<span class="nb">_</span>rtp<span class="nb">_</span>xyz.png<span class="nb">}</span>
+  78 |     <span class="k">\caption</span><span class="nb">{</span>Predicted versus FFTMAD-computed Young’s modulus for the RTPxyz dataset. The same as Figure 4 in the Manuscript but for the RTPxyz dataset. <span class="nb">}</span>
+  79 |     <span class="k">\label</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">_</span>xyz<span class="nb">}</span>
+  80 | <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span> 
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Predicted versus FFTMAD-computed Young’s modulus for the RTPxyz dataset. The same as Figure 4 in the Manuscript but for the RTPxyz dataset.</p>
+</div></blockquote>
+<p><strong>Figure assets carried into the book</strong></p>
+<p><img alt="scatter_rtp_xyz.png" src="../_images/scatter_rtp_xyz.png" /></p>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
+<li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 82-82</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  82 | Models were additionally trained on the RTPxyz dataset, which aggregates Young’s modulus values computed for the RTP structures along all three Cartesian directions. This dataset comprises a total of 1500 samples, of which two thirds correspond to the mechanically easy axes (<span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">y</span><span class="s">$</span>) and one third to the mechanically hard axis (<span class="s">$</span><span class="nb">z</span><span class="s">$</span>). The scatter plot of predicted versus FFTMAD-computed Young’s modulus for models trained with directional and non-directional descriptors is shown in Fig.~<span class="k">\ref</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">_</span>xyz<span class="nb">}</span>, while the corresponding regression metrics are summarized in Table~<span class="k">\ref</span><span class="nb">{</span>tab:metrics<span class="nb">_</span>rtp<span class="nb">_</span>xyz<span class="nb">}</span>.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Models were additionally trained on the RTPxyz dataset, which aggregates Young’s modulus values computed for the RTP structures along all three Cartesian directions. This dataset comprises a total of 1500 samples, of which two thirds correspond to the mechanically easy axes (<span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>) and one third to the mechanically hard axis (<span class="math notranslate nohighlight">\(z\)</span>). The scatter plot of predicted versus FFTMAD-computed Young’s modulus for models trained with directional and non-directional descriptors is shown in Fig. (ref: fig:scatter_rtp_xyz), while the corresponding regression metrics are summarized in Table (ref: tab:metrics_rtp_xyz).</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
+<li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 84-84</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  84 | Models based on directional descriptors maintain high predictive accuracy, with predictions tightly clustered around the diagonal and a coefficient of determination of <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">974</span><span class="s">$</span>. In contrast, models relying on non-directional descriptors perform poorly, achieving only <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">511</span><span class="s">$</span>. The corresponding scatter plot reveals a pronounced bifurcation: predictions obtained from non-directional descriptors split into two distinct branches, one above and one below the diagonal.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Models based on directional descriptors maintain high predictive accuracy, with predictions tightly clustered around the diagonal and a coefficient of determination of <span class="math notranslate nohighlight">\(R^2 = 0.974\)</span>. In contrast, models relying on non-directional descriptors perform poorly, achieving only <span class="math notranslate nohighlight">\(R^2 = 0.511\)</span>. The corresponding scatter plot reveals a pronounced bifurcation: predictions obtained from non-directional descriptors split into two distinct branches, one above and one below the diagonal.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
+<li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 86-98</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>  86 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
+  87 | <span class="k">\centering</span>
+  88 | <span class="k">\caption</span><span class="nb">{</span>Cross-validated regression metrics for Young’s modulus prediction using CatBoost with PH, ECP, and PH+ECP topological summaries, and a CNN baseline trained directly on voxelized structures. Reported as average over 8 folds. The same as Table~1 in the manuscript but for the RTPxyz dataset.<span class="nb">}</span>
+  89 | <span class="k">\label</span><span class="nb">{</span>tab:metrics<span class="nb">_</span>rtp<span class="nb">_</span>xyz<span class="nb">}</span>
+  90 | <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>lcc|cc||l|rrrr<span class="nb">}</span>
+  91 | <span class="k">\hline</span> 
+  92 |  <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>l<span class="nb">}{}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>|l||<span class="nb">}{</span>CNN baseline<span class="nb">}</span> <span class="nb">&amp;</span>  <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>l<span class="nb">}{</span>Non-directional<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>l<span class="nb">}{</span>Directional<span class="nb">}</span> <span class="k">\\</span>
+  93 | Dataset <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> MAE <span class="nb">&amp;</span> Method <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> MAE <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> MAE <span class="k">\\</span> <span class="k">\hline</span>
+  94 | RTPxyz <span class="nb">&amp;</span> 0.38 <span class="nb">&amp;</span> 1.77 <span class="nb">&amp;</span> 0.990 <span class="nb">&amp;</span> 1.88 <span class="nb">&amp;</span> PH     <span class="nb">&amp;</span> 0.509 <span class="nb">&amp;</span> 13.26 <span class="nb">&amp;</span> 0.548 <span class="nb">&amp;</span> 13.61 <span class="k">\\</span>
+  95 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>                        <span class="nb">&amp;</span> ECP    <span class="nb">&amp;</span> 0.493 <span class="nb">&amp;</span> 15.11 <span class="nb">&amp;</span> 0.974 <span class="nb">&amp;</span> 3.09 <span class="k">\\</span>
+  96 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>                        <span class="nb">&amp;</span> PH+ECP <span class="nb">&amp;</span> 0.511 <span class="nb">&amp;</span> 9.94  <span class="nb">&amp;</span> 0.974 <span class="nb">&amp;</span> 2.89 <span class="k">\\</span> <span class="k">\hline</span>
+  97 | <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+  98 | <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Cross-validated regression metrics for Young’s modulus prediction using CatBoost with PH, ECP, and PH+ECP topological summaries, and a CNN baseline trained directly on voxelized structures. Reported as average over 8 folds. The same as Table~1 in the manuscript but for the RTPxyz dataset.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
+<li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 101-101</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 101 | The upper branch (systematic overestimation) predominantly contains data points corresponding to compression along the mechanically easy <span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">y</span><span class="s">$</span> axes, where the true Young’s modulus is relatively low. The lower branch (systematic underestimation) consists mainly of samples compressed along the mechanically hard <span class="s">$</span><span class="nb">z</span><span class="s">$</span> axis, where the true Young’s modulus is significantly higher. This clear separation demonstrates that non-directional descriptors fail to encode the loading direction and therefore cannot distinguish between mechanically inequivalent orientations of the same structure.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>The upper branch (systematic overestimation) predominantly contains data points corresponding to compression along the mechanically easy <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, where the true Young’s modulus is relatively low. The lower branch (systematic underestimation) consists mainly of samples compressed along the mechanically hard <span class="math notranslate nohighlight">\(z\)</span> axis, where the true Young’s modulus is significantly higher. This clear separation demonstrates that non-directional descriptors fail to encode the loading direction and therefore cannot distinguish between mechanically inequivalent orientations of the same structure.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 103-103</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 103 | Only a small fraction of predictions obtained with non-directional descriptors lie close to the line of perfect agreement, which is reflected in the broadened and multimodal error distribution shown in the inset histogram. In contrast, no such branching behavior is observed for directional descriptors: predictions remain symmetrically distributed around the diagonal, indicating that direction-aware topology provides a consistent and physically meaningful representation of anisotropic mechanical response.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Only a small fraction of predictions obtained with non-directional descriptors lie close to the line of perfect agreement, which is reflected in the broadened and multimodal error distribution shown in the inset histogram. In contrast, no such branching behavior is observed for directional descriptors: predictions remain symmetrically distributed around the diagonal, indicating that direction-aware topology provides a consistent and physically meaningful representation of anisotropic mechanical response.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>In the dataset section, this block defines the experimental material on which all later descriptor comparisons depend.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./annotated"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="08-supplement-topologically-diverse-td-dataset.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Supplement: Topologically Diverse (TD) Dataset</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10-supplement-per-fold-cross-validation-performance.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Supplement: Per-Fold Cross-Validation Performance</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-for-rtpxyz-dataset">Results for RTPxyz dataset</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bartosz Naskręcki and collaborators
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

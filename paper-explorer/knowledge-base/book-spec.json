@@ -16,6 +16,10 @@
   ],
   "chapter_map": [
     {
+      "file": "annotated/index.md",
+      "purpose": "Line-numbered, section-by-section annotated reproduction of the manuscript and supplement"
+    },
+    {
       "file": "intro.md",
       "purpose": "Paper overview and navigation"
     },
@@ -50,4 +54,3 @@
     "strict_html": true
   }
 }
-

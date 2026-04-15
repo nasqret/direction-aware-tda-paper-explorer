@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Results and Discussion &#8212; Direction-Aware TDA Paper Explorer</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'annotated/04-results-and-discussion';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Summary" href="05-summary.html" />
+    <link rel="prev" title="Background and methods" href="03-background-and-methods.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-light" alt="Direction-Aware TDA Paper Explorer - Home"/>
+    <script>document.write(`<img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-dark" alt="Direction-Aware TDA Paper Explorer - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Annotated Paper</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00-front-matter-and-abstract.html">Front Matter and Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-background-and-methods.html">Background and methods</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Results and Discussion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-declarations.html">Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-bibliography-hooks.html">Bibliography Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-supplement-topologically-diverse-td-dataset.html">Supplement: Topologically Diverse (TD) Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-supplement-results-for-rtpxyz-dataset.html">Supplement: Results for RTPxyz dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-supplement-per-fold-cross-validation-performance.html">Supplement: Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/01-context.html">Context: Why Direction Matters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/02-datasets.html">Datasets And Mechanical Targets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/03-directional-filtrations.html">Directional Filtrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/04-descriptors-models.html">Descriptors And Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/05-results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/06-applets-and-databases.html">Applets And Database Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/annotated/04-results-and-discussion.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Results and Discussion</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Results and Discussion</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="results-and-discussion">
+<h1>Results and Discussion<a class="headerlink" href="#results-and-discussion" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Coverage</p>
+<p>This page annotates <strong>Main manuscript</strong>, source lines <strong>403-579</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+</div>
+<section id="reading-lens">
+<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This section is the empirical test of the paper’s thesis. Read every reported score as a comparison between direction-agnostic topology, direction-aware topology, and voxel CNN baselines.</p></li>
+<li><p>The important pattern is not a single best number but the relationship between anisotropy and the gain from direction-aware descriptors.</p></li>
+<li><p>Use the tables and figures to distinguish strong-anisotropy wins, weak-anisotropy parity, and cases where descriptor families behave differently.</p></li>
+</ul>
+</section>
+<section id="annotated-source">
+<h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Results and Discussion<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Source lines 403-403</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 403 | <span class="k">\section</span><span class="nb">{</span>Results and Discussion<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Results and Discussion</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This heading opens a new logical unit: <strong>Results and Discussion</strong>.</p></li>
+<li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 405-405</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 405 | Table~<span class="k">\ref</span><span class="nb">{</span>tab:metrics<span class="nb">}</span> summarizes the predictive performance of the evaluated descriptor configurations across all considered datasets. In addition to regression metrics, the table reports two scalar measures characterizing structural anisotropy: the spectral measure <span class="s">$</span><span class="nb">k</span><span class="s">$</span> and the integral correlation-length-based measure <span class="s">$</span><span class="nb">L</span><span class="s">$</span>, both computed directly from the binary microstructures.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Table (ref: tab:metrics) summarizes the predictive performance of the evaluated descriptor configurations across all considered datasets. In addition to regression metrics, the table reports two scalar measures characterizing structural anisotropy: the spectral measure <span class="math notranslate nohighlight">\(k\)</span> and the integral correlation-length-based measure <span class="math notranslate nohighlight">\(L\)</span>, both computed directly from the binary microstructures.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
+<li><p>This supplies the scalar anisotropy summaries used to interpret when directional descriptors should matter most.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 407-407</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 407 | For each dataset, the reported quantities are the standard deviations <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)</span><span class="s">$</span> and <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="s">$</span>. These were computed from the directional values <span class="s">$</span><span class="nb">k_</span><span class="nv">\alpha</span><span class="s">$</span> and <span class="s">$</span><span class="nb">L_</span><span class="nv">\alpha</span><span class="s">$</span> corresponding to the same loading axes used to evaluate Young’s modulus in a given dataset. For example, for the RTPxy dataset, <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)</span><span class="s">$</span> is calculated from the collection of <span class="s">$</span><span class="nb">k_x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">k_y</span><span class="s">$</span> values across all structures, and <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="s">$</span> analogously from <span class="s">$</span><span class="nb">L_x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">L_y</span><span class="s">$</span>. In this way, <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)</span><span class="s">$</span> and <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="s">$</span> quantify the spread of anisotropic characteristics within each dataset: larger values indicate greater variability in directional morphology, while smaller values correspond to more structurally homogeneous ensembles.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>For each dataset, the reported quantities are the standard deviations <span class="math notranslate nohighlight">\(sigma(k)\)</span> and <span class="math notranslate nohighlight">\(sigma(L)\)</span>. These were computed from the directional values <span class="math notranslate nohighlight">\(k_alpha\)</span> and <span class="math notranslate nohighlight">\(L_alpha\)</span> corresponding to the same loading axes used to evaluate Young’s modulus in a given dataset. For example, for the RTPxy dataset, <span class="math notranslate nohighlight">\(sigma(k)\)</span> is calculated from the collection of <span class="math notranslate nohighlight">\(k_x\)</span> and <span class="math notranslate nohighlight">\(k_y\)</span> values across all structures, and <span class="math notranslate nohighlight">\(sigma(L)\)</span> analogously from <span class="math notranslate nohighlight">\(L_x\)</span> and <span class="math notranslate nohighlight">\(L_y\)</span>. In this way, <span class="math notranslate nohighlight">\(sigma(k)\)</span> and <span class="math notranslate nohighlight">\(sigma(L)\)</span> quantify the spread of anisotropic characteristics within each dataset: larger values indicate greater variability in directional morphology, while smaller values correspond to more structurally homogeneous ensembles.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This supplies the scalar anisotropy summaries used to interpret when directional descriptors should matter most.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 410-417</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 410 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+ 411 |     <span class="k">\centering</span>
+ 412 |     <span class="k">\includegraphics</span><span class="na">[width=0.495\linewidth]</span><span class="nb">{</span>scatter<span class="nb">_</span>rtp<span class="nb">_</span>xy.png<span class="nb">}</span>
+ 413 |     <span class="k">\includegraphics</span><span class="na">[width=0.495\linewidth]</span><span class="nb">{</span>scatter<span class="nb">_</span>rtp<span class="nb">_</span>xz.png<span class="nb">}</span>
+ 414 |     <span class="k">\caption</span><span class="nb">{</span>Predicted versus FFTMAD-computed Young’s modulus for the RTPxy (left panel) and RTPxz (right panel) datasets. In both cases, predictions were obtained using a CatBoost regression model trained on combined PH+ECP topological descriptors. The dashed line indicates perfect agreement between predicted and computed values. Black markers correspond to predictions based on non-directional descriptors, while blue markers denote predictions obtained using directional descriptors. Each panel includes two accompanying histograms: the upper histogram shows the distribution of Young’s modulus values in the dataset, and the lower histogram compares the distributions of prediction errors for non-directional and directional models.
+ 415 |     <span class="nb">}</span>
+ 416 |     <span class="k">\label</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">}</span>
+ 417 | <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Predicted versus FFTMAD-computed Young’s modulus for the RTPxy (left panel) and RTPxz (right panel) datasets. In both cases, predictions were obtained using a CatBoost regression model trained on combined PH+ECP topological descriptors. The dashed line indicates perfect agreement between predicted and computed values. Black markers correspond to predictions based on non-directional descriptors, while blue markers denote predictions obtained using directional descriptors. Each panel includes two accompanying histograms: the upper histogram shows the distribution of Young’s modulus values in the dataset, and the lower histogram compares the distributions of prediction errors for non-directional and directional models.</p>
+</div></blockquote>
+<p><strong>Figure assets carried into the book</strong></p>
+<p><img alt="scatter_rtp_xy.png" src="../_images/scatter_rtp_xy.png" /></p>
+<p><img alt="scatter_rtp_xz.png" src="../_images/scatter_rtp_xz.png" /></p>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
+<li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 419-419</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 419 | Figure~<span class="k">\ref</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">}</span> shows predicted versus FFTMAD-computed Young’s modulus for the RTPxy (left) and RTPxz (right) datasets. Insets display the distributions of Young’s modulus values (top) and prediction errors (bottom). For the weakly anisotropic RTPxy dataset, both directional and non-directional descriptors yield predictions tightly clustered around perfect agreement with narrow, symmetric error distributions. In contrast, for the strongly anisotropic RTPxz dataset, directional descriptors maintain high accuracy, while non-directional descriptors exhibit substantial deviations and broadened error distributions, highlighting the importance of directional topology under strong anisotropy.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Figure (ref: fig:scatter_rtp) shows predicted versus FFTMAD-computed Young’s modulus for the RTPxy (left) and RTPxz (right) datasets. Insets display the distributions of Young’s modulus values (top) and prediction errors (bottom). For the weakly anisotropic RTPxy dataset, both directional and non-directional descriptors yield predictions tightly clustered around perfect agreement with narrow, symmetric error distributions. In contrast, for the strongly anisotropic RTPxz dataset, directional descriptors maintain high accuracy, while non-directional descriptors exhibit substantial deviations and broadened error distributions, highlighting the importance of directional topology under strong anisotropy.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This is the target-generation mechanism: the paper uses FFT-based homogenization rather than treating stiffness labels as empirical annotations.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 421-442</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 421 | The RTP datasets provide a controlled setting for assessing the influence of
+ 422 | structural anisotropy on predictive performance.
+ 423 | We first consider the RTPxy dataset, which consists of RTP microstructures for which Young’s modulus was evaluated exclusively
+ 424 | along the <span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">y</span><span class="s">$</span> directions.
+ 425 | As a result, this dataset is statistically isotropic within the <span class="s">$</span><span class="nb">xy</span><span class="s">$</span> plane and
+ 426 | does not exhibit a preferred mechanical hard axis.
+ 427 | Consistent with this interpretation, the average Young’s moduli along the two
+ 428 | directions are nearly identical, with mean values of
+ 429 | <span class="s">$</span><span class="nb">E_x </span><span class="o">=</span><span class="nb"> </span><span class="m">11</span><span class="nb">.</span><span class="m">46</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span> and <span class="s">$</span><span class="nb">E_y </span><span class="o">=</span><span class="nb"> </span><span class="m">11</span><span class="nb">.</span><span class="m">49</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 430 | The corresponding anisotropy measures, based on the <span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">y</span><span class="s">$</span> axes, are lowest, with <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">11</span><span class="s">$</span> and <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">21</span><span class="s">$</span>, indicating only
+ 431 | weak directional differentiation in the underlying pore morphology.
+ 432 | In contrast, the RTPxz dataset is constructed from the same set of RTP
+ 433 | microstructures but probes mechanical response along the <span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">z</span><span class="s">$</span>
+ 434 | directions.
+ 435 | In this case, the <span class="s">$</span><span class="nb">x</span><span class="s">$</span> direction acts as a mechanically easy axis
+ 436 | (<span class="s">$</span><span class="nb">E_x </span><span class="o">=</span><span class="nb"> </span><span class="m">11</span><span class="nb">.</span><span class="m">46</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>), while the <span class="s">$</span><span class="nb">z</span><span class="s">$</span> direction corresponds to a
+ 437 | pronounced hard axis, with an average Young’s modulus of
+ 438 | <span class="s">$</span><span class="nb">E_z </span><span class="o">=</span><span class="nb"> </span><span class="m">35</span><span class="nb">.</span><span class="m">55</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 439 | This strong directional contrast is reflected in substantially higher
+ 440 | anisotropy measures, with <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">40</span><span class="s">$</span> and <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)=</span><span class="m">1</span><span class="nb">.</span><span class="m">89</span><span class="s">$</span>
+ 441 | (based on <span class="s">$</span><span class="nb">x</span><span class="s">$</span> and <span class="s">$</span><span class="nb">z</span><span class="s">$</span> axis), making RTPxz the most anisotropic dataset among all
+ 442 | those considered.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>The RTP datasets provide a controlled setting for assessing the influence of structural anisotropy on predictive performance. We first consider the RTPxy dataset, which consists of RTP microstructures for which Young’s modulus was evaluated exclusively along the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions. As a result, this dataset is statistically isotropic within the <span class="math notranslate nohighlight">\(xy\)</span> plane and does not exhibit a preferred mechanical hard axis. Consistent with this interpretation, the average Young’s moduli along the two directions are nearly identical, with mean values of <span class="math notranslate nohighlight">\(E_x = 11.46 GPa\)</span> and <span class="math notranslate nohighlight">\(E_y = 11.49 GPa\)</span>. The corresponding anisotropy measures, based on the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, are lowest, with <span class="math notranslate nohighlight">\(sigma(k)=0.11\)</span> and <span class="math notranslate nohighlight">\(sigma(L)=0.21\)</span>, indicating only weak directional differentiation in the underlying pore morphology. In contrast, the RTPxz dataset is constructed from the same set of RTP microstructures but probes mechanical response along the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions. In this case, the <span class="math notranslate nohighlight">\(x\)</span> direction acts as a mechanically easy axis (<span class="math notranslate nohighlight">\(E_x = 11.46 GPa\)</span>), while the <span class="math notranslate nohighlight">\(z\)</span> direction corresponds to a pronounced hard axis, with an average Young’s modulus of <span class="math notranslate nohighlight">\(E_z = 35.55 GPa\)</span>. This strong directional contrast is reflected in substantially higher anisotropy measures, with <span class="math notranslate nohighlight">\(sigma(k)=0.40\)</span> and <span class="math notranslate nohighlight">\(sigma(L)=1.89\)</span> (based on <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axis), making RTPxz the most anisotropic dataset among all those considered.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This supplies the scalar anisotropy summaries used to interpret when directional descriptors should matter most.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 445-457</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 445 | For the strongly anisotropic RTPxz dataset, the benefit of directional topology
+ 446 | is pronounced.
+ 447 | When persistent homology (PH) descriptors are used without directional
+ 448 | information, predictive performance is poor (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">463</span><span class="s">$</span>, MAE <span class="s">$</span><span class="o">=</span><span class="m">9</span><span class="nb">.</span><span class="m">42</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>),
+ 449 | indicating that non-directional PH fails to capture the dominant directional
+ 450 | features governing elastic response.
+ 451 | Introducing directionality leads to a dramatic improvement, with directional PH
+ 452 | achieving <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">954</span><span class="s">$</span> and a substantially reduced MAE of <span class="s">$</span><span class="m">2</span><span class="nb">.</span><span class="m">65</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 453 | A similar trend is observed for multifiltration Euler characteristic profiles
+ 454 | (ECP), where the transition from non-directional to directional descriptors
+ 455 | increases <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> from <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">616</span><span class="s">$</span> to <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">978</span><span class="s">$</span> and reduces MAE from <span class="s">$</span><span class="m">12</span><span class="nb">.</span><span class="m">06</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span> to <span class="s">$</span><span class="m">1</span><span class="nb">.</span><span class="m">85</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 456 | The combined PH+ECP representation yields the lowest error overall for RTPxz,
+ 457 | with directional models reaching <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">978</span><span class="s">$</span> and MAE <span class="s">$</span><span class="o">=</span><span class="m">1</span><span class="nb">.</span><span class="m">86</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>For the strongly anisotropic RTPxz dataset, the benefit of directional topology is pronounced. When persistent homology (PH) descriptors are used without directional information, predictive performance is poor (<span class="math notranslate nohighlight">\(R^2=0.463\)</span>, MAE <span class="math notranslate nohighlight">\(=9.42 GPa\)</span>), indicating that non-directional PH fails to capture the dominant directional features governing elastic response. Introducing directionality leads to a dramatic improvement, with directional PH achieving <span class="math notranslate nohighlight">\(R^2=0.954\)</span> and a substantially reduced MAE of <span class="math notranslate nohighlight">\(2.65 GPa\)</span>. A similar trend is observed for multifiltration Euler characteristic profiles (ECP), where the transition from non-directional to directional descriptors increases <span class="math notranslate nohighlight">\(R^2\)</span> from <span class="math notranslate nohighlight">\(0.616\)</span> to <span class="math notranslate nohighlight">\(0.978\)</span> and reduces MAE from <span class="math notranslate nohighlight">\(12.06 GPa\)</span> to <span class="math notranslate nohighlight">\(1.85 GPa\)</span>. The combined PH+ECP representation yields the lowest error overall for RTPxz, with directional models reaching <span class="math notranslate nohighlight">\(R^2=0.978\)</span> and MAE <span class="math notranslate nohighlight">\(=1.86 GPa\)</span>.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>The principal-component construction adds local orientation information and supports multiparameter Euler-characteristic descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 459-480</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 459 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
+ 460 | <span class="k">\centering</span>
+ 461 | <span class="k">\caption</span><span class="nb">{</span>Cross-validated regression performance for Young’s modulus prediction using boosting models trained on persistent homology (PH), Euler characteristic profiles (ECP), and their combination (PH+ECP), together with a convolutional neural network (CNN) baseline trained directly on voxelized structures. Reported metrics correspond to averages over 8 cross-validation folds.<span class="nb">}</span>
+ 462 | <span class="k">\label</span><span class="nb">{</span>tab:metrics<span class="nb">}</span>
+ 463 | <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>lcc|cc||l|rrrr<span class="nb">}</span>
+ 464 | <span class="k">\hline</span> 
+ 465 |  <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>l<span class="nb">}{}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>|l||<span class="nb">}{</span>CNN baseline<span class="nb">}</span> <span class="nb">&amp;</span>  <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>l<span class="nb">}{</span>Non-directional<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>l<span class="nb">}{</span>Directional<span class="nb">}</span> <span class="k">\\</span>
+ 466 | Dataset <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="s">$</span> <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> MAE <span class="nb">&amp;</span> Method <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> MAE <span class="nb">&amp;</span> <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> <span class="nb">&amp;</span> MAE <span class="k">\\</span> <span class="k">\hline</span>
+ 467 | RTPxz <span class="nb">&amp;</span> 0.40 <span class="nb">&amp;</span> 1.89 <span class="nb">&amp;</span> 0.985 <span class="nb">&amp;</span> 1.62 <span class="nb">&amp;</span> PH <span class="nb">&amp;</span> 0.463 <span class="nb">&amp;</span> 9.42 <span class="nb">&amp;</span> 0.954 <span class="nb">&amp;</span> 2.65 <span class="k">\\</span>
+ 468 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> ECP <span class="nb">&amp;</span> 0.616 <span class="nb">&amp;</span> 12.06 <span class="nb">&amp;</span> 0.978 <span class="nb">&amp;</span> 1.85 <span class="k">\\</span>
+ 469 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> PH+ECP <span class="nb">&amp;</span> 0.754 <span class="nb">&amp;</span> 7.05 <span class="nb">&amp;</span> 0.978 <span class="nb">&amp;</span> 1.86 <span class="k">\\</span> <span class="k">\hline</span>
+ 470 | RTPxy <span class="nb">&amp;</span> 0.11 <span class="nb">&amp;</span> 0.21 <span class="nb">&amp;</span> 0.979 <span class="nb">&amp;</span> 1.02 <span class="nb">&amp;</span> PH <span class="nb">&amp;</span> 0.878 <span class="nb">&amp;</span> 2.42 <span class="nb">&amp;</span> 0.873 <span class="nb">&amp;</span> 2.45 <span class="k">\\</span>
+ 471 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> ECP <span class="nb">&amp;</span> 0.925 <span class="nb">&amp;</span> 1.86 <span class="nb">&amp;</span> 0.940 <span class="nb">&amp;</span> 1.66 <span class="k">\\</span>
+ 472 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> PH+ECP <span class="nb">&amp;</span> 0.916 <span class="nb">&amp;</span> 1.98 <span class="nb">&amp;</span> 0.938 <span class="nb">&amp;</span> 1.69 <span class="k">\\</span> <span class="k">\hline</span>
+ 473 | TD <span class="nb">&amp;</span> 0.14 <span class="nb">&amp;</span> 1.80<span class="nb">&amp;</span> 0.976 <span class="nb">&amp;</span> 0.62 <span class="nb">&amp;</span> PH <span class="nb">&amp;</span> 0.596 <span class="nb">&amp;</span> 2.44 <span class="nb">&amp;</span> 0.665 <span class="nb">&amp;</span> 2.18 <span class="k">\\</span>
+ 474 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> ECP <span class="nb">&amp;</span> 0.815 <span class="nb">&amp;</span> 1.48 <span class="nb">&amp;</span> 0.818 <span class="nb">&amp;</span> 1.66 <span class="k">\\</span>
+ 475 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> PH+ECP <span class="nb">&amp;</span> 0.822 <span class="nb">&amp;</span> 1.46 <span class="nb">&amp;</span> 0.836 <span class="nb">&amp;</span> 1.53 <span class="k">\\</span> <span class="k">\hline</span>
+ 476 | ATTD <span class="nb">&amp;</span> 0.20 <span class="nb">&amp;</span> 1.74 <span class="nb">&amp;</span> 0.894 <span class="nb">&amp;</span> 0.34 <span class="nb">&amp;</span> PH <span class="nb">&amp;</span> 0.536 <span class="nb">&amp;</span> 3.78 <span class="nb">&amp;</span> 0.759 <span class="nb">&amp;</span> 2.53 <span class="k">\\</span>
+ 477 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> ECP <span class="nb">&amp;</span> 0.653 <span class="nb">&amp;</span> 3.36 <span class="nb">&amp;</span> 0.815 <span class="nb">&amp;</span> 2.13 <span class="k">\\</span>
+ 478 |  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span>  <span class="nb">&amp;</span> PH+ECP <span class="nb">&amp;</span> 0.643 <span class="nb">&amp;</span> 3.33 <span class="nb">&amp;</span> 0.825 <span class="nb">&amp;</span> 2.06 <span class="k">\\</span> <span class="k">\hline</span>
+ 479 | <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+ 480 | <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Cross-validated regression performance for Young’s modulus prediction using boosting models trained on persistent homology (PH), Euler characteristic profiles (ECP), and their combination (PH+ECP), together with a convolutional neural network (CNN) baseline trained directly on voxelized structures. Reported metrics correspond to averages over 8 cross-validation folds.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
+<li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 482-496</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 482 | For the more weakly anisotropic RTPxy dataset, the performance gap between
+ 483 | directional and non-directional descriptors is smaller than for the strongly
+ 484 | anisotropic RTPxz case, but remains systematic and consistent across all
+ 485 | descriptor classes (with the the exception of PH alone, which is the weakest anyway for both directional and non-directional descriptors).
+ 486 | Although non-directional models already achieve high predictive accuracy
+ 487 | (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">878</span><span class="s">$</span> for PH and <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">925</span><span class="s">$</span> for ECP), the inclusion of directional
+ 488 | information leads to simultaneous improvements in both variance explained and
+ 489 | absolute error for ECP and PH+ECP.
+ 490 | In particular, directional ECP increases <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> from <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">925</span><span class="s">$</span> to <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">940</span><span class="s">$</span> while
+ 491 | reducing MAE from <span class="s">$</span><span class="m">1</span><span class="nb">.</span><span class="m">86</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span> to <span class="s">$</span><span class="m">1</span><span class="nb">.</span><span class="m">66</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>, and similar trends are observed PH+ECP descriptors.
+ 492 | Importantly, with the exception of PH on RTPxy, no instance is observed in which a non-directional representation outperforms its directional counterpart in terms of <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span>, while in some cases non-directional representations slightly surpass directional ones in terms of MAE
+ 493 | This demonstrates that the shift to directional topology provides added predictive value for strongly anisotropic materials and does not decrease the predictive value
+ 494 | even when the probed mechanical response is nearly isotropic, and suggests that
+ 495 | non-directional descriptors offer no practical advantage once directional
+ 496 | alternatives are available.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>For the more weakly anisotropic RTPxy dataset, the performance gap between directional and non-directional descriptors is smaller than for the strongly anisotropic RTPxz case, but remains systematic and consistent across all descriptor classes (with the the exception of PH alone, which is the weakest anyway for both directional and non-directional descriptors). Although non-directional models already achieve high predictive accuracy (<span class="math notranslate nohighlight">\(R^2=0.878\)</span> for PH and <span class="math notranslate nohighlight">\(R^2=0.925\)</span> for ECP), the inclusion of directional information leads to simultaneous improvements in both variance explained and absolute error for ECP and PH+ECP. In particular, directional ECP increases <span class="math notranslate nohighlight">\(R^2\)</span> from <span class="math notranslate nohighlight">\(0.925\)</span> to <span class="math notranslate nohighlight">\(0.940\)</span> while reducing MAE from <span class="math notranslate nohighlight">\(1.86 GPa\)</span> to <span class="math notranslate nohighlight">\(1.66 GPa\)</span>, and similar trends are observed PH+ECP descriptors. Importantly, with the exception of PH on RTPxy, no instance is observed in which a non-directional representation outperforms its directional counterpart in terms of <span class="math notranslate nohighlight">\(R^2\)</span>, while in some cases non-directional representations slightly surpass directional ones in terms of MAE This demonstrates that the shift to directional topology provides added predictive value for strongly anisotropic materials and does not decrease the predictive value even when the probed mechanical response is nearly isotropic, and suggests that non-directional descriptors offer no practical advantage once directional alternatives are available.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 498-508</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 498 | Across both RTP datasets, ECP consistently outperforms PH when used alone, and
+ 499 | the combined PH+ECP descriptors provide the most accurate and stable predictions.
+ 500 | For reference, convolutional neural networks trained directly on voxelized
+ 501 | structures achieve uniformly high accuracy for both RTPxz and RTPxy
+ 502 | (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">985</span><span class="s">$</span> and <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">979</span><span class="s">$</span>, respectively), but the performance gap relative to
+ 503 | topological models narrows substantially for RTPxz when directional PH+ECP
+ 504 | descriptors are employed.
+ 505 | Overall, the RTP results demonstrate that the utility of directional topological
+ 506 | descriptors increases sharply with structural anisotropy, and that their impact
+ 507 | is most pronounced in regimes where elastic response is governed by a clear
+ 508 | mechanical hard axis. 
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Across both RTP datasets, ECP consistently outperforms PH when used alone, and the combined PH+ECP descriptors provide the most accurate and stable predictions. For reference, convolutional neural networks trained directly on voxelized structures achieve uniformly high accuracy for both RTPxz and RTPxy (<span class="math notranslate nohighlight">\(R^2=0.985\)</span> and <span class="math notranslate nohighlight">\(0.979\)</span>, respectively), but the performance gap relative to topological models narrows substantially for RTPxz when directional PH+ECP descriptors are employed. Overall, the RTP results demonstrate that the utility of directional topological descriptors increases sharply with structural anisotropy, and that their impact is most pronounced in regimes where elastic response is governed by a clear mechanical hard axis.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 510-510</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 510 | Results obtained for the combined-direction RTPxyz dataset further support these conclusions; see Section S2 (Table~S1 and Figure~S2) in the Supplementary Information.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Results obtained for the combined-direction RTPxyz dataset further support these conclusions; see Section S2 (Table~S1 and Figure~S2) in the Supplementary Information.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 512-513</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 512 | To further substantiate the consistency of the performance gains across data splits, 
+ 513 | we provide detailed fold-wise cross-validation results in the Section S3 (Tables~S2 and S3) in the Supplementary Information.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>To further substantiate the consistency of the performance gains across data splits, we provide detailed fold-wise cross-validation results in the Section S3 (Tables~S2 and S3) in the Supplementary Information.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 515-522</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 515 | <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+ 516 |     <span class="k">\centering</span>
+ 517 |     <span class="k">\includegraphics</span><span class="na">[width=0.495\linewidth]</span><span class="nb">{</span>scatter<span class="nb">_</span>td.png<span class="nb">}</span>
+ 518 |     <span class="k">\includegraphics</span><span class="na">[width=0.495\linewidth]</span><span class="nb">{</span>scatter<span class="nb">_</span>attd.png<span class="nb">}</span>
+ 519 |     <span class="k">\caption</span><span class="nb">{</span>The same as Figure <span class="k">\ref</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">}</span> but for TD dataset (left panel) and ATTD dataset (right panel).
+ 520 |     <span class="nb">}</span>
+ 521 |     <span class="k">\label</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>td<span class="nb">}</span>
+ 522 | <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>The same as Figure (ref: fig:scatter_rtp) but for TD dataset (left panel) and ATTD dataset (right panel).</p>
+</div></blockquote>
+<p><strong>Figure assets carried into the book</strong></p>
+<p><img alt="scatter_td.png" src="../_images/scatter_td.png" /></p>
+<p><img alt="scatter_attd.png" src="../_images/scatter_attd.png" /></p>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This figure is evidential, not decorative: it gives visual grounding for the structures, descriptors, or performance pattern discussed around it.</p></li>
+<li><p>Read the caption carefully because it usually encodes the variables and comparisons that make the visual scientifically meaningful.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.</p></li>
+<li><p>In the results section, this block should be read as evidence for or against the claimed value of direction-aware descriptors.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 525-539</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 525 | To verify that the observed trends are not specific to the RTP model or to a
+ 526 | particular class of microstructures, additional datasets were considered.
+ 527 | Specifically, a Topologically Diverse (TD) dataset was constructed to include porous
+ 528 | microstructures spanning a broad range of topologies (see Section <span class="k">\ref</span><span class="nb">{</span>sec:td<span class="nb">_</span>structures<span class="nb">}</span> and Section S1 in the Supplementary Information), while remaining statistically isotropic.
+ 529 | This dataset is characterized by low anisotropy, with
+ 530 | <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">14</span><span class="s">$</span> and <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)=</span><span class="m">1</span><span class="nb">.</span><span class="m">80</span><span class="s">$</span>, and an average Young’s modulus of <span class="s">$</span><span class="m">7</span><span class="nb">.</span><span class="m">46</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 531 | For the TD dataset, the same qualitative trends observed for RTPxy persist.
+ 532 | ECP multifiltration descriptors outperform the PH descriptors in both directional and non-directional settings. 
+ 533 | Non-directional PH achieves only <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">596</span><span class="s">$</span> with MAE <span class="s">$</span><span class="o">=</span><span class="m">2</span><span class="nb">.</span><span class="m">44</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>, whereas
+ 534 | non-directional ECP improves performance substantially to <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">815</span><span class="s">$</span> and MAE <span class="s">$</span><span class="o">=</span><span class="m">1</span><span class="nb">.</span><span class="m">48</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 535 | Directional descriptors again provide a consistent advantage in terms of <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span>: directional
+ 536 | PH+ECP reaches <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">836</span><span class="s">$</span>, outperforming all non-directional alternatives, while the latter have a slight advantage in terms of MAE for ECP and PH+ECP.
+ 537 | This reinforces the conclusion
+ 538 | that direction-aware topology is not detrimental even for nominally isotropic
+ 539 | datasets.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>To verify that the observed trends are not specific to the RTP model or to a particular class of microstructures, additional datasets were considered. Specifically, a Topologically Diverse (TD) dataset was constructed to include porous microstructures spanning a broad range of topologies (see Section (ref: sec:td_structures) and Section S1 in the Supplementary Information), while remaining statistically isotropic. This dataset is characterized by low anisotropy, with <span class="math notranslate nohighlight">\(sigma(k)=0.14\)</span> and <span class="math notranslate nohighlight">\(sigma(L)=1.80\)</span>, and an average Young’s modulus of <span class="math notranslate nohighlight">\(7.46 GPa\)</span>. For the TD dataset, the same qualitative trends observed for RTPxy persist. ECP multifiltration descriptors outperform the PH descriptors in both directional and non-directional settings. Non-directional PH achieves only <span class="math notranslate nohighlight">\(R^2=0.596\)</span> with MAE <span class="math notranslate nohighlight">\(=2.44 GPa\)</span>, whereas non-directional ECP improves performance substantially to <span class="math notranslate nohighlight">\(R^2=0.815\)</span> and MAE <span class="math notranslate nohighlight">\(=1.48 GPa\)</span>. Directional descriptors again provide a consistent advantage in terms of <span class="math notranslate nohighlight">\(R^2\)</span>: directional PH+ECP reaches <span class="math notranslate nohighlight">\(R^2=0.836\)</span>, outperforming all non-directional alternatives, while the latter have a slight advantage in terms of MAE for ECP and PH+ECP. This reinforces the conclusion that direction-aware topology is not detrimental even for nominally isotropic datasets.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 541-542</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 541 | A limitation of the TD dataset is that anisotropy cannot be introduced in a controlled manner at the level of microstructure generation. To address this, an Anisotropic Transformed Topologically Diverse (ATTD) dataset was constructed by elongating the original structures along a single axis, thereby introducing moderate but systematic anisotropy. This procedure increases the spectral anisotropy variability to <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">20</span><span class="s">$</span>, while the correlation-length-based variability becomes <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)=</span><span class="m">1</span><span class="nb">.</span><span class="m">74</span><span class="s">$</span>, and the average Young’s modulus increases to <span class="s">$</span><span class="m">9</span><span class="nb">.</span><span class="m">36</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 542 | Although ATTD is more anisotropic than TD—as reflected by the larger value of <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)</span><span class="s">$</span>—the value of <span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="s">$</span> is slightly lower. This stems from the definition of the correlation-length measure, which depends on the integral of the autocorrelation function up to its first zero crossing. In the TD and ATTD datasets, where structures are not generated from spectrally controlled random fields, the autocorrelation does not necessarily decay monotonically, and the elongation procedure can reduce variability in the position of the first zero crossing across samples. As a result, the spread of <span class="s">$</span><span class="nb">L</span><span class="s">$</span> values may decrease even when directional anisotropy increases. In this context, <span class="s">$</span><span class="nb">L</span><span class="s">$</span> serves primarily as an auxiliary real-space measure complementing the more sensitive spectral indicator <span class="s">$</span><span class="nb">k</span><span class="s">$</span>.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>A limitation of the TD dataset is that anisotropy cannot be introduced in a controlled manner at the level of microstructure generation. To address this, an Anisotropic Transformed Topologically Diverse (ATTD) dataset was constructed by elongating the original structures along a single axis, thereby introducing moderate but systematic anisotropy. This procedure increases the spectral anisotropy variability to <span class="math notranslate nohighlight">\(sigma(k)=0.20\)</span>, while the correlation-length-based variability becomes <span class="math notranslate nohighlight">\(sigma(L)=1.74\)</span>, and the average Young’s modulus increases to <span class="math notranslate nohighlight">\(9.36 GPa\)</span>. Although ATTD is more anisotropic than TD—as reflected by the larger value of <span class="math notranslate nohighlight">\(sigma(k)\)</span>—the value of <span class="math notranslate nohighlight">\(sigma(L)\)</span> is slightly lower. This stems from the definition of the correlation-length measure, which depends on the integral of the autocorrelation function up to its first zero crossing. In the TD and ATTD datasets, where structures are not generated from spectrally controlled random fields, the autocorrelation does not necessarily decay monotonically, and the elongation procedure can reduce variability in the position of the first zero crossing across samples. As a result, the spread of <span class="math notranslate nohighlight">\(L\)</span> values may decrease even when directional anisotropy increases. In this context, <span class="math notranslate nohighlight">\(L\)</span> serves primarily as an auxiliary real-space measure complementing the more sensitive spectral indicator <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This explains how continuous fields become admissible binary materials and why connectivity/percolation filters are needed for mechanical tests.</p></li>
+<li><p>This broadens the study beyond RTP by adding structurally diverse families that test whether the descriptor idea generalizes.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 544-553</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 544 | For the ATTD dataset, the benefits of directional topology become
+ 545 | more pronounced. Directional ECP improves predictive performance from <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">653</span><span class="s">$</span> in the
+ 546 | non-directional case to <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">815</span><span class="s">$</span>, while directional PH+ECP achieves the highest
+ 547 | accuracy with <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">825</span><span class="s">$</span> and the lowest MAE of <span class="s">$</span><span class="m">2</span><span class="nb">.</span><span class="m">06</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>.
+ 548 | In contrast, non-directional PH+ECP remains comparatively weak
+ 549 | (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">643</span><span class="s">$</span>, MAE <span class="s">$</span><span class="o">=</span><span class="m">3</span><span class="nb">.</span><span class="m">33</span><span class="nv">\,\mathrm</span><span class="nb">{GPa}</span><span class="s">$</span>).
+ 550 | These results closely mirror those observed for RTPxz, demonstrating that the
+ 551 | relationship between anisotropy and the effectiveness of directional
+ 552 | descriptors is not restricted to RTP microstructures, but extends to a broader
+ 553 | class of porous topologies.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>For the ATTD dataset, the benefits of directional topology become more pronounced. Directional ECP improves predictive performance from <span class="math notranslate nohighlight">\(R^2=0.653\)</span> in the non-directional case to <span class="math notranslate nohighlight">\(0.815\)</span>, while directional PH+ECP achieves the highest accuracy with <span class="math notranslate nohighlight">\(R^2=0.825\)</span> and the lowest MAE of <span class="math notranslate nohighlight">\(2.06 GPa\)</span>. In contrast, non-directional PH+ECP remains comparatively weak (<span class="math notranslate nohighlight">\(R^2=0.643\)</span>, MAE <span class="math notranslate nohighlight">\(=3.33 GPa\)</span>). These results closely mirror those observed for RTPxz, demonstrating that the relationship between anisotropy and the effectiveness of directional descriptors is not restricted to RTP microstructures, but extends to a broader class of porous topologies.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.</p></li>
+<li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 555-555</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 555 | Figure~<span class="k">\ref</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>td<span class="nb">}</span> compares predicted and FFTMAD-computed Young’s modulus for the TD (left) and ATTD (right) datasets. For the isotropic TD dataset, directional and non-directional topological descriptors yield comparable accuracy, with predictions clustered near perfect agreement. Introducing moderate anisotropy in ATTD leads to a clear separation: directional descriptors preserve tight alignment with the diagonal, while non-directional descriptors show increased scatter. As in the RTP datasets (Figure~<span class="k">\ref</span><span class="nb">{</span>fig:scatter<span class="nb">_</span>rtp<span class="nb">}</span>), this highlights that directional topology becomes increasingly informative as anisotropy strengthens, even for structurally diverse porous systems.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Figure (ref: fig:scatter_td) compares predicted and FFTMAD-computed Young’s modulus for the TD (left) and ATTD (right) datasets. For the isotropic TD dataset, directional and non-directional topological descriptors yield comparable accuracy, with predictions clustered near perfect agreement. Introducing moderate anisotropy in ATTD leads to a clear separation: directional descriptors preserve tight alignment with the diagonal, while non-directional descriptors show increased scatter. As in the RTP datasets (Figure (ref: fig:scatter_rtp)), this highlights that directional topology becomes increasingly informative as anisotropy strengthens, even for structurally diverse porous systems.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This connects geometry to the target variable: directional Young’s modulus under a specified loading axis.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 558-560</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 558 | Across the TD and ATTD datasets, convolutional neural networks trained directly on voxelized structures achieve high accuracy, with <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">976</span><span class="s">$</span> for TD and <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">894</span><span class="s">$</span> for ATTD (Table~<span class="k">\ref</span><span class="nb">{</span>tab:metrics<span class="nb">}</span>). However, the performance gap between CNNs and topological models decreases as anisotropy increases and directional PH+ECP descriptors are used.
+ 559 | For the isotropic TD dataset (<span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">14</span><span class="s">$</span>), directional PH+ECP reaches <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">836</span><span class="s">$</span>, yielding a gap of <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">140</span><span class="s">$</span> relative to the CNN. For the moderately anisotropic ATTD dataset (<span class="s">$</span><span class="nv">\sigma</span><span class="o">(</span><span class="nb">k</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">20</span><span class="s">$</span>), this gap reduces to <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">069</span><span class="s">$</span> (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">825</span><span class="s">$</span> vs.<span class="k">\</span> <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">894</span><span class="s">$</span>). A similar trend appears in the RTP datasets: the gap is <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">041</span><span class="s">$</span> for RTPxy and only <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">006</span><span class="s">$</span> for the strongly anisotropic RTPxz case, where directional PH+ECP nearly matches the CNN baseline (<span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">978</span><span class="s">$</span> vs.<span class="k">\</span> <span class="s">$</span><span class="m">0</span><span class="nb">.</span><span class="m">985</span><span class="s">$</span>).
+ 560 | These results indicate that the CNN advantage largely reflects its ability to capture anisotropic structural information, which directional topological descriptors encode explicitly and increasingly effectively as anisotropy strengthens.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Across the TD and ATTD datasets, convolutional neural networks trained directly on voxelized structures achieve high accuracy, with <span class="math notranslate nohighlight">\(R^2 = 0.976\)</span> for TD and <span class="math notranslate nohighlight">\(R^2 = 0.894\)</span> for ATTD (Table (ref: tab:metrics)). However, the performance gap between CNNs and topological models decreases as anisotropy increases and directional PH+ECP descriptors are used. For the isotropic TD dataset (<span class="math notranslate nohighlight">\(sigma(k)=0.14\)</span>), directional PH+ECP reaches <span class="math notranslate nohighlight">\(R^2 = 0.836\)</span>, yielding a gap of <span class="math notranslate nohighlight">\(0.140\)</span> relative to the CNN. For the moderately anisotropic ATTD dataset (<span class="math notranslate nohighlight">\(sigma(k)=0.20\)</span>), this gap reduces to <span class="math notranslate nohighlight">\(0.069\)</span> (<span class="math notranslate nohighlight">\(R^2 = 0.825\)</span> vs.\ <span class="math notranslate nohighlight">\(0.894\)</span>). A similar trend appears in the RTP datasets: the gap is <span class="math notranslate nohighlight">\(0.041\)</span> for RTPxy and only <span class="math notranslate nohighlight">\(0.006\)</span> for the strongly anisotropic RTPxz case, where directional PH+ECP nearly matches the CNN baseline (<span class="math notranslate nohighlight">\(R^2 = 0.978\)</span> vs.\ <span class="math notranslate nohighlight">\(0.985\)</span>). These results indicate that the CNN advantage largely reflects its ability to capture anisotropic structural information, which directional topological descriptors encode explicitly and increasingly effectively as anisotropy strengthens.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This constructs anisotropy by transforming otherwise diverse structures, giving a bridge between controlled RTP anisotropy and heterogeneous real-looking morphologies.</p></li>
+<li><p>This supplies the scalar anisotropy summaries used to interpret when directional descriptors should matter most.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 563-577</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 563 | Taken together, the results across all datasets lead to several general
+ 564 | conclusions.
+ 565 | First, multifiltration ECP descriptors consistently outperform PH when used
+ 566 | alone, regardless of dataset or anisotropy level.
+ 567 | Second, combining PH and ECP yields the most accurate and stable topological
+ 568 | representations across all considered regimes.
+ 569 | Third, directional descriptors uniformly dominate non-directional ones for non-isotropic datasets and have virtually identical performance for isotropic datasets, leaving little practical justification for
+ 570 | the latter.
+ 571 | Finally, the advantage of directional topology increases systematically with
+ 572 | structural anisotropy, a trend observed consistently for both RTP and non-RTP
+ 573 | microstructures.
+ 574 | These findings highlight the robustness and generality of topological data
+ 575 | analysis as a framework for linking complex porous microstructures to
+ 576 | mechanical response, and underscore its potential as an interpretable,
+ 577 | low-dimensional alternative to purely voxel-based learning approaches.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Taken together, the results across all datasets lead to several general conclusions. First, multifiltration ECP descriptors consistently outperform PH when used alone, regardless of dataset or anisotropy level. Second, combining PH and ECP yields the most accurate and stable topological representations across all considered regimes. Third, directional descriptors uniformly dominate non-directional ones for non-isotropic datasets and have virtually identical performance for isotropic datasets, leaving little practical justification for the latter. Finally, the advantage of directional topology increases systematically with structural anisotropy, a trend observed consistently for both RTP and non-RTP microstructures. These findings highlight the robustness and generality of topological data analysis as a framework for linking complex porous microstructures to mechanical response, and underscore its potential as an interpretable, low-dimensional alternative to purely voxel-based learning approaches.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This keeps the physical object in view: porous solid/void geometry is the structure whose topology and mechanics are being related.</p></li>
+<li><p>This introduces or uses TDA as a multiscale language for connectivity, loops, cavities, and Euler-characteristic summaries.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>The principal-component construction adds local orientation information and supports multiparameter Euler-characteristic descriptors.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./annotated"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-background-and-methods.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Background and methods</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-summary.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summary</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Results and Discussion</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bartosz Naskręcki and collaborators
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

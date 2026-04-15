@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": [
+    "arXiv-2604.08105v1/main.tex",
+    "arXiv-2604.08105v1/supplement.tex"
+  ],
+  "pages": [
+    {
+      "title": "Front Matter and Abstract",
+      "file": "annotated/00-front-matter-and-abstract.md",
+      "source": "main",
+      "sourceLines": [
+        21,
+        46
+      ]
+    },
+    {
+      "title": "Introduction",
+      "file": "annotated/01-introduction.md",
+      "source": "main",
+      "sourceLines": [
+        47,
+        66
+      ]
+    },
+    {
+      "title": "Dataset",
+      "file": "annotated/02-dataset.md",
+      "source": "main",
+      "sourceLines": [
+        67,
+        313
+      ]
+    },
+    {
+      "title": "Background and methods",
+      "file": "annotated/03-background-and-methods.md",
+      "source": "main",
+      "sourceLines": [
+        314,
+        402
+      ]
+    },
+    {
+      "title": "Results and Discussion",
+      "file": "annotated/04-results-and-discussion.md",
+      "source": "main",
+      "sourceLines": [
+        403,
+        579
+      ]
+    },
+    {
+      "title": "Summary",
+      "file": "annotated/05-summary.md",
+      "source": "main",
+      "sourceLines": [
+        580,
+        606
+      ]
+    },
+    {
+      "title": "Declarations",
+      "file": "annotated/06-declarations.md",
+      "source": "main",
+      "sourceLines": [
+        607,
+        631
+      ]
+    },
+    {
+      "title": "Bibliography Hooks",
+      "file": "annotated/07-bibliography-hooks.md",
+      "source": "main",
+      "sourceLines": [
+        632,
+        638
+      ]
+    },
+    {
+      "title": "Supplement: Topologically Diverse (TD) Dataset",
+      "file": "annotated/08-supplement-topologically-diverse-td-dataset.md",
+      "source": "supplement",
+      "sourceLines": [
+        6,
+        73
+      ]
+    },
+    {
+      "title": "Supplement: Results for RTPxyz dataset",
+      "file": "annotated/09-supplement-results-for-rtpxyz-dataset.md",
+      "source": "supplement",
+      "sourceLines": [
+        74,
+        104
+      ]
+    },
+    {
+      "title": "Supplement: Per-Fold Cross-Validation Performance",
+      "file": "annotated/10-supplement-per-fold-cross-validation-performance.md",
+      "source": "supplement",
+      "sourceLines": [
+        105,
+        159
+      ]
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Supplement: Per-Fold Cross-Validation Performance &#8212; Direction-Aware TDA Paper Explorer</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'annotated/10-supplement-per-fold-cross-validation-performance';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Context: Why Direction Matters" href="../chapters/01-context.html" />
+    <link rel="prev" title="Supplement: Results for RTPxyz dataset" href="09-supplement-results-for-rtpxyz-dataset.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-light" alt="Direction-Aware TDA Paper Explorer - Home"/>
+    <script>document.write(`<img src="../_static/TDA_directional_horizontal_new.png" class="logo__image only-dark" alt="Direction-Aware TDA Paper Explorer - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Annotated Paper</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00-front-matter-and-abstract.html">Front Matter and Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-dataset.html">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-background-and-methods.html">Background and methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-results-and-discussion.html">Results and Discussion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-declarations.html">Declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-bibliography-hooks.html">Bibliography Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-supplement-topologically-diverse-td-dataset.html">Supplement: Topologically Diverse (TD) Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-supplement-results-for-rtpxyz-dataset.html">Supplement: Results for RTPxyz dataset</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Supplement: Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/01-context.html">Context: Why Direction Matters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/02-datasets.html">Datasets And Mechanical Targets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/03-directional-filtrations.html">Directional Filtrations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/04-descriptors-models.html">Descriptors And Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/05-results.html">Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/06-applets-and-databases.html">Applets And Database Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/annotated/10-supplement-per-fold-cross-validation-performance.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Supplement: Per-Fold Cross-Validation Performance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-fold-cross-validation-performance">Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="supplement-per-fold-cross-validation-performance">
+<h1>Supplement: Per-Fold Cross-Validation Performance<a class="headerlink" href="#supplement-per-fold-cross-validation-performance" title="Link to this heading">#</a></h1>
+<div class="important admonition">
+<p class="admonition-title">Coverage</p>
+<p>This page annotates <strong>Supplementary information</strong>, source lines <strong>105-159</strong>. The original LaTeX source is reproduced in line-numbered blocks, followed by commentary explaining the role, assumptions, and interpretation of each block.</p>
+</div>
+<section id="reading-lens">
+<h2>Reading Lens<a class="headerlink" href="#reading-lens" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This supplementary section fills in implementation detail or additional evidence that the main text compresses.</p></li>
+<li><p>Read it as support for reproducibility: generation procedures, additional RTPxyz results, and fold-level performance tables.</p></li>
+<li><p>Where the main text states a result, the supplement often exposes the variation or construction detail behind it.</p></li>
+</ul>
+</section>
+<section id="annotated-source">
+<h2>Annotated Source<a class="headerlink" href="#annotated-source" title="Link to this heading">#</a></h2>
+<section id="per-fold-cross-validation-performance">
+<h3>Per-Fold Cross-Validation Performance<a class="headerlink" href="#per-fold-cross-validation-performance" title="Link to this heading">#</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Source lines 105-105</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 105 | <span class="k">\section</span><span class="nb">{</span>Per-Fold Cross-Validation Performance<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>Per-Fold Cross-Validation Performance</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This heading opens a new logical unit: <strong>Per-Fold Cross-Validation Performance</strong>.</p></li>
+<li><p>Use it as a checkpoint: the paper is changing either scale, object, method, or evidential role.</p></li>
+<li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 106-106</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 106 | The implemented cross-validation procedure allows for a direct comparison of the models within each fold, as identical train/validation/test splits are used throughout. This provides substantially more detailed insight than the averaged results reported in Table 1 of the manuscript.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>The implemented cross-validation procedure allows for a direct comparison of the models within each fold, as identical train/validation/test splits are used throughout. This provides substantially more detailed insight than the averaged results reported in Table 1 of the manuscript.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 108-108</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 108 | The per-fold results for the <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> and MAE metrics are presented in Tables~<span class="k">\ref</span><span class="nb">{</span>tab:fold<span class="nb">_</span>r2<span class="nb">}</span> and~<span class="k">\ref</span><span class="nb">{</span>tab:fold<span class="nb">_</span>mae<span class="nb">}</span>, respectively. The column Gain indicates whether the use of directional descriptors improves the performance, i.e., increases <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> or decreases MAE. The last two rows of each table report the mean and standard deviation across folds for each method.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>The per-fold results for the <span class="math notranslate nohighlight">\(R^2\)</span> and MAE metrics are presented in Tables (ref: tab:fold_r2) and (ref: tab:fold_mae), respectively. The column Gain indicates whether the use of directional descriptors improves the performance, i.e., increases <span class="math notranslate nohighlight">\(R^2\)</span> or decreases MAE. The last two rows of each table report the mean and standard deviation across folds for each method.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
+<li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 110-110</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 110 | We report results for the PH+ECP descriptor on the RTPxz and RTPxy datasets, as this combination constitutes the main result of the paper. As shown in the tables, the improvement obtained by incorporating directional descriptors is consistent across all folds and for both datasets: <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> increases and MAE decreases in every single split, demonstrating that the performance gain is systematic rather than incidental. The only exception is the standard deviation of <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> for RTPxy, which is slightly higher for the directional descriptors compared to the non-directional variant.
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>We report results for the PH+ECP descriptor on the RTPxz and RTPxy datasets, as this combination constitutes the main result of the paper. As shown in the tables, the improvement obtained by incorporating directional descriptors is consistent across all folds and for both datasets: <span class="math notranslate nohighlight">\(R^2\)</span> increases and MAE decreases in every single split, demonstrating that the performance gain is systematic rather than incidental. The only exception is the standard deviation of <span class="math notranslate nohighlight">\(R^2\)</span> for RTPxy, which is slightly higher for the directional descriptors compared to the non-directional variant.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This is a performance-interpretation block. Watch both <span class="math notranslate nohighlight">\(R^2\)</span> and MAE because they answer different questions about explained variance and absolute error.</p></li>
+<li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 112-131</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 112 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
+ 113 | <span class="k">\caption</span><span class="nb">{</span><span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span> scores obtained in each cross-validation fold for the RTPxz and RTPxy datasets using the PH+ECP descriptor. Results for the CNN model are provided for reference. The column <span class="k">\textit</span><span class="nb">{</span>Gain<span class="nb">}</span> indicates whether the inclusion of directional descriptors improves performance (i.e., increases <span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span>). The last two rows report the mean and standard deviation across folds.<span class="nb">}</span>
+ 114 | <span class="k">\label</span><span class="nb">{</span>tab:fold<span class="nb">_</span>r2<span class="nb">}</span>
+ 115 | <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>r|rrlr|rrlrr<span class="nb">}</span>
+ 116 | <span class="k">\hline</span>
+ 117 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span><span class="s">$</span><span class="nb">R^</span><span class="m">2</span><span class="s">$</span><span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>4<span class="nb">}{</span>c|<span class="nb">}{</span>RTPxz<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>4<span class="nb">}{</span>c<span class="nb">}{</span>RTPxy<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{}</span> <span class="k">\\</span>
+ 118 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>c<span class="nb">}{</span>PH+ECP<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>CNN<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>c<span class="nb">}{</span>PH+ECP<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>CNN<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{}</span> <span class="k">\\</span>
+ 119 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>fold<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Directional<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Non-directional<span class="nb">}</span> <span class="nb">&amp;</span> Gain <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>---<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Directional<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Non-directional<span class="nb">}</span> <span class="nb">&amp;</span> Gain <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>--<span class="nb">}</span> <span class="nb">&amp;</span>  <span class="k">\\</span> <span class="k">\hline</span>
+ 120 | 1 <span class="nb">&amp;</span> 0.9706 <span class="nb">&amp;</span> 0.7213 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9689 <span class="nb">&amp;</span> 0.9176 <span class="nb">&amp;</span> 0.9012 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9852 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 121 | 2 <span class="nb">&amp;</span> 0.9829 <span class="nb">&amp;</span> 0.8088 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9876 <span class="nb">&amp;</span> 0.9777 <span class="nb">&amp;</span> 0.9587 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9751 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 122 | 3 <span class="nb">&amp;</span> 0.9814 <span class="nb">&amp;</span> 0.7638 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9923 <span class="nb">&amp;</span> 0.9265 <span class="nb">&amp;</span> 0.9179 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9889 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 123 | 4 <span class="nb">&amp;</span> 0.9726 <span class="nb">&amp;</span> 0.7582 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9899 <span class="nb">&amp;</span> 0.9132 <span class="nb">&amp;</span> 0.9013 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9823 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 124 | 5 <span class="nb">&amp;</span> 0.9795 <span class="nb">&amp;</span> 0.7018 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9889 <span class="nb">&amp;</span> 0.9408 <span class="nb">&amp;</span> 0.9162 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9892 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 125 | 6 <span class="nb">&amp;</span> 0.9798 <span class="nb">&amp;</span> 0.7473 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9776 <span class="nb">&amp;</span> 0.9525 <span class="nb">&amp;</span> 0.9035 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9732 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 126 | 7 <span class="nb">&amp;</span> 0.9764 <span class="nb">&amp;</span> 0.7866 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9828 <span class="nb">&amp;</span> 0.9532 <span class="nb">&amp;</span> 0.9130 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9863 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 127 | 8 <span class="nb">&amp;</span> 0.9816 <span class="nb">&amp;</span> 0.7464 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9884 <span class="nb">&amp;</span> 0.9233 <span class="nb">&amp;</span> 0.9169 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9541 <span class="nb">&amp;</span>  <span class="k">\\</span> <span class="k">\hline</span>
+ 128 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>Mean<span class="nb">}</span> <span class="nb">&amp;</span> 0.9781 <span class="nb">&amp;</span> 0.7543 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9846 <span class="nb">&amp;</span> 0.9381 <span class="nb">&amp;</span> 0.9161 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.9793 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 129 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>Std<span class="nb">}</span> <span class="nb">&amp;</span> 0.0045 <span class="nb">&amp;</span> 0.0340 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.0078 <span class="nb">&amp;</span> 0.0221 <span class="nb">&amp;</span> 0.0186 <span class="nb">&amp;</span> No <span class="nb">&amp;</span> 0.0118 <span class="nb">&amp;</span>  <span class="k">\\</span> <span class="k">\hline</span>
+ 130 | <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+ 131 | <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(R^2\)</span> scores obtained in each cross-validation fold for the RTPxz and RTPxy datasets using the PH+ECP descriptor. Results for the CNN model are provided for reference. The column Gain indicates whether the inclusion of directional descriptors improves performance (i.e., increases <span class="math notranslate nohighlight">\(R^2\)</span>). The last two rows report the mean and standard deviation across folds.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
+<li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 133-152</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 133 | <span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[]
+ 134 | <span class="k">\caption</span><span class="nb">{</span>The same as Table <span class="k">\ref</span><span class="nb">{</span>tab:fold<span class="nb">_</span>r2<span class="nb">}</span> but for MAE.<span class="nb">}</span>
+ 135 | <span class="k">\label</span><span class="nb">{</span>tab:fold<span class="nb">_</span>mae<span class="nb">}</span>
+ 136 | <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>r|rrlr|rrlrr<span class="nb">}</span>
+ 137 | <span class="k">\hline</span>
+ 138 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>MAE<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>4<span class="nb">}{</span>c|<span class="nb">}{</span>RTPxz<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>4<span class="nb">}{</span>c<span class="nb">}{</span>RTPxy<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{}</span> <span class="k">\\</span>
+ 139 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>c<span class="nb">}{</span>PH+ECP<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>CNN<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>c<span class="nb">}{</span>PH+ECP<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>CNN<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{}</span> <span class="k">\\</span>
+ 140 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>fold<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Directional<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Non-directional<span class="nb">}</span> <span class="nb">&amp;</span> Gain <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>---<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Directional<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>Non-directional<span class="nb">}</span> <span class="nb">&amp;</span> Gain <span class="nb">&amp;</span> <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l<span class="nb">}{</span>--<span class="nb">}</span> <span class="nb">&amp;</span>  <span class="k">\\</span> <span class="k">\hline</span>
+ 141 | 1 <span class="nb">&amp;</span> 2.116 <span class="nb">&amp;</span> 7.532 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 2.269 <span class="nb">&amp;</span> 2.051 <span class="nb">&amp;</span> 2.202 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.871 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 142 | 2 <span class="nb">&amp;</span> 1.572 <span class="nb">&amp;</span> 6.511 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.504 <span class="nb">&amp;</span> 1.120 <span class="nb">&amp;</span> 1.493 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.225 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 143 | 3 <span class="nb">&amp;</span> 1.631 <span class="nb">&amp;</span> 6.803 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.185 <span class="nb">&amp;</span> 1.512 <span class="nb">&amp;</span> 1.763 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.701 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 144 | 4 <span class="nb">&amp;</span> 1.965 <span class="nb">&amp;</span> 6.757 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.203 <span class="nb">&amp;</span> 1.674 <span class="nb">&amp;</span> 1.735 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.792 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 145 | 5 <span class="nb">&amp;</span> 1.820 <span class="nb">&amp;</span> 7.821 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.380 <span class="nb">&amp;</span> 1.764 <span class="nb">&amp;</span> 2.087 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.735 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 146 | 6 <span class="nb">&amp;</span> 1.891 <span class="nb">&amp;</span> 7.331 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 2.062 <span class="nb">&amp;</span> 1.656 <span class="nb">&amp;</span> 2.213 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.243 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 147 | 7 <span class="nb">&amp;</span> 2.119 <span class="nb">&amp;</span> 6.788 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 2.021 <span class="nb">&amp;</span> 1.850 <span class="nb">&amp;</span> 2.396 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.060 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 148 | 8 <span class="nb">&amp;</span> 1.730 <span class="nb">&amp;</span> 6.878 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.336 <span class="nb">&amp;</span> 1.906 <span class="nb">&amp;</span> 1.989 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.520 <span class="nb">&amp;</span>  <span class="k">\\</span> <span class="k">\hline</span>
+ 149 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>Mean<span class="nb">}</span> <span class="nb">&amp;</span> 1.855 <span class="nb">&amp;</span> 7.053 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.620 <span class="nb">&amp;</span> 1.692 <span class="nb">&amp;</span> 1.985 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 1.018 <span class="nb">&amp;</span>  <span class="k">\\</span>
+ 150 | <span class="k">\multicolumn</span><span class="nb">{</span>1<span class="nb">}{</span>l|<span class="nb">}{</span>Std<span class="nb">}</span> <span class="nb">&amp;</span> 0.207 <span class="nb">&amp;</span> 0.454 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.430 <span class="nb">&amp;</span> 0.284 <span class="nb">&amp;</span> 0.300 <span class="nb">&amp;</span> Yes <span class="nb">&amp;</span> 0.293 <span class="nb">&amp;</span>  <span class="k">\\</span> <span class="k">\hline</span>
+ 151 | <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+ 152 | <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+</pre></div>
+</div>
+<p><strong>Readable text</strong></p>
+<blockquote>
+<div><p>The same as Table (ref: tab:fold_r2) but for MAE.</p>
+</div></blockquote>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>This table is a quantitative claim surface. Compare rows by dataset, descriptor family, directional status, and error metric rather than reading only the best score.</p></li>
+<li><p>The main inferential question is whether directional information improves prediction under the same learning setup.</p></li>
+<li><p>This is central to the paper: the loading direction must survive the descriptor construction because the material response is axis-dependent.</p></li>
+<li><p>This defines the RTP construction, where anisotropy is controlled in Fourier space before thresholding into a porous structure.</p></li>
+<li><p>This sets the learning comparison: compact topological descriptors with gradient boosting versus voxel-level convolutional models.</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Source lines 154-155</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span> 154 | <span class="c">% \bibliographystyle{sn-mathphys-num}</span>
+ 155 | <span class="c">% \bibliography{references}</span>
+</pre></div>
+</div>
+<p><strong>Commentary and remarks</strong></p>
+<ul class="simple">
+<li><p>In the supplement, this block provides extra construction detail or result granularity that supports the main text.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./annotated"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09-supplement-results-for-rtpxyz-dataset.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Supplement: Results for RTPxyz dataset</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../chapters/01-context.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Context: Why Direction Matters</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-lens">Reading Lens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotated-source">Annotated Source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#per-fold-cross-validation-performance">Per-Fold Cross-Validation Performance</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Bartosz Naskręcki and collaborators
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

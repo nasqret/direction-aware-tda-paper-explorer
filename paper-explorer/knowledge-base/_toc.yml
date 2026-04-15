@@ -1,6 +1,19 @@
 format: jb-book
 root: intro
 chapters:
+  - file: annotated/index
+    sections:
+      - file: annotated/00-front-matter-and-abstract
+      - file: annotated/01-introduction
+      - file: annotated/02-dataset
+      - file: annotated/03-background-and-methods
+      - file: annotated/04-results-and-discussion
+      - file: annotated/05-summary
+      - file: annotated/06-declarations
+      - file: annotated/07-bibliography-hooks
+      - file: annotated/08-supplement-topologically-diverse-td-dataset
+      - file: annotated/09-supplement-results-for-rtpxyz-dataset
+      - file: annotated/10-supplement-per-fold-cross-validation-performance
   - file: chapters/01-context
   - file: chapters/02-datasets
   - file: chapters/03-directional-filtrations
@@ -8,4 +21,3 @@ chapters:
   - file: chapters/05-results
   - file: chapters/06-applets-and-databases
   - file: references
-
