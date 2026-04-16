@@ -17,6 +17,8 @@ dist/
 
 # Release artifacts
 .exports/
+paper-explorer/media/build/
+paper-explorer/media/walkthrough/
 
 # Local env
 .env

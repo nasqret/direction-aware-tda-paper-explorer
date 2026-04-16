@@ -59,6 +59,14 @@ The JupyterBook source is in:
 paper-explorer/knowledge-base/
 ```
 
+The paper media kit is in:
+
+```text
+paper-explorer/site/assets/paper-walkthrough.mp4
+paper-explorer/site/assets/paper-walkthrough.gif
+docs/x-post.md
+```
+
 When `jupyter-book` is installed, run:
 
 ```sh
